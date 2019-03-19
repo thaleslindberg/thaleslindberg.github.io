@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: mintcream;
+  background-color: whitesmoke;
 }
 
 div {
@@ -15,5 +15,5 @@ div {
 .section-style {
   margin-right: 25px;
   margin-left: 25px;
-  background-color: white;
+  background-color: whitesmoke(255, 255, 255);
 }
