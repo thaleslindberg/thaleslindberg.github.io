@@ -1,23 +1,21 @@
 @media only screen and (max-device-width: 900px) {
   /* .menu { width:100%; } */
-  }
+}
+
+* {
+  text-decoration: none;
+}
 
 body {
   text-align: center;
   background-color: whitesmoke;
 }
 
+a { color: #808000;}
+
+h1 { color: #808080;}
+
 div {
   margin-top: 15px;
 }
 
-.image-section {
-  display: flex;
-  justify-content: center;
-}
-
-.section-style {
-  margin-right: 25px;
-  margin-left: 25px;
-  background-color: whitesmoke(255, 255, 255);
-}
