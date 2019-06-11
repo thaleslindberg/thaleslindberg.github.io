@@ -8,14 +8,23 @@
 
 body {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: #FFF8DC;
 }
 
-a { color: #808000;}
+a { color: #6A5ACD; }
 
-h1 { color: #808080;}
+h1 { color: #808080; }
+
+p {
+  text-shadow: 1px 1px 1px #FFFFFF;
+}
 
 div {
   margin-top: 15px;
 }
 
+
+.container img {
+  max-width: 100px;
+  max-height: 100px;
+}
