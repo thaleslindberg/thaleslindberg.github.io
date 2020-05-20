@@ -1,3 +1,17 @@
-*.gitignore
-*.json
-*.DS_Store
+### VS Code ###
+.vscode/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# ignore Idea files
+.idea
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
