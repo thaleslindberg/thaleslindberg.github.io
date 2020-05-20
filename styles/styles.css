@@ -4,33 +4,42 @@
 
 * {
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: 'Roboto', 'sans-serif';
   font-weight: normal;
 }
 
 body {
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #FCFCFC;
 }
 
 a { color: #0DA0EE; }
 
 h1 { 
-  color: #000000;
-  text-shadow: 1px 1px 1px #FFFFFF;
+  color: #555555;
+  text-shadow: 1px 1px 1px #FCFCFC;
 }
 
 p {
-  text-shadow: 1px 1px 1px #FFFFFF;
+  color: #555555;
+  text-shadow: 1px 1px 1px #FCFCFC;
 }
 
-div {
-  margin-top: 15px;
+li { color: #555555 }
+
+#description {
+  font-size: 22px;
+  font-weight: 100;
 }
 
+div { margin-top: 25px; }
 
 .container img {
   padding: 20px;
   max-width: 150px;
   max-height: 150px;
+}
+
+span {
+  color: #0DA0EE;
 }
