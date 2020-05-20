@@ -1,5 +1,3 @@
-.gitignore
-.metadata/
-.recommenders/
-.DS_Store/
-.vscode/
+*.gitignore
+*.json
+*.DS_Store
