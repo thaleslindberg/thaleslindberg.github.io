@@ -4,7 +4,7 @@
 
 * {
   text-decoration: none;
-  font-family: 'Roboto', 'sans-serif';
+  font-family: 'Roboto';
   font-weight: normal;
 }
 
@@ -20,17 +20,18 @@ h1 {
   text-shadow: 1px 1px 1px #FCFCFC;
 }
 
-p {
+section {
   color: #555555;
   text-shadow: 1px 1px 1px #FCFCFC;
 }
 
-li { color: #555555 }
-
 #description {
   font-size: 22px;
-  font-weight: 100;
 }
+
+li { color: #555555 }
+
+span { color: #0DA0EE; }
 
 div { margin-top: 25px; }
 
@@ -40,6 +41,77 @@ div { margin-top: 25px; }
   max-height: 150px;
 }
 
-span {
-  color: #0DA0EE;
+#website-content {
+  background-color: #f9f6f6;
+  width: 90%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+    border: 1px solid #555555;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#circle1 { 
+  position: relative;
+  top: 73px;
+  left: 60px;
+}
+
+#circle1:hover { background-color: #0DA0EE; }
+
+#circle2 {
+  position: relative;
+  top: -11px;
+  left: -50px;
+}
+
+#circle2:hover { background-color: #0DA0EE; }
+
+#circle3 {
+  position: relative;
+  top: -10px;
+  left: -50px;
+}
+
+#circle3:hover { background-color: #0DA0EE; }
+
+#circle4 { 
+  position: relative;
+  top: -94px;
+  left: 60px;
+}
+
+#circle4:hover { background-color: #0DA0EE; }
+
+#github-page {
+  content: url('/icon/github2.svg');
+  width: 40px;
+  position: relative;
+  top: 10px;
+}
+
+#linkedin-page {
+  content: url('/icon/linkedin.svg'); 
+  position: relative;
+  top: 15px;
+}
+
+#medium-page {
+  content: url('/icon/medium2.svg'); 
+  position: relative;
+  width: 40px;
+  top: 10px;
+}
+
+#behance-page {
+  content: url('/icon/behance.svg'); 
+  position: relative;
+  top: 15px;
 }
