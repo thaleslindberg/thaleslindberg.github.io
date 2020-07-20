@@ -1,17 +1,16 @@
-### VS Code ###
-.vscode/
+# ### VS Code ###
+# .vscode/
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
+# # OS generated files #
+# ######################
+# .DS_Store
+# .DS_Store?
 
-# ignore Idea files
-.idea
+# # ignore Idea files
+# .idea
 
-node_modules/
-.vscode/
-settings.json
-settings.lock/json
+# node_modules
+# settings.json
+# settings.lock/json
 
-.gitignore
+# .gitignore
