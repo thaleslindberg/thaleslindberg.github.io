@@ -131,3 +131,5 @@ p {
 .copyright:hover {
   font-weight: bold;
 }
+
+#email:hover { font-weight: bold; }
