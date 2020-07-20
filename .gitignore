@@ -1,18 +1,6 @@
-### VS Code ###
-.vscode/
-*
-!.gitignore
-
-# OS generated files #
-######################
 .DS_Store
-.DS_Store?
-
-# ignore Idea files
-.idea
-
-node_modules
-settings.json
-settings.lock/json
-
+.vscode
 .gitignore
+node_modules
+package-lock.json
+package-json
