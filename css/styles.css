@@ -2,6 +2,14 @@
   /* .menu { width:100%; } */
 }
 
+:root {
+  --primary: #0DA0EE;
+  --secondary: #555555;
+  --tertiary: #FCFCFC;
+  --container: #f9f6f6;
+  --logos: #0da0ee99;
+}
+
 * {
   text-decoration: none;
   font-family: 'Roboto';
@@ -12,18 +20,18 @@
 
 body {
   text-align: center;
-  background-color: #FCFCFC;
+  background-color: var(--tertiary);
 }
 
-a { color: #0DA0EE; }
+a { color: var(--primary); }
 
 h1 { 
-  color: #555555;
+  color: var(--secondary);
   text-shadow: 1px 1px 1px #FCFCFC;
 }
 
 section {
-  color: #555555;
+  color: var(--secondary);
   text-shadow: 1px 1px 1px #FCFCFC;
 }
 
@@ -31,14 +39,23 @@ section {
   font-size: 22px;
 }
 
-li { color: #555555 }
+li { color: var(--secondary); }
 
-.blue-font { color: #0DA0EE; }
+.blue-font { color: var(--primary); }
 
 #coming-soon { 
   color: linear-gradient(315deg, #000000 0%, #414141 74%);
   font-size: 15px;
   opacity: 0.5;
+}
+
+#coming-soon::after {
+  content: '';
+  width: 140px;
+  height: 4px;
+  background-color: currentColor;
+  display: block;
+  margin: 30px auto;
 }
 
 div { margin-top: 25px; }
@@ -50,7 +67,7 @@ div { margin-top: 25px; }
 }
 
 #website-content {
-  background-color: #f9f6f6;
+  background-color: var(--container);
   width: 100%;
   height: 310px;
   margin-left: auto;
@@ -58,7 +75,7 @@ div { margin-top: 25px; }
 }
 
 p {
-  border: 1px solid #555555;
+  border: 1px solid var(--secondary);
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -73,7 +90,7 @@ p {
   left: 50px;
 }
 
-#circle1:hover { background-color: #0DA0EE; }
+#circle1:hover { background-color: var(--logos); }
 
 /* github */
 #circle2 {
@@ -82,7 +99,7 @@ p {
   left: -60px;
 }
 
-#circle2:hover { background-color: #0DA0EE; }
+#circle2:hover { background-color: var(--logos); }
 
 /* medium */
 #circle3 {
@@ -91,7 +108,7 @@ p {
   left: -60px;
 }
 
-#circle3:hover { background-color: #0DA0EE; }
+#circle3:hover { background-color: var(--logos); }
 
 /* behance */
 #circle4 { 
@@ -100,7 +117,7 @@ p {
   left: 50px;
 }
 
-#circle4:hover { background-color: #0DA0EE; }
+#circle4:hover { background-color: var(--logos); }
 
 #linkedin-page {
   content: url('/icon/linkedin.svg'); 
@@ -131,7 +148,7 @@ p {
 .copyright {
   /* position: relative; */
   line-height: 50px;
-  color: #555555; 
+  color: var(--secondary); 
 }
 
 .copyright:hover {
