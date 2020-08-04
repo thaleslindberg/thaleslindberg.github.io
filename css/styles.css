@@ -33,7 +33,13 @@ section {
 
 li { color: #555555 }
 
-span { color: #0DA0EE; }
+.blue-font { color: #0DA0EE; }
+
+#coming-soon { 
+  color: linear-gradient(315deg, #000000 0%, #414141 74%);
+  font-size: 15px;
+  opacity: 0.5;
+}
 
 div { margin-top: 25px; }
 
@@ -123,8 +129,8 @@ p {
 }
 
 .copyright {
-  position: relative;
-  bottom: 25px;
+  /* position: relative; */
+  line-height: 50px;
   color: #555555; 
 }
 
