@@ -1,6 +1,4 @@
-@media only screen and (max-device-width: 900px) {
-  /* .menu { width:100%; } */
-}
+@media only screen and (max-device-width: 900px) { }
 
 :root {
   --primary: #0DA0EE;
@@ -16,6 +14,7 @@
   font-weight: normal;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -64,14 +63,17 @@ div { margin-top: 25px; }
   padding: 20px;
   max-width: 150px;
   max-height: 150px;
+  
 }
 
 #website-content {
   background-color: var(--container);
-  width: 100%;
-  height: 310px;
+  width: 300px;
+  height: 250px;
+  border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
+  border: 2px solid #FCFCFC;
 }
 
 p {
@@ -147,7 +149,7 @@ p {
 
 .copyright {
   /* position: relative; */
-  line-height: 50px;
+  line-height: 100px;
   color: var(--secondary); 
 }
 
