@@ -1,23 +1,23 @@
-const lightbox = document.createElement('div');
-lightbox.id = 'lightbox'
-document.body.appendChild(lightbox)
+const modal = document.createElement('div');
+modal.id = 'modal'
+document.body.appendChild(modal)
 
 const images = document.querySelectorAll('img');
 
 images.forEach(image => {
   image.addEventListener('click', e => {
-    lightbox.classList.add('active')
+    modal.classList.add('active')
     const img = document.createElement('img');
     img.src = image.src
 
-    while (lightbox.firstChild) {
-      lightbox.removeChild(lightbox.firstChild)
+    while (modal.firstChild) {
+      modal.removeChild(modal.firstChild)
     }
-    lightbox.appendChild(img)
+    modal.appendChild(img)
   })
 })
 
-lightbox.addEventListener('click', e => {
+modal.addEventListener('click', e => {
   if (e.target !== e.currentTarget) return
-  lightbox.classList.remove('active');
+  modal.classList.remove('active');
 })

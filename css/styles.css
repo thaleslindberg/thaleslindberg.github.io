@@ -54,16 +54,6 @@ li { color: var(--secondary); }
 
 div { margin-top: 25px; }
 
-#avatar {
-  padding: 15px;
-  max-width: 150px;
-  max-height: 150px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#avatar:hover {opacity: 0.7;}
-
 #website-content {
   background-color: var(--container);
   width: 300px;
@@ -155,8 +145,18 @@ p {
 
 #email:hover { font-weight: bold; }
 
+#avatar {
+  padding: 15px;
+  max-width: 150px;
+  max-height: 150px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#avatar:hover {opacity: 0.7;}
+
 /* Modal */
-#lightbox {
+#modal {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -166,13 +166,13 @@ p {
   display: none;
 }
 
-#lightbox.active {
+#modal.active {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#lightbox img {
+#modal img {
   max-width: 50%;
   max-height: 50%;
   padding: 4px;
