@@ -10,11 +10,11 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   font-family: 'Roboto';
   font-weight: normal;
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -25,19 +25,13 @@ body {
   background-color: var(--tertiary);
 }
 
-a { color: var(--primary); }
+a, .details { color: var(--primary); }
 
-h1 { color: #fcfcfc; }
+h1, section { color: var(--secondary); }
 
-section { color: var(--secondary); }
+#description { font-size: 22px; }
 
-#description {
-  font-size: 22px;
-}
-
-li { color: var(--secondary); }
-
-.blue-font { color: var(--primary); }
+div { margin-top: 25px; }
 
 #coming-soon { 
   color: rgb(189, 189, 189);
@@ -54,9 +48,7 @@ li { color: var(--secondary); }
   margin: 30px auto;
 }
 
-div { margin-top: 25px; }
-
-#website-content {
+.website-content {
   background-color: var(--container);
   width: 300px;
   height: 250px;
@@ -82,16 +74,12 @@ p {
   left: 50px;
 }
 
-#circle1:hover { background-color: var(--logos); }
-
 /* github */
 #circle2 {
   position: relative;
   top: -11px;
   left: -60px;
 }
-
-#circle2:hover { background-color: var(--logos); }
 
 /* medium */
 #circle3 {
@@ -100,8 +88,6 @@ p {
   left: -60px;
 }
 
-#circle3:hover { background-color: var(--logos); }
-
 /* behance */
 #circle4 { 
   position: relative;
@@ -109,7 +95,15 @@ p {
   left: 50px;
 }
 
-#circle4:hover { background-color: var(--logos); }
+#circle1:hover, #circle2:hover, 
+#circle3:hover, #circle4:hover { 
+  background-color: var(--logos); 
+  transition: .7s ease;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
 
 #linkedin-page {
   content: url('/icon/linkedin.svg'); 
@@ -147,9 +141,10 @@ p {
   padding: 5px;
 }
 
-.copyright:hover { font-weight: bold; }
-
-#email:hover { font-weight: bold; }
+.copyright:hover, 
+#email:hover { 
+  font-weight: bold; 
+}
 
 #avatar {
   padding: 15px;
