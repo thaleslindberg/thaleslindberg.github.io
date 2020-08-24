@@ -199,9 +199,6 @@ p {
     -webkit-box-direction: normal;
     flex-direction: row;
   }
-}
-
-@media (min-width: 768px) {
   .footer__center {
     margin: auto 0;
   }
