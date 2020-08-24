@@ -20,12 +20,16 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   text-align: center;
   background-color: var(--tertiary);
 }
 
-a, .details { color: var(--primary); }
+a, .copyright{ color: var(--primary); }
 
 h1, section { color: var(--secondary); }
 
@@ -131,17 +135,18 @@ p {
   top: 15px;
 }
 
-.copyright {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: var(--secondary); 
+.footer {
   background-color: #232323;
-  height: 30px;
-  padding: 5px;
+  color: var(--secondary);
+  height: 60px;  /* footer height */
+  padding-top: 20px;
+  display: block;
+  margin-top: 20px; /* space between content and footer */
+  position: relative;
+  width: 100%;
 }
 
-.copyright:hover, 
+.footer:hover, 
 #email:hover { 
   font-weight: bold; 
 }
