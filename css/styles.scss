@@ -1,18 +1,24 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&display=swap');
+
+/* Font Variables */
+$IBM-Plex-Serif: 'IBM Plex Serif', serif;
+
+
 :root {
   --primary: #0DA0EE;
   --secondary: #fafafa;
   --tertiary: #212121;
   --quaternary: #555555;
   --container: #f9f6f6;
-  --logos: #0da0ee99;
+  --logos: #9DD5FE;
 }
 
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Roboto';
-  font-weight: normal;
+  font-family: $IBM-Plex-Serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -81,7 +87,7 @@ p {
 /* github */
 #circle2 {
   position: relative;
-  top: -11px;
+  top: -10px;
   left: -60px;
 }
 
@@ -95,7 +101,7 @@ p {
 /* behance */
 #circle4 { 
   position: relative;
-  top: -50px;
+  top: -48px;
   left: 50px;
 }
 
@@ -103,10 +109,9 @@ p {
 #circle3:hover, #circle4:hover { 
   background-color: var(--logos); 
   transition: .7s ease;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-  -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-  inset -4px -4px 6px 0 rgba(255,255,255,.2),
-  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  background: #9DD5FE;
+  box-shadow: inset 5px 5px 10px #6b91ad, 
+              inset -5px -5px 10px #cfffff;
 }
 
 #linkedin-page {
@@ -117,7 +122,6 @@ p {
 
 #github-page {
   content: url('/icon/github2.svg');
-  width: 40px;
   position: relative;
   top: 10px;
 }
@@ -125,7 +129,6 @@ p {
 #medium-page {
   content: url('/icon/medium2.svg'); 
   position: relative;
-  width: 40px;
   top: 10px;
 }
 
@@ -176,7 +179,6 @@ p {
 .footer__content{ flex: 1 0 auto; }
 
 .footer__wrapper {
-  display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: center;
