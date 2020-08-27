@@ -214,7 +214,11 @@ $phone: 480px;
 }
 
 @media (max-width: $phone) {
-  h1, section {
+  h1 {
     font-size: 1.5rem;
+    font-weight: bold;
+  }
+  section {
+    font-size: 1rem;
   }
 }
