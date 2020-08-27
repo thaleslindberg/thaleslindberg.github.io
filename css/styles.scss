@@ -4,7 +4,6 @@
 /* Font Variables */
 $IBM-Plex-Serif: 'IBM Plex Serif', serif;
 
-
 :root {
   --primary: #0DA0EE;
   --secondary: #fafafa;
@@ -33,7 +32,8 @@ body {
   flex-direction: column;
 }
 
-a, .copyright{ color: var(--primary); }
+a, span ,
+.copyright, .details { color: var(--primary); }
 
 h1, section { color: var(--secondary); }
 
@@ -75,7 +75,6 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /* linkedin */
 #circle1 { 
@@ -196,8 +195,14 @@ p {
   font-weight: bold; 
 } 
 
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
+/* MEDIA QUERIES 
+  AND VARIABLES SIZE */
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
+
+@media (min-width: $tablet) {
   .footer__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -205,5 +210,11 @@ p {
   }
   .footer__center {
     margin: auto 0;
+  }
+}
+
+@media (max-width: $phone) {
+  h1, section {
+    font-size: 1.5rem;
   }
 }
