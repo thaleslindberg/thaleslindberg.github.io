@@ -42,7 +42,7 @@ h1, section { color: var(--secondary); }
 div { margin-top: 25px; }
 
 #coming-soon { 
-  color: rgb(189, 189, 189);
+  color:#bdbdbd;
   font-size: 15px;
   opacity: 0.5;
 }
@@ -68,7 +68,9 @@ div { margin-top: 25px; }
 }
 
 p {
-  border: 1px solid var(--quaternary);
+  border: 0;
+  box-shadow: 0 2px 6px 0
+  hsla(0, 0%, 0%, 0.2);
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -107,10 +109,9 @@ p {
 #circle1:hover, #circle2:hover, 
 #circle3:hover, #circle4:hover { 
   background-color: var(--logos); 
-  transition: .7s ease;
+  transition: .9s ease;
   background: #9DD5FE;
-  box-shadow: inset 5px 5px 10px #6b91ad, 
-              inset -5px -5px 10px #cfffff;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 #linkedin-page {
@@ -171,7 +172,9 @@ p {
   max-height: 50%;
   padding: 4px;
   background-color: var(--tertiary);
-  border: 1px solid var(--secondary);
+  border: 0;
+  box-shadow: 0 2px 6px 0
+  hsla(0, 0%, 0%, 0.2);
 }
 
 /* FOOTER */
@@ -184,10 +187,9 @@ p {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  padding: 1em;
-  background-color: #232323;
+  padding: .1em 0 1.3em 0;
+  background-color: hsla(0, 0%, 14%, 1);
   color: var(--secondary);
-  border-top: 0.5px solid var(--quaternary);
 }
 
 .footer__center:hover, 
