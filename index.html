@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="portfolio website">
-  <meta name="keywords" content="web, design, portfolio, personal, website">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="shortcut icon" type="image/png" href="/icon/favicon.ico">
-  <title>Thales Lindberg</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="portfolio website">
+    <meta name="keywords" content="web, design, portfolio, personal, website">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="/icon/favicon.ico">
+
+    <title>Thales Lindberg</title>
 </head>
 
 <body>
+        <div class="card">
+            <div class="card-title">
+                <img src="/img/me.png" alt="thales lindberg" id="avatar" />
+                <h1>
+                    Hello<span class="details">,</span>
+                    I'm Thales Lindberg<span>.</span><br>
+                </h1>
+            </div>
+            <div class="card-description">
+                <section>
+                    <p>
+                        Currently, BSc student in Information Systems.<br />
+                        You can reach me through my <a href="mailto:thales.lindberg@gmail.com" title="mail me"
+                            id="email">email</a>.<br>
+                        Further informations about me and some of my social networks are available below.<br />
+                        <span id="coming-soon">I'll have been posting some stuffs on my portfolio soon.</span>
+                    </p>
+                </section>
+            </div>
+        </div>
 
-  <div>
-      <img src="/img/me.png" alt="thales lindberg" id="avatar" >
-      <span class="overlay"></span>
-  </div>
+        <main>
+            <div class="main-content">
+                <ul>
+                    <li id="social-one">
+                        <a href="https://www.linkedin.com/in/thales-lindberg-28874815b/" target="_blank"
+                            id="linkedin-page"></a>
+                    </li>
+                    <li id="social-two">
+                        <a href="https://github.com/thaleslindberg" target="_blank" id="github-page"></a>
+                    </li>
+                    <li id="social-three">
+                        <a href="https://medium.com/@thaleslindberg" target="_blank" id="medium-page"></a>
+                    </li>
+                    <li id="social-four">
+                        <a href="https://www.behance.net/thaleslindberg" target="_blank" id="behance-page"></a>
+                    </li>
+                </ul>
+            </div>
+        </main>
 
-  <h1>
-    Hello<span class="details">,</span>
-    I'm Thales Lindberg<span>.</span><br>
-  </h1>
 
-  <div id="description">
-    <section>
-      Currently, BSc student in Information Systems.<br />
-      You can reach me through my <a href="mailto:thales.lindberg@gmail.com" title="mail me" id="email">email</a>.<br />
-      Further informations about me and some of my social networks are available below.<br />
-      <span id="coming-soon">I'll have been posting some stuffs on my portfolio soon.</span>
-    </section>
-    
-    <div class="website-content">
-      <p id="circle1">
-        <a href="https://www.linkedin.com/in/thales-lindberg-28874815b/" target="_blank" id="linkedin-page"></a></p>
-      <p id="circle2">
-        <a href="https://github.com/thaleslindberg" target="_blank" id="github-page"></a></p>
-      <p id="circle3">
-        <a href="https://medium.com/@thaleslindberg" target="_blank" id="medium-page"></a></p>
-      <p id="circle4">
-        <a href="https://www.behance.net/thaleslindberg" target="_blank" id="behance-page"></a></p>
-    </div>
-  </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-content"></div>
+        </div>
+          <div class="footer-bottom">
+            Designed by Thales Lindberg 2020
+          </div>
+        </footer>
 
-  <div class="footer__content" >
-  </div>
-  <footer>
-    <div class="footer__wrapper">
-      <div class="footer__center">
-        Thales Lindberg 2020
-      </div>
-    </div>
-    </div>
-  </footer>
-
-  <script defer src="/js/index.js"></script>
+    <script defer src="/js/index.js"></script>
 </body>
+
 </html>
