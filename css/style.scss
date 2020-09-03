@@ -29,7 +29,7 @@ html, body {
 
 .content {
     min-height: calc(100vh - 70px);
-    padding: 40px 40px 0 40px;
+    padding: 0 40px 0 40px;
 }
 
 body {
@@ -49,6 +49,8 @@ a, span , .details {
 h1 {
     font-size: calc(16px + 4vh);
     margin-bottom: .5rem;
+    -webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 h1, .card-description { 
@@ -177,7 +179,6 @@ li {
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
-
 /* Modal */
 #modal {
     position: fixed;
@@ -235,3 +236,40 @@ li {
         hsla(0, 0%, 0%, 0.2);
     }
 }
+
+/* Animations */
+ @-webkit-keyframes focus-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(300px);
+              transform: translateZ(300px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(300px);
+              transform: translateZ(300px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
