@@ -102,8 +102,8 @@ h1, .card-description {
     margin-bottom: 3.5rem;
     border-radius: 45px;
     border: 0;
-    background: #212121;
     transition: transform 2s;
+    background: #212121;
     box-shadow: inset 8px 8px 14px #1a1a1a, 
         inset -8px -8px 14px #282828;
 
@@ -112,7 +112,7 @@ h1, .card-description {
     }
 }
 
-li {
+.links li {
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -213,12 +213,17 @@ li {
 }
 
 .footer:hover,
-#email:hover {
+#email:hover,
+#fiap:hover {
     font-weight: bold;
 }
 
+#fiap:hover {
+    color: #ED145B;
+}
+
 /* MEDIA QUERIES */
-@media (max-width:801px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
         font-weight: bold;
@@ -228,7 +233,7 @@ li {
         font-size: 1rem;
     }
 
-    li {
+    .links li {
         border-radius: 100%;
         border: 0;
         box-shadow: 0 2px 6px 0
