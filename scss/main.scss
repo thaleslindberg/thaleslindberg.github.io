@@ -1,0 +1,115 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&display=swap');
+
+$primary: #212121;
+$secondary: #0EA0EE;
+$light: #9DD5FE;
+$white: #FAFAFA;
+
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'IBM Plex Serif', serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.container {
+    background-color: $primary;
+    color: $white;
+}
+
+.navbar-brand {
+    color: $white;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.rounded {
+    height: 130px;
+    width: 130px;
+}
+
+/* Social Media */
+#linkedin, 
+#github, 
+#medium,
+#behance {
+    border: 0;
+    box-shadow: 0 2px 6px 0
+    hsla(0, 0%, 0%, 0.2);
+
+    &:hover {
+        background-color: $light; 
+        transition: 1s ease;
+        background: $light;
+        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    }
+}
+
+#fiap {
+    color: $white;
+
+    &:hover {
+    color: #ED145B;
+    font-weight: bold;
+    text-decoration: none;
+    }
+}
+
+#email {
+    color: $white;
+
+    &:hover {
+        color: $secondary;
+        font-weight: bold; 
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 490px) and (max-width: 560px) {
+    #github {
+        right: 30px;
+    }
+    #medium {
+        right: 15px;
+    }
+    #behance {
+        bottom: 72px;
+        left: 60px;
+    }
+}
+
+
+@media (max-width: 560px) { 
+    #linkedin,
+    #github,
+    #medium,
+    #behance {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    #medium {
+        margin-left: 47px;
+    }
+    #behance {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 327px) {
+    #linkedin,
+    #github,
+    #medium,
+    #behance {
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    #github, #behance {
+        margin-left: 48px;
+    }
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

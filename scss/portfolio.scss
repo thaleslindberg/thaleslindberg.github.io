@@ -1,0 +1,23 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&display=swap');
+
+$primary: #FBCD33; 
+$secondary: #0EA0EE;
+$light: #FAFAFA;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'IBM Plex Serif', serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+body, html {
+    height: 100%;
+}
+
+#card {
+    height: 100%;
+    background-size: cover;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
