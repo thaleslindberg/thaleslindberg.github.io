@@ -51,21 +51,21 @@ $white: #FAFAFA;
 
 #fiap {
     color: $white;
+    text-decoration: none;
 
     &:hover {
     color: #ED145B;
     font-weight: bold;
-    text-decoration: none;
     }
 }
 
 #email {
     color: $white;
+    text-decoration: none;
 
     &:hover {
         color: $secondary;
         font-weight: bold; 
-        text-decoration: none;
     }
 }
 
