@@ -1,17 +1,21 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 *,
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'IBM Plex Serif', serif;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 .container {
   background-color: #212121;
   color: #FAFAFA;
+}
+
+.container h5, .container .h5 {
+  color: #5D5D5D;
 }
 
 .navbar-brand {
@@ -35,6 +39,7 @@
   border: 0;
   -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  background: #1F1F1F;
 }
 
 #linkedin:hover,
@@ -55,7 +60,7 @@
 }
 
 #fiap:hover {
-  color: limegreen;
+  color: #ED145B;
   font-weight: bold;
 }
 
@@ -138,7 +143,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #9DD5FE;
-  --bs-dark: #191919;
+  --bs-dark: #1F1F1F;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(250, 250, 250, 0.15), rgba(250, 250, 250, 0));
@@ -2245,15 +2250,15 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #191919;
-  --bs-table-striped-bg: #242424;
+  --bs-table-bg: #1F1F1F;
+  --bs-table-striped-bg: #2a2a2a;
   --bs-table-striped-color: #FAFAFA;
-  --bs-table-active-bg: #303030;
+  --bs-table-active-bg: #353535;
   --bs-table-active-color: #FAFAFA;
-  --bs-table-hover-bg: #2a2a2a;
+  --bs-table-hover-bg: #2f2f2f;
   --bs-table-hover-color: #FAFAFA;
   color: #FAFAFA;
-  border-color: #303030;
+  border-color: #353535;
 }
 
 .table-responsive {
@@ -3528,43 +3533,43 @@ fieldset:disabled .btn {
 
 .btn-dark {
   color: #FAFAFA;
-  background-color: #191919;
-  border-color: #191919;
+  background-color: #1F1F1F;
+  border-color: #1F1F1F;
 }
 
 .btn-dark:hover {
   color: #FAFAFA;
-  background-color: #060606;
-  border-color: black;
+  background-color: #0c0c0c;
+  border-color: #060606;
 }
 
 .btn-check:focus + .btn-dark, .btn-dark:focus {
   color: #FAFAFA;
-  background-color: #060606;
-  border-color: black;
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(59, 59, 59, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(59, 59, 59, 0.5);
+  background-color: #0c0c0c;
+  border-color: #060606;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(64, 64, 64, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(64, 64, 64, 0.5);
 }
 
 .btn-check:checked + .btn-dark,
 .btn-check:active + .btn-dark, .btn-dark:active, .btn-dark.active,
 .show > .btn-dark.dropdown-toggle {
   color: #FAFAFA;
-  background-color: black;
+  background-color: #060606;
   border-color: black;
 }
 
 .btn-check:checked + .btn-dark:focus,
 .btn-check:active + .btn-dark:focus, .btn-dark:active:focus, .btn-dark.active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(59, 59, 59, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(59, 59, 59, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(64, 64, 64, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(64, 64, 64, 0.5);
 }
 
 .btn-dark:disabled, .btn-dark.disabled {
   color: #FAFAFA;
-  background-color: #191919;
-  border-color: #191919;
+  background-color: #1F1F1F;
+  border-color: #1F1F1F;
 }
 
 .btn-outline-primary {
@@ -3806,36 +3811,36 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-dark {
-  color: #191919;
-  border-color: #191919;
+  color: #1F1F1F;
+  border-color: #1F1F1F;
 }
 
 .btn-outline-dark:hover {
   color: #FAFAFA;
-  background-color: #191919;
-  border-color: #191919;
+  background-color: #1F1F1F;
+  border-color: #1F1F1F;
 }
 
 .btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(25, 25, 25, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(25, 25, 25, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(31, 31, 31, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(31, 31, 31, 0.5);
 }
 
 .btn-check:checked + .btn-outline-dark,
 .btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
   color: #FAFAFA;
-  background-color: #191919;
-  border-color: #191919;
+  background-color: #1F1F1F;
+  border-color: #1F1F1F;
 }
 
 .btn-check:checked + .btn-outline-dark:focus,
 .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(25, 25, 25, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(25, 25, 25, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(31, 31, 31, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(31, 31, 31, 0.5);
 }
 
 .btn-outline-dark:disabled, .btn-outline-dark.disabled {
-  color: #191919;
+  color: #1F1F1F;
   background-color: transparent;
 }
 
@@ -5289,9 +5294,9 @@ fieldset:disabled .btn {
 }
 
 .alert-dark {
-  color: #0d0d0d;
-  background-color: #cdcdcd;
-  border-color: #bbbbbb;
+  color: #101010;
+  background-color: #cecece;
+  border-color: #bdbdbd;
 }
 
 .alert-dark .alert-link {
@@ -5733,19 +5738,19 @@ fieldset:disabled .btn {
 }
 
 .list-group-item-dark {
-  color: #0d0d0d;
-  background-color: #bbbbbb;
+  color: #101010;
+  background-color: #bdbdbd;
 }
 
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #0d0d0d;
-  background-color: #aeaeae;
+  color: #101010;
+  background-color: #b0b0b0;
 }
 
 .list-group-item-dark.list-group-item-action.active {
   color: #FAFAFA;
-  background-color: #0d0d0d;
-  border-color: #0d0d0d;
+  background-color: #101010;
+  border-color: #101010;
 }
 
 .btn-close {
@@ -6833,7 +6838,7 @@ fieldset:disabled .btn {
 }
 
 .link-dark {
-  color: #191919;
+  color: #1F1F1F;
 }
 
 .link-dark:hover, .link-dark:focus {
@@ -7219,7 +7224,7 @@ fieldset:disabled .btn {
 }
 
 .border-dark {
-  border-color: #191919 !important;
+  border-color: #1F1F1F !important;
 }
 
 .border-white {
@@ -8024,7 +8029,7 @@ fieldset:disabled .btn {
 }
 
 .text-dark {
-  color: #191919 !important;
+  color: #1F1F1F !important;
 }
 
 .text-white {
@@ -8096,7 +8101,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-  background-color: #191919 !important;
+  background-color: #1F1F1F !important;
 }
 
 .bg-body {

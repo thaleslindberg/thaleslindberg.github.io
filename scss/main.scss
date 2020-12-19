@@ -1,23 +1,29 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 $primary: #212121;
 $secondary: #0EA0EE;
 $light: #9DD5FE;
 $white: #FAFAFA;
-$dark: #191919;
+$dark: #1F1F1F;
+$raspberry: #ED145B;
+$gray: #5D5D5D;
 
 *, 
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: 'IBM Plex Serif', serif;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
 }
 
 .container {
     background-color: $primary;
     color: $white;
+
+    h5 {
+        color: $gray;
+    }
 }
 
 .navbar-brand {
@@ -41,6 +47,7 @@ $dark: #191919;
     border: 0;
     box-shadow: 0 2px 6px 0
     hsla(0, 0%, 0%, 0.2);
+    background: $dark;
 
     &:hover {
         background-color: $light; 
@@ -55,7 +62,7 @@ $dark: #191919;
     text-decoration: none;
 
     &:hover {
-    color: limegreen;
+    color: $raspberry;
     font-weight: bold;
     }
 }
