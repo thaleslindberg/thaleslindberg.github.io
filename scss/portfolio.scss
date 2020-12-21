@@ -1,8 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-$primary: #FBCD33; 
-$secondary: #0EA0EE;
+$primary: #71E1E5; 
 $light: #FAFAFA;
 
 *, *::after, *::before {
@@ -13,11 +12,19 @@ $light: #FAFAFA;
 
 body, html {
     height: 100%;
+
+    h6:hover {
+        color: $primary;
+    }
 }
 
 #card {
     height: 100%;
     background-size: cover;
+}
+
+#main_menu {
+
 }
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
