@@ -6,12 +6,16 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .container {
   background-color: #212322;
   color: #FAFAFA;
+}
+
+.container h1, .container .h1 {
+  font-weight: 900;
 }
 
 .container h5, .container .h5 {
