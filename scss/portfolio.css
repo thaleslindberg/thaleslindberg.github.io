@@ -1,23 +1,40 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@&display=swap");
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 body, html {
   height: 100%;
 }
 
+body h6, body .h6, html h6, html .h6 {
+  font-weight: 900;
+}
+
 body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
   color: #71E1E5;
+}
+
+#home-page h6, #home-page .h6 {
+  font-weight: 400;
 }
 
 #card {
   height: 100%;
   background-size: cover;
+}
+
+#card h1, #card .h1 {
+  font-weight: 500;
+  color: #D5D4D0;
+}
+
+#card h4, #card .h4 {
+  font-weight: 800;
 }
 
 /*!

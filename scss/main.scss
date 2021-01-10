@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@&display=swap');
 
 $primary: #212322;
 $secondary: #E57673;
@@ -8,6 +8,7 @@ $white: #FAFAFA;
 $dark: #1E201F;
 $raspberry: #ED145B;
 $gray: #5D5D5D;
+$timberwolf: #D5D4D0;
 
 *, 
 *::after,
@@ -21,13 +22,23 @@ $gray: #5D5D5D;
     background-color: $primary;
     color: $white;
 
-    h1 {
-        font-weight: 900;
+    #title {
+        font-weight: 700;
+        -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
-
+    h4 {
+        font-weight: 300;
+        color: $timberwolf;
+    }
     h5 {
         color: $gray;
+        font-weight: 300;
     }
+}
+
+h6 {
+    color: $timberwolf;
 }
 
 .navbar-brand {
@@ -54,7 +65,7 @@ $gray: #5D5D5D;
     background: $dark;
 
     &:hover {
-        background-color: $light; 
+        transform: translate3d(0, -10px, 20px);
         transition: 1s ease;
         background: $light;
         box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
@@ -67,7 +78,7 @@ $gray: #5D5D5D;
 
     &:hover {
     color: $raspberry;
-    font-weight: bold;
+    font-weight: 500;
     }
 }
 
@@ -77,10 +88,11 @@ $gray: #5D5D5D;
 
     &:hover {
         color: $secondary;
-        font-weight: bold; 
+        font-weight: 500; 
     }
 }
 
+/* Responsive stuff */
 @media (min-width: 490px) and (max-width: 560px) {
     #github {
         right: 30px;
@@ -93,7 +105,6 @@ $gray: #5D5D5D;
         left: 60px;
     }
 }
-
 
 @media (max-width: 560px) { 
     #linkedin,
@@ -123,5 +134,35 @@ $gray: #5D5D5D;
         left: 24px;
     }
 }
+
+/* Keyframes */
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+}
+  
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
