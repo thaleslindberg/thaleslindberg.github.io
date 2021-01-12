@@ -3,12 +3,20 @@
 
 $primary: #212322;
 $secondary: #E77F7B;
-$light: #F0B0AE;
 $white: #FAFAFA;
 $dark: #1E201F;
 $raspberry: #ED145B;
 $gray: #5D5D5D;
 $timberwolf: #D5D4D0;
+//Pastel Colors
+$pink: #FF99C8;
+$blond: #FCF6BD;
+$aeroblue: #D0F4DE;
+$uranianblue: #A9DEF9;
+$mauve: #E4C1F9;
+
+
+
 
 *, 
 *::after,
@@ -148,11 +156,24 @@ h6 {
     box-shadow: 0 2px 6px 0
     hsla(0, 0%, 0%, 0.2);
     background: $dark;
-
-    &:hover {
-      background-color: $light;
-    }
 }
+
+#linkedin:hover {
+  background-color: $pink;
+}
+#github:hover {
+  background-color: $blond;
+}
+#medium:hover {
+  background-color: $aeroblue;
+}
+#behance:hover {
+  background-color: $uranianblue;
+}
+#dribble:hover {
+  background-color: $mauve;
+}
+
 
 #fiap {
     color: $white;
