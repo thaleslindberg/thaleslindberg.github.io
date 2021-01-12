@@ -61,9 +61,9 @@ h6 {
 /* Hexagons */
 #hexGrid {
     overflow: hidden;
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
-    padding: 1.50%;
+    padding: 3.50%;
     font-size: 12px;
 
     &::after {
@@ -79,13 +79,13 @@ h6 {
     float: left;
     overflow: hidden;
     visibility: hidden;
-    outline: 1px solid transparent;  /* fix for jagged edges in FF on hover transition */
+    outline: 1px solid transparent;  
     transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 
     * {
         position: absolute;
         visibility: visible;
-        outline: 1px solid transparent;  /* fix for jagged edges in FF on hover transition */
+        outline: 1px solid transparent; 
     }
 
     img {
@@ -177,10 +177,10 @@ h6 {
 }
 
 /* Responsive */
-@media (min-width:1201px) {  /* <- 2-3  hexagons per row */
+@media (min-width:1201px) {  
     .hex {
-      width: 32.666%;    /* = (100-2) / 3 */
-      padding-bottom: 37.720%;    /* =  width / sin(60) */
+      width: 32.666%;    
+      padding-bottom: 37.720%;    
     }
     .hex:nth-child(5n+1),
     .hex:nth-child(5n+2) {
@@ -206,10 +206,10 @@ h6 {
     }
 }
   
-@media (max-width: 1200px) {  /* <- 1-2  hexagons per row */
+@media (max-width: 1200px) {  
     .hex {
-      width: 49.5%;    /* = (100-1) / 2 */
-      padding-bottom: 57.158%;    /* =  width / sin(60) */
+      width: 49.5%;   
+      padding-bottom: 57.158%;    
     }
     .hex:nth-child(3n+1) {
       transform: translateX(50%) rotate(-60deg) skewY(30deg);
@@ -232,12 +232,13 @@ h6 {
 }
 
 @media (max-width: 790px) {
-    #hexGrid {
-      font-size: 10px;
-    }
+  #hexGrid {
+    overflow: hidden;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 8px;
+  }
 }
-
-
 
 /* Keyframes */
 @-webkit-keyframes tracking-in-contract {
