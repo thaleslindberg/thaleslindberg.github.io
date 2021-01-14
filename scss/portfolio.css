@@ -37,6 +37,11 @@ body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
   font-weight: 800;
 }
 
+#card #cta_menu {
+  -webkit-box-shadow: 0px 20px 40px -15px rgba(113, 225, 229, 0.35);
+          box-shadow: 0px 20px 40px -15px rgba(113, 225, 229, 0.35);
+}
+
 /*!
  * Bootstrap v5.0.0-alpha2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

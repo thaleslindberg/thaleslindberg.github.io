@@ -17,7 +17,6 @@ $mauve: #E4C1F9;
 
 
 
-
 *, 
 *::after,
 *::before {
@@ -51,6 +50,11 @@ $mauve: #E4C1F9;
 
 h6 {
     color: $timberwolf;
+}
+
+#cta_portfolio {
+  color: $primary;
+  box-shadow: 0px 20px 40px -15px rgba(231, 127, 123, 0.35);
 }
 
 .navbar-brand {

@@ -40,6 +40,10 @@ body, html {
     h4 {
         font-weight: 800;
     }
+
+    #cta_menu {
+        box-shadow: 0px 20px 40px -15px rgba(113, 225, 229, 0.35);
+    }
 }
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
