@@ -69,6 +69,12 @@ body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
     width: 300px;
     height: 300px;
   }
+  #card h1, #card .h1 {
+    font-size: 24px;
+  }
+  #card h5, #card .h5 {
+    font-size: 18px;
+  }
 }
 
 /*!
