@@ -40,10 +40,16 @@ body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
   letter-spacing: 5px;
 }
 
-#card h4, #card .h4 {
+#card h3, #card .h3 {
   font-weight: 400;
   letter-spacing: 1px;
   color: #EBFBFB;
+}
+
+#card h5, #card .h5 {
+  color: #D5D4D0;
+  font-weight: 300;
+  font-size: 22px;
 }
 
 #card #cta_menu {

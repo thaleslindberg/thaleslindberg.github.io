@@ -5,6 +5,7 @@ $primary: #71E1E5;
 $light: #FAFAFA;
 $blue: #EBFBFB;
 $dark: #212322;
+$timberwolf: #D5D4D0;
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -45,10 +46,16 @@ body, html {
         letter-spacing: 5px;
     }
 
-    h4 {
+    h3 {
         font-weight: 400;
         letter-spacing: 1px;
         color: $blue;
+    }
+
+    h5 {
+        color: $timberwolf;
+        font-weight: 300;
+        font-size: 22px;
     }
 
     #cta_menu {
