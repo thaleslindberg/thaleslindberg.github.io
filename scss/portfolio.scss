@@ -3,7 +3,8 @@
 
 $primary: #71E1E5; 
 $light: #FAFAFA;
-$timberwolf: #D5D4D0;
+$blue: #EBFBFB;
+$dark: #212322;
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -12,6 +13,7 @@ $timberwolf: #D5D4D0;
 }
 
 body, html {
+    background-color: $dark;
     height: 100%;
 
     h6 {
@@ -29,21 +31,44 @@ body, html {
 }
 
 #card {
+    background-image: url(/img/noise-bg.png);
+    background-color: $dark;
     height: 100%;
-    background-size: cover;
+
+    #illustration {
+        width: 400px;
+        height: 400px;
+    }
 
     h1 {
-        font-weight: 500;
-        color: $timberwolf;
+        font-weight: 700;
+        color: $light;
+        letter-spacing: 5px;
     }
 
     h4 {
-        font-weight: 800;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: $blue;
     }
 
     #cta_menu {
-        box-shadow: 0px 20px 40px -15px rgba(113, 225, 229, 0.35);
+        box-shadow: 0 1px 3px rgba(113, 225, 229, 0.15), 0 1px 2px rgba(113, 225, 229, 0.35);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      
+        &:hover {
+          box-shadow: 0 2px 4px rgba(113, 225, 229, 0.15), 0 2px 3px rgba(113, 225, 229, 0.35);
+        }
     }
 }
+
+@media (max-width: 790px) {
+    #card {
+        #illustration {
+            width: 300px;
+            height: 300px;
+        }
+    }
+ }
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
