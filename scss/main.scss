@@ -15,8 +15,6 @@ $aeroblue: #D0F4DE;
 $uranianblue: #A9DEF9;
 $mauve: #E4C1F9;
 
-
-
 *, 
 *::after,
 *::before {
@@ -40,12 +38,14 @@ $mauve: #E4C1F9;
         animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     h4 {
-        font-weight: 300;
-        color: $timberwolf;
+      color: $timberwolf;
     }
     h5 {
-        color: $gray;
-        font-weight: 300;
+      color: $gray;
+    }
+    h4, h5 {
+      font-weight: 300;
+      line-height: 1.8rem;
     }
 }
 
@@ -184,7 +184,6 @@ h6 {
   background-color: $mauve;
 }
 
-
 #fiap {
     color: $white;
     text-decoration: none;
@@ -266,6 +265,12 @@ h6 {
     width: 40%;
     margin: 0 auto;
     font-size: 8px;
+  }
+  .container {
+    h4, h5 {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
   }
 }
 

@@ -55,7 +55,7 @@ body, html {
     h5 {
         color: $timberwolf;
         font-weight: 300;
-        font-size: 22px;
+        font-size: 1.3rem;
     }
 
     #cta_menu {
@@ -75,10 +75,11 @@ body, html {
             height: 300px;
         }
         h1 {
-            font-size: 24px;
+            font-size: 1.6rem;
         }
         h5 {
-            font-size: 17px;
+            font-size: 1.1rem;
+            line-height: 1.8rem
         }
     }
  }

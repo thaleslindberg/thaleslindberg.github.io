@@ -49,7 +49,7 @@ body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
 #card h5, #card .h5 {
   color: #D5D4D0;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 #card #cta_menu {
@@ -70,10 +70,11 @@ body h6:hover, body .h6:hover, html h6:hover, html .h6:hover {
     height: 300px;
   }
   #card h1, #card .h1 {
-    font-size: 24px;
+    font-size: 1.6rem;
   }
   #card h5, #card .h5 {
-    font-size: 17px;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
   }
 }
 
