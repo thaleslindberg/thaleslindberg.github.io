@@ -3,9 +3,9 @@
 
 $primary: #71E1E5; 
 $light: #FAFAFA;
-$blue: #EBFBFB;
-$dark: #212322;
-$timberwolf: #D5D4D0;
+// $blue: #EBFBFB;  
+$dark: #121212;
+$gray: #858585;
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -15,18 +15,15 @@ $timberwolf: #D5D4D0;
 
 body, html {
     background-color: $dark;
-
-    h6 {
-        font-weight: 900;
-        &:hover {
-            color: $primary;
-        }
-    }
 }
 
 #home-page {
     h6 {
-        font-weight: 400;
+        font-weight: 300;
+
+        &:hover {
+            color: $primary;
+        }
     }
 }
 
@@ -39,21 +36,23 @@ body, html {
         width: 400px;
         height: 400px;
     }
-
-    h1 {
-        font-weight: 700;
+    
+    #title {
+        font-weight: 900;
+        letter-spacing: 1.5px;
         color: $light;
-        letter-spacing: 5px;
+        font-size: 2.5rem;
     }
 
-    h3 {
-        font-weight: 400;
-        letter-spacing: 1px;
-        color: $blue;
+    h1 {
+        font-weight: 600;
+        color: $light;
+        letter-spacing: 1px; 
+        font-size: 1.8rem;
     }
 
     h5 {
-        color: $timberwolf;
+        color: $gray;
         font-weight: 300;
         font-size: 1.3rem;
     }
@@ -74,12 +73,18 @@ body, html {
             width: 300px;
             height: 300px;
         }
+        #title {
+            font-size: 1.8rem;
+            letter-spacing: 1.5px;
+            font-weight: 900;
+        }
         h1 {
             font-size: 1.6rem;
+            line-height: 2rem;
         }
         h5 {
-            font-size: 1.1rem;
-            line-height: 1.8rem
+            font-size: 1.2rem;
+            line-height: 1.5rem;
         }
     }
  }

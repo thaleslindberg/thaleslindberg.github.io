@@ -1,13 +1,12 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@&display=swap');
 
-$primary: #212322;
+$primary: #121212;
 $secondary: #E77F7B;
 $white: #FAFAFA;
 $dark: #1E201F;
 $raspberry: #ED145B;
-$gray: #5D5D5D;
-$timberwolf: #D5D4D0;
+$gray: #858585;
 //Pastel Colors
 $pink: #FF99C8;
 $blond: #FCF6BD;
@@ -23,8 +22,12 @@ $mauve: #E4C1F9;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-#portfolio:hover {
+#portfolio {
+  font-weight: 300;
+
+  &:hover {
     color: $secondary;
+  }
 }
 
 .container {
@@ -38,19 +41,19 @@ $mauve: #E4C1F9;
         animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     h4 {
-      color: $timberwolf;
+      color: $white;
+      line-height: 1.8rem;
+      font-weight: 300;
     }
     h5 {
       color: $gray;
-    }
-    h4, h5 {
-      font-weight: 300;
+      font-weight: 100;
       line-height: 1.8rem;
     }
 }
 
 h6 {
-    color: $timberwolf;
+    color: $white;
 }
 
 #cta_portfolio {
