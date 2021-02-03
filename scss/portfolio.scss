@@ -45,7 +45,7 @@ body, html {
     }
 
     h1 {
-        font-weight: 600;
+        font-weight: 500;
         color: $light;
         letter-spacing: 1px; 
         font-size: 1.8rem;
@@ -55,6 +55,7 @@ body, html {
         color: $gray;
         font-weight: 300;
         font-size: 1.3rem;
+        line-height: 20%;
     }
 
     #cta_menu {
