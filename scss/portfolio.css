@@ -10,7 +10,7 @@ body, html {
 }
 
 #home-page h6, #home-page .h6 {
-  font-weight: 300;
+  font-weight: 100;
 }
 
 #home-page h6:hover, #home-page .h6:hover {
