@@ -1,16 +1,14 @@
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@&display=swap");
 *,
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #portfolio {
-  font-weight: 300;
+  font-weight: 100;
 }
 
 #portfolio:hover {
@@ -32,7 +30,7 @@
 .container h4, .container .h4 {
   color: #FAFAFA;
   line-height: 1.8rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .container h5, .container .h5 {

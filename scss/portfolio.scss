@@ -1,15 +1,11 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@&display=swap');
-
 $primary: #E77F7B; 
 $light: #FAFAFA;
-// $blue: #EBFBFB;  
 $dark: #121212;
 $gray: #858585;
 
 *, *::after, *::before {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -19,7 +15,7 @@ body, html {
 
 #home-page {
     h6 {
-        font-weight: 300;
+    font-weight: 300;
 
         &:hover {
             color: $primary;
@@ -38,14 +34,14 @@ body, html {
     }
     
     #title {
-        font-weight: 900;
+        font-weight: 700;
         letter-spacing: 1.5px;
         color: $light;
         font-size: 2.5rem;
     }
 
     h1 {
-        font-weight: 500;
+        font-weight: 300;
         color: $light;
         letter-spacing: 1px; 
         font-size: 1.8rem;
@@ -53,7 +49,7 @@ body, html {
 
     h5 {
         color: $gray;
-        font-weight: 300;
+        font-weight: 100;
         font-size: 1.3rem;
         line-height: 20%;
     }
