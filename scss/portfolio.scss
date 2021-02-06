@@ -65,6 +65,12 @@ body, html {
     }
 }
 
+@media (min-width: 790px) {
+    #home-page {
+        visibility: hidden;
+    }
+}
+
 @media (max-width: 790px) {
     #card {
         #illustration {
@@ -79,8 +85,10 @@ body, html {
         h1 {
             font-size: 1.5rem;
             line-height: 2rem;
+            text-align: justify;
         }
         h5 {
+            text-align: justify;
             font-size: 1.2rem;
             line-height: 1.5rem;
         }

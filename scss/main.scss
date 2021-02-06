@@ -33,10 +33,10 @@ $mauve: #E4C1F9;
   color: $white;
 
     #title {
-        font-weight: 700;
-        font-family: 'Playfair Display', serif;
-        -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
     #description {
       color: $white;
@@ -113,17 +113,6 @@ h6 {
         height: 100%;
         margin: 0 auto;
     }
-
-    // h1, p {
-    //     margin: 0 auto;
-    //     width: 100%;
-    //     left: -1%;
-    //     padding: 5%;
-    //     box-sizing: border-box;
-    //     // background-color: $light;
-    //     font-weight: 300;
-    //     transition: transform .3s ease-out, opacity .3s ease-out;
-    // }
 }
 
 .hex h1 {
@@ -267,10 +256,22 @@ h6 {
     font-size: 8px;
   }
   .container {
-    h4, h5 {
+    #description,
+    #coming-soon {
+      text-align: left;
       font-size: 1.2rem;
       line-height: 1.8rem;
     }
+  }
+  #profile-photo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 790px) {
+  #portfolio {
+    visibility: hidden;
   }
 }
 

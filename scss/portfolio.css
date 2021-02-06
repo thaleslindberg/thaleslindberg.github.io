@@ -62,6 +62,12 @@ body, html {
           box-shadow: 0 2px 4px rgba(113, 225, 229, 0.15), 0 2px 3px rgba(113, 225, 229, 0.35);
 }
 
+@media (min-width: 790px) {
+  #home-page {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 790px) {
   #card #illustration {
     width: 300px;
@@ -75,8 +81,10 @@ body, html {
   #card h1, #card .h1 {
     font-size: 1.5rem;
     line-height: 2rem;
+    text-align: justify;
   }
   #card h5, #card .h5 {
+    text-align: justify;
     font-size: 1.2rem;
     line-height: 1.5rem;
   }

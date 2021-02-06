@@ -260,9 +260,21 @@ h6, .h6 {
     margin: 0 auto;
     font-size: 8px;
   }
-  .container h4, .container .h4, .container h5, .container .h5 {
+  .container #description,
+  .container #coming-soon {
+    text-align: left;
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+  #profile-photo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 790px) {
+  #portfolio {
+    visibility: hidden;
   }
 }
 
