@@ -23,20 +23,26 @@
 
 .container #title {
   font-weight: 700;
+  line-height: 4.9rem;
   font-family: 'Playfair Display', serif;
   -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-.container #description {
+.container #description_one,
+.container #description_two {
   color: #FAFAFA;
-  line-height: 1.9rem;
+  line-height: 2rem;
   font-weight: 200;
 }
 
 .container #coming-soon {
   color: #858585;
   font-weight: 100;
+}
+
+.container span {
+  display: block;
 }
 
 h6, .h6 {
@@ -183,7 +189,6 @@ h6, .h6 {
 
 #fiap:hover {
   color: #ED145B;
-  font-weight: 500;
 }
 
 #email {
@@ -193,7 +198,6 @@ h6, .h6 {
 
 #email:hover {
   color: #E77F7B;
-  font-weight: 500;
 }
 
 /* Responsive */
@@ -260,11 +264,15 @@ h6, .h6 {
     margin: 0 auto;
     font-size: 8px;
   }
-  .container #description,
+  .container #description_one,
+  .container #description_two,
   .container #coming-soon {
     text-align: left;
     font-size: 1.2rem;
-    line-height: 1.8rem;
+    line-height: 1.9rem;
+  }
+  .container #description_two, .container #email {
+    margin-top: 1em;
   }
   #profile-photo {
     width: 80px;

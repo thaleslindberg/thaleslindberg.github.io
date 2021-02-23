@@ -34,23 +34,29 @@ $mauve: #E4C1F9;
 
     #title {
       font-weight: 700;
+      line-height: 4.9rem;
       font-family: 'Playfair Display', serif;
       -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
       animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     }
-    #description {
+    #description_one,
+    #description_two {
       color: $white;
-      line-height: 1.9rem;
+      line-height: 2rem;
       font-weight: 200;
     }
     #coming-soon {
       color: $gray;
       font-weight: 100;
     }
+
+    span {
+      display: block;
+    }
 }
 
 h6 {
-    color: $white;
+  color: $white;
 }
 
 #cta_portfolio {
@@ -178,8 +184,7 @@ h6 {
     text-decoration: none;
 
     &:hover {
-    color: $raspberry;
-    font-weight: 500;
+      color: $raspberry;
     }
 }
 
@@ -188,8 +193,7 @@ h6 {
     text-decoration: none;
 
     &:hover {
-        color: $secondary;
-        font-weight: 500; 
+      color: $secondary;
     }
 }
 
@@ -256,11 +260,15 @@ h6 {
     font-size: 8px;
   }
   .container {
-    #description,
+    #description_one,
+    #description_two,
     #coming-soon {
       text-align: left;
       font-size: 1.2rem;
-      line-height: 1.8rem;
+      line-height: 1.9rem;
+    }
+    #description_two, #email {
+      margin-top: 1em;
     }
   }
   #profile-photo {
