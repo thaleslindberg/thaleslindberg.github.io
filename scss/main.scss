@@ -1,8 +1,7 @@
-$primary: #121212;
+$primary: #1A1A18;
 $secondary: #E6D973;
 $white: #FAFAFA;
 $darker: #1E201F;
-$dark: #2D302F;
 $raspberry: #ED145B;
 $gray: #858585;
 
@@ -75,7 +74,7 @@ $gray: #858585;
 }
 
 #cta_portfolio {
-  color: $primary;
+  background-image: linear-gradient(to right, #E6D973 0%, #E8DC7E 50%, #EADF88 100%);
   box-shadow: 0 1px 3px rgba(230, 217, 115, 0.15), 0 1px 2px rgba(230, 217, 115, 0.35);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   padding: 8px 30px 8px 30px;
@@ -97,7 +96,6 @@ $gray: #858585;
     margin: auto;
     margin-right: 80px;
     margin-top: -600px;
-    // float: left;
     padding: 3.50%;
     font-size: 12px;
 
@@ -174,7 +172,7 @@ $gray: #858585;
     background: $darker;
 
     &:hover {
-      background-color: $dark;
+      background-color: $primary;
     }
 }
 

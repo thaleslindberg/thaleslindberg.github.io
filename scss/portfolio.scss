@@ -1,6 +1,6 @@
 $primary: #E6D973; 
 $light: #FAFAFA;
-$dark: #121212;
+$dark: #1A1A18;
 $gray: #858585;
 
 *, *::after, *::before {
@@ -56,6 +56,7 @@ body, html {
     }
 
     #cta_menu {
+        background-image: linear-gradient(to right, #E6D973 0%, #E8DC7E 50%, #EADF88 100%);
         box-shadow: 0 1px 3px rgba(230, 217, 115, 0.15), 0 1px 2px rgba(230, 217, 115, 0.35);
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         padding: 8px 30px 8px 30px;

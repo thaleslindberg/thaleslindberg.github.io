@@ -6,7 +6,7 @@
 }
 
 body, html {
-  background-color: #121212;
+  background-color: #1A1A18;
 }
 
 #home-page h6, #home-page .h6 {
@@ -19,7 +19,7 @@ body, html {
 
 #card {
   background-image: url(/img/noise-bg.png);
-  background-color: #121212;
+  background-color: #1A1A18;
   height: 100%;
 }
 
@@ -51,6 +51,8 @@ body, html {
 }
 
 #card #cta_menu {
+  background-image: -webkit-gradient(linear, left top, right top, from(#E6D973), color-stop(50%, #E8DC7E), to(#EADF88));
+  background-image: linear-gradient(to right, #E6D973 0%, #E8DC7E 50%, #EADF88 100%);
   -webkit-box-shadow: 0 1px 3px rgba(230, 217, 115, 0.15), 0 1px 2px rgba(230, 217, 115, 0.35);
           box-shadow: 0 1px 3px rgba(230, 217, 115, 0.15), 0 1px 2px rgba(230, 217, 115, 0.35);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -126,7 +128,7 @@ body, html {
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #FAFAFA;
-  --bs-dark: #121212;
+  --bs-dark: #1A1A18;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -2233,15 +2235,15 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #121212;
-  --bs-table-striped-bg: #1e1e1e;
+  --bs-table-bg: #1A1A18;
+  --bs-table-striped-bg: #252524;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #2a2a2a;
+  --bs-table-active-bg: #31312f;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #242424;
+  --bs-table-hover-bg: #2b2b29;
   --bs-table-hover-color: #fff;
   color: #fff;
-  border-color: #2a2a2a;
+  border-color: #31312f;
 }
 
 .table-responsive {
@@ -3516,22 +3518,22 @@ fieldset:disabled .btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #121212;
-  border-color: #121212;
+  background-color: #1A1A18;
+  border-color: #1A1A18;
 }
 
 .btn-dark:hover {
   color: #fff;
-  background-color: black;
+  background-color: #060606;
   border-color: black;
 }
 
 .btn-check:focus + .btn-dark, .btn-dark:focus {
   color: #fff;
-  background-color: black;
+  background-color: #060606;
   border-color: black;
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(54, 54, 54, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(54, 54, 54, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(60, 60, 59, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(60, 60, 59, 0.5);
 }
 
 .btn-check:checked + .btn-dark,
@@ -3545,14 +3547,14 @@ fieldset:disabled .btn {
 .btn-check:checked + .btn-dark:focus,
 .btn-check:active + .btn-dark:focus, .btn-dark:active:focus, .btn-dark.active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(54, 54, 54, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(54, 54, 54, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(60, 60, 59, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(60, 60, 59, 0.5);
 }
 
 .btn-dark:disabled, .btn-dark.disabled {
   color: #fff;
-  background-color: #121212;
-  border-color: #121212;
+  background-color: #1A1A18;
+  border-color: #1A1A18;
 }
 
 .btn-outline-primary {
@@ -3794,36 +3796,36 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-dark {
-  color: #121212;
-  border-color: #121212;
+  color: #1A1A18;
+  border-color: #1A1A18;
 }
 
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #121212;
-  border-color: #121212;
+  background-color: #1A1A18;
+  border-color: #1A1A18;
 }
 
 .btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(26, 26, 24, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(26, 26, 24, 0.5);
 }
 
 .btn-check:checked + .btn-outline-dark,
 .btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
   color: #fff;
-  background-color: #121212;
-  border-color: #121212;
+  background-color: #1A1A18;
+  border-color: #1A1A18;
 }
 
 .btn-check:checked + .btn-outline-dark:focus,
 .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.5);
-          box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.5);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(26, 26, 24, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(26, 26, 24, 0.5);
 }
 
 .btn-outline-dark:disabled, .btn-outline-dark.disabled {
-  color: #121212;
+  color: #1A1A18;
   background-color: transparent;
 }
 
@@ -5277,9 +5279,9 @@ fieldset:disabled .btn {
 }
 
 .alert-dark {
-  color: #090909;
-  background-color: #d0d0d0;
-  border-color: #bdbdbd;
+  color: #0e0e0c;
+  background-color: #d1d1d1;
+  border-color: #bfbfbe;
 }
 
 .alert-dark .alert-link {
@@ -5721,19 +5723,19 @@ fieldset:disabled .btn {
 }
 
 .list-group-item-dark {
-  color: #090909;
-  background-color: #bdbdbd;
+  color: #0e0e0c;
+  background-color: #bfbfbe;
 }
 
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #090909;
-  background-color: #b0b0b0;
+  color: #0e0e0c;
+  background-color: #b2b2b1;
 }
 
 .list-group-item-dark.list-group-item-action.active {
   color: #fff;
-  background-color: #090909;
-  border-color: #090909;
+  background-color: #0e0e0c;
+  border-color: #0e0e0c;
 }
 
 .btn-close {
@@ -6821,7 +6823,7 @@ fieldset:disabled .btn {
 }
 
 .link-dark {
-  color: #121212;
+  color: #1A1A18;
 }
 
 .link-dark:hover, .link-dark:focus {
@@ -7207,7 +7209,7 @@ fieldset:disabled .btn {
 }
 
 .border-dark {
-  border-color: #121212 !important;
+  border-color: #1A1A18 !important;
 }
 
 .border-white {
@@ -8012,7 +8014,7 @@ fieldset:disabled .btn {
 }
 
 .text-dark {
-  color: #121212 !important;
+  color: #1A1A18 !important;
 }
 
 .text-white {
@@ -8084,7 +8086,7 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-  background-color: #121212 !important;
+  background-color: #1A1A18 !important;
 }
 
 .bg-body {
