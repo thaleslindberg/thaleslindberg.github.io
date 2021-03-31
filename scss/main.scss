@@ -17,13 +17,29 @@ body {
 }
 
 #portfolio {
-  font-weight: 100;
+  font-weight: 200;
   color: $white;
 
-  &:hover {
-    color: $black;
+  #porfolio_icon {
+    position: relative;
+    top: -2.5px;
+    width: 18px;
+    height: 18px;
   }
 }
+
+#portfolio,
+#porfolio_icon {  
+
+  &:hover {
+    border-radius: 4px;
+    backdrop-filter: blur(120px);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: rgba(43, 43, 43, 0.3);
+    box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
+  }
+}
+
 
 .container {
   color: $white;
@@ -267,9 +283,9 @@ body {
 }
 
 @media (min-width: 790px) {
-  #portfolio {
-    visibility: hidden;
-  }
+  // #portfolio {
+  //   visibility: hidden;
+  // }
 }
 
 /* Keyframes */

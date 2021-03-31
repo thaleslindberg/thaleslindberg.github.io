@@ -13,12 +13,27 @@ body {
 }
 
 #portfolio {
-  font-weight: 100;
+  font-weight: 200;
   color: #FFFFFF;
 }
 
-#portfolio:hover {
-  color: #2C2C28;
+#portfolio #porfolio_icon {
+  position: relative;
+  top: -2.5px;
+  width: 18px;
+  height: 18px;
+}
+
+#portfolio:hover,
+#porfolio_icon:hover {
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(120px);
+          backdrop-filter: blur(120px);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: rgba(43, 43, 43, 0.3);
+  -webkit-box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
+          box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
 }
 
 .container {
@@ -283,12 +298,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media (min-width: 790px) {
-  #portfolio {
-    visibility: hidden;
   }
 }
 
