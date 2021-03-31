@@ -8,13 +8,21 @@ $gray: #909090;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-#home-page {
+#homepage {
     h6 {
     font-weight: 100;
+    color: $white;
 
         &:hover {
             color: $black;
         }
+    }
+
+    #homepage_icon {
+        position: relative;
+        top: -2.5px;
+        width: 18px;
+        height: 18px;
     }
 }
 
@@ -66,9 +74,9 @@ $gray: #909090;
 }
 
 @media (min-width: 790px) {
-    #home-page {
-        visibility: hidden;
-    }
+    // #homepage {
+    //     visibility: hidden;
+    // }
 }
 
 @media (max-width: 790px) {

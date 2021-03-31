@@ -5,12 +5,20 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#home-page h6, #home-page .h6 {
+#homepage h6, #homepage .h6 {
   font-weight: 100;
+  color: #FFFFFF;
 }
 
-#home-page h6:hover, #home-page .h6:hover {
+#homepage h6:hover, #homepage .h6:hover {
   color: #2C2C28;
+}
+
+#homepage #homepage_icon {
+  position: relative;
+  top: -2.5px;
+  width: 18px;
+  height: 18px;
 }
 
 #card {
@@ -61,12 +69,6 @@
   background: rgba(43, 43, 43, 0.3);
   -webkit-box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
           box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
-}
-
-@media (min-width: 790px) {
-  #home-page {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 790px) {

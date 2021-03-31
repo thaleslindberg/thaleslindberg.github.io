@@ -16,11 +16,11 @@ body {
   background-image: linear-gradient(225deg, #baebff 0%, #bebcfc 50%, #2B86C5 100%);
 }
 
-#portfolio {
+#navlink {
   font-weight: 200;
   color: $white;
 
-  #porfolio_icon {
+  #navlink_icon {
     position: relative;
     top: -2.5px;
     width: 18px;
@@ -28,8 +28,8 @@ body {
   }
 }
 
-#portfolio,
-#porfolio_icon {  
+#navlink,
+#navlink_icon {  
 
   &:hover {
     border-radius: 4px;
