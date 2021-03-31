@@ -48,13 +48,13 @@ body {
     font-size: 1.2rem;
     color: $white;
     line-height: 1.7rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   #skills {
     font-size: 1.2rem;
     color: $white;
     line-height: 1.9rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   #coming_soon,
   #copyright {
@@ -65,7 +65,7 @@ body {
   #fiap,
   #email {
     font-weight: 300;
-    color: $white;
+    color: rgba(255, 255, 255, 0.7%);
     text-decoration: none;
 
   &:hover {
