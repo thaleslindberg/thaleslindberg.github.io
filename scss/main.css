@@ -12,16 +12,11 @@ body {
   background-image: linear-gradient(225deg, #baebff 0%, #bebcfc 50%, #2B86C5 100%);
 }
 
-#navlink {
-  font-weight: 200;
-  color: #FFFFFF;
-}
-
 #navlink #navlink_icon {
   position: relative;
   top: -2.5px;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 
 #navlink:hover,
