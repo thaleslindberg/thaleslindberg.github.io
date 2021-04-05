@@ -5,11 +5,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#homepage h6:hover, #homepage .h6:hover {
-  color: #2C2C28;
-}
-
-#homepage #homepage_icon {
+#homepage_icon {
   position: relative;
   top: -2.5px;
   width: 18px;
@@ -48,22 +44,8 @@
   line-height: 20%;
 }
 
-#card #cta_menu {
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(255, 255, 255, 0.35);
-          box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(255, 255, 255, 0.35);
-  -webkit-backdrop-filter: blur(120px);
-          backdrop-filter: blur(120px);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  color: #FFFFFF;
+#card #cta_button {
   padding: 8px 30px 8px 30px;
-}
-
-#card #cta_menu:hover {
-  background: rgba(43, 43, 43, 0.3);
-  -webkit-box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
-          box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
 }
 
 @media (max-width: 790px) {
@@ -86,7 +68,7 @@
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
-  #card #cta_menu {
+  #card #cta_button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

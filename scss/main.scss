@@ -13,19 +13,15 @@ $gray: #909090;
 
 body {
   background-color: #baebff;
-  background-image: linear-gradient(225deg, #baebff 0%, #bebcfc 50%, #2B86C5 100%);
+  background-image: linear-gradient(225deg, #baebff 0%,#bebcfc 50%,#2B86C5 100%);
 }
 
-#navlink {
-  // font-weight: 200;
-  // color: $white;
-
-  #navlink_icon {
+// Icon that goes to Portfolio
+#navlink_icon {
     position: relative;
     top: -2.5px;
     width: 24px;
     height: 24px;
-  }
 }
 
 #navlink,
@@ -91,11 +87,13 @@ body {
   }
 }
 
-#cta_portfolio {
+#cta_button {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(120px);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-left: 1px solid rgba(255, 255, 255, 0.3%);
+  border-top: 1px solid rgba(255, 255, 255, 0.3%);
+  backdrop-filter: blur(120px);
   color: $white;
   padding: 10px 35px 10px 35px;
   
@@ -252,40 +250,34 @@ body {
 }
 
 @media (max-width: 790px) {
-  #hexGrid {
-    overflow: hidden;
-    width: 40%;
-    margin: 0 auto;
-    font-size: 8px;
-  }
-  .container {
-
-    #title {
-      font-size: 2rem;
+    #hexGrid {
+      overflow: hidden;
+      width: 40%;
+      margin: 0 auto;
+      font-size: 8px;
     }
+    .container {
+
+      #title {
+        font-size: 2rem;
+      }
     #description_one,
     #description_two,
     #skills,
     #coming_soon {
-      text-align: left;
-      font-size: 1rem;
-      line-height: 1.9rem;
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
     }
-  }
     #profile-photo {
-      width: 80px;
-      height: 80px;
-    }
-    #cta_portfolio {
-      display: flex;
-      justify-content: center;
-    }
-}
-
-@media (min-width: 790px) {
-  // #portfolio {
-  //   visibility: hidden;
-  // }
+        width: 80px;
+        height: 80px;
+      }
+    #cta_button {
+        display: flex;
+        justify-content: center;
+      }
 }
 
 /* Keyframes */

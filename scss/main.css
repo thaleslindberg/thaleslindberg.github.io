@@ -12,7 +12,7 @@ body {
   background-image: linear-gradient(225deg, #baebff 0%, #bebcfc 50%, #2B86C5 100%);
 }
 
-#navlink #navlink_icon {
+#navlink_icon {
   position: relative;
   top: -2.5px;
   width: 24px;
@@ -86,19 +86,21 @@ body {
   color: #2C2C28;
 }
 
-#cta_portfolio {
+#cta_button {
   background: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(255, 255, 255, 0.35);
           box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15), 0 2px 3px rgba(255, 255, 255, 0.35);
-  -webkit-backdrop-filter: blur(120px);
-          backdrop-filter: blur(120px);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(120px);
+          backdrop-filter: blur(120px);
   color: #FFFFFF;
   padding: 10px 35px 10px 35px;
 }
 
-#cta_portfolio:hover {
+#cta_button:hover {
   background: rgba(43, 43, 43, 0.3);
   -webkit-box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
           box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
@@ -286,7 +288,7 @@ body {
     width: 80px;
     height: 80px;
   }
-  #cta_portfolio {
+  #cta_button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
