@@ -45,7 +45,7 @@ body {
     background-color: transparent;
 
     .bullets {
-      color: $black;
+      color: #4943F6;
     }
   }
 
@@ -71,6 +71,11 @@ body {
   #coming_soon,
   #copyright {
     font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5%);
+    font-weight: 200;
+  }
+  #copyright {
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.5%);
     font-weight: 200;
   }
@@ -103,9 +108,16 @@ body {
   }
 }
 
-.rounded {
+.outline {
     height: 130px;
     width: 130px;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(
+      45deg,
+      #20fce2,
+      #0679df
+    );
 }
 
 /* Hexagons */
@@ -261,23 +273,24 @@ body {
       #title {
         font-size: 2rem;
       }
-    #description_one,
-    #description_two,
-    #skills,
-    #coming_soon {
-        text-align: left;
-        font-size: 1rem;
-        line-height: 1.9rem;
+      #description_one,
+      #description_two,
+      #skills,
+      #coming_soon {
+          text-align: left;
+          font-size: 1rem;
+          line-height: 1.9rem;
+        }
+        #profile-photo {
+            width: 80px;
+            height: 80px;
+          }
+        #cta_button {
+            display: flex;
+            justify-content: center;
       }
-    }
-    #profile-photo {
-        width: 80px;
-        height: 80px;
       }
-    #cta_button {
-        display: flex;
-        justify-content: center;
-      }
+
 }
 
 /* Keyframes */

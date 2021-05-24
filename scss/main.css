@@ -41,7 +41,7 @@ body {
 }
 
 .container #card .bullets {
-  color: #2C2C28;
+  color: #4943F6;
 }
 
 .container #title {
@@ -69,6 +69,12 @@ body {
 .container #coming_soon,
 .container #copyright {
   font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+}
+
+.container #copyright {
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
 }
@@ -106,9 +112,12 @@ body {
           box-shadow: 0 2px 4px rgba(43, 43, 43, 0.15), 0 2px 3px rgba(43, 43, 43, 0.35);
 }
 
-.rounded {
+.outline {
   height: 130px;
   width: 130px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #20fce2, #0679df);
 }
 
 /* Hexagons */
@@ -284,11 +293,11 @@ body {
     font-size: 1rem;
     line-height: 1.9rem;
   }
-  #profile-photo {
+  .container #profile-photo {
     width: 80px;
     height: 80px;
   }
-  #cta_button {
+  .container #cta_button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
