@@ -13,8 +13,8 @@
 }
 
 #card {
-  background-color: #baebff;
-  background-image: linear-gradient(225deg, #baebff 0%, #bebcfc 50%, #2B86C5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#010113), to(#0E0E31));
+  background: linear-gradient(180deg, #010113 0%, #0E0E31 100%);
 }
 
 #card #illustration {
@@ -44,8 +44,19 @@
   line-height: 20%;
 }
 
-#card #cta_button {
-  padding: 8px 30px 8px 30px;
+#card #home_button {
+  padding: 10px 90px;
+  color: #00F5D4;
+  border: 1px solid #00F5D4;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 245, 212, 0.15), 0 2px 3px rgba(0, 245, 212, 0.25);
+          box-shadow: 0 2px 4px rgba(0, 245, 212, 0.15), 0 2px 3px rgba(0, 245, 212, 0.25);
+}
+
+#card #home_button:hover {
+  background: #2fffe3;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0 2px 4px rgba(47, 255, 227, 0.15), 0 2px 3px rgba(47, 255, 227, 0.35);
+          box-shadow: 0 2px 4px rgba(47, 255, 227, 0.15), 0 2px 3px rgba(47, 255, 227, 0.35);
 }
 
 @media (max-width: 790px) {
