@@ -44,6 +44,11 @@ body {
   color: rgba(0, 245, 212, 0.8);
 }
 
+.container #card p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .container #title {
   font-weight: 800;
   font-family: 'Playfair Display', serif;

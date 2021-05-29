@@ -43,9 +43,18 @@ body {
     border: 0;
     background-color: transparent;
 
-    .bullets {
-      color: rgba(0, 245, 212, 0.8);
+  .bullets {
+    color: rgba(0, 245, 212, 0.8);
     }
+
+    // p {
+    //   margin-bottom: 0
+    // }
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
   }
 
   #title {
