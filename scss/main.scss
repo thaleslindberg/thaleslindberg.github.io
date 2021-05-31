@@ -13,7 +13,6 @@ $gray: #909090;
 
 body {
   background: linear-gradient(180deg, #010113 0%, #0E0E31 100%);
-
 }
 
 // Icon that goes to Portfolio
@@ -47,14 +46,10 @@ body {
     color: rgba(0, 245, 212, 0.8);
     }
 
-    // p {
-    //   margin-bottom: 0
-    // }
     p {
       text-align: justify;
       text-justify: inter-word;
     }
-
   }
 
   #title {
@@ -63,19 +58,17 @@ body {
     -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
   }
-  #description_one,
-  #description_two {
-    font-size: 1.2rem;
-    color: $white;
-    line-height: 1.7rem;
-    font-weight: 300;
-
-  }
   #skills {
     font-size: 1.2rem;
     color: $white;
     line-height: 1.9rem;
-    font-weight: 300;
+    font-weight: 400;
+  }
+  #description_one {
+    font-size: 1.2rem;
+    color: $white;
+    line-height: 1.7rem;
+    font-weight: 200;
   }
   #coming_soon,
   #copyright {
@@ -274,12 +267,14 @@ body {
         font-size: 2rem;
       }
       #description_one,
-      #description_two,
       #skills,
       #coming_soon {
           text-align: left;
           font-size: 1rem;
-          line-height: 1.9rem;
+          line-height: 1.7rem;
+        }
+        #coming_soon {
+          line-height: 1.5rem;
         }
         #profile-photo {
             width: 80px;

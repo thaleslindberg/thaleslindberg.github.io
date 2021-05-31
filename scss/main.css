@@ -56,19 +56,18 @@ body {
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-.container #description_one,
-.container #description_two {
-  font-size: 1.2rem;
-  color: #FFFFFF;
-  line-height: 1.7rem;
-  font-weight: 300;
-}
-
 .container #skills {
   font-size: 1.2rem;
   color: #FFFFFF;
   line-height: 1.9rem;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.container #description_one {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  line-height: 1.7rem;
+  font-weight: 200;
 }
 
 .container #coming_soon,
@@ -284,12 +283,14 @@ body {
     font-size: 2rem;
   }
   .container #description_one,
-  .container #description_two,
   .container #skills,
   .container #coming_soon {
     text-align: left;
     font-size: 1rem;
-    line-height: 1.9rem;
+    line-height: 1.7rem;
+  }
+  .container #coming_soon {
+    line-height: 1.5rem;
   }
   .container #profile-photo {
     width: 80px;
