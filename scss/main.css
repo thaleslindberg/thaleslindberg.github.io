@@ -19,18 +19,6 @@ body {
   height: 24px;
 }
 
-#navlink:hover,
-#navlink_icon:hover {
-  border-radius: 4px;
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background: rgba(196, 196, 196, 0.01);
-  -webkit-box-shadow: inset 0px 1px 40px rgba(227, 222, 255, 0.2);
-          box-shadow: inset 0px 1px 40px rgba(227, 222, 255, 0.2);
-  -webkit-backdrop-filter: blur(120px);
-          backdrop-filter: blur(120px);
-}
-
 .container {
   color: #FFFFFF;
 }
@@ -59,7 +47,7 @@ body {
 .container #skills {
   font-size: 1.2rem;
   color: #FFFFFF;
-  line-height: 1.9rem;
+  line-height: 1.8rem;
   font-weight: 400;
 }
 
