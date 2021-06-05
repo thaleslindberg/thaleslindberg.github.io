@@ -19,6 +19,13 @@ body {
   height: 24px;
 }
 
+#navlink_icon:hover {
+  display: inline-block;
+  content: "";
+  background-image: url("/icon/briefcase-fill.svg");
+  background-repeat: no-repeat;
+}
+
 .container {
   color: #FFFFFF;
 }
@@ -32,7 +39,7 @@ body {
   color: rgba(0, 245, 212, 0.8);
 }
 
-.container #card p {
+.container #card p, .container #card #title {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -48,7 +55,7 @@ body {
   font-size: 1.2rem;
   color: #FFFFFF;
   line-height: 1.8rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .container #description_one {

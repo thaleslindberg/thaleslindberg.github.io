@@ -21,6 +21,13 @@ body {
     top: -2.5px;
     width: 24px;
     height: 24px;
+
+    &:hover {
+      display: inline-block;
+      content: "";
+      background-image: url("/icon/briefcase-fill.svg");
+      background-repeat: no-repeat;
+  }
 }
 
 .container {
@@ -34,7 +41,7 @@ body {
     color: rgba(0, 245, 212, 0.8);
     }
 
-    p {
+    p, #title {
       text-align: justify;
       text-justify: inter-word;
     }
@@ -50,7 +57,7 @@ body {
     font-size: 1.2rem;
     color: $white;
     line-height: 1.8rem;
-    font-weight: 400;
+    font-weight: 300;
   }
   #description_one {
     font-size: 1.2rem;

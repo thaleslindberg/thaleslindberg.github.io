@@ -8,13 +8,22 @@ $gray: #909090;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-// Icon that goes to Homepage
-#homepage_icon {
+#homepage-icon {
     position: relative;
     top: -2.5px;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
+    border: #00F5D4;
+
+    &:hover {
+        display: inline-block;
+        content: "";
+        background-image: url("/icon/house-fill.svg");
+        background-repeat: no-repeat;
+    }
 }
+
+
 
 #card {
     // background-color: #baebff;
