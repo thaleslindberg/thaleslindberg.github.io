@@ -80,12 +80,13 @@
   #card h1, #card .h1 {
     font-size: 1.5rem;
     line-height: 1.9rem;
-    text-align: justify;
+    text-align: center;
   }
   #card h5, #card .h5 {
-    text-align: justify;
+    text-align: center;
     font-size: 1.2rem;
     line-height: 1.6rem;
+    margin-top: -15px;
   }
   #card #cta_button {
     display: -webkit-box;

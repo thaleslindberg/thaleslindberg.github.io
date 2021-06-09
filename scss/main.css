@@ -39,11 +39,6 @@ body {
   color: rgba(0, 245, 212, 0.8);
 }
 
-.container #card p, .container #card #title {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 .container #title {
   font-weight: 800;
   font-family: 'Playfair Display', serif;
@@ -276,11 +271,12 @@ body {
   }
   .container #title {
     font-size: 2rem;
+    text-align: center;
   }
   .container #description_one,
   .container #skills,
   .container #coming_soon {
-    text-align: left;
+    text-align: center;
     font-size: 1rem;
     line-height: 1.7rem;
   }
