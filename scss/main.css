@@ -36,69 +36,86 @@ body {
 }
 
 .container #card .bullets {
-  color: rgba(0, 245, 212, 0.8);
+  color: #ED1FFF;
 }
 
 .container #title {
   font-weight: 800;
   font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
   -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 .container #skills {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #FFFFFF;
   line-height: 1.8rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .container #description_one {
-  font-size: 1.2rem;
-  color: #FFFFFF;
+  font-size: 1rem;
+  color: #B5B5BC;
   line-height: 1.7rem;
   font-weight: 200;
 }
 
 .container #coming_soon,
 .container #copyright {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  color: #B5B5BC;
   font-weight: 200;
 }
 
 .container #copyright {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.5);
   font-weight: 200;
+  font-size: 0.7rem;
+  color: #7D7D89;
 }
 
 .container #fiap,
 .container #email {
-  font-weight: 300;
-  color: rgba(0, 245, 212, 0.5);
+  font-weight: 200;
+  color: #ed1fff;
   text-decoration: none;
-  text-shadow: 0px 0px 18.2712px rgba(0, 245, 212, 0.7), 0px 0px 70.7336px rgba(0, 245, 212, 0.5);
+  font-size: 1rem;
+  text-shadow: 0px 0px 18.2712px rgba(237, 31, 255, 0.7), 0px 0px 70.7336px rgba(237, 31, 255, 0.5);
 }
 
 .container #fiap:hover,
 .container #email:hover {
   text-decoration: underline;
-  color: rgba(0, 245, 212, 0.7);
+  color: #00ccff;
+  text-shadow: 0px 0px 18.2712px rgba(0, 204, 255, 0.7), 0px 0px 70.7336px rgba(0, 204, 255, 0.5);
 }
 
 #cta_button {
-  -webkit-box-shadow: 0 2px 4px rgba(0, 245, 212, 0.15), 0 2px 3px rgba(0, 245, 212, 0.35);
-          box-shadow: 0 2px 4px rgba(0, 245, 212, 0.15), 0 2px 3px rgba(0, 245, 212, 0.35);
-  background: #00f5d4;
-  color: #FFFFFF;
-  padding: 10px 170px;
+  -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+          box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #00ccff;
+  color: #010113;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out, ease-out;
+  -webkit-transition-delay: initial, initial, initial;
+          transition-delay: initial, initial, initial;
 }
 
 #cta_button:hover {
-  background: #2fffe3;
-  -webkit-box-shadow: 0 2px 4px rgba(47, 255, 227, 0.15), 0 2px 3px rgba(47, 255, 227, 0.35);
-          box-shadow: 0 2px 4px rgba(47, 255, 227, 0.15), 0 2px 3px rgba(47, 255, 227, 0.35);
+  background-color: #58e1ff;
+  -webkit-box-shadow: rgba(88, 225, 255, 0.9) 0px 0px 10px;
+          box-shadow: rgba(88, 225, 255, 0.9) 0px 0px 10px;
 }
 
 .outline {
@@ -295,6 +312,9 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 10px 80px;
+  }
+  .container #copyright {
+    font-size: 0.8rem;
   }
 }
 
