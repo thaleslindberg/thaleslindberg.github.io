@@ -6,6 +6,7 @@ $gray: #B5B5BC;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    clear: both;
 }
 
 #homepage-icon {
@@ -26,9 +27,9 @@ $gray: #B5B5BC;
     background: linear-gradient(180deg, #010113 0%, #0E0E31 100%);
 
     #illustration {
-        // width: 100%;
         max-width: 100%;
         height: 400px;
+        float: right;
     }
     
     #title {
@@ -71,7 +72,6 @@ $gray: #B5B5BC;
         border-bottom-color: rgb(0, 209, 255);
         border-left-color: rgb(0, 209, 255);
         color: rgb(0, 204, 255);
-        font-weight: bold;
         font-size: 13px;
         transition-duration: 0.2s, 0.2s, 0.2s;
         transition-timing-function: ease-out, ease-out, ease-out;

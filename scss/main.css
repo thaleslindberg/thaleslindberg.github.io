@@ -212,6 +212,12 @@ body {
           box-shadow: inset 0px 1px 40px rgba(227, 222, 255, 0.2);
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-out;
+          transition-timing-function: ease-out, ease-out, ease-out;
+  -webkit-transition-delay: initial, initial, initial;
+          transition-delay: initial, initial, initial;
 }
 
 #linkedin:hover,
