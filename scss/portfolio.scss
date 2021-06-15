@@ -4,7 +4,7 @@ $gray: #B5B5BC;
 
 *, *::after, *::before {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     clear: both;
 }
@@ -33,29 +33,24 @@ $gray: #B5B5BC;
     }
     
     #title {
-        font-family: 'Playfair Display', serif;
         font-weight: 900;
         letter-spacing: 1.5px;
         color: $white;
         font-size: 2.5rem;
+        font-stretch: expanded;
     }
 
     h1 {
         font-weight: 400;
         color: $white;
         letter-spacing: 1px; 
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, rgb(0, 209, 255) 0%, rgb(0, 209, 255) 25%, rgb(237, 30, 255) 85%, rgb(237, 30, 255) 100%);
     }
-
-    h5 {
-        color: $gray;
-        font-weight: 200;
-        font-size: 1.3rem;
-        line-height: 20%;
-        font-size: 1rem;
-    }
-
+    
     #home_button {
         box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
         border-top-left-radius: 4px;
@@ -76,7 +71,7 @@ $gray: #B5B5BC;
         transition-duration: 0.2s, 0.2s, 0.2s;
         transition-timing-function: ease-out, ease-out, ease-out;
         transition-delay: initial, initial, initial;
-        padding: 10px 90px;
+        padding: 14px 90px;
 
         &:hover {
             background: rgb(17, 50, 95);
@@ -88,7 +83,12 @@ $gray: #B5B5BC;
 
 
 @media (max-width: 790px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
     #card {
+
         #illustration {
             max-width: 100%;
             height: auto;
@@ -99,16 +99,9 @@ $gray: #B5B5BC;
             font-weight: 900;
         }
         h1 {
-            font-size: 1.5rem;
-            line-height: 1.9rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
             text-align: center;
-        }
-        h5 {
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.6rem;
-            margin-top: -15px;
-            font-size: 0.9rem;
         }
         #cta_button {
             display: flex;

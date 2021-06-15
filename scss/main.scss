@@ -6,7 +6,8 @@ $gray: #B5B5BC;
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -42,29 +43,31 @@ body {
   }
 
   #title {
-    font-weight: 800;
-    font-family: 'Playfair Display', serif;
+    font-weight: 900;
     text-transform: uppercase;
     -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    font-family: 'Lato', sans-serif;
+    line-height: 3.5rem;
+    font-stretch: expanded;
   }
   #skills {
     font-size: 1rem;
     color: $white;
     line-height: 1.8rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   #description_one {
     font-size: 1rem;
     color: $gray;
     line-height: 1.7rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   #coming_soon,
   #copyright {
     font-size: 1rem;
     color: $gray;
-    font-weight: 200;
+    font-weight: 300;
   }
   #copyright {
     font-size: 1rem;
@@ -74,10 +77,10 @@ body {
   }
   #fiap,
   #email {
-    font-weight: 200;
+    font-size: 1rem;
+    font-weight: 300;
     color: rgb(237, 31, 255);
     text-decoration: none;
-    font-size: 1rem;
     text-shadow: 0px 0px 18.2712px rgba(237, 31, 255, 0.7), 0px 0px 70.7336px rgba(237, 31, 255, 0.5);
 
   &:hover {
@@ -96,10 +99,10 @@ body {
   border-bottom-left-radius: 4px;
   background-color: rgb(0, 204, 255);
   color: rgb(1, 1, 19);
-  font-weight: 400;
-  width: 100%;
-  height: 100%;
-  font-size: 13px;
+  font-weight: 600;
+  width: 50%;
+  font-size: 14px;
+  padding: 14px 20px;
   transition-duration: 0.2s, 0.2s, 0.2s;
   transition-timing-function: ease-out, ease-out, ease-out;
   transition-delay: initial, initial, initial;
@@ -271,7 +274,9 @@ body {
 
       #title {
         font-size: 2rem;
+        line-height: 2.5rem;
         text-align: center;
+        font-weight: 900;
       }
       #description_one,
       #skills,
@@ -280,8 +285,11 @@ body {
           font-size: 1rem;
           line-height: 1.7rem;
         }
+        #description_one,
+        #email,
+        #fiap,
         #coming_soon {
-          line-height: 1.5rem;
+          font-size: 0.9rem;
         }
         #profile-photo {
             width: 80px;
@@ -291,6 +299,7 @@ body {
             display: flex;
             justify-content: center;
             padding: 10px 80px;
+            width: 100%;
           }
         #copyright {
           font-size: 0.8rem;

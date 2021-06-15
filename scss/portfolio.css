@@ -1,7 +1,7 @@
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   clear: both;
 }
@@ -32,27 +32,23 @@
 }
 
 #card #title {
-  font-family: 'Playfair Display', serif;
   font-weight: 900;
   letter-spacing: 1.5px;
   color: #FFFFFF;
   font-size: 2.5rem;
+  font-stretch: expanded;
 }
 
 #card h1, #card .h1 {
   font-weight: 400;
   color: #FFFFFF;
   letter-spacing: 1px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
-}
-
-#card h5, #card .h5 {
-  color: #B5B5BC;
-  font-weight: 200;
-  font-size: 1.3rem;
-  line-height: 20%;
-  font-size: 1rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00d1ff), color-stop(25%, #00d1ff), color-stop(85%, #ed1eff), to(#ed1eff));
+  background-image: linear-gradient(to right, #00d1ff 0%, #00d1ff 25%, #ed1eff 85%, #ed1eff 100%);
 }
 
 #card #home_button {
@@ -79,7 +75,7 @@
           transition-timing-function: ease-out, ease-out, ease-out;
   -webkit-transition-delay: initial, initial, initial;
           transition-delay: initial, initial, initial;
-  padding: 10px 90px;
+  padding: 14px 90px;
 }
 
 #card #home_button:hover {
@@ -90,6 +86,10 @@
 }
 
 @media (max-width: 790px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
   #card #illustration {
     max-width: 100%;
     height: auto;
@@ -100,16 +100,9 @@
     font-weight: 900;
   }
   #card h1, #card .h1 {
-    font-size: 1.5rem;
-    line-height: 1.9rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: center;
-  }
-  #card h5, #card .h5 {
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    margin-top: -15px;
-    font-size: 0.9rem;
   }
   #card #cta_button {
     display: -webkit-box;
