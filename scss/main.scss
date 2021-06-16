@@ -137,13 +137,15 @@ body {
 }
  
 .hex {
-    position: relative;
-    list-style-type: none;
-    float: left;
-    overflow: hidden;
-    visibility: hidden;
-    outline: 1px solid transparent;  
-    transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  position: relative;
+  list-style-type: none;
+  float: left;
+  overflow: hidden;
+  visibility: hidden;
+  outline:1px solid transparent; 
+  -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+      -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+          transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 
     * {
         position: absolute;
@@ -180,13 +182,17 @@ body {
     height: 100%;
     text-align: center;
     overflow: hidden;
-    transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+        transform: skewY(-30deg) rotate(60deg);
 }
 
 .hexIn:hover h1, 
 .hexIn:focus h1, 
 .hexIn:hover p, 
 .hexIn:focus p {
+  -webkit-transform: translateY(0%) translatez(-1px);
+  -ms-transform: translateY(0%) translatez(-1px);
     transform: translateY(0%) translatez(-1px);
 }
 

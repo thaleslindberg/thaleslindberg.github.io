@@ -6,6 +6,7 @@ $gray: #B5B5BC;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    -webkit-font-smoothing: antialiased;
     clear: both;
 }
 
@@ -42,13 +43,16 @@ $gray: #B5B5BC;
 
     h1 {
         font-weight: 400;
-        color: $white;
-        letter-spacing: 1px; 
         font-size: 1.6rem;
         text-transform: uppercase;
+        background-image: linear-gradient(to right, rgb(0, 209, 255) 0%, rgb(0, 209, 255) 25%, rgb(237, 30, 255) 85%, rgb(237, 30, 255) 100%);
+        line-height: 48px;
+        font-stretch: expanded;
+        text-align: center;
+        background-clip: text;
+        margin-top: 21px;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-image: linear-gradient(to right, rgb(0, 209, 255) 0%, rgb(0, 209, 255) 25%, rgb(237, 30, 255) 85%, rgb(237, 30, 255) 100%);
     }
     
     #home_button {

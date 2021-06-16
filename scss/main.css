@@ -152,7 +152,7 @@ body {
   visibility: hidden;
   outline: 1px solid transparent;
   -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-          transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+  transform: rotate(-60deg) skewY(30deg) translatez(-1px);
 }
 
 .hex * {
@@ -192,7 +192,7 @@ body {
   text-align: center;
   overflow: hidden;
   -webkit-transform: skewY(-30deg) rotate(60deg);
-          transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
 }
 
 .hexIn:hover h1, .hexIn:hover .h1,
@@ -201,7 +201,7 @@ body {
 .hexIn:hover p,
 .hexIn:focus p {
   -webkit-transform: translateY(0%) translatez(-1px);
-          transform: translateY(0%) translatez(-1px);
+  transform: translateY(0%) translatez(-1px);
 }
 
 /* Social Media */

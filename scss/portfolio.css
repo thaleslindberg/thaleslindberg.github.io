@@ -3,6 +3,7 @@
           box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-font-smoothing: antialiased;
   clear: both;
 }
 
@@ -40,14 +41,17 @@
 
 #card h1, #card .h1 {
   font-weight: 400;
-  color: #FFFFFF;
-  letter-spacing: 1px;
   font-size: 1.6rem;
   text-transform: uppercase;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-image: -webkit-gradient(linear, left top, right top, from(#00d1ff), color-stop(25%, #00d1ff), color-stop(85%, #ed1eff), to(#ed1eff));
   background-image: linear-gradient(to right, #00d1ff 0%, #00d1ff 25%, #ed1eff 85%, #ed1eff 100%);
+  line-height: 48px;
+  font-stretch: expanded;
+  text-align: center;
+  background-clip: text;
+  margin-top: 21px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #card #home_button {
