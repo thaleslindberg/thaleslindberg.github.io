@@ -46,7 +46,7 @@ $gray: #B5B5BC;
         letter-spacing: 1px; 
         font-size: 1.6rem;
         text-transform: uppercase;
-        background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-image: linear-gradient(to right, rgb(0, 209, 255) 0%, rgb(0, 209, 255) 25%, rgb(237, 30, 255) 85%, rgb(237, 30, 255) 100%);
     }
