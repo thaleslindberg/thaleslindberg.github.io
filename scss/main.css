@@ -54,7 +54,7 @@ body {
   font-size: 1rem;
   color: #FFFFFF;
   line-height: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .container #description_one {
@@ -113,6 +113,8 @@ body {
           transition-timing-function: ease-out, ease-out, ease-out;
   -webkit-transition-delay: initial, initial, initial;
           transition-delay: initial, initial, initial;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
 }
 
 #cta_button:hover {
@@ -302,8 +304,7 @@ body {
     font-weight: 900;
   }
   .container #description_one,
-  .container #skills,
-  .container #coming_soon {
+  .container #skills {
     text-align: center;
     font-size: 1rem;
     line-height: 1.7rem;
@@ -313,6 +314,10 @@ body {
   .container #fiap,
   .container #coming_soon {
     font-size: 0.9rem;
+  }
+  .container #coming_soon {
+    text-align: center;
+    font-size: 1rem;
   }
   .container #profile-photo {
     width: 80px;
@@ -334,6 +339,47 @@ body {
 }
 
 /* Keyframes */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+            box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+}
+
 @-webkit-keyframes tracking-in-contract {
   0% {
     letter-spacing: 1em;

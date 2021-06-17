@@ -55,7 +55,7 @@ body {
     font-size: 1rem;
     color: $white;
     line-height: 1.8rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   #description_one {
     font-size: 1rem;
@@ -106,6 +106,8 @@ body {
   transition-duration: 0.2s, 0.2s, 0.2s;
   transition-timing-function: ease-out, ease-out, ease-out;
   transition-delay: initial, initial, initial;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
 
   &:hover {
     background-color: rgb(88, 225, 255);
@@ -285,8 +287,8 @@ body {
         font-weight: 900;
       }
       #description_one,
-      #skills,
-      #coming_soon {
+      #skills
+        {
           text-align: center;
           font-size: 1rem;
           line-height: 1.7rem;
@@ -296,6 +298,10 @@ body {
         #fiap,
         #coming_soon {
           font-size: 0.9rem;
+        }
+        #coming_soon {
+          text-align: center;
+          font-size: 1rem;
         }
         #profile-photo {
             width: 80px;
@@ -315,6 +321,26 @@ body {
 }
 
 /* Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    // box-shadow: 0 0 0 0 rgba(0, 204, 255, 0.7);
+    box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  
+  70% {
+    transform: scale(1);
+    // box-shadow: 0 0 0 10px rgba(0, 204, 255, 0);
+    box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+  
+  100% {
+    transform: scale(0.95);
+    // box-shadow: 0 0 0 0 rgba(0, 204, 255, 0);
+    box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
+  }
+}
+
 @-webkit-keyframes tracking-in-contract {
     0% {
       letter-spacing: 1em;
