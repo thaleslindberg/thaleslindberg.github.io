@@ -63,7 +63,6 @@ body {
     line-height: 1.7rem;
     font-weight: 300;
   }
-  #coming_soon,
   #copyright {
     font-size: 1rem;
     color: $gray;
@@ -295,13 +294,8 @@ body {
         }
         #description_one,
         #email,
-        #fiap,
-        #coming_soon {
+        #fiap {
           font-size: 0.9rem;
-        }
-        #coming_soon {
-          text-align: center;
-          font-size: 1rem;
         }
         #profile-photo {
             width: 80px;

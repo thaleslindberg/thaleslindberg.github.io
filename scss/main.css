@@ -64,7 +64,6 @@ body {
   font-weight: 300;
 }
 
-.container #coming_soon,
 .container #copyright {
   font-size: 1rem;
   color: #B5B5BC;
@@ -311,13 +310,8 @@ body {
   }
   .container #description_one,
   .container #email,
-  .container #fiap,
-  .container #coming_soon {
+  .container #fiap {
     font-size: 0.9rem;
-  }
-  .container #coming_soon {
-    text-align: center;
-    font-size: 1rem;
   }
   .container #profile-photo {
     width: 80px;

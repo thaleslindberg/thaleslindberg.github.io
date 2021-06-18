@@ -84,6 +84,10 @@ $gray: #B5B5BC;
             box-shadow: rgba(0, 209, 255, 0.9) 0px 0px 10px;
         }
     }
+
+    #coming_soon {
+        color: $gray;
+    }
 }
 
 @media (max-width: 790px) {
@@ -103,13 +107,16 @@ $gray: #B5B5BC;
             font-weight: 900;
         }
         h1 {
-            font-size: 1rem;
+            font-size: 1.2rem;
             line-height: 1.5rem;
             text-align: center;
         }
         #cta_button {
             display: flex;
             justify-content: center;
+        }
+        #coming_soon {
+            font-size: 1rem
         }
     }
  }
