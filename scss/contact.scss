@@ -1,0 +1,114 @@
+$beige: #F5F3ED;
+$black: #181818;
+$red: #FE6A79;
+$dutch: #EFDFBB;
+$pink: #F2E2DB;
+
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: $pink;
+}
+
+#header {
+  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 99.55%);
+}
+
+.container-fluid {
+    border-bottom: 2px solid $black;
+    padding: 5px;
+    margin: 10px;
+
+  #homepage, 
+  #projects,
+  #contact {
+    font-family: Butler;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $black;
+
+    &:hover {
+      color: $red;
+    }
+  }
+  #contact:hover { color: $red; }
+
+    #page_number {
+      font-family: Butler;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: $black;
+      
+    }
+}
+
+#behance {
+    width: 218px;
+    height: 19px;
+    
+    font-family: Butler;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 1px;
+    letter-spacing: 0.065em;
+    text-decoration-line: underline;
+    color: $black;
+
+    &:hover {
+      text-decoration-line: underline;
+      color: $red;
+    }
+  #scroll_contact {
+    width: 140.12px;
+    height: 143.83px;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 790px) {
+  .col-md-6,
+  .col-md-4 {
+    visibility: hidden;
+  }
+  
+  #container_about {
+    background: url('/img/about_text_mobile.svg') no-repeat;
+    background-size: auto 100%;
+    margin-left: 32px;   
+  }
+
+  #container_communication{
+    background: url('/img/communication_title_mobile.svg') no-repeat;
+    margin-left: 32px;
+    margin-bottom: 100px;
+
+    #info_communication {
+      position: absolute;
+      left: 32px;
+      bottom: 84px;
+      margin-right: 50px;
+      background: url('/img/communication_text_desktop.svg') no-repeat;
+    }
+    #behance {
+      position: absolute;
+      left: 32px;
+      bottom: 65px;
+      margin-right: 50px;
+
+      a:visited { color: $red; }
+    }
+  }
+}

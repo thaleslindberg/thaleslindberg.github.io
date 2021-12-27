@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #F2E2DB;
+}
+
+#header {
+  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 99.55%);
+}
+
+.container-fluid {
+  border-bottom: 2px solid #181818;
+  padding: 5px;
+  margin: 10px;
+}
+
+.container-fluid #homepage,
+.container-fluid #projects,
+.container-fluid #contact {
+  font-family: Butler;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #181818;
+}
+
+.container-fluid #homepage:hover,
+.container-fluid #projects:hover,
+.container-fluid #contact:hover {
+  color: #FE6A79;
+}
+
+.container-fluid #contact:hover {
+  color: #FE6A79;
+}
+
+.container-fluid #page_number {
+  font-family: Butler;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #181818;
+}
+
+#behance {
+  width: 218px;
+  height: 19px;
+  font-family: Butler;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1px;
+  letter-spacing: 0.065em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #181818;
+}
+
+#behance:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FE6A79;
+}
+
+#behance #scroll_contact {
+  width: 140.12px;
+  height: 143.83px;
+}
+
+/* Responsive */
+@media (max-width: 790px) {
+  .col-md-6,
+  .col-md-4 {
+    visibility: hidden;
+  }
+  #container_about {
+    background: url("/img/about_text_mobile.svg") no-repeat;
+    background-size: auto 100%;
+    margin-left: 32px;
+  }
+  #container_communication {
+    background: url("/img/communication_title_mobile.svg") no-repeat;
+    margin-left: 32px;
+    margin-bottom: 100px;
+  }
+  #container_communication #info_communication {
+    position: absolute;
+    left: 32px;
+    bottom: 84px;
+    margin-right: 50px;
+    background: url("/img/communication_text_desktop.svg") no-repeat;
+  }
+  #container_communication #behance {
+    position: absolute;
+    left: 32px;
+    bottom: 65px;
+    margin-right: 50px;
+  }
+  #container_communication #behance a:visited {
+    color: #FE6A79;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

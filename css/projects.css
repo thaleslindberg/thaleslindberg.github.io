@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #181818;
+}
+
+#header {
+  background: linear-gradient(179.47deg, #181818 0.45%, rgba(24, 24, 24, 0) 99.55%);
+}
+
+.container-fluid {
+  border-bottom: 2px solid #F5F3ED;
+  padding: 5px;
+  margin: 10px;
+}
+
+.container-fluid #homepage,
+.container-fluid #projects,
+.container-fluid #contact {
+  font-family: Butler;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #F5F3ED;
+}
+
+.container-fluid #homepage:hover,
+.container-fluid #projects:hover,
+.container-fluid #contact:hover {
+  color: #EFDFBB;
+}
+
+.container-fluid #contact:hover {
+  color: #FE6A79;
+}
+
+.container-fluid #page_number {
+  font-family: Butler;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #F5F3ED;
+}
+/*# sourceMappingURL=projects.css.map */
