@@ -87,28 +87,27 @@ body {
   #container_about {
     background: url('/img/about_text_mobile.svg') no-repeat;
     background-size: auto 100%;
-    margin-left: 32px;   
+    margin-left: 16px;
+    margin-bottom: 50px;
   }
 
   #container_communication{
     background: url('/img/communication_title_mobile.svg') no-repeat;
-    margin-left: 32px;
-    margin-bottom: 100px;
+    margin-left: 16px;
 
+  }
     #info_communication {
       position: absolute;
-      left: 32px;
-      bottom: 84px;
-      margin-right: 50px;
-      background: url('/img/communication_text_desktop.svg') no-repeat;
+      margin-left: -60px;
+      margin-bottom: 50px;
+      bottom: -90px;
     }
     #behance {
       position: absolute;
-      left: 32px;
-      bottom: 65px;
-      margin-right: 50px;
+      margin-left: -60px;
+      margin-bottom: 50px;
+      bottom: -90px;
 
       a:visited { color: $red; }
     }
   }
-}
