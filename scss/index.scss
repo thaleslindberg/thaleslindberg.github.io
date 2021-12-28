@@ -12,52 +12,42 @@ $pink: #F2E2DB;
 }
 
 body {
-    background: $beige;
-  }
+  background: $beige;
+}
 
 #header {
-  background: linear-gradient(179.47deg, #F5F3ED 0.45%, rgba(245, 243, 237, 0) 99.55%);
+    background: linear-gradient(179.47deg, #F5F3ED 0.45%, rgba(245, 243, 237, 0) 99.55%);
 }
-  
-  .container-fluid {
-      border-bottom: 2px solid $black;
-      padding: 5px;
-      margin: 10px;
-  
-    #homepage, 
-    #projects,
-    #contact {
+
+.container-fluid {
+    border-bottom: 2px solid $black;
+    padding: 5px;
+    margin: 10px;
+
+  #homepage, 
+  #projects,
+  #contact {
+    font-family: Butler;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: $black;
+
+    &:hover {
+      color: $red;
+    }
+  }
+  #contact:hover { color: $red; }
+
+    #page_number {
       font-family: Butler;
       font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-      margin-bottom: 10px;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
       color: $black;
-  
-      &:hover {
-        color: $red;
-      }
     }
-    #contact:hover { color: $red; }
-  
-      #page_number {
-        font-family: Butler;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 18px;
-        color: $black;
-        
-      }
-  }
-
-  #scroll_homepage {
-    width: 140.12px;
-    height: 143.83px;
-  }
-
-
-
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+}

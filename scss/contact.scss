@@ -53,61 +53,78 @@ body {
     }
 }
 
-#behance {
-    width: 218px;
-    height: 19px;
-    
+#container_about {
+  #about_info {
     font-family: Butler;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 1px;
+    font-size: 16px;
+    line-height: 19px;
     letter-spacing: 0.065em;
-    text-decoration-line: underline;
+  }
+}
+
+#container_communication {
+  #communication_info {
+    font-family: Butler;
+    line-height: 20px;
+    letter-spacing: 0.065em;
+  }
+  #email {
+    text-decoration: none;
     color: $black;
 
     &:hover {
-      text-decoration-line: underline;
+      text-decoration: underline;
       color: $red;
     }
-  #scroll_contact {
-    width: 140.12px;
-    height: 143.83px;
+  }
+  #behance {
+      font-family: Butler;
+      font-size: 17.5px;
+      line-height: 1px;
+      letter-spacing: 0.065em;
+      text-decoration-line: underline;
+      color: $black;
+      margin-bottom: 100px;
+  
+      &:hover {
+        text-decoration-line: underline;
+        color: $red;
+      }
   }
 }
 
 
+
 /* Responsive */
 @media (max-width: 790px) {
-  .col-md-6,
-  .col-md-4 {
+  .container-fluid {
+    border-bottom: 2px solid $black;
+    padding: 5px;
+    margin: 10px;
+
+  #homepage, 
+  #projects,
+  #contact {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: $black;
+
+    &:hover { color: $red; }
+  }
+}
+  #about_title,
+  #communication_title {
     visibility: hidden;
   }
-  
   #container_about {
-    background: url('/img/about_text_mobile.svg') no-repeat;
-    background-size: auto 100%;
-    margin-left: 16px;
-    margin-bottom: 50px;
+    background: url('/img/about_title_mobile.svg') no-repeat;
+    margin-left: 20px;
   }
-
-  #container_communication{
+  #container_communication {
     background: url('/img/communication_title_mobile.svg') no-repeat;
-    margin-left: 16px;
-
+    margin-left: 20px;
   }
-    #info_communication {
-      position: absolute;
-      margin-left: -60px;
-      margin-bottom: 50px;
-      bottom: -90px;
-    }
-    #behance {
-      position: absolute;
-      margin-left: -60px;
-      margin-bottom: 50px;
-      bottom: -90px;
 
-      a:visited { color: $red; }
-    }
-  }
+
+
+}
