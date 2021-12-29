@@ -59,15 +59,14 @@ body {
   letter-spacing: 0.065em;
 }
 
-#container_communication #communication_info {
+#container_communication #communication_info,
+#container_communication #email,
+#container_communication #phone {
   font-family: Butler;
   line-height: 20px;
   letter-spacing: 0.065em;
-}
-
-#container_communication #email {
-  text-decoration: none;
   color: #181818;
+  text-decoration: none;
 }
 
 #container_communication #email:hover {

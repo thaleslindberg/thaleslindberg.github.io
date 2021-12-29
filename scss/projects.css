@@ -51,4 +51,137 @@ body {
   line-height: 18px;
   color: #F5F3ED;
 }
+
+.container h2 {
+  cursor: pointer;
+}
+
+.container #gallery {
+  color: #EFDFBB;
+  font-family: Butler;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 24px;
+  padding-right: 32px;
+}
+
+.container #gallery:hover {
+  color: #EFDFBB;
+  opacity: 0.9;
+}
+
+.container #gallery:active {
+  color: #EFDFBB;
+}
+
+.container #gallery::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  background-color: #EFDFBB;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container #index {
+  color: #F5F3ED;
+  font-family: Butler;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 24px;
+  padding-right: 32px;
+}
+
+.container #index:hover {
+  color: #F5F3ED;
+  opacity: 0.9;
+}
+
+.container #index:active {
+  color: #EFDFBB;
+}
+
+.container #index::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  border: 1.5px solid #F5F3ED;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container #index::before:active {
+  background-color: #EFDFBB;
+}
+
+.card {
+  background: url("/img/image_card.png"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.2)));
+  background: url("/img/image_card.png"), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+}
+
+.card .card-category {
+  font-family: Butler;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.padded {
+  padding: 100px 0;
+}
+
+.wrapper {
+  background: #181818;
+}
+
+.card {
+  height: 250px;
+  background-size: cover !important;
+  color: #F5F3ED;
+  position: relative;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 20px;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 1px;
+  left: 16px;
+}
+
+.card-description h2 {
+  font-size: 22px;
+}
+
+.card-description p {
+  font-size: 15px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  background: #181818;
+  opacity: 0;
+}
+
+.card-link:hover {
+  opacity: 0.1;
+}
 /*# sourceMappingURL=projects.css.map */
