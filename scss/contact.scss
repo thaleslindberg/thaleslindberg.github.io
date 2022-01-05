@@ -1,7 +1,7 @@
+$platinum: #F5F3ED;
 $beige: #F5F3ED;
-$black: #181818;
+$black: #010101;
 $red: #FE6A79;
-$dutch: #EFDFBB;
 $pink: #F2E2DB;
 
 *, 
@@ -16,7 +16,7 @@ body {
 }
 
 #header {
-  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 99.55%);
+  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 80.55%);
 }
 
 .container-fluid {
@@ -93,7 +93,6 @@ body {
       }
   }
 }
-
 
 
 /* Responsive */

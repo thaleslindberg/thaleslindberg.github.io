@@ -11,11 +11,11 @@ body {
 }
 
 #header {
-  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 99.55%);
+  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 80.55%);
 }
 
 .container-fluid {
-  border-bottom: 2px solid #181818;
+  border-bottom: 2px solid #010101;
   padding: 5px;
   margin: 10px;
 }
@@ -30,7 +30,7 @@ body {
   line-height: 24px;
   text-align: center;
   margin-bottom: 10px;
-  color: #181818;
+  color: #010101;
 }
 
 .container-fluid #homepage:hover,
@@ -49,7 +49,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #181818;
+  color: #010101;
 }
 
 #container_about #about_info {
@@ -65,7 +65,7 @@ body {
   font-family: Butler;
   line-height: 20px;
   letter-spacing: 0.065em;
-  color: #181818;
+  color: #010101;
   text-decoration: none;
 }
 
@@ -81,7 +81,7 @@ body {
   letter-spacing: 0.065em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #181818;
+  color: #010101;
   margin-bottom: 100px;
 }
 
@@ -94,7 +94,7 @@ body {
 /* Responsive */
 @media (max-width: 790px) {
   .container-fluid {
-    border-bottom: 2px solid #181818;
+    border-bottom: 2px solid #010101;
     padding: 5px;
     margin: 10px;
   }
@@ -103,7 +103,7 @@ body {
   .container-fluid #contact {
     font-size: 17px;
     margin-bottom: 10px;
-    color: #181818;
+    color: #010101;
   }
   .container-fluid #homepage:hover,
   .container-fluid #projects:hover,
