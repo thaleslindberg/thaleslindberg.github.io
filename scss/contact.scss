@@ -94,9 +94,14 @@ body {
   }
 }
 
+#container_about,
+#container_communication {
+  -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 /* Responsive */
-@media (max-width: 790px) {
+@media (max-width: 600px) {
   .container-fluid {
     border-bottom: 2px solid $black;
     padding: 5px;
@@ -107,9 +112,6 @@ body {
   #contact {
     font-size: 17px;
     margin-bottom: 10px;
-    color: $black;
-
-    &:hover { color: $red; }
   }
 }
   #about_title,
@@ -124,7 +126,23 @@ body {
     background: url('/img/communication_title_mobile.svg') no-repeat;
     margin-left: 20px;
   }
+}
 
 
-
+/* --------- Animation 01 ---------- */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

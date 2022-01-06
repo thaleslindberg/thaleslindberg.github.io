@@ -91,8 +91,14 @@ body {
   color: #FE6A79;
 }
 
+#container_about,
+#container_communication {
+  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 /* Responsive */
-@media (max-width: 790px) {
+@media (max-width: 600px) {
   .container-fluid {
     border-bottom: 2px solid #010101;
     padding: 5px;
@@ -103,12 +109,6 @@ body {
   .container-fluid #contact {
     font-size: 17px;
     margin-bottom: 10px;
-    color: #010101;
-  }
-  .container-fluid #homepage:hover,
-  .container-fluid #projects:hover,
-  .container-fluid #contact:hover {
-    color: #FE6A79;
   }
   #about_title,
   #communication_title {
@@ -121,6 +121,25 @@ body {
   #container_communication {
     background: url("/img/communication_title_mobile.svg") no-repeat;
     margin-left: 20px;
+  }
+}
+
+/* --------- Animation 01 ---------- */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=contact.css.map */
