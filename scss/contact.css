@@ -11,7 +11,8 @@ body {
 }
 
 #header {
-  background: linear-gradient(179.47deg, #F2E2DB 0.45%, rgba(242, 226, 219, 0) 80.55%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #F2E2DB), to(rgba(242, 226, 219, 0)));
+  background: linear-gradient(180deg, #F2E2DB 50%, rgba(242, 226, 219, 0) 100%);
 }
 
 .container-fluid {
@@ -92,9 +93,11 @@ body {
 }
 
 #container_about,
-#container_communication {
-  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+#container_communication,
+#header,
+footer {
+  -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* Responsive */
@@ -103,12 +106,6 @@ body {
     border-bottom: 2px solid #010101;
     padding: 5px;
     margin: 10px;
-  }
-  .container-fluid #homepage,
-  .container-fluid #projects,
-  .container-fluid #contact {
-    font-size: 17px;
-    margin-bottom: 10px;
   }
   #about_title,
   #communication_title {
