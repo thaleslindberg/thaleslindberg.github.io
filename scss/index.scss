@@ -169,7 +169,9 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 		}
 		#emkt_one,
 		#emkt_two {
-			font-size: 1rem;
+			font-size: 1.1rem;
+			position: relative;
+			left: 10px;
 		}
 		#personal_projects,
 		#personal_one {
