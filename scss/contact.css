@@ -16,7 +16,7 @@ body {
 }
 
 .container-fluid {
-  border-bottom: 2px solid #010101;
+  border-bottom: 2px solid #1C1C1A;
   padding: 5px;
   margin: 10px;
 }
@@ -31,7 +31,7 @@ body {
   line-height: 24px;
   text-align: center;
   margin-bottom: 10px;
-  color: #010101;
+  color: #1C1C1A;
 }
 
 .container-fluid #homepage:hover,
@@ -50,7 +50,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #010101;
+  color: #1C1C1A;
 }
 
 #container_about #about_info {
@@ -66,7 +66,7 @@ body {
   font-family: Butler;
   line-height: 20px;
   letter-spacing: 0.065em;
-  color: #010101;
+  color: #1C1C1A;
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@ body {
   letter-spacing: 0.065em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  color: #010101;
+  color: #1C1C1A;
   margin-bottom: 100px;
 }
 
@@ -103,7 +103,7 @@ footer {
 /* Responsive */
 @media (max-width: 600px) {
   .container-fluid {
-    border-bottom: 2px solid #010101;
+    border-bottom: 2px solid #1C1C1A;
     padding: 5px;
     margin: 10px;
   }
