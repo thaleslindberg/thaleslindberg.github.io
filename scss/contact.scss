@@ -33,7 +33,7 @@ a {
 }
 
 .container-fluid {
-  border-bottom: 2px solid $black;
+  border-bottom: 1px solid $black;
   padding: 10px;
   margin: 10px;
 
@@ -125,7 +125,7 @@ footer {
 /* Responsive */
 @media (max-width: 600px) {
   .container-fluid {
-    border-bottom: 2px solid $black;
+    border-bottom: 1px solid $black;
     padding: 5px;
     margin: 10px;
 

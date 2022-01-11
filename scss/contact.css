@@ -29,7 +29,7 @@ a {
 }
 
 .container-fluid {
-  border-bottom: 2px solid #010101;
+  border-bottom: 1px solid #010101;
   padding: 10px;
   margin: 10px;
 }
@@ -129,7 +129,7 @@ footer {
 /* Responsive */
 @media (max-width: 600px) {
   .container-fluid {
-    border-bottom: 2px solid #010101;
+    border-bottom: 1px solid #010101;
     padding: 5px;
     margin: 10px;
   }

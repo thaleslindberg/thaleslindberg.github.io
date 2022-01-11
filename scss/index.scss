@@ -36,7 +36,7 @@ dt {
 }
 
 .container-fluid {
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
     padding: 10px;
     margin: 10px;
 
@@ -61,7 +61,7 @@ dt {
       font-weight: normal;
       font-size: 15px;
       line-height: 18px;
-      color: #fff;
+      color: #B2B2B2;
     }
 }
 
@@ -102,7 +102,8 @@ dt {
 		font-family: Butler;
 		font-weight: lighter;
 		text-transform: uppercase;
-		color: #fff;
+		color: #B2B2B2;
+		font-size: 20px;
 	}
 
 	#project_one,
@@ -148,7 +149,7 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
 	.container-fluid {
-		border-bottom: 2px solid #fff;
+		border-bottom: 1px solid #fff;
 		padding: 5px;
 		margin: 10px;
 
@@ -165,7 +166,7 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 
 		#inspect_project {
 			font-size: 2.6rem;
-			margin-left: 10px;
+			margin-left: 30px;
 		}
 		#arrow {
 			width: 32px;
@@ -199,7 +200,7 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 		#personal_projects,
 		#personal_one {
 			position: relative;
-			bottom: -90px;
+			bottom: 32px;
 		}
 		#personal_one {
 			font-size: 1.8rem;

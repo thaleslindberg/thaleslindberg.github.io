@@ -34,7 +34,7 @@ dt {
 }
 
 .container-fluid {
-  border-bottom: 2px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 10px;
   margin: 10px;
 }
@@ -66,7 +66,7 @@ dt {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #fff;
+  color: #B2B2B2;
 }
 
 /* --------- Card ---------- */
@@ -107,7 +107,8 @@ dt {
   font-family: Butler;
   font-weight: lighter;
   text-transform: uppercase;
-  color: #fff;
+  color: #B2B2B2;
+  font-size: 20px;
 }
 
 .box #project_one,
@@ -172,7 +173,7 @@ footer {
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
   .container-fluid {
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
     padding: 5px;
     margin: 10px;
   }
@@ -188,7 +189,7 @@ footer {
   }
   .box #inspect_project {
     font-size: 2.6rem;
-    margin-left: 10px;
+    margin-left: 30px;
   }
   .box #arrow {
     width: 32px;
@@ -219,7 +220,7 @@ footer {
   .box #personal_projects,
   .box #personal_one {
     position: relative;
-    bottom: -90px;
+    bottom: 32px;
   }
   .box #personal_one {
     font-size: 1.8rem;
