@@ -1,49 +1,59 @@
 /* --------- Variables ---------- */
-$platinum: #e5e5e5;
-$beige: #F5F3ED;
-$black: #1C1C1A;
+$black: #010101;
 $red: #FE6A79;
-$pink: #F2E2DB;
+$pink: #F1E8E2;
+
+/* --------- Variables ---------- */
+@font-face {
+	font-family: "Gotham HTF";
+	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
 
 *, 
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 	position: relative;
 	box-sizing: border-box;
 }
 
 body {
-  background: $beige;
+  background: $black;
+}
+
+html,
+a,
+dt {
+	cursor: none;
+	cursor: url('/img/cursor.svg'), auto;
 }
 
 /* --------- Header ---------- */
 #header { 
-	background: linear-gradient(180deg, #F5F3ED 50%, rgba(245, 243, 237, 0) 100%);
+	background: linear-gradient(180deg, #010101 80%, rgba(1, 1, 1, 0) 100%);
 	position: fixed;
 	width: 100%;
 }
 
 .container-fluid {
-    border-bottom: 2px solid $black;
-    padding: 5px;
+    border-bottom: 2px solid #fff;
+    padding: 10px;
     margin: 10px;
 
   #homepage, 
   #contact {
-    font-family: Butler;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
+	font-family: "Gotham HTF";
+    font-size: 18px;
     margin-bottom: 10px;
-    color: $black;
+    color: #fff;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	border-image-repeat: stretch;
+	-webkit-font-smoothing: antialiased;
 
-    &:hover { color: $red; }
+    &:hover { color: #B2B2B2; }
   }
-	#contact:hover { color: $red; }
+	#contact:hover { color: #B2B2B2; }
 
 	#page_number {
       font-family: Butler;
@@ -51,7 +61,7 @@ body {
       font-weight: normal;
       font-size: 15px;
       line-height: 18px;
-      color: $black;
+      color: #fff;
     }
 }
 
@@ -65,12 +75,14 @@ body {
 	#subtitle {
 		font-size: 1.5em;
 		font-family: Butler;
+		color: #fff;
+		margin-top: 300px;
 	}
 
 	#fiap {
 		text-decoration: underline;
 		font-family: Butler;
-		color: $black;
+		color: #fff;
 		&:hover { color: $red; }
 	}
 
@@ -82,7 +94,7 @@ body {
 		margin: 2.75rem 0 1.05rem;
 		font-weight: 800;
 		font-size: 80px;
-		color: $black;
+		color: #fff;
 	}
 
 	#company_name,
@@ -90,6 +102,7 @@ body {
 		font-family: Butler;
 		font-weight: lighter;
 		text-transform: uppercase;
+		color: #fff;
 	}
 
 	#project_one,
@@ -104,11 +117,14 @@ body {
 		font-weight: 800;
 		font-size: 2rem;
 		text-transform: uppercase;
-		text-decoration: underline;
 		line-height: 56px;
+		color: #fff;
+		text-decoration: none;
+
+		&:hover { color:  #B2B2B2; }
 	}
-	a { color: $black;
-		&:hover {color:  $red; }
+	a { color: #fff;
+		&:hover { color: #B2B2B2; }
 	}
 	#emkt_one,
 	#emkt_two {
@@ -132,9 +148,16 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
 	.container-fluid {
-		border-bottom: 2px solid $black;
+		border-bottom: 2px solid #fff;
 		padding: 5px;
 		margin: 10px;
+
+		#homepage, 
+		#contact {
+			font-size: 1rem;
+			border-image-repeat: stretch;
+			-webkit-font-smoothing: antialiased;
+		}
 	}
 	.box {
 		position: relative;
@@ -176,7 +199,7 @@ footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; 
 		#personal_projects,
 		#personal_one {
 			position: relative;
-			bottom: 50px;
+			bottom: -90px;
 		}
 		#personal_one {
 			font-size: 1.8rem;

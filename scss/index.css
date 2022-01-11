@@ -1,51 +1,63 @@
 /* --------- Variables ---------- */
+/* --------- Variables ---------- */
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
+
 *,
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
   position: relative;
   box-sizing: border-box;
 }
 
 body {
-  background: #F5F3ED;
+  background: #010101;
+}
+
+html,
+a,
+dt {
+  cursor: none;
+  cursor: url("/img/cursor.svg"), auto;
 }
 
 /* --------- Header ---------- */
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #F5F3ED), to(rgba(245, 243, 237, 0)));
-  background: linear-gradient(180deg, #F5F3ED 50%, rgba(245, 243, 237, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #010101), to(rgba(1, 1, 1, 0)));
+  background: linear-gradient(180deg, #010101 80%, rgba(1, 1, 1, 0) 100%);
   position: fixed;
   width: 100%;
 }
 
 .container-fluid {
-  border-bottom: 2px solid #1C1C1A;
-  padding: 5px;
+  border-bottom: 2px solid #fff;
+  padding: 10px;
   margin: 10px;
 }
 
 .container-fluid #homepage,
 .container-fluid #contact {
-  font-family: Butler;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
+  font-family: "Gotham HTF";
+  font-size: 18px;
   margin-bottom: 10px;
-  color: #1C1C1A;
+  color: #fff;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  border-image-repeat: stretch;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container-fluid #homepage:hover,
 .container-fluid #contact:hover {
-  color: #FE6A79;
+  color: #B2B2B2;
 }
 
 .container-fluid #contact:hover {
-  color: #FE6A79;
+  color: #B2B2B2;
 }
 
 .container-fluid #page_number {
@@ -54,7 +66,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  color: #1C1C1A;
+  color: #fff;
 }
 
 /* --------- Card ---------- */
@@ -66,12 +78,14 @@ body {
 #subtitle {
   font-size: 1.5em;
   font-family: Butler;
+  color: #fff;
+  margin-top: 300px;
 }
 
 #fiap {
   text-decoration: underline;
   font-family: Butler;
-  color: #1C1C1A;
+  color: #fff;
 }
 
 #fiap:hover {
@@ -85,7 +99,7 @@ body {
   margin: 2.75rem 0 1.05rem;
   font-weight: 800;
   font-size: 80px;
-  color: #1C1C1A;
+  color: #fff;
 }
 
 .box #company_name,
@@ -93,6 +107,7 @@ body {
   font-family: Butler;
   font-weight: lighter;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .box #project_one,
@@ -107,16 +122,28 @@ body {
   font-weight: 800;
   font-size: 2rem;
   text-transform: uppercase;
-  text-decoration: underline;
   line-height: 56px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.box #project_one:hover,
+.box #project_two:hover,
+.box #project_three:hover,
+.box #project_four:hover,
+.box #project_five:hover,
+.box #project_six:hover,
+.box #project_seven:hover,
+.box #personal_one:hover {
+  color: #B2B2B2;
 }
 
 .box a {
-  color: #1C1C1A;
+  color: #fff;
 }
 
 .box a:hover {
-  color: #FE6A79;
+  color: #B2B2B2;
 }
 
 .box #emkt_one,
@@ -145,9 +172,15 @@ footer {
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
   .container-fluid {
-    border-bottom: 2px solid #1C1C1A;
+    border-bottom: 2px solid #fff;
     padding: 5px;
     margin: 10px;
+  }
+  .container-fluid #homepage,
+  .container-fluid #contact {
+    font-size: 1rem;
+    border-image-repeat: stretch;
+    -webkit-font-smoothing: antialiased;
   }
   .box {
     position: relative;
@@ -186,7 +219,7 @@ footer {
   .box #personal_projects,
   .box #personal_one {
     position: relative;
-    bottom: 50px;
+    bottom: -90px;
   }
   .box #personal_one {
     font-size: 1.8rem;
