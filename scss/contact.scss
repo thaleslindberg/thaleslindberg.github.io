@@ -1,158 +1,163 @@
 /* --------- Variables ---------- */
-$platinum: #e5e5e5;
-$beige: #F5F3ED;
-$black: #010101;
+$black: #2E2E2E;
+$gray: #B2B2B2; 
 $red: #FE6A79;
 $pink: #F1E8E2;
+$silver: #B2B2B2;
+$white: #FFFFFF;
 
-/* --------- Variables ---------- */
+/* --------- Fonts ---------- */
 @font-face {
-	font-family: "Gotham HTF";
+	font-family: "Gotham Book";
 	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
+@font-face {
+	font-family: "Gotham Light";
+	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+@font-face {
+	font-family: "Editorial";
+	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
+}
+
 
 *, 
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+	position: relative;
 }
 
-body {
-  background: $pink;
-}
+body { background: $pink; }
 
-html,
+
+html, 
 a {
 	cursor: none;
-	cursor: url('/img/cursor.svg'), auto;
+	cursor: url('/img/cursor_black.svg'), auto;
+	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#header {
-  background: linear-gradient(180deg, #F1E8E2 80%, rgba(241, 232, 226, 0) 100%);
-}
 
 .container-fluid {
-  border-bottom: 1px solid $black;
-  padding: 10px;
-  margin: 10px;
+    border-bottom: 0.5px solid $black;
+    margin: 0 auto;
+	width: 86vw;
+	align-self: center;
 
   #homepage, 
-  #projects,
-  #contact {
-    font-family: "Gotham HTF";
+  #contact,
+  #folio {
+	font-family: "Gotham Light";
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    margin-top: 10px;
     color: $black;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    border-image-repeat: stretch;
-    -webkit-font-smoothing: antialiased;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	border-image-repeat: stretch;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
 
-    &:hover {
-      color: #2E2E2E;
-    }
+    &:hover { color: #777777; }
   }
-  #contact:hover { color: #2E2E2E; }
-
-    #page_number {
-      font-family: Butler;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 18px;
-      color: $black;
-      
-    }
-}
-
-#container_about {
-  #about_info {
-    font-family: Butler;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.065em;
+  #folio {
+	  line-height: normal;
   }
 }
 
-#container_communication {
-  #communication_info, 
-  #email,
-  #phone {
-    font-family: Butler;
-    line-height: 20px;
-    letter-spacing: 0.065em;
-    color: $black;
-    text-decoration: none;
-  }
-  #email {
-    &:hover {
-      text-decoration: underline;
-      color: $red;
-    }
-  }
-  #behance {
-      font-family: Butler;
-      font-size: 17.5px;
-      line-height: 1px;
-      letter-spacing: 0.065em;
-      text-decoration-line: underline;
-      color: $black;
-      margin-bottom: 100px;
-  
-      &:hover {
-        text-decoration-line: underline;
-        color: $red;
-      }
-  }
+/* --------- Sections ---------- */
+#intro,
+#about,
+#fiap_projects,
+#side_projects,
+#social,
+#copyright {
+	font-family: "Gotham Light";
+	font-size: 19px;
+	letter-spacing: -.025px;
+	line-height: 28px;
+	color: #3633FF;
+	border-top: 0.5px solid $black;
+	padding-top: 10px;
 }
 
-#container_about,
-#container_communication,
-#header,
-footer {
-  -webkit-animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+/* --------- Intro | Description ---------- */
+.box {
+	#title {
+		font-family: "Editorial";
+		color: $black;
+		text-align: right;
+		position: absolute;
+		margin-right: 50px;
+		margin-top: 300px;
 
-#behance {
-  animation-name            : displaceContent;
-  animation-duration        : 1s;
-  animation-delay           : 4s;
-  animation-iteration-count : 1;
-  animation-fill-mode       : forwards;
-}
-/* Responsive */
-@media (max-width: 600px) {
-  .container-fluid {
-    border-bottom: 1px solid $black;
-    padding: 5px;
-    margin: 10px;
+		font-size: 15rem;
+		letter-spacing: -.6rem;
+		line-height: 90%;
+		text-transform: initial;
 
-    #homepage, 
-		#contact {
-			font-size: 1rem;
-			border-image-repeat: stretch;
-			-webkit-font-smoothing: antialiased;
+		#year {
+			-webkit-text-fill-color: $pink; 
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: $black;
 		}
+	}
 }
-  #about_title,
-  #communication_title {
-    visibility: hidden;
-  }
-  #container_about {
-    background: url('/img/about_title_mobile.svg') no-repeat;
-    margin-left: 20px;
-  }
-  #container_communication {
-    background: url('/img/communication_title_mobile.svg') no-repeat;
-    margin-left: 20px;
-  }
+
+#personal_projects, 
+a {
+	font-family: "Gotham Book";
+	font-size: 3.2rem;
+	letter-spacing: -0.12rem;
+	text-transform: none;
+	line-height: 120%;
+	color: $black;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover { color: #777777; }
+}
+
+#copyright {
+	border-bottom: 0.5px solid $black;
+	padding-bottom: 10px;
+}
+
+#goto {
+	font-family: "Gotham Book";
+	font-size: 12px;
+	letter-spacing: -.025px;
+	line-height: 28px;
+	color: #000;
+}
+
+
+/* --------- Misc ---------- */
+summary { cursor: pointer; }
+summary::marker, summary::-webkit-details-marker {
+	display: none;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* --------- Responsive ---------- */
+@media only screen and (max-width: 600px) {
+
 }
 
 
 /* --------- Animation 01 ---------- */
-@-webkit-keyframes fade-in {
+ @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -166,23 +171,5 @@ footer {
   }
   100% {
     opacity: 1;
-  }
-}
-
-
-
-
-@keyframes pulse {
-  from {
-      transform : scale(1);
-      opacity   : 1;
-  }
-  50% {
-      transform : scale(0.75);
-      opacity   : 0.25;
-  }
-  to {
-      transform : scale(1);
-      opacity   : 1;
   }
 }

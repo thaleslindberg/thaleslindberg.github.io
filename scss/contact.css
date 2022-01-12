@@ -1,8 +1,18 @@
 /* --------- Variables ---------- */
-/* --------- Variables ---------- */
+/* --------- Fonts ---------- */
 @font-face {
-  font-family: "Gotham HTF";
+  font-family: "Gotham Book";
   src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Light";
+  src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Editorial";
+  src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
 }
 
 *,
@@ -10,7 +20,7 @@
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 body {
@@ -20,139 +30,136 @@ body {
 html,
 a {
   cursor: none;
-  cursor: url("/img/cursor.svg"), auto;
-}
-
-#header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #F1E8E2), to(rgba(241, 232, 226, 0)));
-  background: linear-gradient(180deg, #F1E8E2 80%, rgba(241, 232, 226, 0) 100%);
+  cursor: url("/img/cursor_black.svg"), auto;
+  -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .container-fluid {
-  border-bottom: 1px solid #010101;
-  padding: 10px;
-  margin: 10px;
+  border-bottom: 0.5px solid #2E2E2E;
+  margin: 0 auto;
+  width: 86vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container-fluid #homepage,
-.container-fluid #projects,
-.container-fluid #contact {
-  font-family: "Gotham HTF";
+.container-fluid #contact,
+.container-fluid #folio {
+  font-family: "Gotham Light";
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #010101;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  color: #2E2E2E;
   letter-spacing: -1px;
   text-transform: uppercase;
   border-image-repeat: stretch;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
 .container-fluid #homepage:hover,
-.container-fluid #projects:hover,
-.container-fluid #contact:hover {
+.container-fluid #contact:hover,
+.container-fluid #folio:hover {
+  color: #777777;
+}
+
+.container-fluid #folio {
+  line-height: normal;
+}
+
+/* --------- Sections ---------- */
+#intro,
+#about,
+#fiap_projects,
+#side_projects,
+#social,
+#copyright {
+  font-family: "Gotham Light";
+  font-size: 19px;
+  letter-spacing: -.025px;
+  line-height: 28px;
+  color: #3633FF;
+  border-top: 0.5px solid #2E2E2E;
+  padding-top: 10px;
+}
+
+/* --------- Intro | Description ---------- */
+.box #title {
+  font-family: "Editorial";
   color: #2E2E2E;
+  text-align: right;
+  position: absolute;
+  margin-right: 50px;
+  margin-top: 300px;
+  font-size: 15rem;
+  letter-spacing: -.6rem;
+  line-height: 90%;
+  text-transform: initial;
 }
 
-.container-fluid #contact:hover {
+.box #title #year {
+  -webkit-text-fill-color: #F1E8E2;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2E2E2E;
+}
+
+#personal_projects,
+a {
+  font-family: "Gotham Book";
+  font-size: 3.2rem;
+  letter-spacing: -0.12rem;
+  text-transform: none;
+  line-height: 120%;
   color: #2E2E2E;
-}
-
-.container-fluid #page_number {
-  font-family: Butler;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  color: #010101;
-}
-
-#container_about #about_info {
-  font-family: Butler;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.065em;
-}
-
-#container_communication #communication_info,
-#container_communication #email,
-#container_communication #phone {
-  font-family: Butler;
-  line-height: 20px;
-  letter-spacing: 0.065em;
-  color: #010101;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
-#container_communication #email:hover {
-  text-decoration: underline;
-  color: #FE6A79;
+#personal_projects:hover,
+a:hover {
+  color: #777777;
 }
 
-#container_communication #behance {
-  font-family: Butler;
-  font-size: 17.5px;
-  line-height: 1px;
-  letter-spacing: 0.065em;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  color: #010101;
-  margin-bottom: 100px;
+#copyright {
+  border-bottom: 0.5px solid #2E2E2E;
+  padding-bottom: 10px;
 }
 
-#container_communication #behance:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  color: #FE6A79;
+#goto {
+  font-family: "Gotham Book";
+  font-size: 12px;
+  letter-spacing: -.025px;
+  line-height: 28px;
+  color: #000;
 }
 
-#container_about,
-#container_communication,
-#header,
-footer {
-  -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+/* --------- Misc ---------- */
+summary {
+  cursor: pointer;
 }
 
-#behance {
-  -webkit-animation-name: displaceContent;
-          animation-name: displaceContent;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+summary::marker, summary::-webkit-details-marker {
+  display: none;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container-fluid {
-    border-bottom: 1px solid #010101;
-    padding: 5px;
-    margin: 10px;
-  }
-  .container-fluid #homepage,
-  .container-fluid #contact {
-    font-size: 1rem;
-    border-image-repeat: stretch;
-    -webkit-font-smoothing: antialiased;
-  }
-  #about_title,
-  #communication_title {
-    visibility: hidden;
-  }
-  #container_about {
-    background: url("/img/about_title_mobile.svg") no-repeat;
-    margin-left: 20px;
-  }
-  #container_communication {
-    background: url("/img/communication_title_mobile.svg") no-repeat;
-    margin-left: 20px;
-  }
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
 }
 
+/* --------- Responsive ---------- */
 /* --------- Animation 01 ---------- */
 @-webkit-keyframes fade-in {
   0% {
@@ -168,42 +175,6 @@ footer {
     opacity: 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
-    opacity: 0.25;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
-    opacity: 0.25;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     opacity: 1;
   }
 }

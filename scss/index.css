@@ -1,8 +1,18 @@
 /* --------- Variables ---------- */
-/* --------- Variables ---------- */
+/* --------- Fonts ---------- */
 @font-face {
-  font-family: "Gotham HTF";
+  font-family: "Gotham Book";
   src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Light";
+  src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Editorial";
+  src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
 }
 
 *,
@@ -11,7 +21,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  box-sizing: border-box;
 }
 
 body {
@@ -19,142 +28,173 @@ body {
 }
 
 html,
-a,
-dt {
+a {
   cursor: none;
   cursor: url("/img/cursor.svg"), auto;
+  -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-/* --------- Header ---------- */
-#header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #010101), to(rgba(1, 1, 1, 0)));
-  background: linear-gradient(180deg, #010101 80%, rgba(1, 1, 1, 0) 100%);
-  position: fixed;
-  width: 100%;
+/* --------- FIAP projects ---------- */
+#projects #project_one,
+#projects #project_two,
+#projects #project_three,
+#projects #project_four,
+#projects #project_five,
+#projects #project_six,
+#projects #project_seven,
+#projects #personal_one {
+  font-family: "Gotham Book";
+  font-size: 3.2rem;
+  letter-spacing: -0.12rem;
+  text-transform: none;
+  line-height: 140%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+#projects #project_one:hover,
+#projects #project_two:hover,
+#projects #project_three:hover,
+#projects #project_four:hover,
+#projects #project_five:hover,
+#projects #project_six:hover,
+#projects #project_seven:hover,
+#projects #personal_one:hover {
+  color: #B2B2B2;
+}
+
+#projects a {
+  color: #FFFFFF;
+}
+
+#projects a:hover {
+  color: #B2B2B2;
 }
 
 .container-fluid {
-  border-bottom: 1px solid #fff;
-  padding: 10px;
-  margin: 10px;
+  border-bottom: 0.5px solid #FFFFFF;
+  margin: 0 auto;
+  width: 86vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .container-fluid #homepage,
-.container-fluid #contact {
-  font-family: "Gotham HTF";
+.container-fluid #contact,
+.container-fluid #folio {
+  font-family: "Gotham Light";
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
+  margin-bottom: 16px;
+  margin-top: 10px;
+  color: #FFFFFF;
   letter-spacing: -1px;
   text-transform: uppercase;
   border-image-repeat: stretch;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
 
 .container-fluid #homepage:hover,
+.container-fluid #contact:hover,
+.container-fluid #folio:hover {
+  color: #B2B2B2;
+}
+
+.container-fluid #folio {
+  line-height: normal;
+}
+
 .container-fluid #contact:hover {
   color: #B2B2B2;
 }
 
-.container-fluid #contact:hover {
-  color: #B2B2B2;
+/* --------- Sections ---------- */
+#intro,
+#about,
+#fiap_projects,
+#side_projects,
+#social,
+#copyright {
+  font-family: "Gotham Light";
+  font-size: 19px;
+  letter-spacing: -.025px;
+  line-height: 28px;
+  color: #AEED61;
+  border-top: 0.5px solid #FFFFFF;
+  padding-top: 10px;
 }
 
-.container-fluid #page_number {
-  font-family: Butler;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  color: #B2B2B2;
-}
-
-/* --------- Card ---------- */
-.card {
-  border: transparent;
-}
-
-/* --------- Container ---------- */
-#subtitle {
-  font-size: 1.5em;
-  font-family: Butler;
-  color: #fff;
+/* --------- Intro | Description ---------- */
+.box #title {
+  font-family: "Editorial";
+  color: #FFFFFF;
+  text-align: right;
+  position: absolute;
+  margin-right: 50px;
   margin-top: 300px;
+  font-size: 15rem;
+  letter-spacing: -.5rem;
+  line-height: 90%;
+  text-transform: initial;
+}
+
+.box #title #year {
+  -webkit-text-fill-color: #010101;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+}
+
+/* --------- About | Description ---------- */
+#subtitle {
+  font-size: 3.2em;
+  font-family: "Gotham Light";
+  letter-spacing: -0.12rem;
+  text-transform: none;
+  line-height: 120%;
+  color: #F0F0F0;
 }
 
 #fiap {
-  text-decoration: underline;
-  font-family: Butler;
-  color: #fff;
+  text-decoration: none;
+  font-family: "Gotham Light";
+  letter-spacing: -0.12rem;
+  text-transform: none;
+  line-height: 120%;
+  color: #F0F0F0;
 }
 
 #fiap:hover {
-  color: #FE6A79;
-}
-
-/* --------- Page Content ---------- */
-.box #inspect_project {
-  font-family: Butler;
-  font-style: normal;
-  margin: 2.75rem 0 1.05rem;
-  font-weight: 800;
-  font-size: 80px;
-  color: #fff;
-}
-
-.box #company_name,
-.box #personal_projects {
-  font-family: Butler;
-  font-weight: lighter;
-  text-transform: uppercase;
   color: #B2B2B2;
-  font-size: 20px;
 }
 
-.box #project_one,
-.box #project_two,
-.box #project_three,
-.box #project_four,
-.box #project_five,
-.box #project_six,
-.box #project_seven,
-.box #personal_one {
-  font-family: Butler;
-  font-weight: 800;
-  font-size: 2rem;
-  text-transform: uppercase;
-  line-height: 56px;
-  color: #fff;
+#personal_projects,
+a {
+  font-family: "Gotham Book";
+  font-size: 3.2rem;
+  letter-spacing: -0.12rem;
+  text-transform: none;
+  line-height: 120%;
+  color: #FFFFFF;
   text-decoration: none;
-}
-
-.box #project_one:hover,
-.box #project_two:hover,
-.box #project_three:hover,
-.box #project_four:hover,
-.box #project_five:hover,
-.box #project_six:hover,
-.box #project_seven:hover,
-.box #personal_one:hover {
-  color: #B2B2B2;
-}
-
-.box a {
-  color: #fff;
-}
-
-.box a:hover {
-  color: #B2B2B2;
-}
-
-.box #emkt_one,
-.box #emkt_two {
-  text-decoration: none;
-  font-family: Butler;
-  font-size: 1.3rem;
   text-transform: uppercase;
 }
 
+#personal_projects:hover,
+a:hover {
+  color: #B2B2B2;
+}
+
+#goto {
+  font-family: "Gotham Book";
+  font-size: 12px;
+  letter-spacing: -.025px;
+  line-height: 28px;
+  color: #B2B2B2;
+}
+
+/* --------- Misc ---------- */
 summary {
   cursor: pointer;
 }
@@ -163,71 +203,118 @@ summary::marker, summary::-webkit-details-marker {
   display: none;
 }
 
-#header,
-.container,
-footer {
-  -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* --------- Responsive ---------- */
-@media only screen and (max-width: 600px) {
-  .container-fluid {
-    border-bottom: 1px solid #fff;
-    padding: 5px;
-    margin: 10px;
+@media only screen and (max-width: 480px) {
+  #folio {
+    display: none;
   }
-  .container-fluid #homepage,
-  .container-fluid #contact {
+  .box #title {
+    font-size: 6rem;
+    width: 90%;
+  }
+  #intro_num,
+  #about_num,
+  #fiap_num,
+  #personal_num,
+  #copyright_num {
+    position: relative;
+    right: 15px;
+  }
+  #intro,
+  #about,
+  #fiap_projects,
+  #side_projects,
+  #copyright {
     font-size: 1rem;
-    border-image-repeat: stretch;
-    -webkit-font-smoothing: antialiased;
   }
-  .box {
+  #intro_txt,
+  #about_txt,
+  #fiap_txt,
+  #personal_txt,
+  #copyright_txt {
+    margin-left: 120px;
     position: relative;
-    bottom: 50px;
+    bottom: 28px;
   }
-  .box #inspect_project {
-    font-size: 2.6rem;
-    margin-left: 30px;
-  }
-  .box #arrow {
-    width: 32px;
-    height: 32px;
-    margin-left: 6px;
-  }
-  .box #company_name,
-  .box #personal_projects {
-    font-size: 1.2rem;
-    margin-left: 30px;
-  }
-  .box #project_one,
-  .box #project_two,
-  .box #project_three,
-  .box #project_four,
-  .box #project_five,
-  .box #project_six,
-  .box #project_seven {
-    margin-left: 30px;
-    font-size: 1.8rem;
-  }
-  .box #emkt_one,
-  .box #emkt_two {
-    font-size: 1.1rem;
+  #about {
     position: relative;
-    left: 10px;
+    bottom: 450px;
   }
-  .box #personal_projects,
-  .box #personal_one {
+  #fiap_projects {
     position: relative;
-    bottom: 32px;
+    bottom: 530px;
   }
-  .box #personal_one {
-    font-size: 1.8rem;
-    font-family: Butler;
-    font-weight: 800;
-    text-transform: uppercase;
+  #side_projects {
+    position: relative;
+    bottom: 632px;
+  }
+  #personal_projects .arrow {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    bottom: 686px;
+    left: 26px;
+  }
+  #personal_projects #personal_one {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 690px;
+    left: 32px;
+    letter-spacing: -2.7px;
+  }
+  #copyright {
+    position: relative;
+    bottom: 748px;
+    border-bottom: none;
+  }
+  #goto {
+    position: relative;
+    left: 226px;
+    bottom: 60px;
+  }
+  #projects .arrow {
+    width: 36px;
+    height: 36px;
+  }
+  #projects #project_one,
+  #projects #project_two,
+  #projects #project_three,
+  #projects #project_four,
+  #projects #project_five,
+  #projects #project_six,
+  #projects #project_seven,
+  #projects #personal_one {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 575px;
+    left: 32px;
+    letter-spacing: -2.7px;
+    line-height: 180%;
+  }
+  #subtitle {
+    font-size: 2rem;
     margin-left: 30px;
+    position: relative;
+    bottom: 490px;
+    width: 82%;
+  }
+  #fiap {
+    font-size: 1.75rem;
   }
 }
 

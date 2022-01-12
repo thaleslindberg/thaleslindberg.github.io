@@ -2,110 +2,43 @@
 $black: #010101;
 $red: #FE6A79;
 $pink: #F1E8E2;
+$silver: #B2B2B2;
+$white: #FFFFFF;
 
-/* --------- Variables ---------- */
+/* --------- Fonts ---------- */
 @font-face {
-	font-family: "Gotham HTF";
+	font-family: "Gotham Book";
 	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
+@font-face {
+	font-family: "Gotham Light";
+	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+@font-face {
+	font-family: "Editorial";
+	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
+}
+
 
 *, 
 *::after,
 *::before {
-    box-sizing: border-box;
-	position: relative;
 	box-sizing: border-box;
+	position: relative;
 }
 
-body {
-  background: $black;
-}
+body { background: $black; }
 
-html,
-a,
-dt {
+
+html, 
+a {
 	cursor: none;
 	cursor: url('/img/cursor.svg'), auto;
+	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-/* --------- Header ---------- */
-#header { 
-	background: linear-gradient(180deg, #010101 80%, rgba(1, 1, 1, 0) 100%);
-	position: fixed;
-	width: 100%;
-}
-
-.container-fluid {
-    border-bottom: 1px solid #fff;
-    padding: 10px;
-    margin: 10px;
-
-  #homepage, 
-  #contact {
-	font-family: "Gotham HTF";
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff;
-	letter-spacing: -1px;
-	text-transform: uppercase;
-	border-image-repeat: stretch;
-	-webkit-font-smoothing: antialiased;
-
-    &:hover { color: #B2B2B2; }
-  }
-	#contact:hover { color: #B2B2B2; }
-
-	#page_number {
-      font-family: Butler;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 18px;
-      color: #B2B2B2;
-    }
-}
-
-/* --------- Card ---------- */
-.card {
-	border: transparent;
-}
-
-
-/* --------- Container ---------- */
-	#subtitle {
-		font-size: 1.5em;
-		font-family: Butler;
-		color: #fff;
-		margin-top: 300px;
-	}
-
-	#fiap {
-		text-decoration: underline;
-		font-family: Butler;
-		color: #fff;
-		&:hover { color: $red; }
-	}
-
-/* --------- Page Content ---------- */
-.box {
-	#inspect_project {
-		font-family: Butler;
-		font-style: normal;
-		margin: 2.75rem 0 1.05rem;
-		font-weight: 800;
-		font-size: 80px;
-		color: #fff;
-	}
-
-	#company_name,
-	#personal_projects {
-		font-family: Butler;
-		font-weight: lighter;
-		text-transform: uppercase;
-		color: #B2B2B2;
-		font-size: 20px;
-	}
-
+/* --------- FIAP projects ---------- */
+#projects {
 	#project_one,
 	#project_two,
 	#project_three,
@@ -114,101 +47,255 @@ dt {
 	#project_six,
 	#project_seven,
 	#personal_one {
-		font-family: Butler;
-		font-weight: 800;
-		font-size: 2rem;
+		font-family: "Gotham Book";
+		font-size: 3.2rem;
+		letter-spacing: -0.12rem;
+		text-transform: none;
+		line-height: 140%;
+		color: $white;
 		text-transform: uppercase;
-		line-height: 56px;
-		color: #fff;
-		text-decoration: none;
 
-		&:hover { color:  #B2B2B2; }
+		&:hover { color:  $silver; }
 	}
-	a { color: #fff;
-		&:hover { color: #B2B2B2; }
+	a { color: $white;
+		&:hover { color: $silver; }
 	}
-	#emkt_one,
-	#emkt_two {
-		text-decoration: none;
-		font-family: Butler;
-		font-size: 1.3rem;
-		text-transform: uppercase;
-	}
-
 }
 
+.container-fluid {
+    border-bottom: 0.5px solid $white;
+    margin: 0 auto;
+	width: 86vw;
+	align-self: center;
+
+  #homepage, 
+  #contact,
+  #folio {
+	font-family: "Gotham Light";
+    font-size: 18px;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    color: $white;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	border-image-repeat: stretch;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+
+    &:hover { color: $silver; }
+  }
+  #folio {
+	  line-height: normal;
+  }
+	#contact:hover { color: $silver; }
+}
+
+/* --------- Sections ---------- */
+#intro,
+#about,
+#fiap_projects,
+#side_projects,
+#social,
+#copyright {
+	font-family: "Gotham Light";
+	font-size: 19px;
+	letter-spacing: -.025px;
+	line-height: 28px;
+	color: #AEED61;
+	border-top: 0.5px solid $white;
+	padding-top: 10px;
+}
+
+/* --------- Intro | Description ---------- */
+.box {
+	#title {
+		font-family: "Editorial";
+		color: $white;
+		text-align: right;
+		position: absolute;
+		margin-right: 50px;
+		margin-top: 300px;
+
+		font-size: 15rem;
+		letter-spacing: -.5rem;
+		line-height: 90%;
+		text-transform: initial;
+
+		#year {
+			-webkit-text-fill-color: #010101; 
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: $white;
+		}
+	}
+}
+
+/* --------- About | Description ---------- */
+#subtitle {
+	font-size: 3.2em;
+	font-family: "Gotham Light";
+	letter-spacing: -0.12rem;
+	text-transform: none;
+	line-height: 120%;
+	color: #F0F0F0;
+}
+
+#fiap {
+	text-decoration: none;
+	font-family: "Gotham Light";
+	letter-spacing: -0.12rem;
+	text-transform: none;
+	line-height: 120%;
+	color: #F0F0F0;
+
+	&:hover { color: $silver; }
+}
+
+#personal_projects, 
+a {
+	font-family: "Gotham Book";
+	font-size: 3.2rem;
+	letter-spacing: -0.12rem;
+	text-transform: none;
+	line-height: 120%;
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover { color:  $silver; }
+}
+
+#goto {
+	font-family: "Gotham Book";
+	font-size: 12px;
+	letter-spacing: -.025px;
+	line-height: 28px;
+	color: $silver;
+}
+
+
+/* --------- Misc ---------- */
 summary { cursor: pointer; }
 summary::marker, summary::-webkit-details-marker {
 	display: none;
 }
 
-#header,
-.container,
-footer { animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; }
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
 
 /* --------- Responsive ---------- */
-@media only screen and (max-width: 600px) {
-	.container-fluid {
-		border-bottom: 1px solid #fff;
-		padding: 5px;
-		margin: 10px;
+@media only screen and (max-width: 480px) {
+	#folio { display: none; }
 
-		#homepage, 
-		#contact {
-			font-size: 1rem;
-			border-image-repeat: stretch;
-			-webkit-font-smoothing: antialiased;
-		}
+	.box { 
+		#title { 
+		font-size: 6rem;
+		width: 90%;
+	 }
 	}
-	.box {
+
+	#intro_num,
+	#about_num,
+	#fiap_num,
+	#personal_num,
+	#copyright_num {
 		position: relative;
-		bottom: 50px;
+		right: 15px;
+	}
+	#intro,
+	#about,
+	#fiap_projects,
+	#side_projects,
+	#copyright { font-size: 1rem; }
 
-		#inspect_project {
-			font-size: 2.6rem;
-			margin-left: 30px;
+	#intro_txt,
+	#about_txt,
+	#fiap_txt,
+	#personal_txt,
+	#copyright_txt {
+		margin-left: 120px;
+		position: relative;
+		bottom: 28px;
+	}
+
+	#about {
+		position: relative;
+		bottom: 450px;
+	}
+	#fiap_projects {
+		position: relative;
+		bottom: 530px;
+	}
+	#side_projects {
+		position: relative;
+		bottom: 632px;
+	}
+	#personal_projects {
+		.arrow {
+			width: 36px;
+			height: 36px;
+			position: relative;
+			bottom: 686px;
+			left: 26px;
 		}
-		#arrow {
-			width: 32px;
-			height: 32px;
-			margin-left: 6px;
+		#personal_one {
+			font-size: 1.6rem;
+			position: relative;
+			bottom: 690px;
+			left: 32px;
+			letter-spacing: -2.7px;
 		}
 	}
 
-	.box {
-		#company_name,
-		#personal_projects {
-			font-size: 1.2rem;
-			margin-left: 30px;
+	#copyright {
+		position: relative;
+		bottom: 748px;
+		border-bottom: none;
+	}
+	#goto {
+		position: relative;
+		left: 226px;
+		bottom: 60px;
+	}
+	#projects {
+		.arrow {
+			width: 36px;
+			height: 36px;
 		}
+
 		#project_one,
 		#project_two,
 		#project_three,
 		#project_four,
 		#project_five,
 		#project_six,
-		#project_seven {
-			margin-left: 30px;
-			font-size: 1.8rem;
-		}
-		#emkt_one,
-		#emkt_two {
-			font-size: 1.1rem;
-			position: relative;
-			left: 10px;
-		}
-		#personal_projects,
+		#project_seven,
 		#personal_one {
+			font-size: 1.6rem;
 			position: relative;
-			bottom: 32px;
+			bottom: 575px;
+			left: 32px;
+			letter-spacing: -2.7px;
+			line-height: 180%;
 		}
-		#personal_one {
-			font-size: 1.8rem;
-			font-family: Butler;
-			font-weight: 800;
-			text-transform: uppercase;
-			margin-left: 30px;
-		}
+	}
+
+	#subtitle {
+		font-size: 2rem;
+		margin-left: 30px;
+		position: relative;
+		bottom: 490px;
+		width: 82%;
+	}
+	#fiap {
+		font-size: 1.75rem;
 	}
 }
 
