@@ -28,7 +28,7 @@ $white: #FFFFFF;
 	position: relative;
 }
 
-body { background: $pink; }
+body { background: #f0f0f0; }
 
 
 html, 
@@ -40,10 +40,8 @@ a {
 
 
 .container-fluid {
-    border-bottom: 0.5px solid $black;
+    border-bottom: 2.5px solid $black;
     margin: 0 auto;
-	width: 86vw;
-	align-self: center;
 
   #homepage, 
   #contact,
@@ -77,9 +75,13 @@ a {
 	font-size: 19px;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: #3633FF;
-	border-top: 0.5px solid $black;
+	color: #ED4C19;
+	border-top: 2.5px solid $black;
 	padding-top: 10px;
+}
+
+#intro {
+	border: none;
 }
 
 /* --------- Intro | Description ---------- */
@@ -98,7 +100,7 @@ a {
 		text-transform: initial;
 
 		#year {
-			-webkit-text-fill-color: $pink; 
+			-webkit-text-fill-color: #f0f0f0; 
 			-webkit-text-stroke-width: 1px;
 			-webkit-text-stroke-color: $black;
 		}
@@ -119,11 +121,6 @@ a {
 	&:hover { color: #777777; }
 }
 
-#copyright {
-	border-bottom: 0.5px solid $black;
-	padding-bottom: 10px;
-}
-
 #goto {
 	font-family: "Gotham Book";
 	font-size: 12px;
@@ -131,7 +128,6 @@ a {
 	line-height: 28px;
 	color: #000;
 }
-
 
 /* --------- Misc ---------- */
 summary { cursor: pointer; }
@@ -152,9 +148,84 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
+	#folio { display: none; }
 
+	.box { 
+		#title { 
+			font-size: 6rem;
+			width: 90%;
+		}
+	}
+	#homepage {
+		margin-left: -10px;
+	}
+
+	#intro_num,
+	#about_num,
+	#copyright_num {
+		position: relative;
+		right: 15px;
+	}
+	#intro,
+	#about,
+	#side_projects,
+	#copyright { font-size: 1rem; }
+
+	#intro_txt,
+	#about_txt,
+	#copyright_txt {
+		margin-left: 120px;
+		position: relative;
+		bottom: 28px;
+	}
+
+	#about {
+		position: relative;
+		bottom: 450px;
+	}
+	#social_media {
+		position: relative;
+		bottom: 500px;
+
+		.arrow {
+			width: 36px;
+			height: 36px;
+		}
+
+		#email,
+		#behance,
+		#linkedin {
+			width: 36px;
+			height: 36px;
+			position: relative;
+			left: 26px;
+			font-size: 2.5rem;
+			letter-spacing: -2.7px;
+			line-height: 160%;
+		}
+	}
+
+	#copyright {
+		position: relative;
+		bottom: 564px;
+		border-bottom: none;
+	}
+	#goto {
+		position: relative;
+		left: 226px;
+		bottom: 60px;
+	}
 }
 
+@media only screen and (max-width: 380px) {
+	.box { 
+		#title { 
+			font-size: 5.3rem;
+			width: 90%;
+			letter-spacing: -.3rem;
+		}
+	}
+}
 
 /* --------- Animation 01 ---------- */
  @-webkit-keyframes fade-in {

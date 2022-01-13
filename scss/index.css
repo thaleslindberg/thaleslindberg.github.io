@@ -21,6 +21,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  clear: both;
 }
 
 body {
@@ -73,9 +74,8 @@ a {
 }
 
 .container-fluid {
-  border-bottom: 0.5px solid #FFFFFF;
+  border-bottom: 2.5px solid #FFFFFF;
   margin: 0 auto;
-  width: 86vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -106,10 +106,6 @@ a {
   line-height: normal;
 }
 
-.container-fluid #contact:hover {
-  color: #B2B2B2;
-}
-
 /* --------- Sections ---------- */
 #intro,
 #about,
@@ -121,9 +117,13 @@ a {
   font-size: 19px;
   letter-spacing: -.025px;
   line-height: 28px;
-  color: #AEED61;
-  border-top: 0.5px solid #FFFFFF;
+  color: #B4FF00;
+  border-top: 2.5px solid #FFFFFF;
   padding-top: 10px;
+}
+
+#intro {
+  border: none;
 }
 
 /* --------- Intro | Description ---------- */
@@ -227,6 +227,9 @@ summary::marker, summary::-webkit-details-marker {
     font-size: 6rem;
     width: 90%;
   }
+  #homepage {
+    margin-left: -10px;
+  }
   #intro_num,
   #about_num,
   #fiap_num,
@@ -281,15 +284,38 @@ summary::marker, summary::-webkit-details-marker {
     position: relative;
     bottom: 748px;
     border-bottom: none;
+    height: 100vh;
   }
   #goto {
     position: relative;
     left: 226px;
     bottom: 60px;
+    height: 100vh;
   }
   #projects .arrow {
     width: 36px;
     height: 36px;
+  }
+  #projects .arrow_one {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 254px;
+    top: 2px;
+  }
+  #projects .arrow_three {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 236px;
+    top: 1px;
+  }
+  #projects .arrow_five {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 230px;
+    top: 2px;
   }
   #projects #project_one,
   #projects #project_two,
@@ -299,11 +325,10 @@ summary::marker, summary::-webkit-details-marker {
   #projects #project_six,
   #projects #project_seven,
   #projects #personal_one {
-    font-size: 1.6rem;
+    font-size: 2rem;
     position: relative;
     bottom: 575px;
     left: 32px;
-    letter-spacing: -2.7px;
     line-height: 180%;
   }
   #subtitle {
@@ -315,6 +340,13 @@ summary::marker, summary::-webkit-details-marker {
   }
   #fiap {
     font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .box #title {
+    font-size: 5.3rem;
+    width: 90%;
   }
 }
 
