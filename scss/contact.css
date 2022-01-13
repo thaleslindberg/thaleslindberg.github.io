@@ -228,6 +228,15 @@ summary::marker, summary::-webkit-details-marker {
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .box #title {
+    font-size: 4.3rem;
+    width: 90%;
+    letter-spacing: -0.1rem;
+    line-height: 95%;
+  }
+}
+
 /* --------- Animation 01 ---------- */
 @-webkit-keyframes fade-in {
   0% {
