@@ -1,15 +1,21 @@
 /* --------- Variables ---------- */
 $black: #010101;
-$red: #FE6A79;
-$pink: #F1E8E2;
 $silver: #B2B2B2;
 $white: #FFFFFF;
+$wolf: #D9D4D1;
+$cinnabar: #E83C38;
 
 /* --------- Fonts ---------- */
 @font-face {
 	font-family: "Gotham Book";
 	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
+
+@font-face {
+	font-family: "Gotham Black";
+	src: url("/fonts/GothamHTF-Black.otf") format("truetype");
+}
+
 @font-face {
 	font-family: "Gotham Light";
 	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
@@ -19,19 +25,19 @@ $white: #FFFFFF;
 	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Editorial Thin";
+	src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
+}
 
 *, 
 *::after,
 *::before {
-	box-sizing: border-box;
-	position: relative;
-	clear: both;
+	-webkit-box-sizing:padding-box;
+	box-sizing:padding-box;
 }
 
-body { 
-	background: $black;
-	// height: 100vh;
-}
+body { background: $black; }
 
 html, 
 a {
@@ -40,8 +46,127 @@ a {
 	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+/* --------- Scrolling texts ---------- */
+.menu {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 10vh 0 25vh;
+	--marquee-width: 100vw;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	--item-font-size: 10vw;
+	counter-reset: menu;
+}
+
+.marquee {
+	position: absolute;
+	top: 120;
+	left: 0;
+	width: var(--marquee-width);
+	overflow: hidden;
+	pointer-events: none;
+	color: $silver;
+	text-transform: uppercase;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 10s linear infinite;
+	animation-play-state: paused;
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+
+.marquee .marquee__inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.marquee span {
+  	text-align: center;
+	white-space: nowrap;
+	font-size: var(--item-font-size);
+	padding: 0 1vw;
+	font-family: "Gotham Black";
+	line-height: 1.15;
+}
+
+/* --------- Scrolling texts 2 ---------- */
+.menu2 {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 10vh 0 25vh;
+	--marquee-width: 100vw;
+	--offset: 20vw;
+	--move-initial: calc(-50% + var(--offset));
+	--move-final: calc(-25% + var(--offset));
+	--item-font-size: 10vw;
+	counter-reset: menu;
+}
+
+.marquee2 {
+	position: absolute;
+	top: 120;
+	left: 0;
+	width: var(--marquee-width);
+	overflow: hidden;
+	pointer-events: none;
+	text-transform: uppercase;
+}
+
+.marquee__inner2 {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 10s linear infinite;
+	animation-play-state: paused;
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+
+.marquee2 .marquee__inner2 {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.marquee2 p {
+  	text-align: center;
+	white-space: nowrap;
+	font-size: var(--item-font-size);
+	padding: 0 1vw;
+	font-family: "Gotham Black";
+	line-height: 1.15;
+	opacity: 0.5;
+	-webkit-text-fill-color: $black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: $silver;
+}
+
+#location,
+#year {
+	font-size: 1rem;
+	font-family: "Gotham Light";
+	color: $cinnabar;
+}
+
+#header {
+	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
+}
+
 /* --------- FIAP projects ---------- */
-#projects {
 	#project_one,
 	#project_two,
 	#project_three,
@@ -49,36 +174,39 @@ a {
 	#project_five,
 	#project_six,
 	#project_seven,
-	#personal_one {
-		font-family: "Gotham Book";
+	#project_seven {
+		font-family: "Gotham Black";
 		font-size: 3.2rem;
-		letter-spacing: -0.12rem;
 		text-transform: none;
 		line-height: 140%;
-		color: $white;
 		text-transform: uppercase;
 
-		&:hover { color:  $silver; }
+		-webkit-text-fill-color: #010101; 
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: $white;
+
+		&:hover { 
+			color: $black;
+
+			-webkit-text-fill-color: none; 
+			-webkit-text-stroke-width: none;
+			-webkit-text-stroke-color: #E83C38;
+		}
 	}
-	a { color: $white;
-		&:hover { color: $silver; }
-	}
-}
 
 .container-fluid {
-    border-bottom: 2.5px solid $white;
+    border-bottom: 1px solid $white;
     margin: 0 auto;
-	// width: 86vw;
 	align-self: center;
 
   #homepage, 
   #contact,
   #folio {
-	font-family: "Gotham Light";
+	font-family: "Gotham Book";
     font-size: 18px;
-    margin-bottom: 16px;
-    margin-top: 10px;
-    color: $white;
+    margin-bottom: 8px;
+	padding: 16px;
+    color: $wolf;
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	border-image-repeat: stretch;
@@ -103,8 +231,8 @@ a {
 	font-size: 19px;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: #B4FF00;
-	border-top: 2.5px solid $white;
+	color: $wolf;
+	border-top: 1px solid $white;
 	padding-top: 10px;
 }
 
@@ -112,37 +240,14 @@ a {
 	border: none;
 }
 
-/* --------- Intro | Description ---------- */
-.box {
-	#title {
-		font-family: "Editorial";
-		color: $white;
-		text-align: right;
-		position: absolute;
-		margin-right: 50px;
-		margin-top: 300px;
-
-		font-size: 15rem;
-		letter-spacing: -.5rem;
-		line-height: 90%;
-		text-transform: initial;
-
-		#year {
-			-webkit-text-fill-color: #010101; 
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: $white;
-		}
-	}
-}
-
 /* --------- About | Description ---------- */
-#subtitle {
+#txt_about {
 	font-size: 3.2em;
 	font-family: "Gotham Light";
 	letter-spacing: -0.12rem;
 	text-transform: none;
 	line-height: 120%;
-	color: #F0F0F0;
+	color: $silver;
 }
 
 #fiap {
@@ -151,9 +256,20 @@ a {
 	letter-spacing: -0.12rem;
 	text-transform: none;
 	line-height: 120%;
-	color: #F0F0F0;
+	color: $silver;
 
-	&:hover { color: $silver; }
+	&:hover { 
+		-webkit-text-fill-color: $black; 
+		-webkit-text-stroke-width: 0.5px;
+		-webkit-text-stroke-color: #E83C38;
+	 }
+}
+
+.arrow,
+.arrow_one,
+.arrow_three,
+.arrow_five {
+	animation: slide1 1s ease-in-out infinite;
 }
 
 #personal_projects, 
@@ -200,14 +316,17 @@ summary::marker, summary::-webkit-details-marker {
 @media only screen and (max-width: 480px) {
 	#folio { display: none; }
 
-	.box { 
-		#title { 
-			font-size: 6rem;
-			width: 90%;
-		}
+	.menu {
+		position: relative;
+		top: -20px;
+	}
+	.menu2 {
+		position: relative;
+		top: -120px;
 	}
 	#homepage {
-		margin-left: -10px;
+		position: relative;
+		left: -1px;
 	}
 
 	#intro_num,
@@ -217,6 +336,10 @@ summary::marker, summary::-webkit-details-marker {
 	#copyright_num {
 		position: relative;
 		right: 15px;
+	}
+	#timezone {
+		width: 22px;
+		height: 22px;
 	}
 	#intro,
 	#about,
@@ -228,7 +351,7 @@ summary::marker, summary::-webkit-details-marker {
 	#about_txt,
 	#fiap_txt,
 	#personal_txt,
-	#copyright_txt {
+	#clock {
 		margin-left: 120px;
 		position: relative;
 		bottom: 28px;
@@ -236,44 +359,34 @@ summary::marker, summary::-webkit-details-marker {
 
 	#about {
 		position: relative;
-		bottom: 450px;
+		bottom: 250px;
+	}
+
+	#txt_about {
+		font-size: 2rem;
+		margin-left: 30px;
+		position: relative;
+		bottom: 278px;
+		width: 82%;
+	}
+	#fiap {
+		font-size: 1.75rem;
 	}
 	#fiap_projects {
 		position: relative;
-		bottom: 530px;
+		bottom: 304px;
 	}
 	#side_projects {
 		position: relative;
-		bottom: 632px;
+		bottom: 380px;
 	}
-	#personal_projects {
-		.arrow {
-			width: 36px;
-			height: 36px;
-			position: relative;
-			bottom: 686px;
-			left: 26px;
-		}
-		#personal_one {
-			font-size: 1.6rem;
-			position: relative;
-			bottom: 690px;
-			left: 32px;
-			letter-spacing: -2.7px;
-		}
-	}
-
 	#copyright {
 		position: relative;
-		bottom: 748px;
+		bottom: 480px;
 		border-bottom: none;
-		height: 100vh;
 	}
 	#goto {
-		position: relative;
-		left: 226px;
-		bottom: 60px;
-		height: 100vh;
+		display: none;
 	}
 	#projects {
 		.arrow {
@@ -307,51 +420,57 @@ summary::marker, summary::-webkit-details-marker {
 		#project_three,
 		#project_four,
 		#project_five,
-		#project_six,
-		#project_seven,
-		#personal_one {
+		#project_six {
 			font-size: 2rem;
 			position: relative;
-			bottom: 575px;
+			bottom: 340px;
 			left: 32px;
 			line-height: 180%;
 		}
 	}
-
-	#subtitle {
-		font-size: 2rem;
-		margin-left: 30px;
-		position: relative;
-		bottom: 490px;
-		width: 82%;
-	}
-	#fiap {
-		font-size: 1.75rem;
-	}
-}
-
-@media only screen and (max-width: 380px) {
-	.box { 
-		#title { 
-			font-size: 5.3rem;
-			width: 90%;
+	#personal_projects {
+		.arrow {
+			width: 36px;
+			height: 36px;
+			position: relative;
+			bottom: 00px;
+		}
+		#project_seven {
+			font-size: 2rem;
+			left: 32px;
+			line-height: 180%;
+			position: relative;
+			bottom: 420px;
 		}
 	}
 }
 
 @media only screen and (max-width: 320px) {
-	.box { 
-		#title { 
-			font-size: 4rem;
-			width: 90%;
-			letter-spacing: -0.2rem;
-			line-height: 95%;
+	#projects {
+		#project_one,
+		#project_two,
+		#project_three,
+		#project_four,
+		#project_five,
+		#project_six {
+			font-size: 1.6rem;
+			position: relative;
+			bottom: 340px;
+			left: 32px;
+			line-height: 180%;
+		}
+	}
+	#personal_projects {
+		#project_seven {
+			font-size: 1.6rem;
+			position: relative;
+			bottom: 440px;
 		}
 	}
 }
 
 /* --------- Animation 01 ---------- */
- @-webkit-keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -367,3 +486,34 @@ summary::marker, summary::-webkit-details-marker {
     opacity: 1;
   }
 }
+
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--move-initial), 0, 0);
+	}
+
+	100% {
+		transform: translate3d(var(--move-final), 0, 0);
+	}
+}
+
+@keyframes scrollText {
+	from   { transform: translateX(0%); }
+	to { transform: translateX(-50%); }
+  }
+
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+  @keyframes slide1 {
+	0%,
+	100% {
+	  transform: translate(0, 0);
+	}
+  
+	50% {
+	  transform: translate(10px, 0);
+	}
+  }
