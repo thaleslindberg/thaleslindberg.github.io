@@ -319,14 +319,16 @@ summary::marker, summary::-webkit-details-marker {
 	.menu {
 		position: relative;
 		top: -20px;
+		--item-font-size: 20vw;
 	}
 	.menu2 {
 		position: relative;
 		top: -120px;
+		--item-font-size: 20vw;
 	}
 	#homepage {
 		position: relative;
-		left: -1px;
+		left: -16px;
 	}
 
 	#intro_num,
