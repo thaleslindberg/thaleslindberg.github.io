@@ -428,6 +428,7 @@ summary::marker, summary::-webkit-details-marker {
   }
   #goto {
     display: none;
+    color: #B2B2B2;
   }
   #projects .arrow {
     width: 36px;
