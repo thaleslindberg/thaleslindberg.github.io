@@ -371,7 +371,7 @@ summary::marker, summary::-webkit-details-marker {
     position: relative;
     left: 26px;
     font-size: 2.5rem;
-    letter-spacing: -2.7px;
+    letter-spacing: -0.5px;
     line-height: 160%;
   }
   #copyright {

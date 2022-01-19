@@ -38,7 +38,6 @@ $cinnabar: #E83C38;
 
 body { background: $wolf; }
 
-
 html, 
 a {
 	cursor: none;
@@ -276,7 +275,6 @@ summary::marker, summary::-webkit-details-marker {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
-
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
 	#folio { display: none; }
@@ -337,7 +335,7 @@ summary::marker, summary::-webkit-details-marker {
 			position: relative;
 			left: 26px;
 			font-size: 2.5rem;
-			letter-spacing: -2.7px;
+			letter-spacing: -0.5px;
 			line-height: 160%;
 		}
 	}
