@@ -1,9 +1,12 @@
 /* --------- Variables ---------- */
-$black: #2E2E2E;
-$silver: #D2D2D2;
-$wolf: #D9D4D1;
+$black: #010101;
+$silver: #B2B2B2;
 $white: #FFFFFF;
+$wolf: #D9D4D1;
 $cinnabar: #E83C38;
+$purple: #9738F0;
+$mint: #36F097;
+$half-white: #ffffff80;
 
 /* --------- Fonts ---------- */
 @font-face {
@@ -36,12 +39,12 @@ $cinnabar: #E83C38;
 	position: relative;
 }
 
-body { background: $wolf; }
+body { background: $black; }
 
 html, 
 a {
 	cursor: none;
-	cursor: url('/img/cursor_black.svg'), auto;
+	cursor: url('/img/cursor.svg'), auto;
 	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
@@ -68,7 +71,8 @@ a {
 	width: var(--marquee-width);
 	overflow: hidden;
 	pointer-events: none;
-	color: $black;
+	color: $purple;
+	opacity: 0.6;
 	text-transform: uppercase;
 }
 
@@ -149,9 +153,9 @@ a {
 	line-height: 1.15;
 	font-family: "Gotham Black";
 	opacity: 0.5;
-	-webkit-text-fill-color: $wolf; /* Will override color (regardless of order) */
+	-webkit-text-fill-color: $black; /* Will override color (regardless of order) */
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: $black;
+	-webkit-text-stroke-color: $mint;
 }
 
 #location,
@@ -162,33 +166,36 @@ a {
 }
 
 #header {
-	background: linear-gradient(180deg, #D9D4D1 0.45%, rgba(217, 212, 209, 0.9) 90%);
+	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
 }
 
 .container-fluid {
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $white;
     margin: 0 auto;
 	align-self: center;
 
-  #homepage, 
-  #contact,
-  #folio {
-	font-family: "Gotham Book";
-    font-size: 18px;
-    margin-bottom: 8px;
-	padding: 16px;
-    color: $black;
-	letter-spacing: -1px;
-	text-transform: uppercase;
-	border-image-repeat: stretch;
-	-webkit-font-smoothing: antialiased;
-	text-align: center;
-
-    &:hover { color: #777777; }
-  }
-  #folio {
-	  line-height: normal;
-  }
+	#homepage, 
+	#contact,
+	#folio {
+	  font-family: "Gotham Book";
+	  font-size: 18px;
+	  margin-bottom: 8px;
+	  padding: 16px;
+	  color: $white;
+	  letter-spacing: -1px;
+	  text-transform: uppercase;
+	  border-image-repeat: stretch;
+	  -webkit-font-smoothing: antialiased;
+	  text-align: center;
+	  
+  
+	  &:hover { color: $silver; }
+	}
+	#folio {
+		line-height: normal;
+		color: $half-white;
+		&:hover { color: $half-white; }
+	}
 }
 
 /* --------- Sections ---------- */
@@ -203,16 +210,14 @@ a {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $black;
-	border-top: 1px solid $black;
+	border-top: 1px solid $white;
 	padding-top: 10px;
+	color: $silver;
 }
 
 #intro {
 	border: none;
 }
-
-/* --------- Intro | Description ---------- */
-
 
 #personal_projects, 
 a {
@@ -239,14 +244,14 @@ a {
 	color: $white;
 	text-transform: uppercase;
 
-	-webkit-text-fill-color: $wolf; 
+	-webkit-text-fill-color: $white; 
 	-webkit-text-stroke-width: 1.5px;
 	-webkit-text-stroke-color: $black;
 
 	&:hover {
-		-webkit-text-fill-color: none; 
+		-webkit-text-fill-color: $black; 
 		-webkit-text-stroke-width: none;
-		-webkit-text-stroke-color: $cinnabar;
+		-webkit-text-stroke-color: $mint;
 	}
 }
 
@@ -256,7 +261,7 @@ a {
 	font-size: 12px;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: #000;
+	color: $half-white;
 }
 
 /* --------- Misc ---------- */

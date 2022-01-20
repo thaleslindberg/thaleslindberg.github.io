@@ -67,7 +67,8 @@ a {
   width: var(--marquee-width);
   overflow: hidden;
   pointer-events: none;
-  color: #ffffff80;
+  color: #E83C38;
+  opacity: 0.6;
   text-transform: uppercase;
 }
 
@@ -285,6 +286,7 @@ a {
   color: #D9D4D1;
   border-top: 1px solid #FFFFFF;
   padding-top: 10px;
+  color: #B2B2B2;
 }
 
 #intro {

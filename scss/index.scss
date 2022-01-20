@@ -72,7 +72,8 @@ a {
 	width: var(--marquee-width);
 	overflow: hidden;
 	pointer-events: none;
-	color: $half-white;
+	color: $cinnabar;
+	opacity: 0.6;
 	text-transform: uppercase;
 }
 
@@ -233,6 +234,7 @@ a {
 	border-image-repeat: stretch;
 	-webkit-font-smoothing: antialiased;
 	text-align: center;
+	
 
     &:hover { color: $silver; }
   }
@@ -257,6 +259,7 @@ a {
 	color: $wolf;
 	border-top: 1px solid $white;
 	padding-top: 10px;
+	color: $silver;
 }
 
 #intro {

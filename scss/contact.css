@@ -34,13 +34,13 @@
 }
 
 body {
-  background: #D9D4D1;
+  background: #010101;
 }
 
 html,
 a {
   cursor: none;
-  cursor: url("/img/cursor_black.svg"), auto;
+  cursor: url("/img/cursor.svg"), auto;
   -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
@@ -68,7 +68,8 @@ a {
   width: var(--marquee-width);
   overflow: hidden;
   pointer-events: none;
-  color: #2E2E2E;
+  color: #9738F0;
+  opacity: 0.6;
   text-transform: uppercase;
 }
 
@@ -169,10 +170,10 @@ a {
   line-height: 1.15;
   font-family: "Gotham Black";
   opacity: 0.5;
-  -webkit-text-fill-color: #D9D4D1;
+  -webkit-text-fill-color: #010101;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #2E2E2E;
+  -webkit-text-stroke-color: #36F097;
 }
 
 #location,
@@ -183,12 +184,12 @@ a {
 }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.45%, #D9D4D1), color-stop(90%, rgba(217, 212, 209, 0.9)));
-  background: linear-gradient(180deg, #D9D4D1 0.45%, rgba(217, 212, 209, 0.9) 90%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(99%, rgba(1, 1, 1, 0.8)));
+  background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
 }
 
 .container-fluid {
-  border-bottom: 1px solid #2E2E2E;
+  border-bottom: 1px solid #FFFFFF;
   margin: 0 auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -202,7 +203,7 @@ a {
   font-size: 18px;
   margin-bottom: 8px;
   padding: 16px;
-  color: #2E2E2E;
+  color: #FFFFFF;
   letter-spacing: -1px;
   text-transform: uppercase;
   border-image-repeat: stretch;
@@ -213,11 +214,16 @@ a {
 .container-fluid #homepage:hover,
 .container-fluid #contact:hover,
 .container-fluid #folio:hover {
-  color: #777777;
+  color: #B2B2B2;
 }
 
 .container-fluid #folio {
   line-height: normal;
+  color: #ffffff80;
+}
+
+.container-fluid #folio:hover {
+  color: #ffffff80;
 }
 
 /* --------- Sections ---------- */
@@ -231,16 +237,16 @@ a {
   font-size: 19px;
   letter-spacing: -.025px;
   line-height: 28px;
-  color: #2E2E2E;
-  border-top: 1px solid #2E2E2E;
+  color: #010101;
+  border-top: 1px solid #FFFFFF;
   padding-top: 10px;
+  color: #B2B2B2;
 }
 
 #intro {
   border: none;
 }
 
-/* --------- Intro | Description ---------- */
 #personal_projects,
 a {
   font-family: "Gotham Book";
@@ -248,7 +254,7 @@ a {
   letter-spacing: -0.12rem;
   text-transform: none;
   line-height: 120%;
-  color: #2E2E2E;
+  color: #010101;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -268,17 +274,17 @@ a:hover {
   line-height: 140%;
   color: #FFFFFF;
   text-transform: uppercase;
-  -webkit-text-fill-color: #D9D4D1;
+  -webkit-text-fill-color: #FFFFFF;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #2E2E2E;
+  -webkit-text-stroke-color: #010101;
 }
 
 #email:hover,
 #linkedin:hover,
 #behance:hover {
-  -webkit-text-fill-color: none;
+  -webkit-text-fill-color: #010101;
   -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #E83C38;
+  -webkit-text-stroke-color: #36F097;
 }
 
 #goto {
@@ -286,7 +292,7 @@ a:hover {
   font-size: 12px;
   letter-spacing: -.025px;
   line-height: 28px;
-  color: #000;
+  color: #ffffff80;
 }
 
 /* --------- Misc ---------- */
