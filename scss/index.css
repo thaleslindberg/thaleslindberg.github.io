@@ -67,7 +67,7 @@ a {
   width: var(--marquee-width);
   overflow: hidden;
   pointer-events: none;
-  color: #E83C38;
+  color: #B2B2B2;
   opacity: 0.6;
   text-transform: uppercase;
 }
@@ -168,18 +168,22 @@ a {
   padding: 0 1vw;
   font-family: "Gotham Black";
   line-height: 1.15;
-  opacity: 0.5;
+  opacity: 0.6;
   -webkit-text-fill-color: #010101;
   /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #36F097;
+  -webkit-text-stroke-color: #FFFFFF;
 }
 
 #location,
 #year {
   font-size: 1rem;
   font-family: "Gotham Light";
-  color: #9738F0;
+  color: #FFFFFF;
+}
+
+#location {
+  opacity: 0.6;
 }
 
 #header {
@@ -313,9 +317,7 @@ a {
 }
 
 #fiap:hover {
-  -webkit-text-fill-color: #010101;
-  -webkit-text-stroke-width: 0.4px;
-  -webkit-text-stroke-color: #9738F0;
+  color: #B2B2B2;
 }
 
 .arrow,

@@ -71,7 +71,7 @@ a {
 	width: var(--marquee-width);
 	overflow: hidden;
 	pointer-events: none;
-	color: $purple;
+	color: $silver;
 	opacity: 0.6;
 	text-transform: uppercase;
 }
@@ -146,23 +146,27 @@ a {
 }
 
 .marquee3 p {
-  	text-align: center;
+	text-align: center;
 	white-space: nowrap;
 	font-size: var(--item-font-size);
 	padding: 0 1vw;
-	line-height: 1.15;
 	font-family: "Gotham Black";
-	opacity: 0.5;
+	line-height: 1.15;
+	opacity: 0.6;
 	-webkit-text-fill-color: $black; /* Will override color (regardless of order) */
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: $mint;
+	-webkit-text-stroke-color: $white;
 }
 
 #location,
 #year {
 	font-size: 1rem;
 	font-family: "Gotham Light";
-	color: $cinnabar;
+	color: $white;
+}
+
+#location {
+	opacity: 0.6;
 }
 
 #header {
