@@ -263,11 +263,6 @@ a {
   text-transform: uppercase;
 }
 
-#personal_projects:hover,
-a:hover {
-  color: #E83C38;
-}
-
 #email,
 #linkedin,
 #behance {
@@ -288,7 +283,7 @@ a:hover {
 #behance:hover {
   -webkit-text-fill-color: #010101;
   -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #36F097;
+  -webkit-text-stroke-color: #E3D4A6;
 }
 
 #goto {

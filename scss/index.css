@@ -217,7 +217,7 @@ a {
   color: #010101;
   -webkit-text-fill-color: none;
   -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #9738F0;
+  -webkit-text-stroke-color: #E3D4A6;
 }
 
 #project_seven {
@@ -235,7 +235,7 @@ a {
   color: #010101;
   -webkit-text-fill-color: none;
   -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #36F097;
+  -webkit-text-stroke-color: #E3D4A6;
 }
 
 .container-fluid {
@@ -317,7 +317,7 @@ a {
 }
 
 #fiap:hover {
-  color: #B2B2B2;
+  color: #E3D4A6;
 }
 
 .arrow,
