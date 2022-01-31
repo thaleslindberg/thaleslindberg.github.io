@@ -240,21 +240,22 @@ a {
 #linkedin,
 #behance {
 	font-family: "Gotham Black";
-	font-size: 3.2rem;
+	font-size: 4.4rem;
 	text-transform: none;
-	letter-spacing: 0.5px;
 	line-height: 140%;
-	color: $white;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 
-	-webkit-text-fill-color: $white; 
+	-webkit-text-fill-color: #010101; 
 	-webkit-text-stroke-width: 1.5px;
-	-webkit-text-stroke-color: $black;
+	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 
 	&:hover {
-		-webkit-text-fill-color: $black; 
-		-webkit-text-stroke-width: none;
-		-webkit-text-stroke-color: #E3D4A6;
+		color: #EF4050;
+
+		-webkit-text-fill-color: #EF4050; 
+		-webkit-text-stroke-width: #EF4050;
+		-webkit-text-stroke-color: #EF4050;
 	}
 }
 
@@ -338,12 +339,10 @@ summary::marker, summary::-webkit-details-marker {
 		#email,
 		#behance,
 		#linkedin {
+			font-size: 2.8rem;
 			width: 36px;
 			height: 36px;
 			position: relative;
-			left: 26px;
-			font-size: 2.5rem;
-			letter-spacing: -0.5px;
 			line-height: 160%;
 		}
 	}

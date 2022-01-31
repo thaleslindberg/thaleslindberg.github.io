@@ -197,15 +197,17 @@ a {
 #project_three,
 #project_four,
 #project_five,
-#project_six {
+#project_six,
+#project_seven {
   font-family: "Gotham Black";
-  font-size: 3.2rem;
+  font-size: 4.4rem;
   text-transform: none;
   line-height: 140%;
+  letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #010101;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #FFFFFF;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 }
 
 #project_one:hover,
@@ -213,29 +215,12 @@ a {
 #project_three:hover,
 #project_four:hover,
 #project_five:hover,
-#project_six:hover {
-  color: #010101;
-  -webkit-text-fill-color: none;
-  -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #E3D4A6;
-}
-
-#project_seven {
-  font-family: "Gotham Black";
-  font-size: 3.2rem;
-  text-transform: none;
-  line-height: 140%;
-  text-transform: uppercase;
-  -webkit-text-fill-color: #010101;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #FFFFFF;
-}
-
+#project_six:hover,
 #project_seven:hover {
-  color: #010101;
-  -webkit-text-fill-color: none;
-  -webkit-text-stroke-width: none;
-  -webkit-text-stroke-color: #E3D4A6;
+  color: #EF4050;
+  -webkit-text-fill-color: #EF4050;
+  -webkit-text-stroke-width: #EF4050;
+  -webkit-text-stroke-color: #EF4050;
 }
 
 .container-fluid {
@@ -317,7 +302,7 @@ a {
 }
 
 #fiap:hover {
-  color: #E3D4A6;
+  color: #EF4050;
 }
 
 .arrow,
@@ -486,10 +471,9 @@ summary::marker, summary::-webkit-details-marker {
   #projects #project_four,
   #projects #project_five,
   #projects #project_six {
-    font-size: 2rem;
+    font-size: 2.4rem;
     position: relative;
     bottom: 340px;
-    left: 32px;
     line-height: 180%;
   }
   #personal_projects .arrow {
@@ -499,11 +483,10 @@ summary::marker, summary::-webkit-details-marker {
     bottom: 00px;
   }
   #personal_projects #project_seven {
-    font-size: 2rem;
-    left: 32px;
-    line-height: 180%;
+    font-size: 2.4rem;
     position: relative;
     bottom: 420px;
+    line-height: 180%;
   }
 }
 
@@ -514,14 +497,13 @@ summary::marker, summary::-webkit-details-marker {
   #projects #project_four,
   #projects #project_five,
   #projects #project_six {
-    font-size: 1.6rem;
+    font-size: 2rem;
     position: relative;
     bottom: 340px;
-    left: 32px;
     line-height: 180%;
   }
   #personal_projects #project_seven {
-    font-size: 1.6rem;
+    font-size: 2rem;
     position: relative;
     bottom: 440px;
   }
