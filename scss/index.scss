@@ -322,6 +322,25 @@ summary::marker, summary::-webkit-details-marker {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
+#gotoTop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+  
+  #gotoTop:hover {
+	background-color: #555;
+  }
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 480px) {
@@ -334,7 +353,7 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	.menu2 {
 		position: relative;
-		top: -120px;
+		top: -20px;
 		--item-font-size: 20vw;
 	}
 	#homepage {
@@ -372,14 +391,14 @@ summary::marker, summary::-webkit-details-marker {
 
 	#about {
 		position: relative;
-		bottom: 250px;
+		bottom: 90px;
 	}
 
 	#txt_about {
 		font-size: 2rem;
 		margin-left: 30px;
 		position: relative;
-		bottom: 278px;
+		bottom: 78px;
 		width: 82%;
 	}
 	#fiap {
@@ -387,15 +406,15 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	#fiap_projects {
 		position: relative;
-		bottom: 304px;
+		bottom: 84px;
 	}
 	#side_projects {
 		position: relative;
-		bottom: 380px;
+		bottom: 120px;
 	}
 	#copyright {
 		position: relative;
-		bottom: 480px;
+		bottom: 70px;
 		border-bottom: none;
 	}
 	#goto {
@@ -403,31 +422,6 @@ summary::marker, summary::-webkit-details-marker {
 		color: $silver;
 	}
 	#projects {
-		.arrow {
-			width: 36px;
-			height: 36px;
-		}
-		.arrow_one {
-			width: 36px;
-			height: 36px;
-			position: absolute;
-			left: 254px;
-			top: 2px;
-		}
-		.arrow_three {
-			width: 36px;
-			height: 36px;
-			position: absolute;
-			left: 236px;
-			top: 1px;
-		}
-		.arrow_five {
-			width: 36px;
-			height: 36px;
-			position: absolute;
-			left: 230px;
-			top: 2px;
-		}
 
 		#project_one,
 		#project_two,
@@ -437,22 +431,16 @@ summary::marker, summary::-webkit-details-marker {
 		#project_six {
 			font-size: 2.4rem;
 			position: relative;
-			bottom: 340px;
-			line-height: 180%;
+			bottom: 70px;
+			line-height: 260%;
 		}
 	}
 	#personal_projects {
-		.arrow {
-			width: 36px;
-			height: 36px;
-			position: relative;
-			bottom: 00px;
-		}
 		#project_seven {
 			font-size: 2.4rem;
 			position: relative;
-			bottom: 420px;
-			line-height: 180%;
+			bottom: 90px;
+			line-height: 10%;
 		}
 	}
 }
@@ -476,6 +464,7 @@ summary::marker, summary::-webkit-details-marker {
 			font-size: 2rem;
 			position: relative;
 			bottom: 440px;
+			line-height: 10%;
 		}
 	}
 }
