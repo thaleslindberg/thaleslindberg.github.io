@@ -1,0 +1,145 @@
+/* --------- Variables ---------- */
+$black: #010101;
+$silver: #B2B2B2;
+$white: #FFFFFF;
+$wolf: #D9D4D1;
+$cinnabar: #E83C38;
+$purple: #9738F0;
+$mint: #36F097;
+$half-white: #ffffff80;
+
+/* --------- Fonts ---------- */
+@font-face {
+	font-family: "Gotham Book";
+	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gotham Black";
+	src: url("/fonts/GothamHTF-Black.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gotham Light";
+	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+@font-face {
+	font-family: "Editorial";
+	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Editorial Thin";
+	src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
+}
+
+*, 
+*::after,
+*::before {
+	-webkit-box-sizing:padding-box;
+	box-sizing:padding-box;
+}
+
+body { background: $black; }
+
+html, 
+a {
+	cursor: none;
+	cursor: url('/img/cursor.svg'), auto;
+	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.card-img-top:nth-child(1) {
+    cursor: url('/img/view-cursor.svg'), auto;
+    transition: all .2s ease-in;
+}
+
+#header { background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%); }
+
+.container-fluid {
+    border-bottom: 1px solid $white;
+    margin: 0 auto;
+	align-self: center;
+
+  #homepage, 
+  #contact,
+  #folio {
+	font-family: "Gotham Book";
+    font-size: 18px;
+    margin-bottom: 8px;
+	padding: 16px;
+    color: $white;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	border-image-repeat: stretch;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	
+
+    &:hover { color: $silver; }
+  }
+}
+
+/* --------- Sections ---------- */
+#intro {
+	font-family: "Gotham Light";
+	font-size: 19px;
+	letter-spacing: -.025px;
+	line-height: 28px;
+	color: $wolf;
+	border-top: 1px solid $white;
+	padding-top: 10px;
+	color: $white;
+	margin-top: 200px;
+}
+
+
+
+/* --------- Animation 01 ---------- */
+@keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes marquee {
+	  0% {
+		  transform: translate3d(var(--move-initial), 0, 0);
+	  }
+  
+	  100% {
+		  transform: translate3d(var(--move-final), 0, 0);
+	  }
+  }
+  
+  @keyframes scrollText {
+	  from   { transform: translateX(0%); }
+	  to { transform: translateX(-50%); }
+	}
+  
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+  
+	@keyframes slide1 {
+	  0%,
+	  100% {
+		transform: translate(0, 0);
+	  }
+	
+	  50% {
+		transform: translate(10px, 0);
+	  }
+	}

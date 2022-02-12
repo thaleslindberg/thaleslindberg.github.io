@@ -57,7 +57,7 @@ a {
   --offset: 20vw;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
-  --item-font-size: 10vw;
+  --item-font-size: 18vw;
   counter-reset: menu;
 }
 
@@ -105,7 +105,7 @@ a {
   white-space: nowrap;
   font-size: var(--item-font-size);
   padding: 0 1vw;
-  font-family: "Gotham Black";
+  font-family: "Gotham Book";
   line-height: 1.15;
 }
 
@@ -116,12 +116,12 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 10vh 0 25vh;
+  padding: 10vh 0 40vh;
   --marquee-width: 100vw;
   --offset: 20vw;
   --move-initial: calc(-50% + var(--offset));
   --move-final: calc(-25% + var(--offset));
-  --item-font-size: 10vw;
+  --item-font-size: 18vw;
   counter-reset: menu;
 }
 
@@ -167,13 +167,9 @@ a {
   white-space: nowrap;
   font-size: var(--item-font-size);
   padding: 0 1vw;
-  font-family: "Gotham Black";
+  font-family: "Gotham Book";
   line-height: 1.15;
-  opacity: 0.6;
-  -webkit-text-fill-color: #010101;
-  /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #FFFFFF;
+  color: #ffffff80;
 }
 
 #location,
@@ -244,7 +240,7 @@ a {
   color: #010101;
   border-top: 1px solid #FFFFFF;
   padding-top: 10px;
-  color: #B2B2B2;
+  color: #FFFFFF;
 }
 
 #intro {
@@ -281,6 +277,8 @@ a {
 #linkedin:hover,
 #behance:hover {
   color: #EF4050;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
   -webkit-text-fill-color: #EF4050;
   -webkit-text-stroke-width: #EF4050;
   -webkit-text-stroke-color: #EF4050;
@@ -320,18 +318,17 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
-  #folio {
-    display: none;
-  }
   .menu {
     position: relative;
     top: -20px;
-    --item-font-size: 20vw;
+    --item-font-size: 40vw;
+    padding: 15vh 0 25vh;
   }
   .menu3 {
     position: relative;
-    top: -120px;
-    --item-font-size: 20vw;
+    top: -20px;
+    --item-font-size: 40vw;
+    padding: 0vh 0 50vh;
   }
   #homepage {
     position: relative;
@@ -358,11 +355,11 @@ summary::marker, summary::-webkit-details-marker {
   }
   #about {
     position: relative;
-    bottom: 250px;
+    bottom: 120px;
   }
   #social_media {
     position: relative;
-    bottom: 278px;
+    bottom: 150px;
   }
   #social_media .arrow {
     width: 36px;
@@ -375,11 +372,11 @@ summary::marker, summary::-webkit-details-marker {
     width: 36px;
     height: 36px;
     position: relative;
-    line-height: 160%;
+    line-height: 180%;
   }
   #copyright {
     position: relative;
-    bottom: 314px;
+    bottom: 214px;
     border-bottom: none;
   }
   #copyright #clock {

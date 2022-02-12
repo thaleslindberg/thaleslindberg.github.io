@@ -60,7 +60,7 @@ a {
 	--offset: 20vw;
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
-	--item-font-size: 10vw;
+	--item-font-size: 18vw;
 	counter-reset: menu;
 }
 
@@ -94,11 +94,11 @@ a {
 }
 
 .marquee span {
-  	text-align: center;
+	text-align: center;
 	white-space: nowrap;
 	font-size: var(--item-font-size);
 	padding: 0 1vw;
-	font-family: "Gotham Black";
+	font-family: "Gotham Book";
 	line-height: 1.15;
 }
 
@@ -109,12 +109,12 @@ a {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding: 10vh 0 25vh;
+	padding: 10vh 0 40vh;
 	--marquee-width: 100vw;
 	--offset: 20vw;
 	--move-initial: calc(-50% + var(--offset));
 	--move-final: calc(-25% + var(--offset));
-	--item-font-size: 10vw;
+	--item-font-size: 18vw;
 	counter-reset: menu;
 }
 
@@ -150,12 +150,9 @@ a {
 	white-space: nowrap;
 	font-size: var(--item-font-size);
 	padding: 0 1vw;
-	font-family: "Gotham Black";
+	font-family: "Gotham Book";
 	line-height: 1.15;
-	opacity: 0.6;
-	-webkit-text-fill-color: $black; /* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: $white;
+	color: $half-white;
 }
 
 #location,
@@ -216,7 +213,7 @@ a {
 	color: $black;
 	border-top: 1px solid $white;
 	padding-top: 10px;
-	color: $silver;
+	color: $white;
 }
 
 #intro {
@@ -252,7 +249,7 @@ a {
 
 	&:hover {
 		color: #EF4050;
-
+		transition: all .2s ease-in;
 		-webkit-text-fill-color: #EF4050; 
 		-webkit-text-stroke-width: #EF4050;
 		-webkit-text-stroke-color: #EF4050;
@@ -286,17 +283,17 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
-	#folio { display: none; }
-
 	.menu {
 		position: relative;
 		top: -20px;
-		--item-font-size: 20vw;
+		--item-font-size: 40vw;
+		padding: 15vh 0 25vh;
 	}
 	.menu3 {
 		position: relative;
-		top: -120px;
-		--item-font-size: 20vw;
+		top: -20px;
+		--item-font-size: 40vw;
+		padding: 0vh 0 50vh;
 	}
 
 	#homepage {
@@ -325,11 +322,11 @@ summary::marker, summary::-webkit-details-marker {
 
 	#about {
 		position: relative;
-		bottom: 250px;
+		bottom: 120px;
 	}
 	#social_media {
 		position: relative;
-		bottom: 278px;
+		bottom: 150px;
 
 		.arrow {
 			width: 36px;
@@ -343,13 +340,13 @@ summary::marker, summary::-webkit-details-marker {
 			width: 36px;
 			height: 36px;
 			position: relative;
-			line-height: 160%;
+			line-height: 180%;
 		}
 	}
 
 	#copyright {
 		position: relative;
-		bottom: 314px;
+		bottom: 214px;
 		border-bottom: none;
 
 		#clock {

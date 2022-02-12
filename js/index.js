@@ -7,4 +7,3 @@ function showTime() {
     // document.getElementById("clock").innerHTML = time.toLocaleDateString()
     // document.getElementById("clock").innerHTML = time.getFullYear() + " " + time.toLocaleTimeString()
 }
-

@@ -1,0 +1,216 @@
+/* --------- Variables ---------- */
+/* --------- Fonts ---------- */
+@font-face {
+  font-family: "Gotham Book";
+  src: url("/fonts/GothamHTF-Book.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Black";
+  src: url("/fonts/GothamHTF-Black.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Light";
+  src: url("/fonts/GothamHTF-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Editorial";
+  src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Editorial Thin";
+  src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+}
+
+body {
+  background: #010101;
+}
+
+html,
+a {
+  cursor: none;
+  cursor: url("/img/cursor.svg"), auto;
+  -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.card-img-top:nth-child(1) {
+  cursor: url("/img/view-cursor.svg"), auto;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+#header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(99%, rgba(1, 1, 1, 0.8)));
+  background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
+}
+
+.container-fluid {
+  border-bottom: 1px solid #FFFFFF;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.container-fluid #homepage,
+.container-fluid #contact,
+.container-fluid #folio {
+  font-family: "Gotham Book";
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding: 16px;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  border-image-repeat: stretch;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.container-fluid #homepage:hover,
+.container-fluid #contact:hover,
+.container-fluid #folio:hover {
+  color: #B2B2B2;
+}
+
+/* --------- Sections ---------- */
+#intro {
+  font-family: "Gotham Light";
+  font-size: 19px;
+  letter-spacing: -.025px;
+  line-height: 28px;
+  color: #D9D4D1;
+  border-top: 1px solid #FFFFFF;
+  padding-top: 10px;
+  color: #FFFFFF;
+  margin-top: 200px;
+}
+
+/* --------- Animation 01 ---------- */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate3d(var(--move-initial), 0, 0);
+            transform: translate3d(var(--move-initial), 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(var(--move-final), 0, 0);
+            transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translate3d(var(--move-initial), 0, 0);
+            transform: translate3d(var(--move-initial), 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(var(--move-final), 0, 0);
+            transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+@-webkit-keyframes scrollText {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollText {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+}
+/*# sourceMappingURL=explorations.css.map */
