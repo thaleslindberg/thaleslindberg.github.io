@@ -252,25 +252,62 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 /* --------- Responsive ---------- */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   #location {
     display: none;
-  }
-  .menu {
-    position: relative;
-    top: -20px;
-    --item-font-size: 40vw;
-    padding: 15vh 0 25vh;
-  }
-  .menu3 {
-    position: relative;
-    top: -20px;
-    --item-font-size: 40vw;
-    padding: 0vh 0 50vh;
   }
   #homepage {
     position: relative;
     left: -16px;
+  }
+  nav {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+  nav h2 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(100%, -50%);
+            transform: translate(100%, -50%);
+    font-size: 12rem;
+    letter-spacing: 0.07em;
+    -webkit-animation: scroll-text 600s linear infinite;
+            animation: scroll-text 600s linear infinite;
+    white-space: nowrap;
+    -webkit-text-fill-color: #010101;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #686868;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+  }
+  nav h2.white-text {
+    z-index: 4;
+    right: -12.5%;
+    color: #686868;
+    -webkit-text-fill-color: #686868;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #686868;
+  }
+  nav h5 {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    letter-spacing: 0.07em;
+    -webkit-animation: scroll-text 200s linear infinite;
+            animation: scroll-text 200s linear infinite;
+    white-space: nowrap;
+    color: #B2B2B2;
+    opacity: 0.6;
+  }
+  nav .black-box {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
   }
   #intro_num,
   #about_num,
@@ -293,20 +330,16 @@ summary::marker, summary::-webkit-details-marker {
   }
   #about {
     position: relative;
-    bottom: 120px;
+    bottom: 10px;
   }
   #social_media {
     position: relative;
-    bottom: 150px;
-  }
-  #social_media .arrow {
-    width: 36px;
-    height: 36px;
+    bottom: 50px;
   }
   #social_media #email,
   #social_media #behance,
   #social_media #linkedin {
-    font-size: 2.8rem;
+    font-size: 3rem;
     width: 36px;
     height: 36px;
     position: relative;
@@ -314,7 +347,7 @@ summary::marker, summary::-webkit-details-marker {
   }
   #copyright {
     position: relative;
-    bottom: 214px;
+    bottom: 70px;
     border-bottom: none;
   }
   #copyright #clock {
@@ -325,9 +358,6 @@ summary::marker, summary::-webkit-details-marker {
   #timezone {
     width: 22px;
     height: 22px;
-  }
-  #goto {
-    display: none;
   }
 }
 
