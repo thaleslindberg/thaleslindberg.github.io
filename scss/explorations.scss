@@ -95,51 +95,69 @@ a {
 
 
 
-/* --------- Animation 01 ---------- */
-@keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
+*,*::before,*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
   }
   
-  @keyframes marquee {
-	  0% {
-		  transform: translate3d(var(--move-initial), 0, 0);
-	  }
-  
-	  100% {
-		  transform: translate3d(var(--move-final), 0, 0);
-	  }
+  body {
+	min-height: 100vh;
+	overflow: hidden;
   }
   
-  @keyframes scrollText {
-	  from   { transform: translateX(0%); }
-	  to { transform: translateX(-50%); }
+  @keyframes scroll-text {
+	to {
+	  transform: translate(-160%, -50%);
 	}
+  }
   
-	@keyframes spin {
-	  0% { transform: rotate(0deg); }
-	  100% { transform: rotate(360deg); }
-	}
+  h2 {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(100%,-50%);
+	font-size: 16rem;
+	letter-spacing: 0.07em;
+	animation: scroll-text 340s linear infinite;
+	white-space: nowrap;
+	color: $black;
+	-webkit-text-fill-color: #010101; 
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  }
+
+  h5 {
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, -50%);
+	font-size: 5rem;
+	letter-spacing: 0.07em;
+	animation: scroll-text 200s linear infinite;
+	white-space: nowrap;
+	color: $black;
+	-webkit-text-fill-color: #010101; 
+	-webkit-text-stroke-width: 1.5px;
+	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  }
   
-	@keyframes slide1 {
-	  0%,
-	  100% {
-		transform: translate(0, 0);
-	  }
-	
-	  50% {
-		transform: translate(10px, 0);
-	  }
-	}
+  h2.white-text {
+	  z-index: 4;
+	  right: -12.5%;
+	  color: $silver;
+	  -webkit-text-fill-color: $silver; 
+	  -webkit-text-stroke-width: 1.5px;
+	  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .black-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 70%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+	// background: linear-gradient(180deg, $black 0.45%, rgba(1, 1, 1, 0.5) 99.55%);
+  }

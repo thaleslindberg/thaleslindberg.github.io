@@ -49,121 +49,73 @@ a {
 }
 
 /* --------- Scrolling texts ---------- */
-.menu {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	padding: 10vh 0 25vh;
-	--marquee-width: 100vw;
-	--offset: 20vw;
-	--move-initial: calc(-25% + var(--offset));
-	--move-final: calc(-50% + var(--offset));
-	--item-font-size: 18vw;
-	counter-reset: menu;
-}
-
-.marquee {
-	position: absolute;
-	top: 120;
-	left: 0;
-	width: var(--marquee-width);
-	overflow: hidden;
-	pointer-events: none;
-	color: $silver;
-	opacity: 0.6;
-	text-transform: uppercase;
-}
-
-.marquee__inner {
-	width: fit-content;
-	display: flex;
-	position: relative;
-	transform: translate3d(var(--move-initial), 0, 0);
-	animation: marquee 10s linear infinite;
-	animation-play-state: paused;
-	opacity: 0;
-	transition: opacity 0.1s;
-}
-
-.marquee .marquee__inner {
-	animation-play-state: running;
-	opacity: 1;
-	transition-duration: 0.4s;
-}
-
-.marquee span {
-	text-align: center;
-	white-space: nowrap;
-	font-size: var(--item-font-size);
-	padding: 0 1vw;
+@keyframes scroll-text {
+	to {
+	  transform: translate(-160%, -50%);
+	}
+  }
+  
+  nav {
+	  padding-top: 300px;
+	  padding-bottom: 300px;
 	font-family: "Gotham Book";
-	line-height: 1.15;
-}
-
-/* --------- Scrolling texts 2 ---------- */
-.menu3 {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	padding: 10vh 0 40vh;
-	--marquee-width: 100vw;
-	--offset: 20vw;
-	--move-initial: calc(-50% + var(--offset));
-	--move-final: calc(-25% + var(--offset));
-	--item-font-size: 18vw;
-	counter-reset: menu;
-}
-
-.marquee3 {
-	position: absolute;
-	top: 120;
-	left: 0;
-	width: var(--marquee-width);
 	overflow: hidden;
-	pointer-events: none;
-	text-transform: uppercase;
-}
 
-.marquee__inner3 {
-	width: fit-content;
-	display: flex;
-	position: relative;
-	transform: translate3d(var(--move-initial), 0, 0);
-	animation: marquee 10s linear infinite;
-	animation-play-state: paused;
-	opacity: 0;
-	transition: opacity 0.1s;
-}
 
-.marquee3 .marquee__inner3 {
-	animation-play-state: running;
-	opacity: 1;
-	transition-duration: 0.4s;
-}
+	  h2 {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(100%,-50%);
+		font-size: 18rem;
+		letter-spacing: 0.07em;
+		animation: scroll-text 600s linear infinite;
+		white-space: nowrap;
+		color: #686868;
+		-webkit-text-fill-color: #686868;
+		  -webkit-text-stroke-width: 1.5px;
+		-webkit-text-stroke-color: #686868;
+	  }
+	
+	  h2.white-text {
+		  z-index: 4;
+		  right: -12.5%;
+		  -webkit-text-fill-color: $black; 
+		  -webkit-text-stroke-width: 1.5px;
+		  -webkit-text-stroke-color: #686868;
+		  transition: opacity 0.1s;
+		}
 
-.marquee3 p {
-	text-align: center;
-	white-space: nowrap;
-	font-size: var(--item-font-size);
-	padding: 0 1vw;
-	font-family: "Gotham Book";
-	line-height: 1.15;
-	color: $half-white;
-}
-
-#location,
-#year {
-	font-size: 1rem;
-	font-family: "Gotham Light";
-	color: $white;
-}
+	  h5 {
+		position: absolute;
+		left: 50%;
+		top: 90%;
+		transform: translate(-50%, -50%);
+		font-size: 3rem;
+		letter-spacing: 0.07em;
+		animation: scroll-text 200s linear infinite;
+		white-space: nowrap;
+		color: $silver;
+		opacity: 0.6;
+	  }
+	  
+	  
+	  .black-box {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80%;
+		height: 70%;
+		transform: translate(-50%,-50%);
+		overflow: hidden;
+	}
+  }
 
 #location {
-	opacity: 0.6;
+	font-size: 1rem;
+	font-family: "Gotham Light";
+	color: $silver;
+	letter-spacing: 2px;
 }
 
 #header {
@@ -257,14 +209,6 @@ a {
 }
 
 
-#goto {
-	font-family: "Gotham Book";
-	font-size: 12px;
-	letter-spacing: -.025px;
-	line-height: 28px;
-	color: $half-white;
-}
-
 /* --------- Misc ---------- */
 summary { cursor: pointer; }
 summary::marker, summary::-webkit-details-marker {
@@ -283,6 +227,7 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 600px) {
+	#location { display: none; }
 	.menu {
 		position: relative;
 		top: -20px;
@@ -364,13 +309,13 @@ summary::marker, summary::-webkit-details-marker {
 	}
 }
 
-@media only screen and (max-width: 380px) {
-
+@media only screen and (max-width: 380px) { 
+	#location { display: none; }
 }
 	
 
 @media only screen and (max-width: 320px) {
-
+	#location { display: none; }
 }
 
 /* --------- Animation 01 ---------- */
