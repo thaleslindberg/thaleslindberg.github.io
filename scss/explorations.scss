@@ -10,6 +10,11 @@ $half-white: #ffffff80;
 
 /* --------- Fonts ---------- */
 @font-face {
+	font-family: "Gotham Thin";
+	src: url("/fonts/GothamHTF-Thin.otf") format("truetype");
+}
+
+@font-face {
 	font-family: "Gotham Book";
 	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
@@ -23,21 +28,12 @@ $half-white: #ffffff80;
 	font-family: "Gotham Light";
 	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
-@font-face {
-	font-family: "Editorial";
-	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "Editorial Thin";
-	src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
-}
 
 *, 
 *::after,
 *::before {
-	-webkit-box-sizing:padding-box;
-	box-sizing:padding-box;
+    box-sizing: border-box;
+	position: relative;
 }
 
 body { background: $black; }
@@ -49,115 +45,266 @@ a {
 	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.card-img-top:nth-child(1) {
-    cursor: url('/img/view-cursor.svg'), auto;
-    transition: all .2s ease-in;
+nav {
+    
+    .title {
+        position: absolute;
+        margin-top: 50px;
+        top: 10%;
+        left: 0;
+        right: 0;
+        font-family: "Gotham Thin";
+        overflow: hidden;
+        text-align: center;
+        font-size: 8.5rem;
+        color: #686868; 
+    }
 }
 
-#header { background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%); }
+#header {
+	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
+}
 
 .container-fluid {
     border-bottom: 1px solid $white;
     margin: 0 auto;
 	align-self: center;
 
-  #homepage, 
-  #contact,
-  #folio {
-	font-family: "Gotham Book";
-    font-size: 18px;
-    margin-bottom: 8px;
-	padding: 16px;
-    color: $white;
-	letter-spacing: -1px;
-	text-transform: uppercase;
-	border-image-repeat: stretch;
-	-webkit-font-smoothing: antialiased;
-	text-align: center;
-	
+	#homepage, 
+	#contact {
+	  font-family: "Gotham Book";
+	  font-size: 18px;
+	  margin-bottom: 8px;
+	  padding: 16px;
+	  color: $white;
+	  letter-spacing: -1px;
+	  text-transform: uppercase;
+	  border-image-repeat: stretch;
+	  -webkit-font-smoothing: antialiased;
+	  text-align: center;
+  
+	  &:hover { color: $silver; }
+	}
+}
 
-    &:hover { color: $silver; }
-  }
+/* --------- CARD 1 ---------- */
+.card {
+    overflow: hidden;
+    margin-top: 600px;
+    border: none;
+    border-radius: 0;
+
+    .card-img-top {
+        background: transparent;
+		opacity: 0.8;
+    }
+
+    .card-body {
+        background-color: $black;
+    }
+
+    .card-text {
+         color: $silver;
+         font-size: 14rem;
+         font-family: "Gotham Thin";
+    }
+
+    .card-text::after {
+        content: ".";
+        font-family: "Editorial";
+        color: $silver;
+      }
+
+    #card-info {
+        color: $silver;
+        position: relative;
+        top: 52px;
+
+		#photographer_01
+		,#photographer_02 {
+			font-size: 0.9rem;
+			color: $white;
+			letter-spacing: 2px;
+			text-decoration: underline;
+
+			&:hover {
+				color: #686868;
+			}
+		}
+    }
 }
 
 /* --------- Sections ---------- */
-#intro {
+#intro,
+#copyright {
 	font-family: "Gotham Light";
 	font-size: 19px;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: $wolf;
+	color: $black;
 	border-top: 1px solid $white;
 	padding-top: 10px;
 	color: $white;
-	margin-top: 200px;
+}
+
+#intro {
+	border: none;
+}
+
+/* --------- Misc ---------- */
+summary { cursor: pointer; }
+summary::marker, summary::-webkit-details-marker {
+	display: none;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
 }
 
 
+/* --------- Scrolling texts ---------- */
+@keyframes scroll-text {
+    to {
+      transform: translate(-160%, -50%);
+    }
+  }
+  
+  .section {
+      padding-top: 300px;
+      overflow: hidden;
+	  font-family: 'Gotham Thin';
 
-*,*::before,*::after {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+      h2 {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(100%,-50%);
+        font-size: 4rem;
+        letter-spacing: 0.07em;
+        animation: scroll-text 300s linear infinite;
+        white-space: nowrap;
+		color: #686868;
+      }
+
+	  .black-box {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 30%;
+		transform: translate(-50%,-50%);
+		overflow: hidden;
+		border-top: 1px solid #686868;
+		border-bottom: 1px solid #686868;
+	  }
   }
-  
-  body {
-	min-height: 100vh;
-	overflow: hidden;
-  }
-  
-  @keyframes scroll-text {
-	to {
-	  transform: translate(-160%, -50%);
+
+
+@media only screen and (max-width: 480px) {
+	#homepage {
+		position: relative;
+		left: -16px;
+	}
+
+	#intro_num,
+	#copyright_num {
+		position: relative;
+		right: 15px;
+		font-size: 1rem;
+	}
+
+	nav {
+		.title {
+			margin-top: 180px;
+			left: 0;
+			right: 0;
+			font-size: 3.3rem;
+			letter-spacing: -1.5px;
+		}
+	}
+	.section {
+		position: relative;
+		bottom: 120px;
+
+		.col {
+			position: relative;
+			bottom: 28px;
+			left: 8px;
+			text-transform: uppercase;
+			letter-spacing: -1px;
+			font-size: 1rem;
+		}
+	}
+	.card {
+		position: relative;
+		bottom: 140px;
+
+		.card-img-top {
+			background: transparent;
+			opacity: 0.8;
+		}
+		.card-text {
+			position: relative;
+			bottom: 100px;
+			left: -16px;
+			font-size: 10rem;
+		}
+		.card-text::after {
+			font-size: 7rem;
+			position: relative;
+			right: 10px;
+		}
+		.col-5 {
+			line-height: 180%;
+			top: 50px;
+			width: 100%;
+			height: auto;
+			position: relative;
+			top: 90%;
+		}
+	}
+
+
+	#copyright {
+		position: relative;
+		bottom: 70px;
+		border-bottom: none;
+
+
+		#clock,
+		#top {
+			margin-left: 120px;
+			position: relative;
+			bottom: 28px;
+		}
+		#top {
+			text-decoration: none;
+			margin-left: 280px;
+			position: relative;
+		}
+	}
+}
+
+/* --------- Animation 01 ---------- */
+@keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
 	}
   }
-  
-  h2 {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translate(100%,-50%);
-	font-size: 16rem;
-	letter-spacing: 0.07em;
-	animation: scroll-text 340s linear infinite;
-	white-space: nowrap;
-	color: $black;
-	-webkit-text-fill-color: #010101; 
-	-webkit-text-stroke-width: 1.5px;
-	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
-  }
-
-  h5 {
-	position: absolute;
-	left: 50%;
-	top: 90%;
-	transform: translate(-50%, -50%);
-	font-size: 5rem;
-	letter-spacing: 0.07em;
-	animation: scroll-text 200s linear infinite;
-	white-space: nowrap;
-	color: $black;
-	-webkit-text-fill-color: #010101; 
-	-webkit-text-stroke-width: 1.5px;
-	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
-  }
-  
-  h2.white-text {
-	  z-index: 4;
-	  right: -12.5%;
-	  color: $silver;
-	  -webkit-text-fill-color: $silver; 
-	  -webkit-text-stroke-width: 1.5px;
-	  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
-  }
-  
-  .black-box {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 80%;
-	height: 70%;
-	transform: translate(-50%,-50%);
-	overflow: hidden;
-	// background: linear-gradient(180deg, $black 0.45%, rgba(1, 1, 1, 0.5) 99.55%);
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
   }

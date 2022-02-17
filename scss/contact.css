@@ -62,7 +62,7 @@ a {
 nav {
   padding-top: 300px;
   padding-bottom: 300px;
-  font-family: "Gotham Book";
+  font-family: "Gotham Light";
   overflow: hidden;
 }
 
@@ -78,17 +78,12 @@ nav h2 {
           animation: scroll-text 600s linear infinite;
   white-space: nowrap;
   color: #686868;
-  -webkit-text-fill-color: #686868;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #686868;
 }
 
 nav h2.white-text {
   z-index: 4;
   right: -12.5%;
-  -webkit-text-fill-color: #010101;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #686868;
+  color: #686868;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
@@ -208,7 +203,7 @@ a {
   font-family: "Gotham Black";
   font-size: 4.4rem;
   text-transform: none;
-  line-height: 140%;
+  line-height: 170%;
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #010101;
@@ -270,14 +265,12 @@ summary::marker, summary::-webkit-details-marker {
     top: 50%;
     -webkit-transform: translate(100%, -50%);
             transform: translate(100%, -50%);
-    font-size: 12rem;
+    font-size: 8rem;
     letter-spacing: 0.07em;
     -webkit-animation: scroll-text 600s linear infinite;
             animation: scroll-text 600s linear infinite;
     white-space: nowrap;
-    -webkit-text-fill-color: #010101;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #686868;
+    color: #686868;
     -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
   }
@@ -285,9 +278,6 @@ summary::marker, summary::-webkit-details-marker {
     z-index: 4;
     right: -12.5%;
     color: #686868;
-    -webkit-text-fill-color: #686868;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #686868;
   }
   nav h5 {
     position: absolute;
@@ -295,7 +285,7 @@ summary::marker, summary::-webkit-details-marker {
     top: 90%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    font-size: 2.5rem;
+    font-size: 2rem;
     letter-spacing: 0.07em;
     -webkit-animation: scroll-text 200s linear infinite;
             animation: scroll-text 200s linear infinite;
@@ -380,28 +370,6 @@ summary::marker, summary::-webkit-details-marker {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes marquee {
-  0% {
-    -webkit-transform: translate3d(var(--move-initial), 0, 0);
-            transform: translate3d(var(--move-initial), 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(var(--move-final), 0, 0);
-            transform: translate3d(var(--move-final), 0, 0);
-  }
-}
-
-@keyframes marquee {
-  0% {
-    -webkit-transform: translate3d(var(--move-initial), 0, 0);
-            transform: translate3d(var(--move-initial), 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(var(--move-final), 0, 0);
-            transform: translate3d(var(--move-final), 0, 0);
   }
 }
 
