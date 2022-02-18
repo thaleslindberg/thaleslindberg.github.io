@@ -171,8 +171,7 @@ nav .black-box {
 }
 
 .container-fluid #homepage,
-.container-fluid #contact,
-.container-fluid #folio {
+.container-fluid #contact {
   font-family: "Gotham Book";
   font-size: 18px;
   margin-bottom: 8px;
@@ -186,18 +185,8 @@ nav .black-box {
 }
 
 .container-fluid #homepage:hover,
-.container-fluid #contact:hover,
-.container-fluid #folio:hover {
+.container-fluid #contact:hover {
   color: #B2B2B2;
-}
-
-.container-fluid #folio {
-  line-height: normal;
-  color: #ffffff80;
-}
-
-.container-fluid #folio:hover {
-  color: #ffffff80;
 }
 
 /* --------- Sections ---------- */

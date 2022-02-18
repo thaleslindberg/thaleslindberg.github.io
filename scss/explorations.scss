@@ -206,6 +206,22 @@ summary::marker, summary::-webkit-details-marker {
   }
 
 
+@media only screen and (max-width: 1024px) { 
+	nav {
+		.title {
+			font-size: 8rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) { 
+	nav {
+		.title {
+			font-size: 9.5rem;
+		}
+	}
+}
+
 @media only screen and (max-width: 480px) {
 	#homepage {
 		position: relative;
@@ -224,7 +240,7 @@ summary::marker, summary::-webkit-details-marker {
 			margin-top: 180px;
 			left: 0;
 			right: 0;
-			font-size: 3.3rem;
+			font-size: 3.2rem;
 			letter-spacing: -1.5px;
 		}
 	}
@@ -244,38 +260,41 @@ summary::marker, summary::-webkit-details-marker {
 	.card {
 		position: relative;
 		bottom: 140px;
-
+		
 		.card-img-top {
 			background: transparent;
 			opacity: 0.8;
 		}
 		.card-text {
 			position: relative;
-			bottom: 100px;
+			bottom: -124px;
 			left: -16px;
 			font-size: 10rem;
+
+			&::after {
+				font-size: 7rem;
+				position: relative;
+				right: 10px;
+			}
 		}
-		.card-text::after {
-			font-size: 7rem;
+		#card-info {
+			font-size: 1.2rem;
+		}
+		.row {
 			position: relative;
-			right: 10px;
+			top: -200px;
 		}
-		.col-5 {
+		#card-info {
 			line-height: 180%;
-			top: 50px;
 			width: 100%;
-			height: auto;
 			position: relative;
-			top: 90%;
 		}
 	}
 
-
 	#copyright {
 		position: relative;
-		bottom: 70px;
+		bottom: 300px;
 		border-bottom: none;
-
 
 		#clock,
 		#top {
@@ -287,6 +306,28 @@ summary::marker, summary::-webkit-details-marker {
 			text-decoration: none;
 			margin-left: 280px;
 			position: relative;
+		}
+	}
+}
+
+@media only screen and (max-width: 370px) { 
+	nav {
+		.title {
+			font-size: 2.9rem;
+		}
+	}
+
+	#top {
+		text-decoration: none;
+		position: relative;
+		right: 30px;
+	}
+}
+
+@media only screen and (max-width: 320px) { 
+	nav {
+		.title {
+			font-size: 2.5rem;
 		}
 	}
 }
