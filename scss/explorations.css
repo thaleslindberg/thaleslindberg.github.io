@@ -305,11 +305,6 @@ summary::marker, summary::-webkit-details-marker {
     position: relative;
     bottom: 28px;
   }
-  #copyright #top {
-    text-decoration: none;
-    margin-left: 280px;
-    position: relative;
-  }
 }
 
 @media only screen and (max-width: 370px) {

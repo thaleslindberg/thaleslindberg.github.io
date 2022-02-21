@@ -86,24 +86,15 @@ a {
 		left: 50%;
 		top: 90%;
 		transform: translate(-50%, -50%);
-		font-size: 3rem;
+		font-size: 2rem;
 		letter-spacing: 0.07em;
 		animation: scroll-text 200s linear infinite;
 		white-space: nowrap;
 		color: $silver;
 		opacity: 0.6;
+		border-top: 1px solid #686868;
+		border-bottom: 1px solid #686868;
 	  }
-	  
-	  
-	  .black-box {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 80%;
-		height: 70%;
-		transform: translate(-50%,-50%);
-		overflow: hidden;
-	}
   }
 
 #location {
@@ -258,19 +249,12 @@ summary::marker, summary::-webkit-details-marker {
 		  left: 50%;
 		  top: 90%;
 		  transform: translate(-50%, -50%);
-		  font-size: 2rem;
+		  font-size: 1.5rem;
 		  letter-spacing: 0.07em;
 		  animation: scroll-text 200s linear infinite;
 		  white-space: nowrap;
 		  color: $silver;
 		  opacity: 0.6;
-		}
-
-		.black-box {
-			top: 50%;
-			left: 50%;
-			width: 80%;
-			height: 70%;
 		}
 	}
 
@@ -299,7 +283,8 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	#social_media {
 		position: relative;
-		bottom: 50px;
+		bottom: 20px;
+		margin: 0 auto;
 
 		#email,
 		#behance,
