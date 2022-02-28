@@ -309,13 +309,12 @@ summary::marker, summary::-webkit-details-marker {
 	}
 }
 
-@media only screen and (max-width: 370px) { 
+@media only screen and (max-width: 375px) {
 	nav {
 		.title {
-			font-size: 2.9rem;
+			font-size: 3.2rem;
 		}
 	}
-
 	#top {
 		text-decoration: none;
 		position: relative;
@@ -324,11 +323,9 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 320px) { 
-	nav {
 		.title {
 			font-size: 2.5rem;
 		}
-	}
 }
 
 /* --------- Animation 01 ---------- */
