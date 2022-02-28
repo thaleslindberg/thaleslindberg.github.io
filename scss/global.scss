@@ -307,26 +307,31 @@ summary::marker, summary::-webkit-details-marker {
 			bottom: 28px;
 		}
 	}
+
+	#top {
+		text-decoration: none;
+		position: relative;
+		right: -72px;
+	}
 }
 
 @media only screen and (max-width: 375px) {
 	nav {
 		.title {
-			font-size: 3.2rem;
+			font-size: 4.2rem;
 		}
 	}
+	.section {
+			margin-bottom: 190px;
+		}
 	#top {
 		text-decoration: none;
 		position: relative;
-		right: 30px;
+		right: -32px;
 	}
 }
 
-@media only screen and (max-width: 320px) { 
-		.title {
-			font-size: 2.5rem;
-		}
-}
+
 
 /* --------- Animation 01 ---------- */
 @keyframes fade-in {
