@@ -23,15 +23,7 @@ $half-white: #ffffff80;
 	font-family: "Gotham Light";
 	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
-@font-face {
-	font-family: "Editorial";
-	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
-}
 
-@font-face {
-	font-family: "Editorial Thin";
-	src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
-}
 *, 
 *::after,
 *::before {
@@ -186,11 +178,9 @@ a {
 	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 
 	&:hover {
-		color: #EF4050;
 		transition: all .2s ease-in;
-		-webkit-text-fill-color: #EF4050; 
-		-webkit-text-stroke-width: #EF4050;
-		-webkit-text-stroke-color: #EF4050;
+		-webkit-text-stroke-width: #36F097;
+		-webkit-text-stroke-color: #36F097;
 	}
 }
 

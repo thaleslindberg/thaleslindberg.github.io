@@ -119,14 +119,15 @@ nav .title {
   top: 52px;
 }
 
-.card #card-info #photographer_01 {
+.card #card-info #roger {
   font-size: 0.9rem;
   color: #FFFFFF;
-  letter-spacing: 2px;
-  text-decoration: underline;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.card #card-info #photographer_01:hover {
+.card #card-info #roger:hover {
   color: #686868;
 }
 
@@ -310,6 +311,13 @@ summary::marker, summary::-webkit-details-marker {
     text-decoration: none;
     position: relative;
     right: -72px;
+  }
+  #intro {
+    font-size: 1rem;
+  }
+  #intro_num {
+    position: relative;
+    right: 15px;
   }
 }
 

@@ -24,15 +24,6 @@ $half-white: #ffffff80;
 	font-family: "Gotham Light";
 	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
-@font-face {
-	font-family: "Editorial";
-	src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "Editorial Thin";
-	src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
-}
 
 *, 
 *::after,
@@ -100,17 +91,7 @@ a {
 		border-top: 1px solid #686868;
 		border-bottom: 1px solid #686868;
 	  }
-	  
-	//   .black-box {
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	width: 80%;
-	// 	height: 70%;
-	// 	transform: translate(-50%,-50%);
-	// 	overflow: hidden;
-	// }
-  }
+}
 
 #location {
 	font-size: 1rem;
@@ -132,7 +113,7 @@ a {
 		font-family: "Gotham Black";
 		font-size: 4.4rem;
 		text-transform: none;
-		line-height: 140%;
+		line-height: 160%;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 
@@ -141,11 +122,9 @@ a {
 		-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 
 		&:hover { 
-			color: #EF4050;
 			transition: all .2s ease-in;
-			-webkit-text-fill-color: #EF4050; 
-			-webkit-text-stroke-width: #EF4050;
-			-webkit-text-stroke-color: #EF4050;
+			-webkit-text-stroke-width: #9738F0;
+			-webkit-text-stroke-color: #9738F0;
 		}
 	}
 
@@ -213,7 +192,7 @@ a {
 	color: $half-white;
 
 	&:hover { 
-		color: #EF4050;
+		color: #9738F0;
 	 }
 }
 

@@ -119,11 +119,12 @@ nav {
         position: relative;
         top: 52px;
 
-		#photographer_01 {
+		#roger {
 			font-size: 0.9rem;
 			color: $white;
-			letter-spacing: 2px;
-			text-decoration: underline;
+			letter-spacing: 1.5px;
+			text-decoration: none;
+			text-transform: uppercase;
 
 			&:hover {
 				color: #686868;
@@ -313,6 +314,13 @@ summary::marker, summary::-webkit-details-marker {
 		position: relative;
 		right: -72px;
 	}
+
+	#intro { font-size: 1rem; }
+
+	#intro_num {
+		position: relative;
+		right: 15px;
+	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -330,7 +338,6 @@ summary::marker, summary::-webkit-details-marker {
 		right: -32px;
 	}
 }
-
 
 
 /* --------- Animation 01 ---------- */

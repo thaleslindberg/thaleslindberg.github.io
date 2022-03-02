@@ -15,16 +15,6 @@
   src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
 
-@font-face {
-  font-family: "Editorial";
-  src: url("/fonts/EditorialNew-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Editorial Thin";
-  src: url("/fonts/EditorialNew-Thin.ttf") format("truetype");
-}
-
 *,
 *::after,
 *::before {
@@ -130,7 +120,7 @@ nav h5 {
   font-family: "Gotham Black";
   font-size: 4.4rem;
   text-transform: none;
-  line-height: 140%;
+  line-height: 160%;
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #010101;
@@ -145,12 +135,10 @@ nav h5 {
 #project_five:hover,
 #project_six:hover,
 #project_seven:hover {
-  color: #EF4050;
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
-  -webkit-text-fill-color: #EF4050;
-  -webkit-text-stroke-width: #EF4050;
-  -webkit-text-stroke-color: #EF4050;
+  -webkit-text-stroke-width: #9738F0;
+  -webkit-text-stroke-color: #9738F0;
 }
 
 .container-fluid {
@@ -221,7 +209,7 @@ nav h5 {
 }
 
 #fiap:hover {
-  color: #EF4050;
+  color: #9738F0;
 }
 
 #personal_projects,
