@@ -124,12 +124,11 @@ nav {
 		,#photographer_02 {
 			font-size: 0.9rem;
 			color: $white;
-			letter-spacing: 2px;
-			text-decoration: underline;
+			letter-spacing: 1.5px;
+			text-decoration: none;
+			text-transform: uppercase;
 
-			&:hover {
-				color: #686868;
-			}
+			&:hover { color: #686868; }
 		}
     }
 }
@@ -303,6 +302,12 @@ summary::marker, summary::-webkit-details-marker {
 			bottom: 28px;
 		}
 	}
+
+	#top {
+		text-decoration: none;
+		position: relative;
+		right: -72px;
+	}
 }
 
 @media only screen and (max-width: 370px) { 
@@ -315,7 +320,7 @@ summary::marker, summary::-webkit-details-marker {
 	#top {
 		text-decoration: none;
 		position: relative;
-		right: 30px;
+		right: -32px;
 	}
 }
 

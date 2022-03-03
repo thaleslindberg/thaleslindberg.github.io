@@ -124,8 +124,9 @@ nav .title {
 , .card #card-info #photographer_02 {
   font-size: 0.9rem;
   color: #FFFFFF;
-  letter-spacing: 2px;
-  text-decoration: underline;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card #card-info #photographer_01:hover
@@ -305,6 +306,11 @@ summary::marker, summary::-webkit-details-marker {
     position: relative;
     bottom: 28px;
   }
+  #top {
+    text-decoration: none;
+    position: relative;
+    right: -72px;
+  }
 }
 
 @media only screen and (max-width: 370px) {
@@ -314,7 +320,7 @@ summary::marker, summary::-webkit-details-marker {
   #top {
     text-decoration: none;
     position: relative;
-    right: 30px;
+    right: -32px;
   }
 }
 
