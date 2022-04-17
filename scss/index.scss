@@ -64,7 +64,7 @@ a {
 		transform: translate(100%,-50%);
 		font-size: 18rem;
 		letter-spacing: 0.07em;
-		animation: scroll-text 1600s linear infinite;
+		animation: scroll-text 4600s linear infinite;
 		white-space: nowrap;
 		color: #686868;
 		transition: opacity 0.1s;
@@ -84,7 +84,7 @@ a {
 		transform: translate(-50%, -50%);
 		font-size: 1.5rem;
 		letter-spacing: 0.07em;
-		animation: scroll-text 200s linear infinite;
+		animation: scroll-text 1500s linear infinite;
 		white-space: nowrap;
 		color: $silver;
 		opacity: 0.6;
