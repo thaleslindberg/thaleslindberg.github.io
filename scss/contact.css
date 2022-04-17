@@ -64,8 +64,8 @@ nav h2 {
           transform: translate(100%, -50%);
   font-size: 18rem;
   letter-spacing: 0.07em;
-  -webkit-animation: scroll-text 900s linear infinite;
-          animation: scroll-text 900s linear infinite;
+  -webkit-animation: scroll-text 1600s linear infinite;
+          animation: scroll-text 1600s linear infinite;
   white-space: nowrap;
   color: #686868;
 }
@@ -186,7 +186,7 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #010101;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -195,8 +195,8 @@ a {
 #behance:hover {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
-  -webkit-text-stroke-width: #36F097;
-  -webkit-text-stroke-color: #36F097;
+  -webkit-text-stroke-width: #19F596;
+  -webkit-text-stroke-color: #19F596;
 }
 
 /* --------- Misc ---------- */
@@ -262,7 +262,7 @@ summary::marker, summary::-webkit-details-marker {
     top: 90%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 0.07em;
     -webkit-animation: scroll-text 200s linear infinite;
             animation: scroll-text 200s linear infinite;
