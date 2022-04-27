@@ -139,6 +139,15 @@ nav h5 {
   -webkit-text-stroke-color: #6B1BF5;
 }
 
+#project_three,
+#project_four,
+#project_five {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .container-fluid {
   border-bottom: 1px solid #FFFFFF;
   margin: 0 auto;
