@@ -64,8 +64,8 @@ nav h2 {
           transform: translate(100%, -50%);
   font-size: 18rem;
   letter-spacing: 0.07em;
-  -webkit-animation: scroll-text 4600s linear infinite;
-          animation: scroll-text 4600s linear infinite;
+  -webkit-animation: scroll-text 3000s linear infinite;
+          animation: scroll-text 3000s linear infinite;
   white-space: nowrap;
   color: #686868;
 }
