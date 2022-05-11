@@ -64,7 +64,7 @@ a {
 		transform: translate(100%,-50%);
 		font-size: 18rem;
 		letter-spacing: 0.07em;
-		animation: scroll-text 3000s linear infinite;
+		animation: scroll-text 2500s linear infinite;
 		white-space: nowrap;
 		color: #686868;
 		transition: opacity 0.1s;
@@ -101,13 +101,12 @@ a {
 #header { background: linear-gradient(180deg, #020202 10%, rgba(2, 2, 2, 0.6) 0.1%); }
   
 /* --------- FIAP projects ---------- */
-	#project_one,
-	#project_two,
-	#project_three,
-	#project_four,
-	#project_five,
-	#project_six,
-	#project_seven {
+	#global,
+	#corporate,
+	#next,
+	#lgpd,
+	#power_skills,
+	#layout_ex {
 		font-family: "Gotham Black";
 		font-size: 4.4rem;
 		text-transform: none;
@@ -126,9 +125,8 @@ a {
 		}
 	}
 
-	#project_three,
-	#project_four,
-	#project_five{
+	#lgpd,
+	#power_skills {
 		-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
 		cursor: not-allowed;

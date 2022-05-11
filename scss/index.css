@@ -64,8 +64,8 @@ nav h2 {
           transform: translate(100%, -50%);
   font-size: 18rem;
   letter-spacing: 0.07em;
-  -webkit-animation: scroll-text 3000s linear infinite;
-          animation: scroll-text 3000s linear infinite;
+  -webkit-animation: scroll-text 2500s linear infinite;
+          animation: scroll-text 2500s linear infinite;
   white-space: nowrap;
   color: #686868;
   -webkit-transition: opacity 0.1s;
@@ -108,13 +108,12 @@ nav h5 {
 }
 
 /* --------- FIAP projects ---------- */
-#project_one,
-#project_two,
-#project_three,
-#project_four,
-#project_five,
-#project_six,
-#project_seven {
+#global,
+#corporate,
+#next,
+#lgpd,
+#power_skills,
+#layout_ex {
   font-family: "Gotham Black";
   font-size: 4.4rem;
   text-transform: none;
@@ -126,22 +125,20 @@ nav h5 {
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 }
 
-#project_one:hover,
-#project_two:hover,
-#project_three:hover,
-#project_four:hover,
-#project_five:hover,
-#project_six:hover,
-#project_seven:hover {
+#global:hover,
+#corporate:hover,
+#next:hover,
+#lgpd:hover,
+#power_skills:hover,
+#layout_ex:hover {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   -webkit-text-stroke-width: #6B1BF5;
   -webkit-text-stroke-color: #6B1BF5;
 }
 
-#project_three,
-#project_four,
-#project_five {
+#lgpd,
+#power_skills {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
   cursor: not-allowed;
