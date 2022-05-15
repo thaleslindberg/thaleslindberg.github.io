@@ -59,7 +59,7 @@ nav .title {
 }
 
 .container-fluid {
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 0.3px solid #FFFFFF;
   margin: 0 auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -142,7 +142,7 @@ nav .title {
   letter-spacing: -.025px;
   line-height: 28px;
   color: #010101;
-  border-top: 1px solid #FFFFFF;
+  border-top: 0.3px solid #FFFFFF;
   padding-top: 10px;
   color: #FFFFFF;
 }

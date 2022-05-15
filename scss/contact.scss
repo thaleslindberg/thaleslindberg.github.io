@@ -99,7 +99,7 @@ a {
 }
 
 .container-fluid {
-    border-bottom: 1px solid $white;
+    border-bottom: 0.3px solid $white;
     margin: 0 auto;
 	align-self: center;
 
@@ -139,7 +139,7 @@ a {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $black;
-	border-top: 1px solid $white;
+	border-top: 0.3px solid $white;
 	padding-top: 10px;
 	color: $white;
 }
@@ -220,7 +220,7 @@ summary::marker, summary::-webkit-details-marker {
 		  transform: translate(100%,-50%);
 		  font-size: 8rem;
 		  letter-spacing: 0.07em;
-		  animation: scroll-text 600s linear infinite;
+		  animation: scroll-text 1000s linear infinite;
 		  white-space: nowrap;
 		  color: #686868;
 		  transition: opacity 0.1s;

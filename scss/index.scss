@@ -53,8 +53,8 @@ a {
   nav {
 	  padding-top: 300px;
 	  padding-bottom: 300px;
-	font-family: "Gotham Light";
-	overflow: hidden;
+	  font-family: "Gotham Light";
+	  overflow: hidden;
 
 
 	  h2 {
@@ -134,7 +134,7 @@ a {
 	}
 
 .container-fluid {
-    border-bottom: 1px solid $white;
+    border-bottom: 0.3px solid $white;
     margin: 0 auto;
 	align-self: center;
 
@@ -168,7 +168,7 @@ a {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $wolf;
-	border-top: 1px solid $white;
+	border-top: 0.3px solid $white;
 	padding-top: 10px;
 	color: $white;
 }
@@ -260,7 +260,7 @@ summary::marker, summary::-webkit-details-marker {
 		  transform: translate(100%,-50%);
 		  font-size: 8rem;
 		  letter-spacing: 0.07em;
-		  animation: scroll-text 600s linear infinite;
+		  animation: scroll-text 1000s linear infinite;
 		  white-space: nowrap;
 		  color: #686868;
 		  transition: opacity 0.1s;
@@ -351,12 +351,11 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	#projects {
 
-		#project_one,
-		#project_two,
-		#project_three,
-		#project_four,
-		#project_five,
-		#project_six {
+		#global,
+		#corporate,
+		#next,
+		#lgpd,
+		#power_skills {
 			font-size: 2.4rem;
 			position: relative;
 			bottom: 70px;
@@ -364,7 +363,7 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 	#personal_projects {
-		#project_seven {
+		#layout_ex {
 			font-size: 2.4rem;
 			position: relative;
 			bottom: 90px;
@@ -375,12 +374,11 @@ summary::marker, summary::-webkit-details-marker {
 
 @media only screen and (max-width: 370px) { 
 	#projects {
-		#project_one,
-		#project_two,
-		#project_three,
-		#project_four,
-		#project_five,
-		#project_six {
+		#global,
+		#corporate,
+		#next,
+		#lgpd,
+		#power_skills {
 			font-size: 2.3rem;
 			position: relative;
 			bottom: 100px;
@@ -388,7 +386,7 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 	#personal_projects {
-		#project_seven {
+		#layout_ex {
 			font-size: 2.3rem;
 			position: relative;
 			bottom: 120px;
@@ -401,12 +399,11 @@ summary::marker, summary::-webkit-details-marker {
 	#location { display: none; }
 
 	#projects {
-		#project_one,
-		#project_two,
-		#project_three,
-		#project_four,
-		#project_five,
-		#project_six {
+		#global,
+		#corporate,
+		#next,
+		#lgpd,
+		#power_skills {
 			font-size: 1.8rem;
 			position: relative;
 			bottom: 100px;
@@ -414,7 +411,7 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 	#personal_projects {
-		#project_seven {
+		#layout_ex {
 			font-size: 2rem;
 			position: relative;
 			bottom: 120px;
