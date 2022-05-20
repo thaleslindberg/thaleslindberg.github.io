@@ -251,7 +251,7 @@ summary::marker, summary::-webkit-details-marker {
     margin-top: 180px;
     left: 0;
     right: 0;
-    font-size: 3.2rem;
+    font-size: 3.9rem;
     letter-spacing: -1.5px;
   }
   .section {
@@ -323,7 +323,7 @@ summary::marker, summary::-webkit-details-marker {
 
 @media only screen and (max-width: 375px) {
   nav .title {
-    font-size: 4.2rem;
+    font-size: 3.3rem;
   }
   .section {
     margin-bottom: 190px;
