@@ -103,8 +103,10 @@ nav h5 {
 }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #020202), color-stop(0.1%, rgba(2, 2, 2, 0.6)));
-  background: linear-gradient(180deg, #020202 10%, rgba(2, 2, 2, 0.6) 0.1%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(0.1%, rgba(1, 1, 1, 0.6)));
+  background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 /* --------- FIAP projects ---------- */
@@ -145,7 +147,6 @@ nav h5 {
 }
 
 .container-fluid {
-  border-bottom: 0.3px solid #FFFFFF;
   margin: 0 auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -186,10 +187,6 @@ nav h5 {
   border-top: 0.3px solid #FFFFFF;
   padding-top: 10px;
   color: #FFFFFF;
-}
-
-#intro {
-  border: none;
 }
 
 /* --------- About | Description ---------- */

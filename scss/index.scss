@@ -98,7 +98,10 @@ a {
 	letter-spacing: 2px;
 }
 
-#header { background: linear-gradient(180deg, #020202 10%, rgba(2, 2, 2, 0.6) 0.1%); }
+#header { 
+	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%); 
+	backdrop-filter: blur(3px);
+}
   
 /* --------- FIAP projects ---------- */
 	#global,
@@ -124,7 +127,6 @@ a {
 			-webkit-text-stroke-color: #6B1BF5;
 		}
 	}
-
 	
 	#power_skills {
 		-webkit-text-stroke-width: 1px;
@@ -133,10 +135,11 @@ a {
         pointer-events: none;
 	}
 
+
 .container-fluid {
-    border-bottom: 0.3px solid $white;
     margin: 0 auto;
 	align-self: center;
+
 
   #homepage, 
   #contact {
@@ -171,10 +174,6 @@ a {
 	border-top: 0.3px solid $white;
 	padding-top: 10px;
 	color: $white;
-}
-
-#intro {
-	border: none;
 }
 
 /* --------- About | Description ---------- */

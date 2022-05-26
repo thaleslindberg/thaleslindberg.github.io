@@ -94,12 +94,12 @@ a {
 	letter-spacing: 2px;
 }
 
-#header {
-	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.8) 99%);
+#header { 
+	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%); 
+	backdrop-filter: blur(3px);
 }
 
 .container-fluid {
-    border-bottom: 0.3px solid $white;
     margin: 0 auto;
 	align-self: center;
 
@@ -142,10 +142,6 @@ a {
 	border-top: 0.3px solid $white;
 	padding-top: 10px;
 	color: $white;
-}
-
-#intro {
-	border: none;
 }
 
 #personal_projects, 
