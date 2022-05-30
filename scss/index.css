@@ -139,13 +139,6 @@ nav h5 {
   -webkit-text-stroke-color: #6B1BF5;
 }
 
-#power_skills {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
 .container-fluid {
   margin: 0 auto;
   -ms-flex-item-align: center;
@@ -184,9 +177,9 @@ nav h5 {
   letter-spacing: -.025px;
   line-height: 28px;
   color: #D9D4D1;
-  border-top: 0.3px solid #FFFFFF;
+  border-top: 0.3px solid #B2B2B2;
   padding-top: 10px;
-  color: #FFFFFF;
+  color: #B2B2B2;
 }
 
 /* --------- About | Description ---------- */
@@ -263,16 +256,12 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 480px) {
-  #homepage {
-    position: relative;
-    left: -16px;
-  }
   #location {
     display: none;
   }
   nav {
     padding-top: 150px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
   }
   nav h2 {
     position: absolute;

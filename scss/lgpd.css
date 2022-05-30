@@ -60,6 +60,10 @@ nav .title {
           backdrop-filter: blur(3px);
 }
 
+#location {
+  display: none;
+}
+
 .container-fluid {
   margin: 0 auto;
   -ms-flex-item-align: center;
@@ -120,18 +124,6 @@ nav .title {
   top: 52px;
 }
 
-.card #card-info #roger {
-  font-size: 0.9rem;
-  color: #FFFFFF;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.card #card-info #roger:hover {
-  color: #686868;
-}
-
 /* --------- Sections ---------- */
 #intro,
 #copyright {
@@ -140,9 +132,9 @@ nav .title {
   letter-spacing: -.025px;
   line-height: 28px;
   color: #010101;
-  border-top: 0.3px solid #FFFFFF;
+  border-top: 0.3px solid #B2B2B2;
   padding-top: 10px;
-  color: #FFFFFF;
+  color: #B2B2B2;
 }
 
 #intro {
@@ -239,14 +231,13 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 480px) {
-  #homepage {
-    position: relative;
-    left: -16px;
-  }
   #copyright_num {
     position: relative;
     right: 15px;
     font-size: 1rem;
+  }
+  #location {
+    display: none;
   }
   nav .title {
     margin-top: 180px;
@@ -290,7 +281,7 @@ summary::marker, summary::-webkit-details-marker {
   }
   .card .row {
     position: relative;
-    top: -200px;
+    top: -100px;
   }
   .card #card-info {
     line-height: 180%;

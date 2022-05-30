@@ -128,14 +128,6 @@ a {
 		}
 	}
 	
-	#power_skills {
-		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
-		cursor: not-allowed;
-        pointer-events: none;
-	}
-
-
 .container-fluid {
     margin: 0 auto;
 	align-self: center;
@@ -171,9 +163,9 @@ a {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $wolf;
-	border-top: 0.3px solid $white;
+	border-top: 0.3px solid $silver;
 	padding-top: 10px;
-	color: $white;
+	color: $silver;
 }
 
 /* --------- About | Description ---------- */
@@ -240,17 +232,11 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 480px) {
-	#homepage {
-		position: relative;
-		left: -16px;
-	}
-
 	#location { display: none; }
 
 	nav {
 		padding-top: 150px;
-		padding-bottom: 200px;
-  
+		padding-bottom: 150px;
   
 		h2 {
 		  position: absolute;

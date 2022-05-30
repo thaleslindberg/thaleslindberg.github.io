@@ -66,6 +66,8 @@ nav {
 	backdrop-filter: blur(3px);
 }
 
+#location { display: none; }
+
 .container-fluid {
     margin: 0 auto;
 	align-self: center;
@@ -142,9 +144,9 @@ nav {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $black;
-	border-top: 0.3px solid $white;
+	border-top: 0.3px solid $silver;
 	padding-top: 10px;
-	color: $white;
+	color: $silver;
 }
 
 #intro {
@@ -229,16 +231,13 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 480px) {
-	#homepage {
-		position: relative;
-		left: -16px;
-	}
-
 	#copyright_num {
 		position: relative;
 		right: 15px;
 		font-size: 1rem;
 	}
+
+	#location { display: none; }
 
 	nav {
 		.title {
@@ -286,7 +285,7 @@ summary::marker, summary::-webkit-details-marker {
 		}
 		.row {
 			position: relative;
-			top: -200px;
+			top: -100px;
 		}
 		#card-info {
 			line-height: 180%;

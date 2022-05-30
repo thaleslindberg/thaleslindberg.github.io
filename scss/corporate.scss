@@ -66,6 +66,8 @@ nav {
 	backdrop-filter: blur(3px);
 }
 
+#location { display: none; }
+
 .container-fluid {
     margin: 0 auto;
 	align-self: center;
@@ -118,18 +120,6 @@ nav {
         color: $silver;
         position: relative;
         top: 52px;
-
-		#roger {
-			font-size: 0.9rem;
-			color: $white;
-			letter-spacing: 1.5px;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				color: #686868;
-			}
-		}
     }
 }
 
@@ -142,9 +132,9 @@ nav {
 	letter-spacing: -.025px;
 	line-height: 28px;
 	color: $black;
-	border-top: 0.3px solid $white;
+	border-top: 0.3px solid $silver;
 	padding-top: 10px;
-	color: $white;
+	color: $silver;
 }
 
 #intro {
@@ -229,16 +219,13 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 480px) {
-	#homepage {
-		position: relative;
-		left: -16px;
-	}
-
 	#copyright_num {
 		position: relative;
 		right: 15px;
 		font-size: 1rem;
 	}
+
+	#location { display: none; }
 
 	nav {
 		.title {
@@ -284,10 +271,6 @@ summary::marker, summary::-webkit-details-marker {
 		#card-info {
 			font-size: 1.2rem;
 		}
-		.row {
-			position: relative;
-			top: -200px;
-		}
 		#card-info {
 			line-height: 180%;
 			width: 100%;
@@ -328,9 +311,6 @@ summary::marker, summary::-webkit-details-marker {
 			font-size: 3.3rem;
 		}
 	}
-	.section {
-			margin-bottom: 190px;
-		}
 	#top {
 		text-decoration: none;
 		position: relative;
