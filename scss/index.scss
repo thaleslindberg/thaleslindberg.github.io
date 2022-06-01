@@ -184,7 +184,7 @@ a {
 	letter-spacing: -0.12rem;
 	text-transform: none;
 	line-height: 120%;
-	color: $half-white;
+	color: $white;
 
 	&:hover { 
 		color: #F61A78;
@@ -232,6 +232,15 @@ summary::marker, summary::-webkit-details-marker {
 
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 480px) {
+	#homepage {
+		position: relative;
+		right: 6px;
+	}
+	#contact {
+		position: relative;
+		left: 28px;
+	}
+	
 	#location { display: none; }
 
 	nav {

@@ -231,6 +231,15 @@ summary::marker, summary::-webkit-details-marker {
 		font-size: 1rem;
 	}
 
+	#homepage {
+		position: relative;
+		right: 6px;
+	}
+	#contact {
+		position: relative;
+		left: 28px;
+	}
+
 	#location { display: none; }
 
 	nav {
@@ -309,7 +318,7 @@ summary::marker, summary::-webkit-details-marker {
 	}
 }
 
-@media only screen and (max-width: 370px) { 
+@media only screen and (max-width: 375px) { 
 	nav {
 		.title {
 			font-size: 2.9rem;

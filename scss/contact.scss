@@ -173,8 +173,8 @@ a {
 
 	&:hover {
 		transition: all .2s ease-in;
-		-webkit-text-stroke-width: #19F596;
-		-webkit-text-stroke-color: #19F596;
+		-webkit-text-stroke-width: #AEFF03;
+		-webkit-text-stroke-color: #AEFF03;
 	}
 }
 
@@ -198,6 +198,15 @@ summary::marker, summary::-webkit-details-marker {
 /* --------- Responsive ---------- */
 @media only screen and (max-width: 480px) {
 	#location { display: none; }
+
+	#homepage {
+		position: relative;
+		right: 6px;
+	}
+	#contact {
+		position: relative;
+		left: 28px;
+	}
 
 	nav {
 		padding-top: 150px;

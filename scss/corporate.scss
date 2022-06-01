@@ -219,6 +219,16 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 480px) {
+
+	#homepage {
+		position: relative;
+		right: 6px;
+	}
+	#contact {
+		position: relative;
+		left: 28px;
+	}
+	
 	#copyright_num {
 		position: relative;
 		right: 15px;
