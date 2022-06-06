@@ -109,7 +109,8 @@ a {
 	#next,
 	#lgpd,
 	#power_skills,
-	#layout_ex {
+	#layout_ex,
+	#spotify-cover {
 		font-family: "Gotham Black";
 		font-size: 4.4rem;
 		text-transform: none;
@@ -363,6 +364,13 @@ summary::marker, summary::-webkit-details-marker {
 			bottom: 90px;
 			line-height: 10%;
 		}
+
+		#spotify-cover {
+			font-size: 2.2rem;
+			position: relative;
+			bottom: 70px;
+			line-height: 200%;
+		}
 	}
 }
 
@@ -381,6 +389,13 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	#personal_projects {
 		#layout_ex {
+			font-size: 2.3rem;
+			position: relative;
+			bottom: 120px;
+			line-height: 10%;
+		}
+
+		#spotify-cover {
 			font-size: 2.3rem;
 			position: relative;
 			bottom: 120px;
@@ -410,6 +425,12 @@ summary::marker, summary::-webkit-details-marker {
 			position: relative;
 			bottom: 120px;
 			line-height: 10%;
+		}
+		#spotify-cover {
+			font-size: 1.8rem;
+			position: relative;
+			bottom: 100px;
+			line-height: 250%;
 		}
 	}
 }

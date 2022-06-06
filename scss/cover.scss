@@ -4,8 +4,8 @@ $silver: #B2B2B2;
 $white: #FFFFFF;
 $wolf: #D9D4D1;
 $cinnabar: #E83C38;
-$purple: #9738F0;
-$mint: #36F097;
+$purple: #6B1BF5;
+$mint: #19F596;
 $half-white: #ffffff80;
 
 /* --------- Fonts ---------- */
@@ -35,6 +35,80 @@ $half-white: #ffffff80;
     box-sizing: border-box;
 	position: relative;
 }
+
+html, body, #carousel, #carousel ul, #carousel li {
+	min-height: 90%;
+	height: 90%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+#debug {
+	position: fixed;
+	padding: 5px;
+	color: #000;
+	top: 0;
+	left: 0;
+	z-index: 1337;
+}
+
+#carousel {
+	margin-top: 24px;
+	overflow: hidden;
+	width:100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+	-webkit-transform-style: preserve-3d;
+}
+
+#carousel ul.animate {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+#carousel ul {
+	transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-o-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-ms-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-moz-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	-webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
+
+#carousel ul {
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+	position: relative;
+}
+
+#carousel li {
+	float: left;
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+#carousel li h2 {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 100%;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.2);
+}
+
+#carousel li.pane1 { background: #010101; }
+#carousel li.pane2 { background: #010101; }
+#carousel li.pane3 { background: #010101; }
+#carousel li.pane4 { background: #010101; }
+#carousel li.pane5 { background: #010101; }
 
 body { background: $black; }
 
@@ -94,51 +168,6 @@ nav {
 	}
 }
 
-/* --------- CARD 1 ---------- */
-.card {
-    overflow: hidden;
-    margin-top: 600px;
-    border: none;
-    border-radius: 0;
-
-    .card-img-top {
-        background: transparent;
-		opacity: 0.8;
-    }
-
-    .card-body {
-        background-color: $black;
-    }
-
-    .card-text {
-         color: $silver;
-         font-size: 14rem;
-         font-family: "Gotham Thin";
-    }
-
-    .card-text::after {
-        content: ".";
-        font-family: "Editorial";
-        color: $silver;
-      }
-
-    #card-info {
-        color: $silver;
-        position: relative;
-        top: 52px;
-
-		#photographer_01
-		,#photographer_02 {
-			font-size: 0.9rem;
-			color: $white;
-			letter-spacing: 1.5px;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover { color: #686868; }
-		}
-    }
-}
 
 /* --------- Sections ---------- */
 #intro,
@@ -169,8 +198,8 @@ summary::marker, summary::-webkit-details-marker {
 	   -khtml-user-select: none; /* Konqueror HTML */
 		 -moz-user-select: none; /* Old versions of Firefox */
 		  -ms-user-select: none; /* Internet Explorer/Edge */
-			  user-select: none; /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
+			  user-select: none; /* Non-prefixed version, currently */
+			
 }
 
 /* --------- Scrolling texts ---------- */
@@ -207,7 +236,12 @@ summary::marker, summary::-webkit-details-marker {
 		overflow: hidden;
 		border-top: 1px solid #686868;
 		border-bottom: 1px solid #686868;
-	  }
+	}
+    .corporate {
+        text-decoration: none;
+        color: $white;
+        font-family: 'Gotham Light';
+    }
   }
 
 
@@ -228,13 +262,6 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media only screen and (max-width: 480px) {
-	#intro_num,
-	#copyright_num {
-		position: relative;
-		right: 15px;
-		font-size: 1rem;
-	}
-
 	#homepage {
 		position: relative;
 		right: 6px;
@@ -242,6 +269,12 @@ summary::marker, summary::-webkit-details-marker {
 	#contact {
 		position: relative;
 		left: 28px;
+	}
+	
+	#copyright_num {
+		position: relative;
+		right: 15px;
+		font-size: 1rem;
 	}
 
 	#location { display: none; }
@@ -274,7 +307,6 @@ summary::marker, summary::-webkit-details-marker {
 		
 		.card-img-top {
 			background: transparent;
-			opacity: 0.8;
 		}
 		.card-text {
 			position: relative;
@@ -311,7 +343,7 @@ summary::marker, summary::-webkit-details-marker {
 		#top {
 			margin-left: 120px;
 			position: relative;
-			bottom: 28px;
+			bottom: 2px;
 		}
 	}
 
@@ -320,15 +352,21 @@ summary::marker, summary::-webkit-details-marker {
 		position: relative;
 		right: -72px;
 	}
+
+	#intro { font-size: 1rem; }
+
+	#intro_num {
+		position: relative;
+		right: 15px;
+	}
 }
 
-@media only screen and (max-width: 375px) { 
+@media only screen and (max-width: 375px) {
 	nav {
 		.title {
-			font-size: 2.9rem;
+			font-size: 4.2rem;
 		}
 	}
-
 	#top {
 		text-decoration: none;
 		position: relative;
@@ -336,13 +374,6 @@ summary::marker, summary::-webkit-details-marker {
 	}
 }
 
-@media only screen and (max-width: 320px) { 
-	nav {
-		.title {
-			font-size: 2.5rem;
-		}
-	}
-}
 
 /* --------- Animation 01 ---------- */
 @keyframes fade-in {
