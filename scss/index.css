@@ -116,7 +116,8 @@ nav h5 {
 #lgpd,
 #power_skills,
 #layout_ex,
-#spotify-cover {
+#spotify-cover,
+#nouvelle {
   font-family: "Gotham Black";
   font-size: 4.4rem;
   text-transform: none;
@@ -134,7 +135,8 @@ nav h5 {
 #lgpd:hover,
 #power_skills:hover,
 #layout_ex:hover,
-#spotify-cover:hover {
+#spotify-cover:hover,
+#nouvelle:hover {
   -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   -webkit-text-stroke-width: #6B1BF5;
@@ -379,20 +381,19 @@ summary::marker, summary::-webkit-details-marker {
     line-height: 200%;
   }
   #personal_projects #layout_ex {
-    font-size: 2.4rem;
-    position: relative;
-    bottom: 90px;
-    line-height: 10%;
-  }
-  #personal_projects #spotify-cover {
     font-size: 2.2rem;
     position: relative;
-    bottom: 70px;
+    bottom: 90px;
+  }
+  #personal_projects #nouvelle {
+    font-size: 2.2rem;
+    position: relative;
+    bottom: 100px;
     line-height: 200%;
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 375px) {
   #projects #global,
   #projects #corporate,
   #projects #next,
@@ -403,45 +404,12 @@ summary::marker, summary::-webkit-details-marker {
     bottom: 100px;
     line-height: 250%;
   }
-  #personal_projects #layout_ex {
+  #personal_projects #layout_ex,
+  #personal_projects #nouvelle {
     font-size: 2.3rem;
     position: relative;
     bottom: 120px;
     line-height: 10%;
-  }
-  #personal_projects #spotify-cover {
-    font-size: 2.3rem;
-    position: relative;
-    bottom: 120px;
-    line-height: 10%;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  #location {
-    display: none;
-  }
-  #projects #global,
-  #projects #corporate,
-  #projects #next,
-  #projects #lgpd,
-  #projects #power_skills {
-    font-size: 1.8rem;
-    position: relative;
-    bottom: 100px;
-    line-height: 250%;
-  }
-  #personal_projects #layout_ex {
-    font-size: 2rem;
-    position: relative;
-    bottom: 120px;
-    line-height: 10%;
-  }
-  #personal_projects #spotify-cover {
-    font-size: 1.8rem;
-    position: relative;
-    bottom: 100px;
-    line-height: 250%;
   }
 }
 

@@ -110,7 +110,8 @@ a {
 	#lgpd,
 	#power_skills,
 	#layout_ex,
-	#spotify-cover {
+	#spotify-cover,
+	#nouvelle {
 		font-family: "Gotham Black";
 		font-size: 4.4rem;
 		text-transform: none;
@@ -359,22 +360,21 @@ summary::marker, summary::-webkit-details-marker {
 	}
 	#personal_projects {
 		#layout_ex {
-			font-size: 2.4rem;
-			position: relative;
-			bottom: 90px;
-			line-height: 10%;
-		}
-
-		#spotify-cover {
 			font-size: 2.2rem;
 			position: relative;
-			bottom: 70px;
+			bottom: 90px;
+		}
+		
+		#nouvelle {
+			font-size: 2.2rem;
+			position: relative;
+			bottom: 100px;
 			line-height: 200%;
 		}
 	}
 }
 
-@media only screen and (max-width: 370px) { 
+@media only screen and (max-width: 375px) { 
 	#projects {
 		#global,
 		#corporate,
@@ -388,14 +388,8 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 	#personal_projects {
-		#layout_ex {
-			font-size: 2.3rem;
-			position: relative;
-			bottom: 120px;
-			line-height: 10%;
-		}
-
-		#spotify-cover {
+		#layout_ex,
+		#nouvelle {
 			font-size: 2.3rem;
 			position: relative;
 			bottom: 120px;
@@ -403,38 +397,6 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 }
-
-@media only screen and (max-width: 320px) {
-	#location { display: none; }
-
-	#projects {
-		#global,
-		#corporate,
-		#next,
-		#lgpd,
-		#power_skills {
-			font-size: 1.8rem;
-			position: relative;
-			bottom: 100px;
-			line-height: 250%;
-		}
-	}
-	#personal_projects {
-		#layout_ex {
-			font-size: 2rem;
-			position: relative;
-			bottom: 120px;
-			line-height: 10%;
-		}
-		#spotify-cover {
-			font-size: 1.8rem;
-			position: relative;
-			bottom: 100px;
-			line-height: 250%;
-		}
-	}
-}
-
 /* --------- Animation 01 ---------- */
 @keyframes fade-in {
   0% {
