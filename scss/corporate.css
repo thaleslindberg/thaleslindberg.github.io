@@ -64,6 +64,13 @@ nav .title {
   display: none;
 }
 
+#live-site {
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: "Gotham Book";
+}
+
 .container-fluid {
   margin: 0 auto;
   -ms-flex-item-align: center;

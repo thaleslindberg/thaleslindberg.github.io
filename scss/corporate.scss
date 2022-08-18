@@ -68,6 +68,13 @@ nav {
 
 #location { display: none; }
 
+#live-site {
+	text-decoration: none;
+	color: $white;
+	text-transform: uppercase;
+	font-family: "Gotham Book";
+}
+
 .container-fluid {
     margin: 0 auto;
 	align-self: center;
