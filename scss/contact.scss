@@ -3,99 +3,99 @@ $black: #010101;
 $silver: #B2B2B2;
 $white: #FFFFFF;
 $wolf: #D9D4D1;
-$cinnabar: #E83C38;
 $purple: #6B1BF5;
-$mint: #19F596;
+$mint: #AEFF03;
 $half-white: #ffffff80;
-
-/* --------- Fonts ---------- */
-@font-face {
-	font-family: "Gotham Book";
-	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Black";
-	src: url("/fonts/GothamHTF-Black.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Light";
-	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
-}
 
 *, 
 *::after,
 *::before {
     box-sizing: border-box;
-	position: relative;
+	margin: 0;
+    padding: 0;
+	animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 body { background: $black; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 
 html, 
 a {
 	cursor: none;
 	cursor: url('/img/cursor.svg'), auto;
-	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 /* --------- Scrolling texts ---------- */
-@keyframes scroll-text {
-	to {
-	  transform: translate(-160%, -50%);
-	}
-  }
-  
-  nav {
-	  padding-top: 300px;
-	  padding-bottom: 300px;
-	font-family: "Gotham Light";
-	overflow: hidden;
+@keyframes marqueeLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 
-	  h2 {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translate(100%,-50%);
-		font-size: 18rem;
-		letter-spacing: 0.07em;
-		animation: scroll-text 2500s linear infinite;
-		white-space: nowrap;
-		color: #686868;
-	  }
-	
-	  h2.white-text {
-		  z-index: 4;
-		  right: -12.5%;
-		  color: #686868;
-		  transition: opacity 0.1s;
-		}
+/* Running text */
+.running-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
-	  h5 {
-		position: absolute;
-		left: 50%;
-		top: 90%;
-		transform: translate(-50%, -50%);
-		font-size: 1.5rem;
-		letter-spacing: 0.07em;
-		animation: scroll-text 1500s linear infinite;
-		white-space: nowrap;
-		color: $silver;
-		opacity: 0.6;
-	  }
-  }
+}
+
+.marquee {
+    overflow: hidden;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: #fff;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 40vw;
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.marquee__inner { display: flex; }
 
 #location {
 	font-size: 1rem;
-	font-family: "Gotham Light";
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
 	color: $silver;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 }
 
 #header { 
-	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%); 
+	background: linear-gradient(180deg, $black 10%, rgba(1, 1, 1, 0.6) 0.1%); 
 	backdrop-filter: blur(3px);
 }
 
@@ -103,87 +103,77 @@ a {
     margin: 0 auto;
 	align-self: center;
 
-	#homepage, 
-	#contact,
-	#folio {
-	  font-family: "Gotham Book";
-	  font-size: 18px;
-	  margin-bottom: 8px;
-	  padding: 16px;
-	  color: $white;
-	  letter-spacing: -1px;
-	  text-transform: uppercase;
-	  border-image-repeat: stretch;
-	  -webkit-font-smoothing: antialiased;
-	  text-align: center;
-	  
-  
-	  &:hover { color: $silver; }
-	}
-	#folio {
-		line-height: normal;
-		color: $half-white;
-		&:hover { color: $half-white; }
-	}
+  #homepage, 
+  #contact {
+	font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+	padding: 16px;
+    color: $white;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	
+    &:hover { color: $silver; }
+  }
 }
 
 /* --------- Sections ---------- */
 #intro,
 #about,
-#fiap_projects,
-#side_projects,
-#social,
 #copyright {
-	font-family: "Gotham Light";
+	font-family: 'Poppins', sans-serif;
 	font-size: 19px;
+	font-weight: 200;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: $black;
+	color: $wolf;
 	border-top: 0.3px solid $silver;
 	padding-top: 10px;
 	color: $silver;
 }
 
-#personal_projects, 
-a {
-	font-family: "Gotham Book";
-	font-size: 3.2rem;
-	letter-spacing: -0.12rem;
-	text-transform: none;
-	line-height: 120%;
-	color: $black;
-	text-decoration: none;
-	text-transform: uppercase;	
-
-}
-
 #email,
 #linkedin,
 #behance {
-	font-family: "Gotham Black";
-	font-size: 4.4rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800;
+	font-size: 10vh;
 	text-transform: none;
-	line-height: 170%;
+	line-height: 160%;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	text-align: center;
 
-	-webkit-text-fill-color: #010101; 
+	-webkit-text-fill-color: $black; 
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 
 	&:hover {
 		transition: all .2s ease-in;
-		-webkit-text-stroke-width: #AEFF03;
-		-webkit-text-stroke-color: #AEFF03;
+		-webkit-text-stroke-width: $purple;
+		-webkit-text-stroke-color: $purple;
 	}
+}
+
+a {
+	font-family: 'Poppins', sans-serif;
+	font-size: 3.2vh;
+	letter-spacing: -0.12rem;
+	text-transform: none;
+	line-height: 120%;
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover { color:  $silver; }
 }
 
 
 /* --------- Misc ---------- */
 summary { cursor: pointer; }
-summary::marker, summary::-webkit-details-marker {
-	display: none;
-}
+summary::marker, summary::-webkit-details-marker { display: none; }
 
 .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -193,123 +183,6 @@ summary::marker, summary::-webkit-details-marker {
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
-}
-
-/* --------- Responsive ---------- */
-@media only screen and (max-width: 480px) {
-	#location { display: none; }
-
-	#homepage {
-		position: relative;
-		right: 6px;
-	}
-	#contact {
-		position: relative;
-		left: 28px;
-	}
-
-	nav {
-		padding-top: 150px;
-		padding-bottom: 150px;
-  
-  
-		h2 {
-		  position: absolute;
-		  right: 0;
-		  top: 50%;
-		  transform: translate(100%,-50%);
-		  font-size: 8rem;
-		  letter-spacing: 0.07em;
-		  animation: scroll-text 1000s linear infinite;
-		  white-space: nowrap;
-		  color: #686868;
-		  transition: opacity 0.1s;
-		}
-  
-		h2.white-text {
-			z-index: 4;
-			right: -12.5%;
-			color: #686868;
-		  }
-
-		h5 {
-		  position: absolute;
-		  left: 50%;
-		  top: 90%;
-		  transform: translate(-50%, -50%);
-		  font-size: 1rem;
-		  letter-spacing: 0.07em;
-		  animation: scroll-text 200s linear infinite;
-		  white-space: nowrap;
-		  color: $silver;
-		  opacity: 0.6;
-		}
-	}
-
-	#intro_num,
-	#about_num,
-	#copyright_num {
-		position: relative;
-		right: 15px;
-	}
-	#intro,
-	#about,
-	#side_projects,
-	#copyright { font-size: 1rem; }
-
-	#intro_txt,
-	#about_txt,
-	#copyright_txt {
-		margin-left: 120px;
-		position: relative;
-		bottom: 28px;
-	}
-
-	#about {
-		position: relative;
-		bottom: 10px;
-	}
-	#social_media {
-		position: relative;
-		bottom: 20px;
-		margin: 0 auto;
-
-		#email,
-		#behance,
-		#linkedin {
-			font-size: 3rem;
-			width: 36px;
-			height: 36px;
-			position: relative;
-			line-height: 180%;
-		}
-	}
-
-	#copyright {
-		position: relative;
-		bottom: 70px;
-		border-bottom: none;
-
-		#clock {
-			position: relative;
-			left: 120px;
-			bottom: 26px;
-		}
-	}
-	#timezone {
-		width: 22px;
-		height: 22px;
-	}
-
-}
-
-@media only screen and (max-width: 380px) { 
-	#location { display: none; }
-}
-	
-
-@media only screen and (max-width: 320px) {
-	#location { display: none; }
 }
 
 /* --------- Animation 01 ---------- */
@@ -329,4 +202,56 @@ summary::marker, summary::-webkit-details-marker {
   100% {
     opacity: 1;
   }
+}
+
+
+// Media queries
+@media screen and (max-width: 414px) {
+	.content {
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+	#location { display: none; }
+
+	#intro_txt,
+	#about_txt,
+	#fiap_txt,
+	#personal_txt
+	 {
+		position: absolute;
+		margin-left: 124px;
+	}
+
+	#homepage {
+		position: relative;
+		right: 6px;
+	}
+	#contact {
+		position: relative;
+		left: 28px;
+	}
+
+	#email,
+	#linkedin,
+	#behance {
+		font-size: 52px;
+		line-height: 52px * 2.2;
+		margin-left: 40px;
+	}
+	#clock {
+		position: absolute;
+		margin-left: 124px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#fiap{ font-size: 1.6rem; }
+
+	#email,
+	#linkedin,
+	#behance {
+		font-size: 46px;
+		line-height: 46px * 2.2;
+		margin-left: 40px;
+	}
 }
