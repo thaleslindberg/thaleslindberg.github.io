@@ -3,46 +3,30 @@ $black: #010101;
 $silver: #B2B2B2;
 $white: #FFFFFF;
 $wolf: #D9D4D1;
-$cinnabar: #E83C38;
 $purple: #6B1BF5;
-$mint: #19F596;
+$mint: #AEFF03;
 $half-white: #ffffff80;
-
-/* --------- Fonts ---------- */
-@font-face {
-	font-family: "Gotham Thin";
-	src: url("/fonts/GothamHTF-Thin.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Book";
-	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Black";
-	src: url("/fonts/GothamHTF-Black.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Light";
-	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
-}
 
 *, 
 *::after,
 *::before {
     box-sizing: border-box;
-	position: relative;
+	margin: 0;
+    padding: 0;
+	animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 body { background: $black; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
 
 html, 
 a {
 	cursor: none;
 	cursor: url('/img/cursor.svg'), auto;
-	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 nav {
@@ -66,27 +50,36 @@ nav {
 	backdrop-filter: blur(3px);
 }
 
-#location { display: none; }
 
 .container-fluid {
     margin: 0 auto;
 	align-self: center;
 
-	#homepage, 
-	#contact {
-	  font-family: "Gotham Book";
-	  font-size: 18px;
-	  margin-bottom: 8px;
-	  padding: 16px;
-	  color: $white;
-	  letter-spacing: -1px;
-	  text-transform: uppercase;
-	  border-image-repeat: stretch;
-	  -webkit-font-smoothing: antialiased;
-	  text-align: center;
-  
-	  &:hover { color: $silver; }
-	}
+  #homepage, 
+  #contact {
+	font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+	padding: 16px;
+    color: $white;
+	letter-spacing: -2px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	
+    &:hover { color: $silver; }
+  }
+}
+
+#location { display: none; }
+
+#title {
+	font-family: 'Poppins', sans-serif;
+	color: $white;
+	font-weight: 100;
+	letter-spacing: -0.12rem;
+	text-transform: uppercase;
+	margin-top: 100px;
 }
 
 /* --------- CARD 1 ---------- */
@@ -107,57 +100,86 @@ nav {
     .card-text {
          color: $silver;
          font-size: 14rem;
-         font-family: "Gotham Thin";
+         font-family: 'Poppins', sans-serif;
+		 color: $white;
+		 font-weight: 100;
     }
-
-    .card-text::after {
-        content: ".";
-        font-family: "Editorial";
-        color: $silver;
-      }
 
     #card-info {
         color: $silver;
         position: relative;
         top: 52px;
-
-		#roger {
-			font-size: 0.9rem;
-			color: $white;
-			letter-spacing: 1.5px;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				color: #686868;
-			}
-		}
-    }
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 300;
+	}
 }
-
 
 /* --------- Sections ---------- */
 #intro,
 #copyright {
-	font-family: "Gotham Light";
+	font-family: 'Poppins', sans-serif;
 	font-size: 19px;
+	font-weight: 200;
 	letter-spacing: -.025px;
 	line-height: 28px;
-	color: $black;
+	color: $wolf;
 	border-top: 0.3px solid $silver;
 	padding-top: 10px;
 	color: $silver;
+}
+
+#copyright {
+	margin-top: 114px;
 }
 
 #intro {
 	border: none;
 }
 
+/* Running text */
+.running-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.marquee {
+    overflow: hidden;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+	font-style: italic;
+    color: #fff;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 10vw;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+
+		&:hover { color: #6B1BF5; }
+	}
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.marquee__inner { display: flex; }
+
 /* --------- Misc ---------- */
 summary { cursor: pointer; }
-summary::marker, summary::-webkit-details-marker {
-	display: none;
-}
+summary::marker, summary::-webkit-details-marker { display: none; }
 
 .noselect {
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -169,66 +191,34 @@ summary::marker, summary::-webkit-details-marker {
 									supported by Chrome, Edge, Opera and Firefox */
 }
 
+/* --------- Animations ---------- */
+@keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
 
-/* --------- Scrolling texts ---------- */
-@keyframes scroll-text {
+@keyframes marqueeLine {
+    from {
+        transform: translateX(0);
+    }
+
     to {
-      transform: translate(-160%, -50%);
+        transform: translateX(-100%);
     }
-  }
-  
-  .section {
-      padding-top: 300px;
-      overflow: hidden;
-	  font-family: 'Gotham Thin';
-
-      h2 {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(100%,-50%);
-        font-size: 4rem;
-        letter-spacing: 0.07em;
-        animation: scroll-text 300s linear infinite;
-        white-space: nowrap;
-		color: #686868;
-      }
-
-	  .black-box {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 100%;
-		height: 30%;
-		transform: translate(-50%,-50%);
-		overflow: hidden;
-		border-top: 1px solid #686868;
-		border-bottom: 1px solid #686868;
-	}
-
-    .corporate {
-        text-decoration: none;
-        color: $white;
-        font-family: 'Gotham Light';
-    }
-  }
-
-
-@media only screen and (max-width: 1024px) { 
-	nav {
-		.title {
-			font-size: 8rem;
-		}
-	}
 }
 
-@media only screen and (min-width: 1024px) { 
-	nav {
-		.title {
-			font-size: 9.5rem;
-		}
-	}
-}
 
 @media only screen and (max-width: 480px) {
 	#homepage {
@@ -250,16 +240,15 @@ summary::marker, summary::-webkit-details-marker {
 
 	nav {
 		.title {
-			margin-top: 180px;
 			left: 0;
 			right: 0;
-			font-size: 3.2rem;
+			font-size: 5.2rem;
 			letter-spacing: -1.5px;
 		}
 	}
 	.section {
 		position: relative;
-		bottom: 120px;
+		bottom: 140px;
 
 		.col {
 			position: relative;
@@ -303,9 +292,14 @@ summary::marker, summary::-webkit-details-marker {
 		}
 	}
 
+	.marquee {
+		letter-spacing: -0.07em;
+		font-size: 20vw;
+	}
+
 	#copyright {
-		position: relative;
-		bottom: 300px;
+		position: fixed;
+		bottom: 0;
 		border-bottom: none;
 
 		#clock,
@@ -342,22 +336,3 @@ summary::marker, summary::-webkit-details-marker {
 		right: -32px;
 	}
 }
-
-
-/* --------- Animation 01 ---------- */
-@keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
