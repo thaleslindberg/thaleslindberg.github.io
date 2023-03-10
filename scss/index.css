@@ -213,11 +213,11 @@ a {
 }
 
 .menu-hover-image2 .menu-item2:nth-child(1):hover ~ .cursor2 {
-  background-image: url("");
+  background-image: url("/img/mouseover6.png");
 }
 
 .menu-hover-image2 .menu-item2:nth-child(2):hover ~ .cursor2 {
-  background-image: url("");
+  background-image: url("/img/mouseover7.png");
 }
 
 .menu-hover-image2 .menu-item2:nth-child(3):hover ~ .cursor2 {
@@ -526,8 +526,8 @@ summary::marker, summary::-webkit-details-marker {
   #nouvelle,
   #layout_ex,
   #ux_case {
-    font-size: 32px;
-    line-height: 70.4px;
+    font-size: 30px;
+    line-height: 66px;
   }
 }
 /*# sourceMappingURL=index.css.map */

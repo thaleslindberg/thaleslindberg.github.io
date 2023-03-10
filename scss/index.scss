@@ -172,8 +172,8 @@ a {
   
 	.menu-item2 {
 	  $menu-image2-urls: 
-	  	url(''),
-		url(''),
+		url('/img/mouseover6.png'),
+		url('/img/mouseover7.png'),
 		url('/img/mouseover5.png');
   
 	  @for $i from 1 through 3 {
@@ -439,7 +439,7 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#nouvelle,
 	#layout_ex,
 	#ux_case {
-		font-size: 32px;
-		line-height: 32px * 2.2;
+		font-size: 30px;
+		line-height: 30px * 2.2;
 	}
 }
