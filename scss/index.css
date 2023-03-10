@@ -25,6 +25,29 @@ a {
   cursor: url("/img/cursor.svg"), auto;
 }
 
+.container {
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 24px;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 3vw;
+  color: #AEFF03;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
 /* --------- Scrolling texts ---------- */
 @-webkit-keyframes marqueeLine {
   from {
@@ -107,6 +130,120 @@ a {
           backdrop-filter: blur(3px);
 }
 
+.menu-hover-image {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  list-style-type: none;
+}
+
+.menu-hover-image .cursor {
+  position: absolute;
+  top: -50%;
+  left: -25%;
+  z-index: -1;
+  width: 600px;
+  height: 400px;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0;
+}
+
+.menu-hover-image .menu-item:nth-child(1):hover ~ .cursor {
+  background-image: url("/img/global_01.png");
+}
+
+.menu-hover-image .menu-item:nth-child(2):hover ~ .cursor {
+  background-image: url("/img/mouseover1.png");
+}
+
+.menu-hover-image .menu-item:nth-child(3):hover ~ .cursor {
+  background-image: url("/img/next_02.png");
+}
+
+.menu-hover-image .menu-item:nth-child(4):hover ~ .cursor {
+  background-image: url("/img/mouseover2.png");
+}
+
+.menu-hover-image .menu-item:nth-child(5):hover ~ .cursor {
+  background-image: url("/img/mouseover3.png");
+}
+
+.menu-hover-image .menu-item:nth-child(6):hover ~ .cursor {
+  background-image: url("/img/mouseover4.png");
+}
+
+.menu-hover-image .menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 16px;
+  color: white;
+  border-bottom: 0.4px solid #161616;
+  mix-blend-mode: difference;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-hover-image2 {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  list-style-type: none;
+}
+
+.menu-hover-image2 .cursor2 {
+  position: absolute;
+  top: -40%;
+  left: 15%;
+  z-index: -1;
+  width: 600px;
+  height: 400px;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0;
+}
+
+.menu-hover-image2 .menu-item2:nth-child(1):hover ~ .cursor2 {
+  background-image: url("");
+}
+
+.menu-hover-image2 .menu-item2:nth-child(2):hover ~ .cursor2 {
+  background-image: url("");
+}
+
+.menu-hover-image2 .menu-item2:nth-child(3):hover ~ .cursor2 {
+  background-image: url("/img/mouseover5.png");
+}
+
+.menu-hover-image2 .menu-item2 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 16px;
+  color: white;
+  border-bottom: 0.4px solid #161616;
+  mix-blend-mode: difference;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
 /* --------- FIAP projects ---------- */
 #global,
 #corporate,
@@ -119,10 +256,9 @@ a {
 #nouvelle,
 #ux_case {
   font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 9.2vh;
   text-transform: none;
-  line-height: 160%;
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #010101;
@@ -198,7 +334,7 @@ a {
   letter-spacing: -0.12rem;
   text-transform: none;
   line-height: 120%;
-  color: #ffffff80;
+  color: #808080;
 }
 
 #fiap:hover {
@@ -272,6 +408,17 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media screen and (max-width: 414px) {
+  .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .container .text {
+    font-size: 6vw;
+  }
   #location {
     display: none;
   }
@@ -312,7 +459,6 @@ summary::marker, summary::-webkit-details-marker {
   #ux_case {
     font-size: 42px;
     line-height: 92.4px;
-    margin-left: 40px;
   }
   #clock {
     position: absolute;
@@ -321,6 +467,17 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 @media screen and (max-width: 375px) {
+  .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .container .text {
+    font-size: 6vw;
+  }
   #txt_about {
     font-size: 1.6rem;
     padding-left: 32px;
@@ -343,11 +500,21 @@ summary::marker, summary::-webkit-details-marker {
   #ux_case {
     font-size: 38px;
     line-height: 83.6px;
-    margin-left: 40px;
   }
 }
 
 @media screen and (max-width: 320px) {
+  .container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .container .text {
+    font-size: 6vw;
+  }
   #global,
   #corporate,
   #next,
@@ -361,7 +528,6 @@ summary::marker, summary::-webkit-details-marker {
   #ux_case {
     font-size: 32px;
     line-height: 70.4px;
-    margin-left: 40px;
   }
 }
 /*# sourceMappingURL=index.css.map */

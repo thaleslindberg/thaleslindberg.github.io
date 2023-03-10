@@ -5,7 +5,7 @@ $white: #FFFFFF;
 $wolf: #D9D4D1;
 $purple: #6B1BF5;
 $mint: #AEFF03;
-$half-white: #ffffff80;
+$half-white: #808080;
 
 
 *, 
@@ -28,6 +28,22 @@ html,
 a {
 	cursor: none;
 	cursor: url('/img/cursor.svg'), auto;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	justify-content: start;
+	align-items: start;
+	display: flex;
+	padding-top: 24px;
+	
+}
+.text {
+	font-weight: 100;
+	font-size: 3vw;
+	color: #AEFF03;
+	font-family: 'Poppins', sans-serif;
+	font-style: italic;
 }
 
 /* --------- Scrolling texts ---------- */
@@ -86,7 +102,102 @@ a {
 	background: linear-gradient(180deg, $black 10%, rgba(1, 1, 1, 0.6) 0.1%); 
 	backdrop-filter: blur(3px);
 }
+
+
+.menu-hover-image {
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+	list-style-type: none;
+
+	.cursor {
+	  position: absolute;
+	  top: -50%;
+	  left: -25%;
+	  z-index: -1;
+	  width: 600px;
+	  height: 400px;
+	  background-position: 50% 50%;
+	  background-size: cover;
+	  opacity: 0;
+	}
   
+	.menu-item {
+	  $menu-image-urls: 
+	  	url('/img/global_01.png'),
+		url('/img/mouseover1.png'),
+		url('/img/next_02.png'),
+		url('/img/mouseover2.png'),
+		url('/img/mouseover3.png'),
+		url('/img/mouseover4.png');
+  
+	  @for $i from 1 through 6 {
+		&:nth-child(#{$i}):hover~.cursor {
+		  background-image: nth($menu-image-urls, $i);
+		}
+	  }
+  
+	  a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		text-decoration: none;
+		padding: 16px;
+		color: white;
+		border-bottom: 0.4px solid #161616;
+		mix-blend-mode: difference;
+		transform: translate3d(0, 0, 0);  // just make "mix-blend-mode" work properly.
+	  }
+	}
+  }
+
+  .menu-hover-image2 {
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+	list-style-type: none;
+
+	.cursor2 {
+	  position: absolute;
+	  top: -40%;
+	  left: 15%;
+	  z-index: -1;
+	  width: 600px;
+	  height: 400px;
+	  background-position: 50% 50%;
+	  background-size: cover;
+	  opacity: 0;
+	}
+  
+	.menu-item2 {
+	  $menu-image2-urls: 
+	  	url(''),
+		url(''),
+		url('/img/mouseover5.png');
+  
+	  @for $i from 1 through 3 {
+		&:nth-child(#{$i}):hover~.cursor2 {
+		  background-image: nth($menu-image2-urls, $i);
+		}
+	  }
+  
+	  a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		text-decoration: none;
+		padding: 16px;
+		color: white;
+		border-bottom: 0.4px solid #161616;
+		mix-blend-mode: difference;
+		transform: translate3d(0, 0, 0);  // just make "mix-blend-mode" work properly.
+	  }
+	}
+  }
+
+
 /* --------- FIAP projects ---------- */
 	#global,
 	#corporate,
@@ -99,10 +210,10 @@ a {
 	#nouvelle,
 	#ux_case {
 		font-family: 'Poppins', sans-serif;
-		font-weight: 800;
+		font-weight: 700;
 		font-size: 9.2vh;
 		text-transform: none;
-		line-height: 160%;
+		// line-height: 160%;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 
@@ -217,6 +328,15 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 
 // Media queries
 @media screen and (max-width: 414px) {
+	.container {
+		justify-content: start;
+		align-items: start;
+		
+		.text {
+			font-size: 6vw;
+		}
+	}
+
 	#location { display: none; }
 
 	#intro_txt,
@@ -257,7 +377,6 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#ux_case {
 		font-size: 42px;
 		line-height: 42px * 2.2;
-		margin-left: 40px;
 	}
 	#clock {
 		position: absolute;
@@ -266,6 +385,15 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 }
 
 @media screen and (max-width: 375px) {
+	.container {
+		justify-content: start;
+		align-items: start;
+		
+		.text {
+			font-size: 6vw;
+		}
+	}
+
 	#txt_about {
 		font-size: 1.6rem;
 		padding-left: 32px;
@@ -287,11 +415,19 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#ux_case {
 		font-size: 38px;
 		line-height: 38px * 2.2;
-		margin-left: 40px;
 	}
 }
 
 @media screen and (max-width: 320px) {
+	.container {
+		justify-content: start;
+		align-items: start;
+		
+		.text {
+			font-size: 6vw;
+		}
+	}
+
 	#global,
 	#corporate,
 	#next,
@@ -305,6 +441,5 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#ux_case {
 		font-size: 32px;
 		line-height: 32px * 2.2;
-		margin-left: 40px;
 	}
 }
