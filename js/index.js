@@ -8,6 +8,10 @@ function showTime() {
     // document.getElementById("clock").innerHTML = time.getFullYear() + " " + time.toLocaleTimeString()
 }
 
+// ——————————————————————————————————————————————————
+// MouseoverEffect
+// ——————————————————————————————————————————————————
+
 let menuItems = document.querySelectorAll(".menu-hover-image .menu-item");
 let cursor = document.querySelector(".menu-hover-image .cursor");
 
@@ -131,7 +135,7 @@ const phrases = [
   'I am Thales Lindberg',
   'can I help you with something?',
   'feel free to reach me out and...', 
-  'we can turn your vision into a digital masterpiece, together!'
+  'we can turn your creative vision into a digital masterpiece!'
 ]
 
 const el = document.querySelector('.text')

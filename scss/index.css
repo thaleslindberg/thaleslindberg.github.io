@@ -261,7 +261,7 @@ a {
   text-transform: none;
   letter-spacing: 2px;
   text-transform: uppercase;
-  -webkit-text-fill-color: #010101;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.5);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 }
@@ -526,8 +526,8 @@ summary::marker, summary::-webkit-details-marker {
   #nouvelle,
   #layout_ex,
   #ux_case {
-    font-size: 30px;
-    line-height: 66px;
+    font-size: 29px;
+    line-height: 63.8px;
   }
 }
 /*# sourceMappingURL=index.css.map */

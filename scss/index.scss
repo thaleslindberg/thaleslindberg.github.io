@@ -192,7 +192,7 @@ a {
 		color: white;
 		border-bottom: 0.4px solid #161616;
 		mix-blend-mode: difference;
-		transform: translate3d(0, 0, 0);  // just make "mix-blend-mode" work properly.
+		transform: translate3d(0, 0, 0); 
 	  }
 	}
   }
@@ -213,11 +213,10 @@ a {
 		font-weight: 700;
 		font-size: 9.2vh;
 		text-transform: none;
-		// line-height: 160%;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 
-		-webkit-text-fill-color: $black; 
+		-webkit-text-fill-color: rgba(0, 0, 0, 0.5); 
 		-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 
@@ -439,7 +438,7 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#nouvelle,
 	#layout_ex,
 	#ux_case {
-		font-size: 30px;
-		line-height: 30px * 2.2;
+		font-size: 29px;
+		line-height: 29px * 2.2;
 	}
 }
