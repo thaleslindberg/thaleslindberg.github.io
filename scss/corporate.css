@@ -148,6 +148,61 @@ nav .title {
   border: none;
 }
 
+/* Running text */
+.running-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.marquee {
+  overflow: hidden;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 10vw;
+}
+
+.marquee a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.marquee a:hover {
+  color: #6B1BF5;
+}
+
+.marquee__line {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0;
+  padding: 0px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  -webkit-animation-name: marqueeLine;
+          animation-name: marqueeLine;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.marquee__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* --------- Misc ---------- */
 summary {
   cursor: pointer;
@@ -170,6 +225,28 @@ summary::marker, summary::-webkit-details-marker {
   user-select: none;
   /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
+}
+
+@-webkit-keyframes marqueeLine {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueeLine {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 
 /* --------- Scrolling texts ---------- */

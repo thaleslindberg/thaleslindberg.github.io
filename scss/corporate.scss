@@ -148,6 +148,47 @@ nav {
 	border: none;
 }
 
+/* Running text */
+.running-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.marquee {
+    overflow: hidden;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+	font-style: italic;
+    color: #fff;
+	font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 10vw;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+
+		&:hover { color: #6B1BF5; }
+	}
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.marquee__inner { display: flex; }
+
 /* --------- Misc ---------- */
 summary { cursor: pointer; }
 summary::marker, summary::-webkit-details-marker {
@@ -162,6 +203,16 @@ summary::marker, summary::-webkit-details-marker {
 		  -ms-user-select: none; /* Internet Explorer/Edge */
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
+}
+
+@keyframes marqueeLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 
