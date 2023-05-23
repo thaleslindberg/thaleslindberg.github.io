@@ -2,12 +2,10 @@
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 body {
@@ -28,14 +26,8 @@ a {
 .container {
   height: 100%;
   width: 100%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: start;
+  align-items: start;
   display: flex;
   padding-top: 24px;
 }
@@ -44,40 +36,24 @@ a {
   font-weight: 100;
   font-size: 3vw;
   color: #AEFF03;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: italic;
 }
 
 /* --------- Scrolling texts ---------- */
-@-webkit-keyframes marqueeLine {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
 @keyframes marqueeLine {
   from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 /* Running text */
 .running-text {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -87,44 +63,36 @@ a {
   letter-spacing: -0.07em;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-size: 25vw;
 }
 
 .marquee__line {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   margin: 0;
   padding: 0px 15px;
   min-width: 100%;
   white-space: nowrap;
-  -webkit-animation-name: marqueeLine;
-          animation-name: marqueeLine;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: marqueeLine;
+  animation-duration: 30s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .marquee__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 #location {
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 200;
   color: #B2B2B2;
   letter-spacing: 3px;
 }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(0.1%, rgba(1, 1, 1, 0.6)));
   background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -132,11 +100,10 @@ a {
 
 .menu-hover-image {
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 100;
   list-style-type: none;
 }
-
 .menu-hover-image .cursor {
   position: absolute;
   top: -50%;
@@ -148,58 +115,43 @@ a {
   background-size: cover;
   opacity: 0;
 }
-
 .menu-hover-image .menu-item:nth-child(1):hover ~ .cursor {
   background-image: url("/img/global_01.png");
 }
-
 .menu-hover-image .menu-item:nth-child(2):hover ~ .cursor {
   background-image: url("/img/mouseover1.png");
 }
-
 .menu-hover-image .menu-item:nth-child(3):hover ~ .cursor {
   background-image: url("/img/next_02.png");
 }
-
 .menu-hover-image .menu-item:nth-child(4):hover ~ .cursor {
   background-image: url("/img/mouseover2.png");
 }
-
 .menu-hover-image .menu-item:nth-child(5):hover ~ .cursor {
   background-image: url("/img/mouseover3.png");
 }
-
 .menu-hover-image .menu-item:nth-child(6):hover ~ .cursor {
   background-image: url("/img/mouseover4.png");
 }
-
 .menu-hover-image .menu-item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-decoration: none;
   padding: 16px;
   color: white;
   border-bottom: 0.4px solid #161616;
   mix-blend-mode: difference;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .menu-hover-image2 {
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 100;
   list-style-type: none;
 }
-
 .menu-hover-image2 .cursor2 {
   position: absolute;
   top: -40%;
@@ -211,37 +163,29 @@ a {
   background-size: cover;
   opacity: 0;
 }
-
 .menu-hover-image2 .menu-item2:nth-child(1):hover ~ .cursor2 {
-  background-image: url("/img/mouseover6.png");
-}
-
-.menu-hover-image2 .menu-item2:nth-child(2):hover ~ .cursor2 {
-  background-image: url("/img/mouseover7.png");
-}
-
-.menu-hover-image2 .menu-item2:nth-child(3):hover ~ .cursor2 {
   background-image: url("/img/mouseover5.png");
 }
-
+.menu-hover-image2 .menu-item2:nth-child(2):hover ~ .cursor2 {
+  background-image: url("/img/mouseover8.png");
+}
+.menu-hover-image2 .menu-item2:nth-child(3):hover ~ .cursor2 {
+  background-image: url("/img/mouseover9.png");
+}
+.menu-hover-image2 .menu-item2:nth-child(4):hover ~ .cursor2 {
+  background-image: url("/img/mouseover7.png");
+}
 .menu-hover-image2 .menu-item2 a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-decoration: none;
   padding: 16px;
   color: white;
   border-bottom: 0.4px solid #161616;
   mix-blend-mode: difference;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* --------- FIAP projects ---------- */
@@ -252,10 +196,10 @@ a {
 #power_skills,
 #scientific,
 #layout_ex,
-#spotify-cover,
 #nouvelle,
-#ux_case {
-  font-family: 'Poppins', sans-serif;
+#ux_case,
+#le_septieme {
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 9.2vh;
   text-transform: none;
@@ -265,7 +209,6 @@ a {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
 }
-
 #global:hover,
 #corporate:hover,
 #next:hover,
@@ -273,25 +216,21 @@ a {
 #power_skills:hover,
 #scientific:hover,
 #layout_ex:hover,
-#spotify-cover:hover,
 #nouvelle:hover,
-#ux_case:hover {
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+#ux_case:hover,
+#le_septieme:hover {
+  transition: all 0.2s ease-in;
   -webkit-text-stroke-width: #AEFF03;
   -webkit-text-stroke-color: #AEFF03;
 }
 
 .container-fluid {
   margin: 0 auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .container-fluid #homepage,
 .container-fluid #contact {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   margin-bottom: 8px;
   padding: 16px;
@@ -301,7 +240,6 @@ a {
   -webkit-font-smoothing: antialiased;
   text-align: center;
 }
-
 .container-fluid #homepage:hover,
 .container-fluid #contact:hover {
   color: #B2B2B2;
@@ -314,10 +252,10 @@ a {
 #side_projects,
 #social,
 #copyright {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 19px;
   font-weight: 200;
-  letter-spacing: -.025px;
+  letter-spacing: -0.025px;
   line-height: 28px;
   color: #D9D4D1;
   border-top: 0.3px solid #B2B2B2;
@@ -329,7 +267,7 @@ a {
 #txt_about,
 #fiap {
   font-size: 3.4vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   letter-spacing: -0.12rem;
   text-transform: none;
@@ -342,7 +280,7 @@ a {
 }
 
 a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3.2vh;
   letter-spacing: -0.12rem;
   text-transform: none;
@@ -351,7 +289,6 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 a:hover {
   color: #B2B2B2;
 }
@@ -366,22 +303,15 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* --------- Animation 01 ---------- */
-@-webkit-keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -397,24 +327,10 @@ summary::marker, summary::-webkit-details-marker {
     opacity: 1;
   }
 }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @media screen and (max-width: 414px) {
   .container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    justify-content: start;
+    align-items: start;
   }
   .container .text {
     font-size: 6vw;
@@ -456,7 +372,8 @@ summary::marker, summary::-webkit-details-marker {
   #layout_ex,
   #nouvelle,
   #layout_ex,
-  #ux_case {
+  #ux_case,
+  #le_septieme {
     font-size: 42px;
     line-height: 92.4px;
   }
@@ -465,15 +382,10 @@ summary::marker, summary::-webkit-details-marker {
     margin-left: 124px;
   }
 }
-
 @media screen and (max-width: 375px) {
   .container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    justify-content: start;
+    align-items: start;
   }
   .container .text {
     font-size: 6vw;
@@ -497,20 +409,16 @@ summary::marker, summary::-webkit-details-marker {
   #layout_ex,
   #nouvelle,
   #layout_ex,
-  #ux_case {
+  #ux_case,
+  #le_septieme {
     font-size: 38px;
     line-height: 83.6px;
   }
 }
-
 @media screen and (max-width: 320px) {
   .container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    justify-content: start;
+    align-items: start;
   }
   .container .text {
     font-size: 6vw;
@@ -525,9 +433,9 @@ summary::marker, summary::-webkit-details-marker {
   #layout_ex,
   #nouvelle,
   #layout_ex,
-  #ux_case {
+  #ux_case,
+  #le_septieme {
     font-size: 29px;
     line-height: 63.8px;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

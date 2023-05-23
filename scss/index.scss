@@ -172,11 +172,12 @@ a {
   
 	.menu-item2 {
 	  $menu-image2-urls: 
-		url('/img/mouseover6.png'),
-		url('/img/mouseover7.png'),
-		url('/img/mouseover5.png');
+		url('/img/mouseover5.png'),
+		url('/img/mouseover8.png'),
+		url('/img/mouseover9.png'),
+		url('/img/mouseover7.png');
   
-	  @for $i from 1 through 3 {
+	  @for $i from 1 through 4 {
 		&:nth-child(#{$i}):hover~.cursor2 {
 		  background-image: nth($menu-image2-urls, $i);
 		}
@@ -206,9 +207,9 @@ a {
 	#power_skills,
 	#scientific,
 	#layout_ex,
-	#spotify-cover,
 	#nouvelle,
-	#ux_case {
+	#ux_case,
+	#le_septieme {
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
 		font-size: 9.2vh;
@@ -373,7 +374,8 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#nouvelle,
 	#layout_ex,
-	#ux_case {
+	#ux_case,
+	#le_septieme {
 		font-size: 42px;
 		line-height: 42px * 2.2;
 	}
@@ -411,7 +413,8 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#nouvelle,
 	#layout_ex,
-	#ux_case {
+	#ux_case,
+	#le_septieme {
 		font-size: 38px;
 		line-height: 38px * 2.2;
 	}
@@ -437,7 +440,8 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#nouvelle,
 	#layout_ex,
-	#ux_case {
+	#ux_case,
+	#le_septieme {
 		font-size: 29px;
 		line-height: 29px * 2.2;
 	}

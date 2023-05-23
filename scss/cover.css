@@ -4,27 +4,22 @@
   font-family: "Gotham Thin";
   src: url("/fonts/GothamHTF-Thin.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Book";
   src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Black";
   src: url("/fonts/GothamHTF-Black.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Light";
   src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
-
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -55,8 +50,7 @@ html, body, #carousel, #carousel ul, #carousel li {
 }
 
 #carousel ul.animate {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #carousel ul {
@@ -71,7 +65,6 @@ html, body, #carousel, #carousel ul, #carousel li {
 }
 
 #carousel ul {
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -122,8 +115,7 @@ html,
 a {
   cursor: none;
   cursor: url("/img/cursor.svg"), auto;
-  -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 #carousel {
@@ -145,7 +137,6 @@ nav .title {
 }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(0.1%, rgba(1, 1, 1, 0.6)));
   background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -157,11 +148,8 @@ nav .title {
 
 .container-fluid {
   margin: 0 auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .container-fluid #homepage,
 .container-fluid #contact {
   font-family: "Gotham Book";
@@ -175,7 +163,6 @@ nav .title {
   -webkit-font-smoothing: antialiased;
   text-align: center;
 }
-
 .container-fluid #homepage:hover,
 .container-fluid #contact:hover {
   color: #B2B2B2;
@@ -186,7 +173,7 @@ nav .title {
 #copyright {
   font-family: "Gotham Light";
   font-size: 19px;
-  letter-spacing: -.025px;
+  letter-spacing: -0.025px;
   line-height: 28px;
   color: #010101;
   border-top: 0.3px solid #B2B2B2;
@@ -208,17 +195,10 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
 }
 
 @media only screen and (max-width: 1024px) {
@@ -226,13 +206,11 @@ summary::marker, summary::-webkit-details-marker {
     font-size: 8rem;
   }
 }
-
 @media only screen and (min-width: 1024px) {
   nav .title {
     font-size: 9.5rem;
   }
 }
-
 @media only screen and (max-width: 480px) {
   #location {
     display: none;
@@ -283,7 +261,6 @@ summary::marker, summary::-webkit-details-marker {
     right: -72px;
   }
 }
-
 @media only screen and (max-width: 375px) {
   nav .title {
     font-size: 4.2rem;
@@ -294,9 +271,8 @@ summary::marker, summary::-webkit-details-marker {
     right: -32px;
   }
 }
-
 /* --------- Animation 01 ---------- */
-@-webkit-keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -311,14 +287,4 @@ summary::marker, summary::-webkit-details-marker {
   100% {
     opacity: 1;
   }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/*# sourceMappingURL=cover.css.map */
+}/*# sourceMappingURL=cover.css.map */

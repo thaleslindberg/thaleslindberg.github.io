@@ -4,27 +4,22 @@
   font-family: "Gotham Thin";
   src: url("/fonts/GothamHTF-Thin.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Book";
   src: url("/fonts/GothamHTF-Book.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Black";
   src: url("/fonts/GothamHTF-Black.otf") format("truetype");
 }
-
 @font-face {
   font-family: "Gotham Light";
   src: url("/fonts/GothamHTF-Light.otf") format("truetype");
 }
-
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -36,8 +31,7 @@ html,
 a {
   cursor: none;
   cursor: url("/img/cursor.svg"), auto;
-  -webkit-animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 nav .title {
@@ -54,7 +48,6 @@ nav .title {
 }
 
 #header {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #010101), color-stop(0.1%, rgba(1, 1, 1, 0.6)));
   background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -66,11 +59,8 @@ nav .title {
 
 .container-fluid {
   margin: 0 auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .container-fluid #homepage,
 .container-fluid #contact {
   font-family: "Gotham Book";
@@ -84,7 +74,6 @@ nav .title {
   -webkit-font-smoothing: antialiased;
   text-align: center;
 }
-
 .container-fluid #homepage:hover,
 .container-fluid #contact:hover {
   color: #B2B2B2;
@@ -97,33 +86,27 @@ nav .title {
   border: none;
   border-radius: 0;
 }
-
 .card .card-img-top {
   background: transparent;
 }
-
 .card .card-body {
   background-color: #010101;
 }
-
 .card .card-text {
   color: #B2B2B2;
   font-size: 14rem;
   font-family: "Gotham Thin";
 }
-
 .card .card-text::after {
   content: ".";
   font-family: "Editorial";
   color: #B2B2B2;
 }
-
 .card #card-info {
   color: #B2B2B2;
   position: relative;
   top: 52px;
 }
-
 .card #card-info #roger {
   font-size: 0.9rem;
   color: #FFFFFF;
@@ -131,7 +114,6 @@ nav .title {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .card #card-info #roger:hover {
   color: #686868;
 }
@@ -141,7 +123,7 @@ nav .title {
 #copyright {
   font-family: "Gotham Light";
   font-size: 19px;
-  letter-spacing: -.025px;
+  letter-spacing: -0.025px;
   line-height: 28px;
   color: #010101;
   border-top: 0.3px solid #B2B2B2;
@@ -163,71 +145,50 @@ summary::marker, summary::-webkit-details-marker {
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* --------- Scrolling texts ---------- */
-@-webkit-keyframes scroll-text {
-  to {
-    -webkit-transform: translate(-160%, -50%);
-            transform: translate(-160%, -50%);
-  }
-}
 @keyframes scroll-text {
   to {
-    -webkit-transform: translate(-160%, -50%);
-            transform: translate(-160%, -50%);
+    transform: translate(-160%, -50%);
   }
 }
-
 .section {
   padding-top: 300px;
   overflow: hidden;
-  font-family: 'Gotham Thin';
+  font-family: "Gotham Thin";
 }
-
 .section h2 {
   position: absolute;
   top: 50%;
   right: 0;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
+  transform: translate(100%, -50%);
   font-size: 4rem;
   letter-spacing: 0.07em;
-  -webkit-animation: scroll-text 300s linear infinite;
-          animation: scroll-text 300s linear infinite;
+  animation: scroll-text 300s linear infinite;
   white-space: nowrap;
   color: #686868;
 }
-
 .section .black-box {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 30%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   border-top: 1px solid #686868;
   border-bottom: 1px solid #686868;
 }
-
 .section .corporate {
   text-decoration: none;
   color: #FFFFFF;
-  font-family: 'Gotham Light';
+  font-family: "Gotham Light";
 }
 
 @media only screen and (max-width: 1024px) {
@@ -235,13 +196,11 @@ summary::marker, summary::-webkit-details-marker {
     font-size: 8rem;
   }
 }
-
 @media only screen and (min-width: 1024px) {
   nav .title {
     font-size: 9.5rem;
   }
 }
-
 @media only screen and (max-width: 480px) {
   #homepage {
     position: relative;
@@ -331,7 +290,6 @@ summary::marker, summary::-webkit-details-marker {
     right: 15px;
   }
 }
-
 @media only screen and (max-width: 375px) {
   nav .title {
     font-size: 4.2rem;
@@ -345,9 +303,8 @@ summary::marker, summary::-webkit-details-marker {
     right: -32px;
   }
 }
-
 /* --------- Animation 01 ---------- */
-@-webkit-keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -362,14 +319,4 @@ summary::marker, summary::-webkit-details-marker {
   100% {
     opacity: 1;
   }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/*# sourceMappingURL=ux_case.css.map */
+}/*# sourceMappingURL=ux_case.css.map */
