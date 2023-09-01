@@ -212,7 +212,6 @@ a {
 	#le_septieme {
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
-		// font-size: 9.2vh;
 		font-size: 5vw;
 		text-transform: none;
 		letter-spacing: 2px;
@@ -377,9 +376,8 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#ux_case,
 	#le_septieme {
-		// font-size: 42px;
-		font-size: 8vw;
-		line-height: 8vw * 2.2;
+		font-size: 9vw;
+		line-height: 9vw * 2.2;
 	}
 	#clock {
 		position: absolute;
@@ -417,9 +415,8 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#ux_case,
 	#le_septieme {
-		// font-size: 38px;
-		font-size: 8vw;
-		line-height: 38px * 2.2;
+		font-size: 9vw;
+		line-height: 9vw * 2.2;
 	}
 }
 
@@ -446,7 +443,7 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#ux_case,
 	#le_septieme {
 		// font-size: 29px;
-		font-size: 8vw;
-		line-height: 29px * 2.2;
+		font-size: 9vw;
+		line-height: 9vw * 2.2;
 	}
 }

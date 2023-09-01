@@ -374,8 +374,8 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 8vw;
-    line-height: 17.6vw;
+    font-size: 9vw;
+    line-height: 19.8vw;
   }
   #clock {
     position: absolute;
@@ -411,8 +411,8 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 8vw;
-    line-height: 83.6px;
+    font-size: 9vw;
+    line-height: 19.8vw;
   }
 }
 @media screen and (max-width: 320px) {
@@ -435,7 +435,7 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 8vw;
-    line-height: 63.8px;
+    font-size: 9vw;
+    line-height: 19.8vw;
   }
 }/*# sourceMappingURL=index.css.map */
