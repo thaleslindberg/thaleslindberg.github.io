@@ -201,7 +201,7 @@ a {
 #le_septieme {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 9.2vh;
+  font-size: 5vw;
   text-transform: none;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -374,8 +374,8 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 42px;
-    line-height: 92.4px;
+    font-size: 8vw;
+    line-height: 17.6vw;
   }
   #clock {
     position: absolute;
@@ -411,7 +411,7 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 38px;
+    font-size: 8vw;
     line-height: 83.6px;
   }
 }
@@ -435,7 +435,7 @@ supported by Chrome, Edge, Opera and Firefox */
   #layout_ex,
   #ux_case,
   #le_septieme {
-    font-size: 29px;
+    font-size: 8vw;
     line-height: 63.8px;
   }
 }/*# sourceMappingURL=index.css.map */
