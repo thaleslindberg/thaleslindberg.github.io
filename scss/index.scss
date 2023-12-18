@@ -219,7 +219,8 @@ a {
 
 		-webkit-text-fill-color: rgba(0, 0, 0, 0.5); 
 		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+		// -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+		-webkit-text-stroke-color: $white;
 
 		&:hover { 
 			transition: all .2s ease-in;
@@ -442,7 +443,6 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#layout_ex,
 	#ux_case,
 	#le_septieme {
-		// font-size: 29px;
 		font-size: 9vw;
 		line-height: 9vw * 2.2;
 	}

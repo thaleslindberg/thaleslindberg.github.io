@@ -207,7 +207,7 @@ a {
   text-transform: uppercase;
   -webkit-text-fill-color: rgba(0, 0, 0, 0.5);
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke-color: #FFFFFF;
 }
 #global:hover,
 #corporate:hover,
