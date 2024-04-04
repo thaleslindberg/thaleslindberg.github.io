@@ -209,7 +209,8 @@ a {
 	#layout_ex,
 	#nouvelle,
 	#ux_case,
-	#le_septieme {
+	#le_septieme,
+	#autopass {
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
 		font-size: 5vw;
@@ -227,6 +228,18 @@ a {
 			-webkit-text-stroke-width: $mint;
 			-webkit-text-stroke-color: $mint;
 		}
+	}
+	#autopass {
+		-webkit-text-stroke-color: $half-white;
+
+		&:hover { -webkit-text-stroke-color: $half-white; }
+	}
+
+	#coming-soon {
+		font-size: 0.8em;
+		margin-left: 10px;
+		letter-spacing: 1px;
+		color: $mint;
 	}
 	
 .container-fluid {
@@ -376,10 +389,13 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 	#nouvelle,
 	#layout_ex,
 	#ux_case,
-	#le_septieme {
+	#le_septieme,
+	#autopass  {
 		font-size: 9vw;
 		line-height: 9vw * 2.2;
 	}
+	#coming-soon { font-size: 0.5em; }
+
 	#clock {
 		position: absolute;
 		margin-left: 124px;

@@ -198,7 +198,8 @@ a {
 #layout_ex,
 #nouvelle,
 #ux_case,
-#le_septieme {
+#le_septieme,
+#autopass {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 5vw;
@@ -218,10 +219,25 @@ a {
 #layout_ex:hover,
 #nouvelle:hover,
 #ux_case:hover,
-#le_septieme:hover {
+#le_septieme:hover,
+#autopass:hover {
   transition: all 0.2s ease-in;
   -webkit-text-stroke-width: #AEFF03;
   -webkit-text-stroke-color: #AEFF03;
+}
+
+#autopass {
+  -webkit-text-stroke-color: #808080;
+}
+#autopass:hover {
+  -webkit-text-stroke-color: #808080;
+}
+
+#coming-soon {
+  font-size: 0.8em;
+  margin-left: 10px;
+  letter-spacing: 1px;
+  color: #AEFF03;
 }
 
 .container-fluid {
@@ -373,9 +389,13 @@ supported by Chrome, Edge, Opera and Firefox */
   #nouvelle,
   #layout_ex,
   #ux_case,
-  #le_septieme {
+  #le_septieme,
+  #autopass {
     font-size: 9vw;
     line-height: 19.8vw;
+  }
+  #coming-soon {
+    font-size: 0.5em;
   }
   #clock {
     position: absolute;
