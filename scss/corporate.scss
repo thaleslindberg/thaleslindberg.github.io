@@ -296,30 +296,9 @@ summary::marker, summary::-webkit-details-marker {
 	#location { display: none; }
 
 	nav {
-		.title {
-			margin-top: 180px;
-			left: 0;
-			right: 0;
-			font-size: 3.9rem;
-			letter-spacing: -1.5px;
-		}
-	}
-	.section {
-		position: relative;
-		bottom: 120px;
-
-		.col {
-			position: relative;
-			bottom: 28px;
-			left: 8px;
-			text-transform: uppercase;
-			letter-spacing: -1px;
-			font-size: 1rem;
-		}
+		display: none;
 	}
 	.card {
-		position: relative;
-		bottom: 140px;
 		
 		.card-img-top {
 			background: transparent;
@@ -371,6 +350,7 @@ summary::marker, summary::-webkit-details-marker {
 		position: relative;
 		right: 15px;
 	}
+	.section { display: none; }
 }
 
 @media only screen and (max-width: 375px) {
@@ -384,6 +364,7 @@ summary::marker, summary::-webkit-details-marker {
 		position: relative;
 		right: -32px;
 	}
+	.section { display: none; }
 }
 
 

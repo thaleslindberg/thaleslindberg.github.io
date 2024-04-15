@@ -238,4 +238,9 @@ supported by Chrome, Edge, Opera and Firefox */
     line-height: 101.2px;
     margin-left: 40px;
   }
+}
+@media screen and (max-width: 750px) {
+  #location {
+    display: none;
+  }
 }/*# sourceMappingURL=contact.css.map */

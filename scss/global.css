@@ -228,27 +228,11 @@ supported by Chrome, Edge, Opera and Firefox */
   #location {
     display: none;
   }
-  nav .title {
-    left: 0;
-    right: 0;
-    font-size: 5.2rem;
-    letter-spacing: -1.5px;
+  nav {
+    display: none;
   }
   .section {
-    position: relative;
-    bottom: 140px;
-  }
-  .section .col {
-    position: relative;
-    bottom: 28px;
-    left: 8px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-size: 1rem;
-  }
-  .card {
-    position: relative;
-    bottom: 140px;
+    display: none;
   }
   .card .card-img-top {
     background: transparent;
@@ -280,22 +264,6 @@ supported by Chrome, Edge, Opera and Firefox */
     letter-spacing: -0.07em;
     font-size: 20vw;
   }
-  #copyright {
-    position: fixed;
-    bottom: 0;
-    border-bottom: none;
-  }
-  #copyright #clock,
-  #copyright #top {
-    margin-left: 120px;
-    position: relative;
-    bottom: 28px;
-  }
-  #top {
-    text-decoration: none;
-    position: relative;
-    right: -72px;
-  }
   #intro {
     font-size: 1rem;
   }
@@ -312,5 +280,8 @@ supported by Chrome, Edge, Opera and Firefox */
     text-decoration: none;
     position: relative;
     right: -32px;
+  }
+  .section {
+    display: none;
   }
 }/*# sourceMappingURL=global.css.map */

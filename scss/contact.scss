@@ -255,3 +255,5 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 		margin-left: 40px;
 	}
 }
+
+@media screen and (max-width: 750px) { #location { display: none; } }

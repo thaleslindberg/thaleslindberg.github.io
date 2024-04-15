@@ -266,28 +266,8 @@ supported by Chrome, Edge, Opera and Firefox */
   #location {
     display: none;
   }
-  nav .title {
-    margin-top: 180px;
-    left: 0;
-    right: 0;
-    font-size: 3.9rem;
-    letter-spacing: -1.5px;
-  }
-  .section {
-    position: relative;
-    bottom: 120px;
-  }
-  .section .col {
-    position: relative;
-    bottom: 28px;
-    left: 8px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-size: 1rem;
-  }
-  .card {
-    position: relative;
-    bottom: 140px;
+  nav {
+    display: none;
   }
   .card .card-img-top {
     background: transparent;
@@ -334,6 +314,9 @@ supported by Chrome, Edge, Opera and Firefox */
     position: relative;
     right: 15px;
   }
+  .section {
+    display: none;
+  }
 }
 @media only screen and (max-width: 375px) {
   nav .title {
@@ -343,6 +326,9 @@ supported by Chrome, Edge, Opera and Firefox */
     text-decoration: none;
     position: relative;
     right: -32px;
+  }
+  .section {
+    display: none;
   }
 }
 /* --------- Animation 01 ---------- */

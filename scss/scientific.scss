@@ -238,30 +238,10 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 
 	#location { display: none; }
 
-	nav {
-		.title {
-			left: 0;
-			right: 0;
-			font-size: 5.2rem;
-			letter-spacing: -1.5px;
-		}
-	}
-	.section {
-		position: relative;
-		bottom: 140px;
+	nav { display: none; }
+	.section { display: none; }
 
-		.col {
-			position: relative;
-			bottom: 28px;
-			left: 8px;
-			text-transform: uppercase;
-			letter-spacing: -1px;
-			font-size: 1rem;
-		}
-	}
 	.card {
-		position: relative;
-		bottom: 140px;
 		
 		.card-img-top {
 			background: transparent;
@@ -335,4 +315,5 @@ summary::marker, summary::-webkit-details-marker { display: none; }
 		position: relative;
 		right: -32px;
 	}
+	.section { display: none; }
 }
