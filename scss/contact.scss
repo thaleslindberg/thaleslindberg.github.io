@@ -321,9 +321,7 @@ summary::-webkit-details-marker {
 	}
 
 	.footer_copyright {
-		position: relative;
-		top: 26px;
-		left: 18px;
+		display: none;
 	}
 }
 
@@ -357,6 +355,9 @@ summary::-webkit-details-marker {
 
 @media screen and (min-width: 431px) {
 	#thumbnail_mobile {
+		display: none;
+	}
+	.footer_copyright {
 		display: none;
 	}
 }
