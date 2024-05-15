@@ -1,337 +1,297 @@
 /* --------- Variables ---------- */
-$black: #010101;
-$silver: #B2B2B2;
-$white: #FFFFFF;
-$wolf: #D9D4D1;
-$cinnabar: #E83C38;
-$purple: #6B1BF5;
-$mint: #19F596;
-$half-white: #ffffff80;
-
-/* --------- Fonts ---------- */
-@font-face {
-	font-family: "Gotham Thin";
-	src: url("/fonts/GothamHTF-Thin.otf") format("truetype");
+:root {
+    --black: #454C4F;
+    --silver: #bbbbbb;
+    --white: #F7F6F5;
 }
 
-@font-face {
-	font-family: "Gotham Book";
-	src: url("/fonts/GothamHTF-Book.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Black";
-	src: url("/fonts/GothamHTF-Black.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "Gotham Light";
-	src: url("/fonts/GothamHTF-Light.otf") format("truetype");
-}
-
-*, 
+*,
 *::after,
 *::before {
     box-sizing: border-box;
-	position: relative;
+    margin: 0;
+    padding: 0;
+    animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-body { background: $black; }
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 16px;
+}
 
-html, 
+html,
 a {
-	cursor: none;
-	cursor: url('/img/cursor.svg'), auto;
-	animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    cursor: none;
+    cursor: url('/img/cursor.svg'), auto;
+    text-decoration: none;
 }
 
-nav {
-    
-    .title {
-        position: absolute;
-        margin-top: 50px;
-        top: 10%;
-        left: 0;
-        right: 0;
-        font-family: "Gotham Thin";
-        overflow: hidden;
-        text-align: center;
-        font-size: 8.5rem;
-        color: #686868; 
+a {
+    cursor: pointer;
+    color: var(--white);
+}
+
+body {
+    padding: 2rem;
+    background: #000;
+}
+
+#header {
+    background-color: transparent;
+
+    #homepage,
+    #contact {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        padding: 16px 0;
+        text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
+        color: var(--white);
+
+        &:hover {
+            color: var(--silver);
+        }
+    }
+
+    #homepage {
+        padding-left: 4px;
+    }
+
+    #contact {
+        padding-left: 40px;
     }
 }
 
-#header { 
-	background: linear-gradient(180deg, #010101 10%, rgba(1, 1, 1, 0.6) 0.1%); 
-	backdrop-filter: blur(3px);
-}
+.container {
+    padding-left: 12px;
+    position: absolute;
+    text-transform: uppercase;
+    padding-top: 88px;
+    padding-bottom: 40px;
 
-#location { display: none; }
-
-.container-fluid {
-    margin: 0 auto;
-	align-self: center;
-
-	#homepage, 
-	#contact {
-	  font-family: "Gotham Book";
-	  font-size: 18px;
-	  margin-bottom: 8px;
-	  padding: 16px;
-	  color: $white;
-	  letter-spacing: -1px;
-	  text-transform: uppercase;
-	  border-image-repeat: stretch;
-	  -webkit-font-smoothing: antialiased;
-	  text-align: center;
-  
-	  &:hover { color: $silver; }
-	}
-}
-
-/* --------- CARD 1 ---------- */
-.card {
-    overflow: hidden;
-    margin-top: 600px;
-    border: none;
-    border-radius: 0;
-
-    .card-img-top {
-        background: transparent;
-    }
-
-    .card-body {
-        background-color: $black;
-    }
-
-    .card-text {
-         color: $silver;
-         font-size: 14rem;
-         font-family: "Gotham Thin";
-    }
-
-    .card-text::after {
-        content: ".";
-        font-family: "Editorial";
-        color: $silver;
-      }
-
-    #card-info {
-        color: $silver;
-        position: relative;
-        top: 52px;
-
-		span {
-			font-size: 0.9rem;
-			color: $white;
-			letter-spacing: 0.8px;
-		}
+    .footer_name,
+    .footer_copyright {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        color: var(--black);
+        text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
     }
 }
 
+.cards_wrap {
+    &__card {
+        h2 {
+            font-size: 9vw;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: var(--white);
+            padding: 16px;
+            margin-right: 40px;
+            position: relative;
+        }
 
-/* --------- Sections ---------- */
-#intro,
-#copyright {
-	font-family: "Gotham Light";
-	font-size: 19px;
-	letter-spacing: -.025px;
-	line-height: 28px;
-	color: $black;
-	border-top: 0.3px solid $silver;
-	padding-top: 10px;
-	color: $silver;
-}
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 1vw;
+            -webkit-font-smoothing: antialiased;
+            color: var(--white);
+            padding: 16px;
+            margin-right: 120px;
+            position: relative;
+        }
 
-#intro {
-	border: none;
-}
+        &-stick {
+            top: 2rem;
+            position: sticky;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 1rem;
+            background-image: url('/img/powerskills-1.png');
+            background-position: center;
+            background-size: cover;
+            height: 90vh;
 
-/* --------- Misc ---------- */
-summary { cursor: pointer; }
-summary::marker, summary::-webkit-details-marker {
-	display: none;
-}
+            &.color2 {
+                background-image: url('/img/powerskills-2.png');
+            }
 
-.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	  -webkit-user-select: none; /* Safari */
-	   -khtml-user-select: none; /* Konqueror HTML */
-		 -moz-user-select: none; /* Old versions of Firefox */
-		  -ms-user-select: none; /* Internet Explorer/Edge */
-			  user-select: none; /* Non-prefixed version, currently
-									supported by Chrome, Edge, Opera and Firefox */
-}
+            &.color3 {
+                background-image: url('/img/powerskills-3.png');
+            }
 
+            &.last {
+                background-image: url('/img/uxcase-cover.png');
 
-/* --------- Scrolling texts ---------- */
-@keyframes scroll-text {
-    to {
-      transform: translate(-160%, -50%);
+                &:hover {
+                    background-image: url('/img/uxcase-cover-mouseover.png');
+                }
+            }
+        }
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                @if $i > 1 {
+                    margin-top: calc(-90vh * (4 - $i + 1));
+                }
+
+                height: calc(90vh * (4 - $i) + 90vh);
+            }
+        }
     }
-  }
-  
-  .section {
-      padding-top: 300px;
-      overflow: hidden;
-	  font-family: 'Gotham Thin';
-
-      h2 {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(100%,-50%);
-        font-size: 4rem;
-        letter-spacing: 0.07em;
-        animation: scroll-text 300s linear infinite;
-        white-space: nowrap;
-		color: #686868;
-      }
-
-	  .black-box {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 100%;
-		height: 30%;
-		transform: translate(-50%,-50%);
-		overflow: hidden;
-		border-top: 1px solid #686868;
-		border-bottom: 1px solid #686868;
-	}
-
-    .corporate {
-        text-decoration: none;
-        color: $white;
-        font-family: 'Gotham Light';
-    }
-  }
-
-
-@media only screen and (max-width: 1024px) { 
-	nav {
-		.title {
-			font-size: 8rem;
-		}
-	}
 }
-
-@media only screen and (min-width: 1024px) { 
-	nav {
-		.title {
-			font-size: 9.5rem;
-		}
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	#homepage {
-		position: relative;
-		right: 6px;
-	}
-	#contact {
-		position: relative;
-		left: 28px;
-	}
-	
-	#copyright_num {
-		position: relative;
-		right: 15px;
-		font-size: 1rem;
-	}
-
-	#location { display: none; }
-
-	nav { display: none; }
-	.section { display: none; }
-
-	.card {
-
-		.card-img-top {
-			background: transparent;
-		}
-		.card-text {
-			position: relative;
-			bottom: -124px;
-			left: -16px;
-			font-size: 10rem;
-
-			&::after {
-				font-size: 7rem;
-				position: relative;
-				right: 10px;
-			}
-		}
-		#card-info {
-			font-size: 1.2rem;
-		}
-		.row {
-			position: relative;
-			top: -100px;
-		}
-		#card-info {
-			line-height: 180%;
-			width: 100%;
-			position: relative;
-		}
-	}
-
-	#copyright {
-		position: relative;
-		bottom: 300px;
-		border-bottom: none;
-
-		#clock,
-		#top {
-			margin-left: 120px;
-			position: relative;
-			bottom: 28px;
-		}
-	}
-
-	#top {
-		text-decoration: none;
-		position: relative;
-		right: -72px;
-	}
-
-	#intro { font-size: 1rem; }
-
-	#intro_num {
-		position: relative;
-		right: 15px;
-	}
-}
-
-@media only screen and (max-width: 375px) {
-	nav {
-		.title {
-			font-size: 4.2rem;
-		}
-	}
-	#top {
-		text-decoration: none;
-		position: relative;
-		right: -32px;
-	}
-	.section { display: none; }
-}
-
 
 /* --------- Animation 01 ---------- */
 @keyframes fade-in {
-	0% {
-	  opacity: 0;
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+    .cards_wrap__card {
+        h2 {
+            font-size: 9vw;
+            margin-right: 110px;
+			position: relative;
+        }
+
+        p {
+            font-size: 1.2vw;
+            margin-right: 40px;
+        }	
+    }
+    
+    #homepage {
+        position: relative;
+        right: 8px;
+    }
+
+    #contact,
+    .footer_name {
+        position: relative;
+        left: 8px;
+    }
+
+    .footer_copyright {
+        position: relative;
+        left: -10px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .cards_wrap__card {
+        h2 {
+            font-size: 9vw;
+            margin-right: 40px;
+            font-weight: 500;
+            -webkit-text-stroke-width: 1px;
+			position: relative;
+        }
+
+        p {
+            font-size: 1.8vw;
+            margin-left: 80px;
+            position: relative;
+        }
+
+        &-stick.last {
+            background-image: url('/img/powerskills-cover-mouseover-mobile.png');
+        }
+    }
+
+    #homepage {
+        position: relative;
+        right: 24px;
+    }
+
+    #contact {
+        position: relative;
+        left: 24px;
+    }
+
+    .footer_name {
+        position: relative;
+        left: -10px;
+    }
+
+    .footer_copyright {
+        position: relative;
+        left: 30px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .cards_wrap__card {
+        h2 {
+            font-size: 10vw;
+            font-weight: 300;
+            color: var(--white);
+            -webkit-text-fill-color: var(--white);
+            position: relative;
+            margin-left: 16px;
+        }
+
+        p {
+            font-size: 3.5vw;
+            position: relative;
+            margin-left: 16px;
+        }
+    }
+
+    #homepage {
+        position: relative;
+        right: 24px;
+    }
+
+    #contact {
+        position: relative;
+    }
+
+    .footer_copyright {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #homepage {
+        position: relative;
+        right: 40px;
+    }
+
+    #contact {
+        position: relative;
+        left: 160px;
+        top: -60px;
+    }
+	.cards_wrap__card {
+        h2 {
+            font-size: 10vw;
+            font-weight: 300;
+            color: var(--white);
+            -webkit-text-fill-color: var(--white);
+            position: relative;
+            margin-left: 16px;
+        }
+
+        p {
+            font-size: 3.8vw;
+            position: relative;
+            margin-left: 16px;
+        }
 	}
-	100% {
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
+}

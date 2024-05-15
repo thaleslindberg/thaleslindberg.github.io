@@ -71,3 +71,140 @@ menuItems.forEach(menuItem => {
   });
 });
 
+
+(function() {
+  var SliceSlider = {
+    /**
+     * Settings Object
+     */
+    settings: {
+      delta:              0,
+      currentSlideIndex:  0,
+      scrollThreshold:    40,
+      slides:             document.querySelectorAll('.slide'),
+      numSlides:          document.querySelectorAll('.slide').length,
+      navPrev:            document.querySelector('.js-prev'),
+      navNext:            document.querySelector('.js-next'),
+    },
+    
+    /**
+     * Init
+     */
+    init: function() {
+      var s = this.settings;
+      this.bindEvents();
+    },
+    
+    /**
+     * Bind our click, scroll, key events
+     */
+    bindEvents: function(){
+      var s = this.settings;
+      
+      // Scrollwheel & trackpad
+      s.slides.forEach(function(slide) {
+        slide.addEventListener('wheel', SliceSlider.handleScroll);
+      });
+      // On click prev
+      s.navPrev.addEventListener('click', SliceSlider.prevSlide);
+      // On click next
+      s.navNext.addEventListener('click', SliceSlider.nextSlide);
+      // On Arrow keys
+      document.addEventListener('keyup', function(e) {
+        // Left or back arrows
+        if ((e.which === 37) ||  (e.which === 38)){
+          SliceSlider.prevSlide();
+        }
+        // Down or right
+        if ((e.which === 39) ||  (e.which === 40)) {
+          SliceSlider.nextSlide();
+        }
+      });
+    },
+    
+    /** 
+     * Interept scroll direction
+     */
+    handleScroll: function(e){
+      var s = SliceSlider.settings;
+
+      // Scrolling up
+      if (e.deltaY < 0) { 
+        s.delta--;
+     
+        if ( Math.abs(s.delta) >= s.scrollThreshold) {
+          SliceSlider.prevSlide();
+        }
+      }
+      // Scrolling Down
+      else {
+        s.delta++;
+ 
+        if (s.delta >= s.scrollThreshold) {
+          SliceSlider.nextSlide();
+        }
+      }
+ 
+      // Prevent page from scrolling
+      e.preventDefault();
+    },
+
+    /**
+     * Show Slide
+     */
+    showSlide: function(){ 
+      var s = this.settings;
+      // reset
+      s.delta = 0;
+      // Bail if we're already sliding
+      if (document.body.classList.contains('is-sliding')){
+        return;
+      }
+      // Loop through our slides
+      s.slides.forEach(function(slide, i) {
+
+        // Toggle the is-active class to show slide
+        slide.classList.toggle('is-active', (i === s.currentSlideIndex)); 
+        slide.classList.toggle('is-prev', (i === s.currentSlideIndex - 1)); 
+        slide.classList.toggle('is-next', (i === s.currentSlideIndex + 1)); 
+        
+        // Add and remove is-sliding class
+        document.body.classList.add('is-sliding');
+
+        setTimeout(function(){
+            document.body.classList.remove('is-sliding');
+        }, 1000);
+      });
+    },
+
+    /**
+     * Previous Slide
+     */
+    prevSlide: function(){
+      var s = SliceSlider.settings;
+      // If on first slide, loop to last
+      if (s.currentSlideIndex <= 0) {
+        s.currentSlideIndex = s.numSlides;
+      }
+      s.currentSlideIndex--;
+      
+      SliceSlider.showSlide();
+    },
+
+    /**
+     * Next Slide
+     */
+    nextSlide: function(){
+      var s = SliceSlider.settings;
+      s.currentSlideIndex++;
+   
+      // If on last slide, loop to first
+      if (s.currentSlideIndex >= s.numSlides) { 
+        s.currentSlideIndex = 0;
+      }
+ 
+      SliceSlider.showSlide();
+    },
+  };
+  SliceSlider.init();
+})();
