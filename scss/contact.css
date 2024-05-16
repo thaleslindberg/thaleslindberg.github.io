@@ -29,7 +29,7 @@ html {
 html,
 a {
   cursor: none;
-  cursor: url("/img/cursor.svg"), auto;
+  cursor: url("/img/cursor-2.svg"), auto;
   text-decoration: none;
 }
 
@@ -289,9 +289,7 @@ summary::-webkit-details-marker {
     left: -16px;
   }
   .footer_copyright {
-    position: relative;
-    top: 26px;
-    left: 18px;
+    display: none;
   }
 }
 @media screen and (max-width: 320px) {
@@ -319,6 +317,9 @@ summary::-webkit-details-marker {
 }
 @media screen and (min-width: 431px) {
   #thumbnail_mobile {
+    display: none;
+  }
+  .footer_copyright {
     display: none;
   }
 }/*# sourceMappingURL=contact.css.map */

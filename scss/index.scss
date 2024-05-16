@@ -170,201 +170,63 @@ summary::-webkit-details-marker {
 	grid-row: 1 / 3;
 }
 
-$color-dark: $black;
-$color-border: transparent;
-$color-trans-bg: transparent;
-$ease-cb: cubic-bezier(.4,0,.2,1);
-$ease-cb-2: cubic-bezier(.19,1,.22,1);
-$ease-cb-3: cubic-bezier(.77,0,.175,1);
-$ease-cb-4: cubic-bezier(.99,1,.92,1);
-$pad: 3em;
-$mq-med: 54em;
-$mq-large: 65em;
-$mq-xlarge: 91em;
-
-
-@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
-  @for $i from 1 through $delay_items {
-    &:nth-child(#{$i}) {   
-     transition-delay: $delay_time * $i; 
-    }
-  }
-}
-
-.slides-nav {
-  z-index: 99;
-  position: fixed;
-  right: -5%;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  
-  @media (min-width: $mq-med){
-    right: 2%;
-  }
-
-  &__nav {
-    position: relative;
-    right: 0;
-    display: block;
-    font-size: 1em;
-    transform: rotate(90deg);
-    transform-origin: center;
-  }
-}
-
-//-------------------------------
-//  Slides
-//-------------------------------
-.slides {
-  position: relative;
-  display: block;
-  height: 100vh;
-  width: 100%;
-  background: $white;
-  transition: background 1s $ease-cb-4;
-
-  .is-sliding &{
-    background: $color-trans-bg;
-    transition: background 0.3s $ease-cb-4;
-  }
-}
-
-//-------------------------------
-//  Single Slide
-//-------------------------------
-$slide-content-size-sm: 95%;
-$slide-content-size: 94%;
-
-.slide {
-  z-index: -1;
+* {
+  margin: 0;
   padding: 0;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  transition: z-index 1s ease;
-  
-  // Bring active layer to foreground
-  &.is-active {
-    z-index: 19;
-    transition: z-index 1s ease;
-  }
+  box-sizing: border-box;
+}
 
-  &__content {
-    position: relative;
-    margin: 0 auto;
-    height: $slide-content-size-sm;
-    width: $slide-content-size-sm;
-    top: (100% - $slide-content-size-sm) / 2;
-    
-    @media (min-width: $mq-med){
-      height: $slide-content-size;
-      width: $slide-content-size;
-      top: (100% - $slide-content-size) / 2;
+main {
+  // height: 100vh;
+  // height: 100svh;
+  display: grid;
+  place-items: center;
+  background-color: $white;
+}
+
+.accordion {
+  list-style-type: none;
+  display: flex;
+  gap: 0.15rem;
+  padding: 0.15rem;
+
+  &:hover :not(.item:hover) {
+    flex: 1;
+
+    & img {
+      transform: scale(1.5);
     }
   }
 
-  &__header {
-    z-index: 9;
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow-y: hidden;
-    transform: translateX(5%);
-    
-    @media (min-width: $mq-med){
-      position: relative;
-      display: flex;
-      align-items: center;
+  & .item {
+    flex: 1;
+    height: 80vmin;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 1s;
 
-    }
-  }
+    &:last-of-type {
+      flex: 5;
 
-  &__title {
-    font-size: 4.5em;
-    overflow-y: hidden;
-    font-weight: 200;
-    text-transform: none;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    color: $white;
-
-    @media (min-width: $mq-med){
-      font-size: 9em;
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: -0.5px;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-      -webkit-text-fill-color: transparent; 
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: $white;
-    }
-     
-    // Slice text animation
-    .title-line {
-      display: block;
-      overflow-y: hidden;
-
-      span {
-        display: inline-block;
-        transform:translate3d(0,140%,0);
-        opacity: 0;
-        transition: transform 0.4s ease, opacity 0.8s ease;
-        @include nth-trans-delay(2, 0.15s);
-      }
-
-      .is-active & span {
-        transform:translate3d(0,0%,0);
-        opacity: 1;
-        transition: transform 0.6s $ease-cb-3, opacity 0.1s ease;
-      }
-      .is-active &:nth-of-type(2n) span {
-        transition-delay:0.2s;
+      & img {
+        transform: scale(1);
       }
     }
-  }
-  
-  // Image wrapper
-  &__figure {
-    z-index: 7;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    overflow-y: hidden;
-    transition: transform 0.5s $ease-cb-2;
-    border-radius: 1rem;
-     
-    // Scale Image
-    .is-sliding &{
-      transform: scale(0.5);
-      transition: transform 0.5s $ease-cb-2;
+
+    &:hover {
+      flex: 5;
+
+      & img {
+        transform: scale(1);
+      }
     }
-  }
-  &__img {
-    position: relative;
-    display: block;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50%;
-    backface-visibility: hidden;
-    height: 0%;
-    width: 100%;
-    filter: grayscale(0%);
-    transition: height 1s 1.4s $ease-cb-2, filter 0.4s 0.1s ease;
-      
-    .is-active & {
+
+    & img {
+      width: 100%;
       height: 100%;
-      opacity: 1;
-      transition: height .5s .3s $ease-cb-3, filter 0.4s 0.1s ease;
-    }
-    .is-sliding & {
-      filter: grayscale(100%);
+      object-fit: cover;
+      transform: scale(1.5);
+      transition: transform 0.75s ease-in-out;
     }
   }
 }
