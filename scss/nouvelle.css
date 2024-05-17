@@ -87,6 +87,11 @@ a {
     height: auto;
   }
 }
+@media (width > 1920px) {
+  .card {
+    height: auto;
+  }
+}
 @media (width < 800px) {
   .gallery-track {
     grid-template-columns: repeat(1, 1fr);
