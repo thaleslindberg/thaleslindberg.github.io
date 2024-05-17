@@ -14,12 +14,6 @@
     animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    font-size: 16px;
-}
-
 html,
 a {
     cursor: none;
@@ -32,20 +26,22 @@ a {
     color: var(--white);
 }
 
-body {
-    padding: 2rem;
-    background: #000;
-}
-
-#header {
+.navbar {
+    width: 100%;
+    color: white;
+    position: fixed;
     background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0; 
+    margin: 0; 
 
     #homepage,
     #contact {
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
         font-size: 18px;
-        padding: 16px 0;
         text-transform: uppercase;
         -webkit-font-smoothing: antialiased;
         color: var(--white);
@@ -54,121 +50,56 @@ body {
             color: var(--silver);
         }
     }
-
-    #homepage {
-        padding-left: 4px;
-    }
-
-    #contact {
-        padding-left: 40px;
-    }
 }
 
-.container {
-    padding-left: 12px;
-    position: absolute;
-    text-transform: uppercase;
-    padding-top: 88px;
-    padding-bottom: 40px;
-
-    .footer_name,
-    .footer_copyright {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        font-size: 18px;
-        color: var(--black);
-        text-transform: uppercase;
-        -webkit-font-smoothing: antialiased;
-    }
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.cards_wrap {
-    &__card {
-        h2 {
-            font-size: 9vw;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: var(--white);
-            padding: 16px;
-            margin-right: 300px;
-            position: relative;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 300;
-            font-size: 1vw;
-            -webkit-font-smoothing: antialiased;
-            color: var(--white);
-            padding: 16px;
-            margin-right: 120px;
-            position: relative;
-        }
-
-        &-stick {
-            top: 2rem;
-            position: sticky;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border-radius: 1rem;
-            background-image: url('/img/leseptieme-1.png');
-            background-position: center;
-            background-size: cover;
-            height: 90vh;
-
-            &.color2 {
-                background-image: url('/img/leseptieme-2.png');
-            }
-
-            &.color3 {
-                background-image: url('/img/leseptieme-3.png');
-            }
-
-            &.color4 {
-                background-image: url('/img/leseptieme-4.png');
-            }
-
-            &.color5 {
-                background-image: url('/img/leseptieme-5.png');
-            }
-
-            &.color6 {
-                background-image: url('/img/leseptieme-6.png');
-            }
-
-            &.color7 {
-                background-image: url('/img/leseptieme-7.png');
-            }
-
-            &.color8 {
-                background-image: url('/img/leseptieme-8.png');
-            }
-
-            &.last {
-                background-image: url('/img/powerskills-cover.png');
-
-                &:hover {
-                    background-image: url('/img/powerskills-cover-mouseover.png');
-                }
-            }
-        }
-
-        @for $i from 1 through 9 {
-            &:nth-child(#{$i}) {
-                @if $i > 1 {
-                    margin-top: calc(-90vh * (9 - $i + 1));
-                }
-
-                height: calc(90vh * (9 - $i) + 90vh);
-            }
-        }
+.gallery-track {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 0.25rem;
+    padding: 0.25rem;
+    will-change: transform;
+  }
+  
+  .card {
+    height: 850px;
+    overflow: hidden;
+  
+    & .card-image-wrapper {
+      height: 135%;
+      will-change: transform;
+  
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
-}
+} 
+// .card-image-wrapper {
+//     #global:hover {
+//         background: url('/img/globalimpact-cover-mouseover.png');
+//     }
+// }
+  
+  /* Media Queries */
+  @media (width < 800px) {
+    .gallery-track {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  
+  @media (width < 550px) {
+    .gallery-track {
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
 
 /* --------- Animation 01 ---------- */
 @keyframes fade-in {
@@ -179,139 +110,4 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-/* Media Queries */
-@media only screen and (max-width: 1024px) {
-    .cards_wrap__card {
-        h2 {
-            font-size: 9vw;
-            margin-right: 274px;
-			position: relative;
-        }
-
-        p {
-            font-size: 1.2vw;
-            margin-right: 40px;
-        }	
-    }
-    
-    #homepage {
-        position: relative;
-        right: 8px;
-    }
-
-    #contact,
-    .footer_name {
-        position: relative;
-        left: 8px;
-    }
-
-    .footer_copyright {
-        position: relative;
-        left: -10px;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .cards_wrap__card {
-        h2 {
-            font-size: 9vw;
-            margin-right: 100px;
-            font-weight: 500;
-            -webkit-text-stroke-width: 1px;
-			position: relative;
-        }
-
-        p {
-            font-size: 1.8vw;
-            margin-left: 80px;
-            position: relative;
-        }
-
-        &-stick.last {
-            background-image: url('/img/powerskills-cover-mouseover-mobile.png');
-        }
-    }
-
-    #homepage {
-        position: relative;
-        right: 24px;
-    }
-
-    #contact {
-        position: relative;
-        left: 24px;
-    }
-
-    .footer_name {
-        position: relative;
-        left: -10px;
-    }
-
-    .footer_copyright {
-        position: relative;
-        left: 30px;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    .cards_wrap__card {
-        h2 {
-            font-size: 10vw;
-            font-weight: 300;
-            color: var(--white);
-            -webkit-text-fill-color: var(--white);
-            position: relative;
-            margin-left: 16px;
-        }
-
-        p {
-            font-size: 3.5vw;
-            position: relative;
-            margin-left: 16px;
-        }
-    }
-
-    #homepage {
-        position: relative;
-        right: 24px;
-    }
-
-    #contact {
-        position: relative;
-    }
-
-    .footer_copyright {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    #homepage {
-        position: relative;
-        right: 40px;
-    }
-
-    #contact {
-        position: relative;
-        left: 160px;
-        top: -60px;
-    }
-	.cards_wrap__card {
-        h2 {
-            font-size: 10vw;
-            font-weight: 300;
-            color: var(--white);
-            -webkit-text-fill-color: var(--white);
-            position: relative;
-            margin-left: 32px;
-        }
-
-        p {
-            font-size: 3.8vw;
-            position: relative;
-            margin-left: 16px;
-        }
-	}
 }
