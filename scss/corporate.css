@@ -82,14 +82,25 @@ a {
 }
 
 /* Media Queries */
+@media (width > 1440px) {
+  .card {
+    height: auto;
+  }
+}
 @media (width < 800px) {
   .gallery-track {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    height: auto;
   }
 }
 @media (width < 550px) {
   .gallery-track {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    height: auto;
   }
 }
 /* --------- Animation 01 ---------- */
