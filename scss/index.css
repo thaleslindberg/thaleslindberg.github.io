@@ -1,4 +1,10 @@
-/* --------- Variables ---------- */
+/* CSS Variables */
+:root {
+  --black: #454C4F;
+  --silver: #bbbbbb;
+  --white: #F7F6F5;
+}
+
 *,
 *::after,
 *::before {
@@ -17,7 +23,7 @@
 }
 
 body {
-  background: #F7F6F5;
+  background: var(--white);
   height: 100%;
 }
 
@@ -40,28 +46,31 @@ a {
 #header {
   background-color: transparent;
 }
-#header #homepage,
-#header #contact {
+
+#homepage,
+#contact {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 18px;
   padding: 16px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  color: #454C4F;
+  color: var(--black);
 }
-#header #homepage:hover,
-#header #contact:hover {
-  color: #bbbbbb;
+
+#homepage:hover,
+#contact:hover {
+  color: var(--silver);
 }
-#header #homepage {
+
+#homepage {
   padding-left: 32px;
 }
 
 .text {
   text-indent: 7em;
   font-size: 3.4vw;
-  color: #454C4F;
+  color: var(--black);
   white-space: pre-line;
   line-height: 0.9;
   text-align: left;
@@ -72,19 +81,17 @@ a {
 
 strong {
   font-weight: 200;
-  color: #bbbbbb;
+  color: var(--silver);
 }
 
-/* --------- Sections ---------- */
 .about {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 18px;
   padding: 16px;
-  color: #454C4F;
+  color: var(--black);
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  color: #454C4F;
 }
 
 .footer_name,
@@ -93,13 +100,11 @@ strong {
   font-weight: 300;
   font-size: 18px;
   padding-bottom: 16px;
-  color: #454C4F;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  color: #bbbbbb;
+  color: var(--silver);
 }
 
-/* --------- About | Description ---------- */
 #txt_about {
   font-size: 3.4vw;
   font-family: "Poppins", sans-serif;
@@ -109,17 +114,17 @@ strong {
   line-height: 120%;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #bbbbbb;
-}
-#txt_about #linkedin:hover,
-#txt_about #behance:hover,
-#txt_about #email:hover,
-#txt_about #resume:hover {
-  -webkit-text-fill-color: #454C4F;
-  -webkit-text-stroke-color: #454C4F;
+  -webkit-text-stroke-color: var(--silver);
 }
 
-/* --------- Misc ---------- */
+#linkedin:hover,
+#behance:hover,
+#email:hover,
+#resume:hover {
+  -webkit-text-fill-color: var(--black);
+  -webkit-text-stroke-color: var(--black);
+}
+
 summary {
   cursor: pointer;
 }
@@ -131,16 +136,9 @@ summary::-webkit-details-marker {
 
 .noselect {
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Old versions of Firefox */
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-  								supported by Chrome, Edge, Opera and Firefox */
 }
 
 .container {
@@ -165,16 +163,10 @@ summary::-webkit-details-marker {
   grid-row: 1/3;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 main {
   display: grid;
   place-items: center;
-  background-color: #F7F6F5;
+  background-color: var(--white);
 }
 
 .accordion {
@@ -183,12 +175,11 @@ main {
   gap: 0.15rem;
   padding: 0.15rem;
 }
+
 .accordion:hover :not(.item:hover) {
   flex: 1;
 }
-.accordion:hover :not(.item:hover) img {
-  transform: scale(1.5);
-}
+
 .accordion .item {
   flex: 1;
   height: 80vmin;
@@ -196,18 +187,15 @@ main {
   overflow: hidden;
   transition: flex 1s;
 }
+
 .accordion .item:last-of-type {
   flex: 5;
 }
-.accordion .item:last-of-type img {
-  transform: scale(1);
-}
+
 .accordion .item:hover {
   flex: 5;
 }
-.accordion .item:hover img {
-  transform: scale(1);
-}
+
 .accordion .item img {
   width: 100%;
   height: 100%;
@@ -221,7 +209,7 @@ main {
 #behance,
 #email,
 #resume {
-  color: #bbbbbb;
+  color: var(--silver);
 }
 
 #linkedin:hover::after,
@@ -231,15 +219,6 @@ main {
   margin-left: 8px;
 }
 
-/* --------- Animation 01 ---------- */
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -253,7 +232,7 @@ main {
     font-size: 12vw;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F7F6F5;
+    -webkit-text-stroke-color: var(--white);
   }
   #homepage,
   .about {
@@ -286,7 +265,7 @@ main {
     font-weight: 500;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #F7F6F5;
+    -webkit-text-stroke-color: var(--white);
   }
   #homepage,
   .about {
@@ -324,7 +303,7 @@ main {
     font-weight: 500;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F7F6F5;
+    -webkit-text-stroke-color: var(--white);
   }
   .text,
   #txt_about {
@@ -369,7 +348,7 @@ main {
     font-weight: 500;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F7F6F5;
+    -webkit-text-stroke-color: var(--white);
   }
   #homepage,
   .about {

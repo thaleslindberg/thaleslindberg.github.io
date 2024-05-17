@@ -1,14 +1,22 @@
-// const items = document.querySelectorAll('.item');
+// Debounce scroll event handler
+let scrollTimeout;
+function onScroll() {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(init, 10);
+}
 
-// const reset = () => items.forEach((item) => item.classList.remove('animation'));
+function init() {
+  // Initialization logic, e.g., lazy loading images, animations, etc.
+  console.log('Initialized on scroll or load');
+}
 
-// function accordion(e) {
-//   if (!e.target.closest('.item')) return;
-//   reset();
-//   e.target.parentElement.classList.add('animation');
-// }
+function updateScroll() {
+  // Update scroll logic, e.g., adjust layout on resize
+  console.log('Updated on resize');
+}
 
-// const init = () => items[items.length-1].classList.add('animation');
-
-// window.addEventListener('load',init,false);
-// window.addEventListener('click',accordion,false);
+window.addEventListener('load', () => {
+  init();
+  window.addEventListener('scroll', onScroll, false);
+  window.addEventListener('resize', updateScroll, false);
+});
