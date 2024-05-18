@@ -337,9 +337,7 @@ main {
     left: -16px;
   }
   .footer_copyright {
-    position: relative;
-    top: 26px;
-    left: 18px;
+    display: none;
   }
 }
 @media screen and (max-width: 320px) {
