@@ -214,7 +214,8 @@
   }
 
   #linkedin:hover::after,
-  #behance:hover::after {
+  #behance:hover::after,
+  #resume:hover::after {
     content: url('/img/external-link.svg');
     display: inline-block;
     margin-left: 8px;

@@ -170,14 +170,9 @@ summary::-webkit-details-marker {
 }
 
 #linkedin:hover::after,
-#behance:hover::after {
-  content: url("/img/external-link.svg");
-  display: inline-block;
-  margin-left: 8px;
-}
-
+#behance:hover::after,
 #resume:hover::after {
-  content: url("/img/download-link.svg");
+  content: url("/img/external-link.svg");
   display: inline-block;
   margin-left: 8px;
 }
