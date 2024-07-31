@@ -1,0 +1,118 @@
+/* --------- Variables ---------- */
+:root {
+  --black: #454C4F;
+  --silver: #bbbbbb;
+  --white: #F7F6F5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+html,
+a {
+  cursor: none;
+  cursor: url('/img/cursor.svg'), auto;
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+  color: var(--white);
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0; 
+  margin: 0; 
+
+  #homepage,
+  #contact {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+      color: var(--white);
+
+      &:hover {
+          color: var(--silver);
+      }
+  }
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-track {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 0.25rem;
+  padding: 0.25rem;
+  will-change: transform;
+}
+
+.card {
+  height: 850px;
+  overflow: hidden;
+
+  & .card-image-wrapper {
+    height: 135%;
+    will-change: transform;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+} 
+// .card-image-wrapper {
+//     #global:hover {
+//         background: url('/img/globalimpact-cover-mouseover.png');
+//     }
+// }
+
+/* Media Queries */
+@media (width > 1440px) {
+  .card { height: auto; }
+}
+
+@media (width > 1920px) {
+  .card { height: auto; }
+}
+
+@media (width < 800px) {
+  .gallery-track { grid-template-columns: repeat(1,1fr); }
+  .card { height: auto; }
+}
+
+@media (width < 550px) {
+  .gallery-track { grid-template-columns: repeat(1,1fr); }
+  .card { height: auto; }
+}
+
+/* --------- Animation 01 ---------- */
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
