@@ -1,8 +1,57 @@
+/* Fonts */
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Italic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
 /* CSS Variables */
 :root {
-  --black: #454C4F;
-  --silver: #bbbbbb;
-  --white: #F7F6F5;
+  --black: #000000;
+  --silver: #373737;
+  --white: #ffffff;
 }
 
 *,
@@ -23,8 +72,9 @@
 }
 
 body {
-  background: var(--white);
+  background: var(--black);
   height: 100%;
+  font-family: "NeueMontreal", sans-serif;
 }
 
 html {
@@ -35,7 +85,7 @@ html {
 html,
 a {
   cursor: none;
-  cursor: url("/img/cursor-2.svg"), auto;
+  cursor: url("/img/cursor.svg"), auto;
   text-decoration: none;
 }
 
@@ -49,18 +99,19 @@ a {
 
 #homepage,
 #contact {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-family: "NeueMontreal";
+  font-weight: 500;
+  font-size: 16px;
   padding: 16px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  color: var(--black);
+  color: var(--white);
 }
-
 #homepage:hover,
 #contact:hover {
-  color: var(--silver);
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
 }
 
 #homepage {
@@ -70,7 +121,7 @@ a {
 .text {
   text-indent: 7em;
   font-size: 3.4vw;
-  color: var(--black);
+  color: var(--white);
   white-space: pre-line;
   line-height: 0.9;
   text-align: left;
@@ -85,20 +136,20 @@ strong {
 }
 
 .about {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-family: "NeueMontreal";
+  font-weight: 500;
+  font-size: 16px;
   padding: 16px;
-  color: var(--black);
+  color: var(--white);
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
 
 .footer_name,
 .footer_copyright {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
+  font-family: "NeueMontreal";
+  font-weight: 500;
+  font-size: 16px;
   padding-bottom: 16px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
@@ -107,22 +158,25 @@ strong {
 
 #txt_about {
   font-size: 3.4vw;
-  font-family: "Poppins", sans-serif;
+  font-family: "NeueMontreal";
   font-weight: 500;
   letter-spacing: -0.05rem;
   text-transform: none;
   line-height: 120%;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--silver);
 }
-
-#linkedin:hover,
-#behance:hover,
-#email:hover,
-#resume:hover {
-  -webkit-text-fill-color: var(--black);
-  -webkit-text-stroke-color: var(--black);
+#txt_about #linkedin,
+#txt_about #behance,
+#txt_about #email,
+#txt_about #resume {
+  color: var(--white);
+}
+#txt_about #linkedin:hover,
+#txt_about #behance:hover,
+#txt_about #email:hover,
+#txt_about #resume:hover {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
 }
 
 summary {
@@ -145,6 +199,7 @@ summary::-webkit-details-marker {
   display: grid;
   margin-left: 16px;
   grid-template-columns: repeat(3, 1fr);
+  border: 0.3 solid var(--silver);
 }
 
 .about {
@@ -166,14 +221,17 @@ summary::-webkit-details-marker {
 main {
   display: grid;
   place-items: center;
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 .accordion {
   list-style-type: none;
   display: flex;
-  gap: 0.15rem;
   padding: 0.15rem;
+}
+
+.item {
+  border: 0.2px solid var(--silver);
 }
 
 .accordion:hover :not(.item:hover) {
@@ -181,8 +239,8 @@ main {
 }
 
 .accordion .item {
-  flex: 1;
-  height: 80vmin;
+  flex: 5;
+  height: 100vmin;
   cursor: pointer;
   overflow: hidden;
   transition: flex 1s;
@@ -192,32 +250,16 @@ main {
   flex: 5;
 }
 
-.accordion .item:hover {
-  flex: 5;
-}
-
 .accordion .item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: scale(1.5);
   transition: transform 0.75s ease-in-out;
 }
 
-#linkedin,
-#behance,
-#email,
-#resume {
-  color: var(--silver);
-}
-
-#linkedin:hover::after,
-#behance:hover::after,
-#resume:hover::after {
-  content: url("/img/external-link.svg");
-  display: inline-block;
-  margin-left: 8px;
+.accordion .item:hover img {
+  display: none;
 }
 
 @keyframes fade-in {
@@ -229,12 +271,6 @@ main {
   }
 }
 @media screen and (max-width: 1024px) {
-  .slide__title {
-    font-size: 12vw;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--white);
-  }
   #homepage,
   .about {
     position: relative;
@@ -261,13 +297,6 @@ main {
   }
 }
 @media screen and (max-width: 740px) {
-  .slide__title {
-    font-size: 12vw;
-    font-weight: 500;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--white);
-  }
   #homepage,
   .about {
     position: relative;
@@ -299,13 +328,6 @@ main {
   }
 }
 @media screen and (max-width: 430px) {
-  .slide__title {
-    font-size: 12vw;
-    font-weight: 500;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--white);
-  }
   .text,
   #txt_about {
     font-size: 8vw;
@@ -342,13 +364,6 @@ main {
   }
 }
 @media screen and (max-width: 320px) {
-  .slide__title {
-    font-size: 12vw;
-    font-weight: 500;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--white);
-  }
   #homepage,
   .about {
     position: relative;
@@ -373,9 +388,6 @@ main {
 }
 @media screen and (min-width: 431px) {
   #thumbnail_mobile {
-    display: none;
-  }
-  .footer_copyright {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */
