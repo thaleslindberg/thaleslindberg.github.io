@@ -59,6 +59,7 @@
    :root {
     --black: #000000;
     --silver: #373737;
+    --lightSilver: #484848;
     --white: #ffffff;
   }
 
@@ -134,7 +135,7 @@
 
   strong {
     font-weight: 200;
-    color: var(--silver);
+    color: var(--lightSilver);
   }
 
   .about {
