@@ -28,7 +28,7 @@ const items = document.querySelectorAll('.accordion .item');
 const backgroundImages = [
     "/img/project-1.png", // Background image for the first item
     "/img/project-2.png", // Background image for the second item
-    "/img/project-3.MP4", // Background image for the third item
+    "/img/project-3.png", // Background image for the third item
     "/img/project-4.png", // Background image for the fourth item
     "/img/project-5.png", // Background image for the fifth item
     "/img/project-6.png" // Background image for the sixth item
