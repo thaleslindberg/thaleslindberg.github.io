@@ -142,11 +142,66 @@ a {
     }
   }
 } 
-// .card-image-wrapper {
-//     #global:hover {
-//         background: url('/img/globalimpact-cover-mouseover.png');
-//     }
-// }
+
+.nav-container {
+  font-family: 'NeueMontreal';
+  font-weight: 200;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  background-color: var(--black);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* Ensure text color is set */
+}
+
+.nav-button .text {
+  font-size: 80px;
+
+  &:hover {
+    font-weight: 400;
+  }
+}
+
+.arrow-left, .arrow-right {
+  font-size: 80px;
+  margin: 0 10px;
+}
+
+/* Responsive pagination */
+@media (max-width: 1200px) {
+  .nav-button .text, .arrow-left, .arrow-right {
+      font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-button .text, .arrow-left, .arrow-right {
+      font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+  }
+
+  .nav-button {
+      margin-bottom: 20px;
+  }
+
+  .nav-button .text, .arrow-left, .arrow-right {
+      font-size: 40px;
+  }
+}
 
 /* Media Queries */
 @media (width > 1440px) {

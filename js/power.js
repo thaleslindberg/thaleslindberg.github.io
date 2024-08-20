@@ -53,9 +53,9 @@ window.addEventListener('load', () => {
 
 
 document.getElementById('previousButton').addEventListener('click', function() {
-  window.location.href = '/pages/nouvelle.html';
+  window.location.href = '/pages/global.html';
 });
 
 document.getElementById('nextButton').addEventListener('click', function() {
-  window.location.href = '/pages/global.html';
+  window.location.href = '/pages/le_septieme.html';
 });
