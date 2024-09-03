@@ -434,6 +434,9 @@
   
 
   @media (max-width: 550px) {
+    .ball {
+      display: none;
+    }
     .etiquette.mobile {
         grid-row-gap: .4em;
         display: flex;

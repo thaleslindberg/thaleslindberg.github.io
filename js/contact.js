@@ -15,3 +15,4 @@ document.addEventListener("DOMContentLoaded", function () {
       spriteAnimation.progress(frameIndex / totalFrames);
     });
   });
+
