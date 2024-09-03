@@ -1,383 +1,549 @@
 /* Fonts */
 @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
-	font-weight: normal;
-	font-style: normal;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-Bold.otf') format('opentype');
-	font-weight: bold;
-	font-style: normal;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-BoldItalic.otf') format('opentype');
-	font-weight: bold;
-	font-style: italic;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-Italic.otf') format('opentype');
-	font-weight: normal;
-	font-style: italic;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-Light.otf') format('opentype');
-	font-weight: 300;
-	font-style: normal;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-LightItalic.otf') format('opentype');
-	font-weight: 300;
-	font-style: italic;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-Medium.otf') format('opentype');
-	font-weight: 500;
-	font-style: normal;
-  }
-  
-  @font-face {
-	font-family: 'NeueMontreal';
-	src: url('/fonts/NeueMontreal-MediumItalic.otf') format('opentype');
-	font-weight: 500;
-	font-style: italic;
-  }
-  
-  /* CSS Variables */
-	 :root {
-	  --black: #000000;
-	  --silver: #373737;
-	  --lightSilver: #484848;
-	  --white: #ffffff;
-	}
-  
-	*,
-	*::after,
-	*::before {
-	  box-sizing: border-box;
-	  margin: 0;
-	  padding: 0;
-	  animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	}
-  
-	#thumbnail,
-	#thumbnail_mobile {
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  width: 100%;
-	  height: auto;
-	}
-  
-	body {
-	  background: var(--black);
-	  height: 100%;
-	  font-family: 'NeueMontreal', sans-serif;
-	}
-  
-	html {
-	  -webkit-text-size-adjust: 100%;
-	  -ms-text-size-adjust: 100%;
-	}
-  
-	html,
-	a {
-	  cursor: none;
-	  cursor: url('/img/cursor.svg'), auto;
-	  text-decoration: none;
-	}
-  
-	a { cursor: pointer; }
-  
-	#header { background-color: transparent; }
-  
-	#homepage,
-	#contact {
-	  font-family: 'NeueMontreal';
-	  font-weight: 500;
-	  font-size: 16px;
-	  padding: 16px;
-	  text-transform: uppercase;
-	  -webkit-font-smoothing: antialiased;
-	  color: var(--white);
-  
-	  &:hover {
-		color: transparent;
-		text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
-		transition: 0.3s;
-	  }
-	}
-  
-	#homepage { padding-left: 32px; }
-  
-	.text {
-	  text-indent: 7em;
-	  font-size: 3.4vw;
-	  color: var(--white);
-	  white-space: pre-line;
-	  line-height: .9;
-	  text-align: left;
-	  font-weight: 200;
-	  padding: 140px 40px;
-	  line-height: 104%;
-	}
-  
-	strong {
-	  font-weight: 200;
-	  color: var(--lightSilver);
-	}
-  
-	.about {
-	  font-family: 'NeueMontreal';
-	  font-weight: 500;
-	  font-size: 16px;
-	  padding: 16px;
-	  color: var(--white);
-	  text-transform: uppercase;
-	  -webkit-font-smoothing: antialiased;
-	}
-  
-	.footer_name,
-	.footer_copyright {
-	  font-family: 'NeueMontreal';
-	  font-weight: 500;
-	  font-size: 16px;
-	  padding-bottom: 16px;
-	  text-transform: uppercase;
-	  -webkit-font-smoothing: antialiased;
-	  color: var(--silver);
-	}
-  
-	#txt_about {
-	  font-size: 3.4vw;
-	  font-family: 'NeueMontreal';
-	  font-weight: 500;
-	  letter-spacing: -0.05rem;
-	  text-transform: none;
-	  line-height: 120%;
-  
-	  #linkedin,
-	  #behance,
-	  #email,
-	  #resume {
-		color: var(--white);
-  
-		&:hover {
-		  color: transparent;
-		  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-		  transition: 0.3s;
-		}
-	  }
-	}
-  
-	summary { cursor: pointer; }
-	summary::marker,
-	summary::-webkit-details-marker { display: none; }
-  
-	.noselect {
-	  -webkit-touch-callout: none;
-	  -webkit-user-select: none;
-	  -khtml-user-select: none;
-	  -moz-user-select: none;
-	  -ms-user-select: none;
-	  user-select: none;
-	}
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	.container {
-		display: grid;
-		margin-left: 16px;
-		grid-template-columns: repeat(3, 1fr);
-		border: 0.3 solid var(--silver);
-	  }
-	
-	  .about {
-		grid-column: 1 / 5;
-		grid-row: 1;
-	  }
-	
-	  .footer_name,
-	  .footer_copyright {
-		padding-top: 88px;
-	  }
-	
-	  #txt_about,
-	  .footer_copyright {
-		grid-column: 2 / 4;
-		grid-row: 1 / 3;
-	  }
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
 
-	  /* --------- Animation 01 ---------- */
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* CSS Variables */
+:root {
+  --black: #000000;
+  --silver: #373737;
+  --lightSilver: #484848;
+  --white: #ffffff;
+  --green: #08F209;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  font-family: 'NeueMontreal';
+  font-weight: 400;
+}
+
+body {
+  background-image: url('/img/profile-pic.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: var(--green);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+// Side Nav
+.etiquette {
+  background-color: var(--green);
+  pointer-events: auto;
+  z-index: 999;
+  color: var(--white);
+  padding: 1em .7em;
+  display: flex;
+  position: fixed;
+  inset: 0% auto auto 0%;
+  text-decoration: none;
+}
+
+.etiquette-text {
+  text-transform: uppercase;
+  margin-top: 1em;
+  display: inline-block;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 14px;
+  margin-left: 0.2em;
+  font-family: 'NeueMontreal';
+  font-weight: normal;
+  color: var(--black)
+}
+
+.content {
+  &__marquee {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+
+    h1 {
+      font-family: 'NeueMontreal';
+      font-weight: 300;
+      font-size: 12vw;
+      line-height: 0.72;
+      display: inline-flex;
+      align-items: center;
+      animation: marquee 30s linear infinite;
+      animation-play-state: running;
+      will-change: transform;
+    }
+
+    @keyframes marquee {
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9vw;
+    color: #fff;
+    max-width: 32vw;
+    padding: 0 24px 0 24px;
+    z-index: 99;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    inset: auto 1em 1em 0%;
+
+    &:nth-child(even) {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+// Key Services
+.service ul {
+  list-style: none;
+  text-transform: uppercase;
+  margin-top: 136px;
+}
+
+.service ul li {
+  margin-bottom: 10px;
+  font-size: 0.9vw;
+  color: var(--lightSilver);
+}
+
+.service ul li:nth-child(1) {
+  padding-bottom: 8px;
+  color: #fff;
+}
+
+.service ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.service ul li a:hover {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+}
+
+// Contact
+.contact ul {
+  list-style: none;
+  text-transform: uppercase;
+  margin-top: 112px;
+}
+
+.contact ul li {
+  margin-bottom: 10px;
+  font-size: 0.9vw;
+  color: var(--lightSilver);
+}
+
+.contact ul li:nth-child(1) {
+  padding-bottom: 8px;
+  color: var(--white);
+}
+
+.contact ul li a {
+  color: var(--white);
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.contact ul li a:hover {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+}
+
+.parent {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* Espaço entre os elementos */
+  align-items: center;
+  /* Centraliza os elementos verticalmente */
+  padding: 0 24px;
+  /* Margem lateral esquerda e direita de 16px */
+  height: 100vh;
+  /* Ocupa toda a altura da tela */
+  box-sizing: border-box;
+  /* Inclui o padding no cálculo da largura */
+  position: fixed;
+  inset: auto 1em 1em 0%;
+}
+
+.wrapper div {
+  font-size: 0.9vw;
+  /* Ajusta o tamanho da fonte */
+  color: var(--lightSilver);
+  /* Cor do texto */
+  white-space: nowrap;
+  /* Impede quebra de linha nos elementos */
+  line-height: 16px;
+}
+
+// Menu no footer
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.image-8,
+.nav-mobile,
+.nav-mobile.element {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  border: 0;
+}
+
+.image-8 {
+  display: block;
+  margin: 0 auto;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: .5em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+.plus-wrapper.arrow {
+  margin-left: 0;
+  margin-right: .5em;
+  display: inline-block;
+}
+
+.arrow-nav {
+  object-fit: contain;
+  width: 100%;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: 1.2em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+
+
+
+
+// Menu no footer
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.image-8,
+.nav-mobile,
+.nav-mobile.element {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  border: 0;
+}
+
+.image-8 {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: .5em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.plus-wrapper.arrow {
+  margin-left: 0;
+  margin-right: .5em;
+  display: inline-block;
+}
+
+.arrow-nav {
+  object-fit: contain;
+  width: 100%;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: 1.2em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+.nav-fixed {
+  z-index: 99;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: auto 1em 1em 0%;
+}
+
+.nav-links-wrapper {
+  cursor: pointer;
+}
+
+.text-nav {
+  display: inline-block;
+  color: var(--white);
+  font-family: 'NeueMontreal';
+  font-weight: normal;
+  font-size: 0.9em;
+
+  &:hover {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 550px) {
+  .wrapper {
+    display: none;
+  }
+
+  .parent {
+    position: relative;
+    left: -10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 40px;
+  }
+
+  .div1 { grid-area: 1 / 1 / 2 / 2; }
+  .div2 { grid-area: 1 / 2 / 2 / 3; }
+
+  // Key Services
+  .div1 ul,
+  .div2 ul {
+    list-style: none;
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+
+  .div1 ul li,
+  .div2 ul li {
+    margin-bottom: 2px;
+    font-size: 0.9em;
+    color: var(--lightSilver);
+  }
+
+  .div1 ul li:nth-child(2) {
+    color: var(--white);
+  }
+
+  .div1 ul li:nth-child(1),
+  .div2 ul li:nth-child(1) {
+    padding-bottom: 80px;
+  }
+
+  .div1 ul li:nth-child(2),
+  .div2 ul li:nth-child(2) {
+    padding-bottom: 4px;
+  }
+
+  .div1 ul li a,
+  .div2 ul li a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .content {
+    h1 {
+      display: none;
+    }
+
+    p {
+      color: var(--white);
+      font-size: 0.9em;
+      font-weight: 400;
+      max-width: 100vw;
+      padding: 0 16px 0 24px;
+      align-items: center;
+      display: flex;
+      position: fixed;
+      inset: auto 0em 0em 0%;
+      margin-bottom: 140px;
+    }
+  }
+
+  .etiquette.mobile {
+    grid-row-gap: .4em;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    inset: auto 0% 0%;
+    padding: 0 8px 16px 8px;
+  }
+
+  .en {
+    font-size: 12px;
+    color: var(--black);
+  }
+
+  .image-2.hide-mobile {
+    display: none;
+  }
+
+  .etiquette {
+    display: none;
+  }
+
+  .nav-mobile {
+    z-index: 998;
+    display: flex;
+  }
+
+  .div-block-21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .text-nav {
+    font-size: 16px;
+    color: var(--black);
+  }
+
+  .image-8 {
+    width: 100%;
+    display: block;
+  }
+
+  .nav-fixed {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    margin: 0 -0.2em 0 -0.2em;
+    display: flex;
+  }
+
+  .text-nav {
+    font-size: 13px;
+  }
+}
+
+// Animations
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-// Media queries
-@media screen and (max-width: 1024px) {
-    #homepage,
-    .about {
-        position: relative;
-        right: 8px;
-    }
-
-    #contact,
-    .footer_name {
-        position: relative;
-        left: 8px;
-    }
-
-    .footer_copyright {
-        position: relative;
-        left: -10px;
-    }
-
-    #txt_about {
-        grid-column: 2 / 1;
-        position: relative;
-        left: 300px;
-        padding-top: 8px;
-        font-size: 4vw;
-    }
-    .text {font-size: 4vw; }
-}
-
-@media screen and (max-width: 740px) {
-    #homepage,
-    .about {
-        position: relative;
-        right: 24px;
-    }
-
-    #contact {
-        position: relative;
-        left: 24px;
-    }
-
-    .footer_name {
-        position: relative;
-        left: -10px;
-    }
-
-    .footer_copyright {
-        position: relative;
-        left: 30px;
-    }
-
-    .text {
-        font-size: 5vw;
-        padding: 88px 24px;
-    }
-
-    #txt_about {
-        grid-column: 2 / 1;
-        position: relative;
-        left: -10px;
-        font-size: 6vw;
-        left: 200px;
-        -webkit-text-stroke-width: 1px;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .text,
-    #txt_about {
-        font-size: 8vw;
-        text-indent: 0;
-        padding: 88px 14px;
-    }
-
-    #txt_about {
-        -webkit-text-stroke-width: 1px;
-        font-size: 11vw;
-    }
-
-    #homepage,
-    .about {
-        position: relative;
-        right: 32px;
-    }
-
-    #contact {
-        position: relative;
-        left: 32px;
-    }
-
-    #thumbnail {
-        display: none;
-    }
-
-    #txt_about {
-        position: relative;
-        left: -32px;
-        padding-top: 88px;
-    }
-
-    .footer_name {
-        position: relative;
-        left: -16px;
-    }
-
-    .footer_copyright {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    #homepage,
-    .about {
-        position: relative;
-        right: 32px;
-    }
-
-    #contact {
-        position: relative;
-        left: 222px;
-        bottom: 58px;
-    }
-
-    .text {
-        font-size: 8vw;
-        text-indent: 0;
-        padding: 72px 12px;
-    }
-
-    #txt_about {
-        padding: 64px 14px 0 14px;
-    }
-
-    .footer_copyright {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 431px) {
-    #thumbnail_mobile {
-        display: none;
-    }
+  100% {
+    opacity: 1;
+  }
 }

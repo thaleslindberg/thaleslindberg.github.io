@@ -1,69 +1,120 @@
-// Debounce scroll event handler
-let scrollTimeout;
-function onScroll() {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(init, 10);
-}
+/*--------------------
+Vars
+--------------------*/
+const menu = document.querySelector('.menu');
+const items = document.querySelectorAll('.menu--item');
+const images = document.querySelectorAll('.menu--item img');
+let menuWidth = menu.clientWidth;
+let itemWidth = items[0].clientWidth;
+let wrapWidth = items.length * itemWidth;
 
-function init() {
-  // Initialization logic, e.g., lazy loading images, animations, etc.
-  console.log('Initialized on scroll or load');
-}
+let scrollSpeed = 0;
+let oldScrollY = 0;
+let scrollY = 0;
+let y = 0;
 
-function updateScroll() {
-  // Update scroll logic, e.g., adjust layout on resize
-  console.log('Updated on resize');
-}
+/*--------------------
+Lerp
+--------------------*/
+const lerp = (v0, v1, t) => {
+  return v0 * (1 - t) + v1 * t;
+};
 
-window.addEventListener('load', () => {
-  init();
-  window.addEventListener('scroll', onScroll, false);
-  window.addEventListener('resize', updateScroll, false);
+/*--------------------
+Dispose
+--------------------*/
+const dispose = (scroll) => {
+  items.forEach((item, i) => {
+    let x = i * itemWidth + scroll;
+    x = ((x + wrapWidth) % wrapWidth) - itemWidth; // wrapping logic
+    item.style.transform = `translateX(${x}px)`;
+  });
+};
+dispose(0);
+
+/*--------------------
+Wheel
+--------------------*/
+const handleMouseWheel = (e) => {
+  scrollY -= e.deltaY * 0.9;
+};
+
+/*--------------------
+Touch
+--------------------*/
+let touchStart = 0;
+let touchX = 0;
+let isDragging = false;
+
+const handleTouchStart = (e) => {
+  touchStart = e.clientX || e.touches[0].clientX;
+  isDragging = true;
+  menu.classList.add('is-dragging');
+};
+
+const handleTouchMove = (e) => {
+  if (!isDragging) return;
+  touchX = e.clientX || e.touches[0].clientX;
+  scrollY += (touchX - touchStart) * 2.5;
+  touchStart = touchX;
+};
+
+const handleTouchEnd = () => {
+  isDragging = false;
+  menu.classList.remove('is-dragging');
+};
+
+/*--------------------
+Listeners
+--------------------*/
+menu.addEventListener('wheel', handleMouseWheel);
+
+menu.addEventListener('touchstart', handleTouchStart);
+menu.addEventListener('touchmove', handleTouchMove);
+menu.addEventListener('touchend', handleTouchEnd);
+
+menu.addEventListener('mousedown', handleTouchStart);
+menu.addEventListener('mousemove', handleTouchMove);
+menu.addEventListener('mouseleave', handleTouchEnd);
+menu.addEventListener('mouseup', handleTouchEnd);
+
+menu.addEventListener('selectstart', (e) => e.preventDefault());
+
+/*--------------------
+Resize
+--------------------*/
+window.addEventListener('resize', () => {
+  menuWidth = menu.clientWidth;
+  itemWidth = items[0].clientWidth;
+  wrapWidth = items.length * itemWidth;
 });
 
-// Select all elements with the class 'item' inside 'accordion'
-const items = document.querySelectorAll('.accordion .item');
+/*--------------------
+Render
+--------------------*/
+const render = () => {
+  requestAnimationFrame(render);
+  y = lerp(y, scrollY, 0.1);
+  dispose(y);
 
-// Define an array of background images for each item
-const backgroundImages = [
-    "/img/project-1.png", // Background image for the first item
-    "/img/project-2.png", // Background image for the second item
-    "/img/project-3.png", // Background image for the third item
-    "/img/project-4.png", // Background image for the fourth item
-    "/img/project-5.png", // Background image for the fifth item
-    "/img/project-6.png" // Background image for the sixth item
-];
+  scrollSpeed = y - oldScrollY;
+  oldScrollY = y;
 
-// Define an array of URLs for each item
-const urls = [
-    '/pages/corporate.html', // URL for the first item
-    '/pages/global.html', // URL for the second item
-    '/pages/power_skills.html', // URL for the third item
-    '/pages/le_septieme.html', // URL for the fourth item
-    '/pages/ux_case.html', // URL for the fifth item
-    '/pages/nouvelle.html'  // URL for the sixth item
-];
+  items.forEach((item) => {
+    const skewX = -scrollSpeed * 0.2;
+    const rotate = scrollSpeed * 0.01;
+    const scale = 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003;
+    item.style.transform += ` skewX(${skewX}deg) rotate(${rotate}deg) scale(${scale})`;
+  });
+};
+render();
 
-// Function to add event listeners to each item
-items.forEach((item, index) => {
-    // Add hover event listeners
-    item.addEventListener('mouseover', () => {
-        if (backgroundImages[index]) {
-            item.style.backgroundImage = `url('${backgroundImages[index]}')`;
-            item.style.backgroundRepeat = 'no-repeat';
-            item.style.backgroundSize = 'cover';
-            item.style.backgroundPosition = 'center center';
-            item.style.transition = 'all 1s ease-out';
-        }
-    });
 
-    item.addEventListener('mouseout', () => {
-        item.style.backgroundImage = '';
-    });
-
-    // Add click event listener to navigate to the URL
-    item.addEventListener('click', () => {
-        // window.location.href = urls[index];
-        window.open(urls[index], '_blank');
-    });
+document.querySelectorAll('.menu--item').forEach(item => {
+  item.addEventListener('click', function() {
+    const url = this.getAttribute('data-url');
+    if (url) {
+      window.location.href = url;
+    }
+  });
 });

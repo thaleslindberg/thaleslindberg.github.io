@@ -56,356 +56,370 @@
 }
 
 /* CSS Variables */
-   :root {
-    --black: #000000;
-    --silver: #373737;
-    --lightSilver: #484848;
-    --white: #ffffff;
-  }
+:root {
+  --black: #000000;
+  --silver: #373737;
+  --lightSilver: #484848;
+  --white: #ffffff;
+  --green: #08F209;
+}
 
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
-  #thumbnail,
-  #thumbnail_mobile {
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-  }
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  body {
-    background: var(--black);
+// Side Nav
+.etiquette {
+  background-color: var(--green);
+  pointer-events: auto;
+  z-index: 999;
+  color: var(--white);
+  padding: 1em .7em;
+  display: flex;
+  position: fixed;
+  inset: 0% auto auto 0%;
+  text-decoration: none;
+}
+
+.etiquette-text {
+  text-transform: uppercase;
+  margin-top: 1em;
+  display: inline-block;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 14px;
+  margin-left: 0.2em;
+  font-family: 'NeueMontreal';
+  font-weight: normal;
+  color: var(--black)
+}
+
+.menu {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  cursor: url('/img/mouseover.svg'), auto;
+
+  &--wrapper {
+    counter-reset: count;
+    display: flex;
+    position: absolute;
+    z-index: 1;
     height: 100%;
-    font-family: 'NeueMontreal', sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
-
-  html,
-  a {
-    cursor: none;
-    cursor: url('/img/cursor.svg'), auto;
-    text-decoration: none;
-  }
-
-  a { cursor: pointer; }
-
-  #header { background-color: transparent; }
-
-  #homepage,
-  #contact {
+  &--item {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    padding: 1.5vh 2.5vw;
+    overflow: hidden;
     font-family: 'NeueMontreal';
     font-weight: 500;
-    font-size: 16px;
-    padding: 16px;
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-    color: var(--white);
 
-    &:hover {
-      color: transparent;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
-      transition: 0.3s;
+    @media (max-width: 767px) {
+      width: 100vw;
+      height: 100vw;
     }
-  }
 
-  #homepage { padding-left: 32px; }
+    figure {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      user-select: none;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      transform-origin: center;
 
-  .text {
-    text-indent: 7em;
-    font-size: 3.4vw;
-    color: var(--white);
-    white-space: pre-line;
-    line-height: .9;
-    text-align: left;
-    font-weight: 200;
-    padding: 140px 40px;
-    line-height: 104%;
-  }
+      img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+        transform-origin: center;
+      }
 
-  strong {
-    font-weight: 200;
-    color: var(--lightSilver);
-  }
-
-  .about {
-    font-family: 'NeueMontreal';
-    font-weight: 500;
-    font-size: 16px;
-    padding: 16px;
-    color: var(--white);
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .footer_name,
-  .footer_copyright {
-    font-family: 'NeueMontreal';
-    font-weight: 500;
-    font-size: 16px;
-    padding-bottom: 16px;
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-    color: var(--silver);
-  }
-
-  #txt_about {
-    font-size: 3.4vw;
-    font-family: 'NeueMontreal';
-    font-weight: 500;
-    letter-spacing: -0.05rem;
-    text-transform: none;
-    line-height: 120%;
-
-    #linkedin,
-    #behance,
-    #email,
-    #resume {
-      color: var(--white);
-
-      &:hover {
-        color: transparent;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-        transition: 0.3s;
+      &:before {
+        position: absolute;
+        z-index: 2;
+        bottom: 1vw;
+        left: 1vw;
+        display: inline-block;
       }
     }
   }
+}
 
-  summary { cursor: pointer; }
-  summary::marker,
-  summary::-webkit-details-marker { display: none; }
 
-  .noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/* Texto para os cards */
+.menu--item:nth-child(1):before {
+  content: "Corporate — UI/UX";
+}
+
+.menu--item:nth-child(2):before {
+  content: "Global Impact — Web & Mobile";
+}
+
+.menu--item:nth-child(3):before {
+  content: "Power Skills — UI/UX";
+}
+
+.menu--item:nth-child(4):before {
+  content: "Le Septième — Art Direction | Branding | UI/UX";
+}
+
+.menu--item:nth-child(5):before {
+  content: "iHealthy — Art Direction | Branding | UI/UX";
+}
+
+.menu--item:nth-child(6):before {
+  content: "Operahuset — Art Direction | Branding | UI/UX | Web & App";
+}
+
+.menu--item:nth-child(7):before {
+  content: "Autopass — UI/UX";
+}
+
+
+// Menu no footer
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.image-8,
+.nav-mobile,
+.nav-mobile.element {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+  border: 0;
+}
+
+.image-8 {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-link {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: .5em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.plus-wrapper.arrow {
+  margin-left: 0;
+  margin-right: .5em;
+  display: inline-block;
+}
+
+.arrow-nav {
+  object-fit: contain;
+  width: 100%;
+}
+
+.plus-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  margin-left: 1.2em;
+  display: flex;
+  transform: translate(0, -.1em);
+}
+
+.nav-fixed {
+  z-index: 99;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: auto 1em 1em 0%;
+}
+
+.nav-links-wrapper {
+  cursor: pointer;
+}
+
+.text-nav {
+  display: inline-block;
+  color: var(--white);
+  font-family: 'NeueMontreal';
+  font-weight: normal;
+  font-size: 0.9em;
+
+  &:hover {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 767px) {
+.menu {
+  overflow: hidden;
+  cursor: grab;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  &.is-dragging {
+    cursor: grabbing;
   }
 
-  .container {
-    display: grid;
-    margin-left: 16px;
-    grid-template-columns: repeat(3, 1fr);
-    border: 0.3 solid var(--silver);
-  }
-
-  .about {
-    grid-column: 1 / 5;
-    grid-row: 1;
-  }
-
-  .footer_name,
-  .footer_copyright {
-    padding-top: 88px;
-  }
-
-  #txt_about,
-  .footer_copyright {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
-  }
-
-  main {
-    display: grid;
-    place-items: center;
-    background-color: var(--black);
-  }
-
-  .accordion {
-    list-style-type: none;
+  &--wrapper {
+    counter-reset: count;
     display: flex;
-    // gap: 0.15rem;
-    padding: 0.15rem;
-  }
-
-  .item { border: 0.2px solid var(--silver); }
-
-  .accordion:hover :not(.item:hover) { flex: 1; }
-
-  .accordion .item {
-    flex: 5;
-    height: 100vmin;
-    cursor: pointer;
-    overflow: hidden;
-    transition: flex 1s;
-  }
-
-  //First accordion
-  .accordion .item:last-of-type { flex: 5; }
-
-  .accordion .item img {
-    width: 100%;
+    position: absolute;
+    z-index: 1;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.75s ease-in-out;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  //This will hide all the images on accordion while mouseovering
-  .accordion .item:hover img { display: none; }
+  &--item {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 75vh;
+    height: 60vh;
+    padding: 1.5vh 1vw;
+    overflow: hidden;
+  }
+}
+}
 
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+@media (max-width: 550px) {
+  .arrow {
+      display: flex;
   }
 
-  @media screen and (max-width: 1024px) {
-    #homepage,
-    .about {
-      position: relative;
-      right: 8px;
-    }
-
-    #contact,
-    .footer_name {
-      position: relative;
-      left: 8px;
-    }
-
-    .footer_copyright {
-      position: relative;
-      left: -10px;
-    }
-
-    #txt_about {
-      grid-column: 2 / 1;
-      position: relative;
-      left: 300px;
-      padding-top: 8px;
-      font-size: 4vw;
-    }
-
-    .text {
-      font-size: 4vw;
-    }
+  .etiquette.mobile {
+      grid-row-gap: .4em;
+      display: flex;
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      height: auto;
+      inset: auto 0% 0%;
+      padding: 0 8px 16px 8px;
   }
 
-  @media screen and (max-width: 740px) {
-    #homepage,
-    .about {
-      position: relative;
-      right: 24px;
-    }
-
-    #contact {
-      position: relative;
-      left: 24px;
-    }
-
-    .footer_name {
-      position: relative;
-      left: -10px;
-    }
-
-    .footer_copyright {
-      position: relative;
-      left: 30px;
-    }
-
-    .text {
-      font-size: 5vw;
-      padding: 88px 24px;
-    }
-
-    #txt_about {
-      grid-column: 2 / 1;
-      position: relative;
-      left: -10px;
-      font-size: 6vw;
-      left: 200px;
-      -webkit-text-stroke-width: 1px;
-    }
+  .en {
+      font-size: 12px;
+      color: var(--black);
   }
 
-  @media screen and (max-width: 430px) {
-    .text,
-    #txt_about {
-      font-size: 8vw;
-      text-indent: 0;
-      padding: 88px 14px;
-    }
-
-    #txt_about {
-      -webkit-text-stroke-width: 1px;
-      font-size: 11vw;
-    }
-
-    #homepage,
-    .about {
-      position: relative;
-      right: 32px;
-    }
-
-    #contact {
-      position: relative;
-      left: 32px;
-    }
-
-    #thumbnail {
+  .image-2.hide-mobile {
       display: none;
-    }
-
-    #txt_about {
-      position: relative;
-      left: -32px;
-      padding-top: 88px;
-    }
-
-    .footer_name {
-      position: relative;
-      left: -16px;
-    }
-
-    .footer_copyright {
-      display: none;
-    }
   }
 
-  @media screen and (max-width: 320px) {
-    #homepage,
-    .about {
-      position: relative;
-      right: 32px;
-    }
-
-    #contact {
-      position: relative;
-      left: 222px;
-      bottom: 58px;
-    }
-
-    .text {
-      font-size: 8vw;
-      text-indent: 0;
-      padding: 72px 12px;
-    }
-
-    #txt_about {
-      padding: 64px 14px 0 14px;
-    }
-
-    .footer_copyright {
+  .etiquette {
       display: none;
-    }
   }
 
-  @media screen and (min-width: 431px) {
-    #thumbnail_mobile {
-      display: none;
-    }
+  .nav-mobile {
+      z-index: 998;
+      display: flex;
   }
+
+  .div-block-21 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0 16px;
+  }
+
+  .text-nav {
+      font-size: 16px;
+      color: var(--black);
+  }
+
+  .image-8 {
+      width: 100%;
+      display: block;
+  }
+
+  .nav-fixed {
+      display: none;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    margin: 0 -0.2em 0 -0.2em;
+    display: flex;
+}
+.text-nav { 
+  font-size: 13px; 
+}
+}
+
+// Animations
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
