@@ -67,7 +67,7 @@
 }
 
 body {
-  background-image: url("/img/profile-pic.png");
+  background-image: url("/img/profile-pic.webp");
   z-index: 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,7 +127,7 @@ body {
 }
 .content p {
   font-size: 0.9vw;
-  color: #fff;
+  color: var(--white);
   max-width: 32vw;
   padding: 0 24px 0 24px;
   z-index: 99;
@@ -150,16 +150,16 @@ body {
 .service ul li {
   margin-bottom: 10px;
   font-size: 0.9vw;
-  color: var(--lightSilver);
+  color: var(--white);
 }
 
 .service ul li:nth-child(1) {
   padding-bottom: 8px;
-  color: #fff;
+  color: var(--white);
 }
 
 .service ul li a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   text-decoration: underline;
 }
@@ -179,7 +179,6 @@ body {
 .contact ul li {
   margin-bottom: 10px;
   font-size: 0.9vw;
-  color: var(--lightSilver);
 }
 
 .contact ul li:nth-child(1) {
@@ -189,7 +188,6 @@ body {
 
 .contact ul li a {
   color: var(--white);
-  text-decoration: none;
   text-decoration: underline;
 }
 
@@ -222,7 +220,7 @@ body {
 .wrapper div {
   font-size: 0.9vw;
   /* Ajusta o tamanho da fonte */
-  color: var(--lightSilver);
+  color: var(--white);
   /* Cor do texto */
   white-space: nowrap;
   /* Impede quebra de linha nos elementos */
@@ -410,7 +408,7 @@ img {
   .div2 ul li {
     margin-bottom: 2px;
     font-size: 0.9em;
-    color: var(--lightSilver);
+    color: var(--white);
   }
   .div1 ul li:nth-child(2) {
     color: var(--white);
@@ -426,7 +424,6 @@ img {
   .div1 ul li a,
   .div2 ul li a {
     color: var(--white);
-    text-decoration: none;
   }
   .content h1 {
     display: none;
@@ -437,9 +434,6 @@ img {
     font-weight: 400;
     max-width: 100vw;
     padding: 0 16px 0 24px;
-    align-items: center;
-    display: flex;
-    position: fixed;
     inset: auto 0em 0em 0%;
     margin-bottom: 140px;
   }
