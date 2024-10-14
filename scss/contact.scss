@@ -364,7 +364,7 @@ img {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 440px) {
   .ball {
     display: none;
   }
@@ -443,13 +443,12 @@ img {
     color: var(--white);
   }
 
-
   .parent {
     position: relative;
     left: -36px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 88px;
+    grid-gap: 30%;
     padding: 20px;
   }
 
