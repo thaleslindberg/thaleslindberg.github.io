@@ -116,10 +116,9 @@ body {
   display: flex;
 }
 .content__marquee h1 {
-  font-family: "NeueMontreal";
   font-weight: 300;
   font-size: 9vw;
-  line-height: 0.72;
+  line-height: 0.75;
   display: inline-flex;
   align-items: center;
   animation: marquee 30s linear infinite;

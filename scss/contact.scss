@@ -126,10 +126,10 @@ body {
     display: flex;
 
     h1 {
-      font-family: 'NeueMontreal';
       font-weight: 300;
       font-size: 9vw;
-      line-height: 0.72;
+      // color: var(--white);
+      line-height: 0.75;
       display: inline-flex;
       align-items: center;
       animation: marquee 30s linear infinite;
@@ -138,6 +138,10 @@ body {
       transform: translateZ(0);
       backface-visibility: hidden;
       perspective: 1000px;
+
+      // -webkit-text-fill-color: var(--black); /* Will override color (regardless of order) */
+      // -webkit-text-stroke-width: 0.8px;
+      // -webkit-text-stroke-color: var(--white);
     }
 
     @keyframes marquee {
