@@ -1,0 +1,461 @@
+/* Fonts */
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  /* CSS Variables */
+  :root {
+    --black: #000000;
+    --silver: #373737;
+    --lightSilver: #484848;
+    --white: #ffffff;
+    --green: #08F209;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  // Side Nav
+  .etiquette {
+    background-color: var(--green);
+    pointer-events: auto;
+    z-index: 999;
+    color: var(--white);
+    padding: 1em .7em;
+    display: flex;
+    position: fixed;
+    inset: 0% auto auto 0%;
+    text-decoration: none;
+  }
+  
+  .etiquette-text {
+    text-transform: uppercase;
+    margin-top: 1em;
+    display: inline-block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 14px;
+    margin-left: 0.2em;
+    font-family: 'NeueMontreal';
+    font-weight: normal;
+    color: var(--black)
+  }
+  
+  // Close Button
+  .close {
+    position: fixed;
+    top: 8.5%;
+    right: 6px;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 999999;
+  }
+  
+  .close a {
+    text-decoration: none;
+  }
+  
+  .btn-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/img/Close.svg');
+  }
+  
+  .btn-social:hover {
+    transition: .3s all ease-in;
+    transform: rotate(180deg);
+  }
+  
+  .menu {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    cursor: url('/img/horizontal-mouseover.svg'), auto;
+  
+    &--wrapper {
+      counter-reset: count;
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    &--item {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      padding: 1.5vh 2.5vw;
+      overflow: hidden;
+      font-family: 'NeueMontreal';
+      font-weight: 500;
+  
+      @media (max-width: 767px) {
+        width: 100vw;
+        height: 100vw;
+      }
+  
+      figure {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        user-select: none;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        transform-origin: center;
+  
+        img {
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          vertical-align: middle;
+          transform-origin: center;
+        }
+  
+        &:before {
+          position: absolute;
+          z-index: 2;
+          bottom: 1vw;
+          left: 1vw;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  
+  /* Texto para os cards */
+  // .menu--item:nth-child(1):before {
+  //   content: "Corporate — UI/UX";
+  // }
+  
+  // .menu--item:nth-child(2):before {
+  //   content: "Global Impact — Web & Mobile";
+  // }
+  
+  // .menu--item:nth-child(3):before {
+  //   content: "Power Skills — UI/UX";
+  // }
+  
+  // .menu--item:nth-child(4):before {
+  //   content: "Le Septième — Art Direction | Branding | UX/UI";
+  // }
+  
+  // .menu--item:nth-child(5):before {
+  //   content: "iHealthy — Art Direction | Branding | UX/UI | App";
+  // }
+  
+  // .menu--item:nth-child(6):before {
+  //   content: "Operahuset — Art Direction | Branding | UX/UI | Web & App";
+  // }
+  
+  // .menu--item:nth-child(7):before {
+  //   content: "Autopass — UX/UI | App";
+  // }
+  
+  
+  // Menu no footer
+  .w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+  }
+  
+  img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+  
+  .image-8,
+  .nav-mobile,
+  .nav-mobile.element {
+    display: none;
+  }
+  
+  img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+    border: 0;
+  }
+  
+  .image-8 {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .nav-link {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+  }
+  
+  .plus-wrapper {
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    margin-left: .5em;
+    display: flex;
+    transform: translate(0, -.1em);
+  }
+  
+  .w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+  }
+  
+  .plus-wrapper.arrow {
+    margin-left: 0;
+    margin-right: .5em;
+    display: inline-block;
+  }
+  
+  .arrow-nav {
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .plus-wrapper {
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    margin-left: 1.2em;
+    display: flex;
+    transform: translate(0, -.1em);
+  }
+  
+  .nav-fixed {
+    z-index: 99;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    inset: auto 1em 1em 0%;
+  }
+  
+  .nav-links-wrapper {
+    cursor: pointer;
+  }
+  
+  .text-nav {
+    display: inline-block;
+    color: var(--white);
+    font-family: 'NeueMontreal';
+    font-weight: normal;
+    font-size: 0.9em;
+  
+    &:hover {
+      color: transparent;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+      transition: 0.3s;
+    }
+  }
+  
+  @media (max-width: 767px) {
+  .menu {
+    overflow: hidden;
+    cursor: grab;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+  
+    &.is-dragging {
+      cursor: grabbing;
+    }
+  
+    &--wrapper {
+      counter-reset: count;
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    &--item {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 75vh;
+      height: 60vh;
+      padding: 1.5vh 1vw;
+      overflow: hidden;
+    }
+  }
+  }
+  
+  @media (max-width: 550px) {
+    .close {
+      position: fixed;
+      top: 75%;
+      left: 10px;
+      align-items: center;
+      transform: translate(0%, -50%);
+    }
+    
+    .arrow {
+        display: flex;
+    }
+  
+    .etiquette.mobile {
+        grid-row-gap: .4em;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        height: auto;
+        inset: auto 0% 0%;
+        padding: 0 8px 16px 8px;
+    }
+  
+    .en {
+        font-size: 12px;
+        color: var(--black);
+    }
+  
+    .image-2.hide-mobile {
+        display: none;
+    }
+  
+    .etiquette {
+        display: none;
+    }
+  
+    .nav-mobile {
+        z-index: 998;
+        display: flex;
+    }
+  
+    .div-block-21 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 16px;
+    }
+  
+    .text-nav {
+        font-size: 16px;
+        color: var(--black);
+    }
+  
+    .image-8 {
+        width: 100%;
+        display: block;
+    }
+  
+    .nav-fixed {
+        display: none;
+    }
+  
+    .nav-link {
+      padding: 12px 16px;
+      margin: 0 -0.2em 0 -0.2em;
+      display: flex;
+  }
+  .text-nav { 
+    font-size: 13px; 
+  }
+  }
+  
+  // Animations
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
